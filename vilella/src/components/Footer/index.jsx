@@ -1,17 +1,9 @@
 export default function Footer() {
   return (
     <footer>
-      <div>
-        <div>
-          Serviços
-        </div>
-        <div>
-          Fale Conosco
-        </div>
-        <div>
-          Social Media
-        </div>
-      </div>
+      <div>Fele Conosco</div>
+      <div>Nossos Serviços</div>
+      <div>Portal do Cliente</div>
     </footer>
   )
 }
