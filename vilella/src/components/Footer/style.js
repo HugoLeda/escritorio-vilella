@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const FooterContainer = styled.footer`
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: stretch;
   
   width: 100vw;
 
@@ -13,13 +13,38 @@ export const FooterContainer = styled.footer`
   color: #fafafa;
 
   div {
-    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+
+    div.social-items {     
+      width: 50%;      
+
+      .social-item {
+        display: flex;
+        flex-direction: row;
+        
+        width: 100%;
+      }
+    }
   }
 
   .client-center {
-    image {
-      
+    font-size: 1.2em;
+    text-align: center;
+
+    img {
+      width: 100px;
+      height: auto;
     }
-  }
+  }  
 
 `

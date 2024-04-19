@@ -1,5 +1,4 @@
 import  { FooterContainer } from "./style"
-
 import { MdOutlineWhatsapp, MdLocalPhone, MdMail } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa6";
 
@@ -7,15 +6,31 @@ export default function Footer() {
   return (
     <FooterContainer>
       <div className="contact">
-        <h2>Fale Conosco</h2>
-        <p><MdLocalPhone />(14) 3382-2052</p>
-        <p><MdOutlineWhatsapp />(14) 99779-5080</p>
-        <p><MdMail />admin@evilella.com</p>
-        <h2>Redes Sociais</h2>
-        <p><FaInstagram />escritoriovilella</p>
+        <h3 className="address">Fale Conosco</h3>
+        <div className="social-items">
+          <div className="social-item">
+            <MdLocalPhone /> 
+            <span>(14) 3382-2052</span>
+          </div>
+          <p>
+            <MdOutlineWhatsapp />
+            <span>(14) 99779-5080</span>
+          </p>
+          <p>
+            <MdMail />
+            <span>adm@evilella.com</span>
+          </p>        
+        </div>
+        <h3 className="socials">Redes Sociais</h3>
+        <div>
+          <p>
+            <FaInstagram />
+            <span>escritoriovilella</span>
+          </p>
+        </div>
       </div>
       <div className="services">
-        <h2>Nossos Serviços</h2>
+        <h3>Nossos Serviços</h3>
         <ul>
           <li>Certificadora</li>
           <li>Soluções Contábeis</li>
@@ -28,10 +43,10 @@ export default function Footer() {
       </div>
       <div className="client-center">
         <img src="src\assets\logo.png" alt="Vilella"/>
-        <h2>
+        <h3>
           <span>Acesso</span>
-          Portal do Cliente
-        </h2>
+          <p>Portal do Cliente</p>
+        </h3>
       </div>
     </FooterContainer>
   )
