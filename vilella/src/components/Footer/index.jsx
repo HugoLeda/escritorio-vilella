@@ -42,7 +42,7 @@ export default function Footer() {
         </ul>
       </div>
       <div className="client-center">
-        <img src="src\assets\logo.png" alt="Vilella"/>
+        <img src="src\assets\whiteLogo.png" alt="Vilella"/>
         <h3>
           <span>Acesso</span>
           <p>Portal do Cliente</p>

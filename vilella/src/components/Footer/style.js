@@ -37,10 +37,19 @@ export const FooterContainer = styled.footer`
     }
   }
 
+  .services {
+    li {
+      list-style: none;
+    }
+  }
+
+
   .client-center {
     font-size: 1.2em;
     text-align: center;
-
+    span {
+      text-transform: uppercase;
+    }
     img {
       width: 100px;
       height: auto;
