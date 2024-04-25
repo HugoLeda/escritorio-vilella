@@ -14,8 +14,7 @@ export const HeaderContainer = styled.header `
 
     div {
         display: flex;
-        }
-
+    }
 
     .header-logo {
         img {
@@ -33,9 +32,15 @@ export const HeaderContainer = styled.header `
         li a {
             text-decoration: none;
             text-transform: uppercase;
-            
-            color: #2b2b2b;
+
+            color: inherit;
+            font-family: arial;
             font-size: 16px;
+            font-weight: 500;
+        }
+        li a:hover {
+            font-weight: 700;
+            color: #00116f;
         }
         
     }

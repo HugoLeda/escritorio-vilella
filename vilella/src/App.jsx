@@ -1,6 +1,4 @@
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-
+import Home from "./pages/Home"
 import GlobalStyles from "./styles/global"
 
 function App() {  
@@ -8,8 +6,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Header />
-      <Footer />
+      <Home />
     </>
   )
 }
