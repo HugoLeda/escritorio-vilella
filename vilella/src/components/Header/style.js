@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header `
     display: flex;
     justify-content: space-around;
-    align-items: stretch;
+    align-items: center;
     
     width: 100vw;
 
@@ -26,15 +26,16 @@ export const HeaderContainer = styled.header `
 
     .menu {
         li {
-            display: inline-block;
+            display: inline;
             margin: 10px;
-            
+            float: left;
         }
         li a {
             text-decoration: none;
+            text-transform: uppercase;
             
-            color: inherit;
-            font-size: 20px;
+            color: #2b2b2b;
+            font-size: 16px;
         }
         
     }

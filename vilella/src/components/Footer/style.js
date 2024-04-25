@@ -24,22 +24,53 @@ export const FooterContainer = styled.footer`
   .contact {
     display: flex;
     justify-content: space-between;
+    
+    h3.network{
+      margin-top: 20px;
+    }
+    span {
+        margin: 0 2px;
+      }
 
     div.social-items {     
-      width: 50%;      
-
-      .social-item {
+      width: 100%;
+      
+      .social-item-phone {
         display: flex;
         flex-direction: row;
         
         width: 100%;
       }
-    }
+      .social-item-whatsapp {
+        display: flex;
+        flex-direction: row;
+        
+        width: 100%;
+      }
+      .social-item-email {
+        display: flex;
+        flex-direction: row;
+        
+        width: 100%;
+      }
+      .social-item-instagram {
+        
+        display: flex;
+        flex-direction: row;
+
+        width: 100%;
+      }
+    }  
   }
 
   .services {
+    display: flex;
+    justify-content: flex-start;
+
     li {
+      display: block;
       list-style: none;
+
     }
   }
 

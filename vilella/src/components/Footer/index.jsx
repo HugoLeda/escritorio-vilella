@@ -6,27 +6,25 @@ export default function Footer() {
   return (
     <FooterContainer>
       <div className="contact">
+      <div className="social-items">
         <h3 className="address">Fale Conosco</h3>
-        <div className="social-items">
-          <div className="social-item">
+          <div className="social-item-phone">
             <MdLocalPhone /> 
             <span>(14) 3382-2052</span>
           </div>
-          <p>
+          <div className="social-item-whatsapp">
             <MdOutlineWhatsapp />
             <span>(14) 99779-5080</span>
-          </p>
-          <p>
+          </div>
+          <div className="social-item-email">
             <MdMail />
             <span>adm@evilella.com</span>
-          </p>        
-        </div>
-        <h3 className="socials">Redes Sociais</h3>
-        <div>
-          <p>
+          </div>   
+          <h3 className="network">Redes Sociais</h3>
+          <div className="social-item-instagram">
             <FaInstagram />
             <span>escritoriovilella</span>
-          </p>
+          </div>     
         </div>
       </div>
       <div className="services">
