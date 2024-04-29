@@ -1,7 +1,15 @@
 import styled from "styled-components";
 
 export const Homepage = styled.div `      
-/*  .flex {
+  max-width: 100vw;
+  padding: 0 10%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem; 
+
+  .flex {
     display: flex;
   }
 
@@ -11,54 +19,117 @@ export const Homepage = styled.div `
   }
 
   h1, h2 {
-    font-size: 50px;
-    margin-bottom: 10px;
+    font-size: 70px;
+    font-weight: 500;
+    color: #00116f;
+    span {
+      font-weight: 700;
+      color: #ff0000;
+    }
   }
   
   h3 {
-    font-size: 30px;
-    margin-bottom: 5px;
-  }
-
-  p {
-      margin-bottom: 20px;
+    font-size: 40px;
   }
   
-  .bsc-boxes {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    
-    text-align: center;
-    
-    .bsc-boxes-vision {
-      width: 300px;
-      height: 300px;
-      border-radius: 3px;
-      transition: scale 0.5 ease;
-      box-shadow: 0 0 10px rgb(0,0,0,0.3);
+  p {
+      font-size: 22px;
+      line-height: 1.5;
     }
 
-    .bsc-boxes-vision:hover {
-      transform: scale(1.02);
+  .presentation-text {
+
+    p {
+      margin-top: 1rem;
+      font-size: 22px;
+      line-height: 1.5;      
     }
+  }
+
+  .bsc-boxes {
+    justify-content: center;
+    gap: 3rem;
     
-    .bsc-boxes-values{
-      //width: 300px;
-      //height: 300px;
+    .bsc-boxes-vision,
+    .bsc-boxes-values {
+      width: 450px;
+      height: 420px;
       border-radius: 3px;
       transition: scale 0.5 ease;
-      box-shadow: 0 0 10px rgb(0,0,0,0.3);
+      box-shadow: 0 0 8px rgb(0,0,0,0.2);
+
+      text-align: center;
+
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
+
+      img {
+        height: auto;
+      }
+
+      h3 {
+        color: #00116f;
+      }
+
+      p {
+        font-size: 20px;
+      }
+      button {
+        width: 120px;
+        height: 40px;
+        border-radius: 6px;
+
+        background-color: #00116f;
+        color: white;
+        
+        font-size: 16px;
+        font-weight: bold;
+      }
     }
+
+    .bsc-boxes-vision:hover,
     .bsc-boxes-values:hover {
-      transform: scale(1.02);
+      transform: scale(1.01);
     }
   }
 
   .history {
+    
+    h2 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1rem;
+      
+      .history-title-bigger {
+      font-size: 200px;
+      font-weight: 500;
+      color: #00116f;
+      }
+
+    }
+    
+    .history-text {
+      justify-content: space-around;
+      font-size: 24px;
+      
+      gap: 10rem;
+    }
+    .history-text-paragraph {
+      align-content: space-evenly;
+      font-size: 22px;
+    }
     .history-text-numbers {
+      text-transform: uppercase;
+      align-items: flex-start;
       span {
-         font-weight: bold;
+        font-size:100px;
+        font-weight: 700;
+        color: #759dcc;
+      }
+      p {
+        font-weight: 600;
       }
     }
   }
@@ -66,19 +137,31 @@ export const Homepage = styled.div `
   .solution-icons {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;    
-  }
-
-  /*.general-contact {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom:30px;
-
-    .map-address {
-      width: 100px;
-      height: 100px;
-      box-shadow: 0 0 3px;
+    align-items: flex-end;
+    gap: 3rem;
+    
+    text-align: center;
+    p {
+      font-size: 18px;  
     }
   }
-*/
+
+  .general-contact {
+    justify-content: space-between;
+    gap: 5rem;
+    .find-us {
+      font-size: 24px;
+      line-height: 1.5;
+      h4 {
+        font-weight: 500;
+        color: #00116f;
+      }
+    }
+    
+    .map-address {
+      width: 400px;
+      height: 350px;
+    }
+  }
+
 `

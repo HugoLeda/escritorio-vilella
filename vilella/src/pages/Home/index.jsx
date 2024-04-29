@@ -11,40 +11,48 @@ export default function Home() {
   return(
     <>
       <Header/>      
-      <Homepage>
+      <Homepage className="flex">
         <div className="presentation-text">
-          <h1>Escritório Vilella</h1>
+          <h1>Escritório <span>Vilella</span></h1>
           <p>Atuamos no mercado como parceiros essenciais para empresas em todas as etapas de sua 
             jornada. Nossa equipe de profissionais altamente qualificados nas áreas contábil, fiscal, trabalhista 
             e de consultoria está pronta para oferecer suporte dedicado e soluções sob medida para a sua empresa.</p>
         </div>
         <div className="bsc-boxes flex">
           <div className="bsc-boxes-vision flex-column">
+            <img src="src\assets\letterE.png" alt="Empresarial"/>
             <h3>Visão <span>Empresarial</span></h3>
             <p>Reconhecimento em soluções contábeis.</p>
+            <button>Saiba Mais</button>
           </div>
-          <div className="bsc-boxes-values">
+          <div className="bsc-boxes-values flex-column">
+            <img src="src\assets\letterV.png" alt="Valores"/>
             <h3>Nossos <span>Valores</span></h3>
             <p>Transparência, Integridade e Responsabilidade.</p>
+            <button>Saiba Mais</button>
           </div>
         </div>
         <div className="history">
-          <h2><span>30</span> anos de excelência</h2>
-          <div className="history-text">  
+          <h2>
+            <span className="history-title-bigger">30</span>
+            <span className="history-title-shorter">anos de <br/> excelência</span>
+          </h2>
+          <div className="history-text flex">  
             <div className="history-text-paragraph">
               <p>Com anos de mercado, nossa experiência nos capacita a fornecer soluções 
               personalizadas para empresas de todos os portes e setores.</p>
+              <br/>
               <p>Trabalhamos para garantir que nossos clientes estejam sempre em conformidade
               com todas as leis e regulamentos aplicáveis.</p>
             </div>
-            <div className="history-text-numbers">
+            <div className="history-text-numbers flex-column">
               <div>
                 <span>+400</span>
-                <p>empresas atendidas</p>
+                <p>Empresas Atendidas</p>
               </div>
               <div>
                 <span>+1000</span>
-                <p>clientes atendidos</p>
+                <p>Clientes Atendidos</p>
               </div>
             </div>
           </div>
@@ -66,7 +74,7 @@ export default function Home() {
             <p>Abordagem proativa para garantir a conformidade com a LGPD.</p>
           </div>
         </div>  
-        <div className="general-contact">
+        <div className="general-contact flex">
           <div className="find-us">
             <h2>Entre em <span>contato</span></h2>
             <div className="social-item-location">
@@ -91,7 +99,9 @@ export default function Home() {
               <p>De segunda à sexta-feira, das 9h às 17h.</p>
             </div>
           </div>
-          <div className="map-address"><p>hey, im address</p></div>
+          <div className="map-address flex">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.9730041908283!2d-49.51449542549472!3d-23.38919385528803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c1a540abcf309b%3A0x292c0f46692abb18!2sEscrit%C3%B3rio%20Cont%C3%A1bil%20Vilella!5e0!3m2!1spt-BR!2sbr!4v1714398045177!5m2!1spt-BR!2sbr" width="400" height="350" loading="lazy" frameborder="0"></iframe>
+          </div>
         </div>
       </Homepage>
       <Footer/>

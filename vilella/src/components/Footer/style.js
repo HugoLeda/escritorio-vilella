@@ -4,10 +4,9 @@ export const FooterContainer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: stretch;
-  
-  width: 100vw;
 
   padding: 16px 0;
+  margin-top: 5rem;
 
   background-color: #00116f;
   color: #fafafa;

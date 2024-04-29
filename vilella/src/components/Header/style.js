@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header `
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    
-    width: 100vw;
 
-    padding: 16px 0;
+    padding: 1.5rem 3rem;
 
     background-color: #ffffff;
     color: #2b2b2b;
