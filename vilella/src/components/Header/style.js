@@ -27,6 +27,7 @@ export const HeaderContainer = styled.header `
             display: inline;
             margin: 10px;
             justify-content: flex-start;
+            cursor: pointer;
         }
         li a {
             text-decoration: none;
@@ -36,6 +37,8 @@ export const HeaderContainer = styled.header `
             font-family: arial;
             font-size: 16px;
             font-weight: 500;
+
+            transition: linear all .2s;
         }
         li a:hover {
             font-weight: 700;

@@ -55,11 +55,11 @@ export const Homepage = styled.div `
       width: 450px;
       height: 420px;
       border-radius: 3px;
-      transition: scale 0.5 ease;
       box-shadow: 0 0 8px rgb(0,0,0,0.2);
 
       text-align: center;
       line-height: 2em;
+      transition: linear all .2s;
 
       justify-content: center;
       align-items: center;
@@ -88,6 +88,8 @@ export const Homepage = styled.div `
         background-color: #00116f;
         color: white;
         
+        cursor: pointer;
+
         font-size: 18px;
         font-weight: 700;
       }
@@ -95,12 +97,14 @@ export const Homepage = styled.div `
 
     .bsc-boxes-vision:hover,
     .bsc-boxes-values:hover {
-      transform: scale(1.01);
+      transform: scale(1.05);
+      p {
+        line-height: 1.5em;
+      }
     }
   }
 
   .history {
-    
     h2 {
       display: flex;
       justify-content: flex-start;
@@ -143,17 +147,24 @@ export const Homepage = styled.div `
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    gap: 3rem;
+    gap: 2rem;
     
     text-align: center;
+  /*
+    border-radius: 3px;
+    transition: linear all .2s;*/
     
     h3 {
-      font-size: 28px;
-      font-weight: 400;
+      font-size: 24px;
+      font-weight: 500;
     }
     p {
-      font-size: 20px;  
+      font-size: 18px;  
     }
+
+    /*.solution-icons-meters:hover {
+      transform: scale(1.5);
+    }*/
   }
 
   .general-contact {

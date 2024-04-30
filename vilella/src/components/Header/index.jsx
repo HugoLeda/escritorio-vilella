@@ -4,7 +4,9 @@ export default function Header() {
   return (
     <HeaderContainer>
       <div className="header-logo">
-        <img src="src\assets\logoVilella.png" alt="Vilella"/>
+        <a href="#">
+          <img src="src\assets\logoVilella.png" alt="Vilella"/>
+        </a>
       </div>
       <div className="menu">
         <ul>
