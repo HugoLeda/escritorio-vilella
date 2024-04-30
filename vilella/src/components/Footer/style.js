@@ -17,12 +17,18 @@ export const FooterContainer = styled.footer`
     justify-content: center;
     align-items: center;
     width: 30%;
-
   }
+
+  h3 {
+      font-weight: 600;
+      font-size: 22px;
+    }
 
   .contact {
     display: flex;
     justify-content: space-between;
+    
+    line-height: 1.5em;
     
     h3.network{
       margin-top: 20px;
@@ -66,17 +72,23 @@ export const FooterContainer = styled.footer`
     display: flex;
     justify-content: flex-start;
 
+    ul {
+      font-size: 20px;
+    }
     li {
       display: block;
       list-style: none;
-
+      line-height: 1.15em;
     }
   }
-
 
   .client-center {
     font-size: 1.2em;
     text-align: center;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
     span {
       text-transform: uppercase;
     }

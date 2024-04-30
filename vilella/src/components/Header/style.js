@@ -10,6 +10,7 @@ export const HeaderContainer = styled.header `
     background-color: #ffffff;
     color: #2b2b2b;
 
+
     div {
         display: flex;
     }
@@ -25,7 +26,7 @@ export const HeaderContainer = styled.header `
         li {
             display: inline;
             margin: 10px;
-            float: left;
+            justify-content: flex-start;
         }
         li a {
             text-decoration: none;

@@ -42,8 +42,7 @@ export default function Footer() {
       <div className="client-center">
         <img src="src\assets\whiteLogo.png" alt="Vilella"/>
         <h3>
-          <span>Acesso</span>
-          <p>Portal do Cliente</p>
+          <a href="#">Acesso ao<br/><span>Portal do Cliente</span></a>
         </h3>
       </div>
     </FooterContainer>

@@ -20,7 +20,7 @@ export const Homepage = styled.div `
 
   h1, h2 {
     font-size: 70px;
-    font-weight: 500;
+    font-weight: 600;
     color: #00116f;
     span {
       font-weight: 700;
@@ -59,6 +59,7 @@ export const Homepage = styled.div `
       box-shadow: 0 0 8px rgb(0,0,0,0.2);
 
       text-align: center;
+      line-height: 2em;
 
       justify-content: center;
       align-items: center;
@@ -70,21 +71,25 @@ export const Homepage = styled.div `
 
       h3 {
         color: #00116f;
+        span {
+          font-weight: 600;
+        }
       }
 
       p {
         font-size: 20px;
+        font-weight: 400;
       }
       button {
-        width: 120px;
+        width: 130px;
         height: 40px;
         border-radius: 6px;
 
         background-color: #00116f;
         color: white;
         
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 18px;
+        font-weight: 700;
       }
     }
 
@@ -141,8 +146,13 @@ export const Homepage = styled.div `
     gap: 3rem;
     
     text-align: center;
+    
+    h3 {
+      font-size: 28px;
+      font-weight: 400;
+    }
     p {
-      font-size: 18px;  
+      font-size: 20px;  
     }
   }
 
