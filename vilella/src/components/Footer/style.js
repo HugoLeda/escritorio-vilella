@@ -40,29 +40,10 @@ export const FooterContainer = styled.footer`
     div.social-items {     
       width: 100%;
       
-      .social-item-phone {
+      .social-item {
         display: flex;
         flex-direction: row;
         
-        width: 100%;
-      }
-      .social-item-whatsapp {
-        display: flex;
-        flex-direction: row;
-        
-        width: 100%;
-      }
-      .social-item-email {
-        display: flex;
-        flex-direction: row;
-        
-        width: 100%;
-      }
-      .social-item-instagram {
-        
-        display: flex;
-        flex-direction: row;
-
         width: 100%;
       }
     }  

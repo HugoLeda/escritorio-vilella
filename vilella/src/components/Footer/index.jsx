@@ -8,20 +8,20 @@ export default function Footer() {
       <div className="contact">
       <div className="social-items">
         <h3 className="address">Fale Conosco</h3>
-          <div className="social-item-phone">
+          <div className="social-item">
             <MdLocalPhone /> 
             <span>(14) 3382-2052</span>
           </div>
-          <div className="social-item-whatsapp">
+          <div className="social-item">
             <MdOutlineWhatsapp />
             <span>(14) 99779-5080</span>
           </div>
-          <div className="social-item-email">
+          <div className="social-item">
             <MdMail />
             <span>adm@evilella.com</span>
           </div>   
           <h3 className="network">Redes Sociais</h3>
-          <div className="social-item-instagram">
+          <div className="social-item">
             <FaInstagram />
             <span>escritoriovilella</span>
           </div>     

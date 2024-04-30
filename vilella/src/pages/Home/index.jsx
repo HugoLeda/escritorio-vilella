@@ -19,14 +19,18 @@ export default function Home() {
             e de consultoria está pronta para oferecer suporte dedicado e soluções sob medida para a sua empresa.</p>
         </div>
         <div className="bsc-boxes flex">
-          <div className="bsc-boxes-vision flex-column">
-            <img src="src\assets\letterE.png" alt="Empresarial"/>
+          <div className="bsc-boxes-vision flex-column transition">
+            <div className="img">
+              <img src="src\assets\letterE.png" alt="Empresarial"/>
+            </div>
             <h3>Visão <span>Empresarial</span></h3>
             <p>Reconhecimento em soluções contábeis.</p>
             <button>Saiba Mais</button>
           </div>
-          <div className="bsc-boxes-values flex-column">
-            <img src="src\assets\letterV.png" alt="Valores"/>
+          <div className="bsc-boxes-values flex-column transition">
+            <div className="img">
+              <img src="src\assets\letterV.png" alt="Valores"/>
+            </div>
             <h3>Nossos <span>Valores</span></h3>
             <p>Transparência, Integridade e Responsabilidade.</p>
             <button>Saiba Mais</button>
@@ -57,19 +61,25 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="solution-icons">
-          <div className="solution-icon-meters">
-            <img src="src\assets\metersSpeed.png" alt="Speed"/>
+        <div className="solution-icons flex">
+          <div className="solution-icon transition flex-column">
+            <div>
+              <img src="src\assets\metersSpeed.png" alt="Speed"/>
+            </div>
             <h3>Otimização</h3>
-            <p>Aprimorar cada aspecto do seu projeto ou negócio para alcançar a máxima eficiência.</p>
+            <p>Aprimorar cada aspecto do seu negócio para alcançar a máxima eficiência.</p>
           </div>
-          <div className="solution-icon-cluster">
-            <img src="src\assets\cluster.png" alt="Speed"/>
+          <div className="solution-icon transition flex-column">
+            <div>
+              <img src="src\assets\cluster.png" alt="Speed"/>
+            </div>
             <h3>Tecnologia</h3>
-            <p>Proporcionar soluções inovadoras que atendam às suas necessidades.</p>
+            <p>Proporcionar soluções inovadoras para atender às suas necessidades.</p>
           </div>
-          <div>
-            <img src="src\assets\shield.png" alt="Speed"/>
+          <div className="solution-icon transition flex-column">
+            <div>
+              <img src="src\assets\shield.png" alt="Speed"/>
+            </div>
             <h3>Responsabilidade</h3>
             <p>Abordagem proativa para garantir a conformidade com a LGPD.</p>
           </div>
@@ -77,20 +87,20 @@ export default function Home() {
         <div className="general-contact flex">
           <div className="find-us">
             <h2>Entre em <span>contato</span></h2>
-            <div className="social-item-location">
+            <div className="social-item">
               <MdLocationOn />
               <span>R. Mario Monteiro de França, 256 - Centro,
                 Fartura/SP - CEP: 18870-030</span> 
             </div>
-            <div className="social-item-phone">
+            <div className="social-item">
               <MdLocalPhone /> 
               <span>(14) 3382-2052</span>
             </div>
-            <div className="social-item-whatsapp">
+            <div className="social-item">
               <MdOutlineWhatsapp />
               <span>(14) 99779-5080</span>
             </div>
-            <div className="social-item-email">
+            <div className="social-item">
               <MdMail /> 
               <span>adm@evilella.com</span>
             </div>
