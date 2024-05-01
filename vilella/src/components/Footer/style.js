@@ -20,9 +20,9 @@ export const FooterContainer = styled.footer`
   }
 
   h3 {
-      font-weight: 600;
-      font-size: 22px;
-    }
+    font-weight: 600;
+    font-size: 22px;
+  }
 
   .contact {
     display: flex;

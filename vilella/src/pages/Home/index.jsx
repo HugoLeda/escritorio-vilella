@@ -1,11 +1,10 @@
-
-
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 import { MdLocationOn, MdOutlineWhatsapp, MdLocalPhone, MdMail, MdImportExport } from "react-icons/md";
 import { Homepage } from "./style";
+import { ThemeProvider } from "styled-components";
 
 export default function Home() {
   return(
@@ -87,26 +86,34 @@ export default function Home() {
         <div className="general-contact flex">
           <div className="find-us">
             <h2>Entre em <span>contato</span></h2>
+            <span>Onde nos encontrar:</span>
             <div className="social-item">
-              <MdLocationOn />
-              <span>R. Mario Monteiro de França, 256 - Centro,
-                Fartura/SP - CEP: 18870-030</span> 
+              <span className="item">
+                <MdLocationOn style={{fontSize: 32, color: "#00116f"}} />
+              </span>
+              <span> R. Mario Monteiro de França, 256 - Centro, Fartura/SP - CEP: 18870-030</span> 
             </div>
-            <div className="social-item">
-              <MdLocalPhone /> 
+            <a className="social-item" href="tel:551433822052">
+              <span className="item">
+                <MdLocalPhone style={{fontSize: 32, color: "#00116f"}} />
+              </span>
               <span>(14) 3382-2052</span>
-            </div>
-            <div className="social-item">
-              <MdOutlineWhatsapp />
+            </a>
+            <a className="social-item" href="https://wa.me/5514997795080?text=Ol%C3%A1%2C+gostaria+de+falar+com+o+Escrit%C3%B3rio+Vilella" target="blank">
+              <span className="item">
+                <MdOutlineWhatsapp style={{fontSize: 32, color: "#00116f"}} />
+              </span>
               <span>(14) 99779-5080</span>
-            </div>
-            <div className="social-item">
-              <MdMail /> 
+            </a>
+            <a className="social-item" href="mailto:adm@evilella.com">
+              <span className="item">
+                <MdMail style={{fontSize: 32, color: "#00116f"}} />
+              </span>
               <span>adm@evilella.com</span>
-            </div>
+            </a>
             <div className="office-hours">
               <h4>Horário de Atendimento:</h4>
-              <p>De segunda à sexta-feira, das 9h às 17h.</p>
+              <span>De segunda à sexta-feira, das 9h às 17h.</span>
             </div>
           </div>
           <div className="map-address flex">

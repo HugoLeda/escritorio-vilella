@@ -26,10 +26,12 @@ export const Homepage = styled.div `
     font-size: 70px;
     font-weight: 600;
     color: #00116f;
+
     span {
       font-weight: 700;
       color: #ff0000;
     }
+
   }
   
   h3 {
@@ -84,6 +86,7 @@ export const Homepage = styled.div `
         font-weight: 400;
         line-height: 2.2em;
       }
+
       button {
         width: 130px;
         height: 40px;
@@ -106,6 +109,7 @@ export const Homepage = styled.div `
     .bsc-boxes-values:hover {
       transform: scale(1.1);
     }
+
     button:hover {
       background-color: #93c5ff;
       color: #00116f;
@@ -113,6 +117,7 @@ export const Homepage = styled.div `
   }
 
   .history {
+
     h2 {
       display: flex;
       justify-content: flex-start;
@@ -132,18 +137,22 @@ export const Homepage = styled.div `
       
       gap: 10rem;
     }
+
     .history-text-paragraph {
       align-content: space-evenly;
       font-size: 22px;
     }
+
     .history-text-numbers {
       text-transform: uppercase;
       align-items: flex-start;
+
       span {
-        font-size:100px;
+        font-size: 100px;
         font-weight: 700;
         color: #759dcc;
       }
+
       p {
         font-weight: 600;
       }
@@ -187,6 +196,7 @@ export const Homepage = styled.div `
       font-size: 24px;
       font-weight: 500;
     }
+
     p {
       font-size: 18px;  
     }
@@ -195,12 +205,35 @@ export const Homepage = styled.div `
   .general-contact {
     justify-content: space-between;
     gap: 5rem;
-    .find-us {
-      font-size: 24px;
-      line-height: 1.5;
-      h4 {
-        font-weight: 500;
-        color: #00116f;
+
+    .find-us {           
+
+      .social-item {
+        display: flex;   
+        align-items: center;        
+        gap: .5rem;      
+
+        font-size: 24px;
+        line-height: 1.5;
+
+        text-decoration: none;
+        color: #000;        
+
+        .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+        }
+
+        span:nth-child(2) {
+          width: 70%;
+        }
+      }
+
+      h4, + {
+        font-weight: 500;                
       }
       
     }
@@ -208,10 +241,12 @@ export const Homepage = styled.div `
     .map-address {
       width: 400px;
       height: 350px;
-      transition: ease-in-out .2s;
+      transition: ease-in-out all .2s;      
     }
+
     .map-address:hover {
       box-shadow: 0 0 8px rgb(0,0,0,0.4);
+      transform: scale(1.1);
     }
   }
 `
