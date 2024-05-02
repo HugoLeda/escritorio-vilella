@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 export const BannerContainer = styled.section`
-  .background {
-    display: flex;
-    justify-content:center;
+  padding: 0 0 18px 0;
+  img {
     width: 100%;
   }
 `

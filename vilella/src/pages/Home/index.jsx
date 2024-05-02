@@ -4,12 +4,12 @@ import Header from "../../components/Header";
 
 import { MdLocationOn, MdOutlineWhatsapp, MdLocalPhone, MdMail, MdImportExport } from "react-icons/md";
 import { Homepage } from "./style";
-import { ThemeProvider } from "styled-components";
 
 export default function Home() {
   return(
     <>
-      <Header/>      
+      <Header/>
+      <Banner/>
       <Homepage className="flex">
         <div className="presentation-text">
           <h1>Escritório <span>Vilella</span></h1>
@@ -35,12 +35,12 @@ export default function Home() {
             <button>Saiba Mais</button>
           </div>
         </div>
-        <div className="history">
-          <h2>
-            <span className="history-title-bigger">30</span>
-            <span className="history-title-shorter">anos de <br/> excelência</span>
-          </h2>
-          <div className="history-text flex">  
+        <div className="history flex">
+          <div class="history-content flex-column">
+            <h2>
+              <span className="history-title-bigger">30</span>
+              <span className="history-title-shorter">anos de <br/> excelência</span>
+            </h2>
             <div className="history-text-paragraph">
               <p>Com anos de mercado, nossa experiência nos capacita a fornecer soluções 
               personalizadas para empresas de todos os portes e setores.</p>
@@ -48,17 +48,15 @@ export default function Home() {
               <p>Trabalhamos para garantir que nossos clientes estejam sempre em conformidade
               com todas as leis e regulamentos aplicáveis.</p>
             </div>
-            <div className="history-text-numbers flex-column">
+          </div>
+          <div className="history-numbers flex-column">
               <div>
                 <span>+400</span>
                 <p>Empresas Atendidas</p>
-              </div>
-              <div>
                 <span>+1000</span>
                 <p>Clientes Atendidos</p>
               </div>
             </div>
-          </div>
         </div>
         <div className="solution-icons flex">
           <div className="solution-icon transition flex-column">
@@ -86,7 +84,7 @@ export default function Home() {
         <div className="general-contact flex">
           <div className="find-us">
             <h2>Entre em <span>contato</span></h2>
-            <span>Onde nos encontrar:</span>
+            <h4>Onde nos encontrar:</h4>
             <div className="social-item">
               <span className="item">
                 <MdLocationOn style={{fontSize: 32, color: "#00116f"}} />
@@ -113,7 +111,7 @@ export default function Home() {
             </a>
             <div className="office-hours">
               <h4>Horário de Atendimento:</h4>
-              <span>De segunda à sexta-feira, das 9h às 17h.</span>
+              <p>De segunda à sexta-feira, das 9h às 17h.</p>
             </div>
           </div>
           <div className="map-address flex">

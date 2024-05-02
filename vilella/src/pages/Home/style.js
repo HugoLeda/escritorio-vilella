@@ -75,8 +75,9 @@ export const Homepage = styled.div `
       }
 
       h3 {
-        color: #00116f;
+        color: #000000;
         span {
+          color: #00116f;
           font-weight: 600;
         }
       }
@@ -117,7 +118,7 @@ export const Homepage = styled.div `
   }
 
   .history {
-
+    gap: 5rem;
     h2 {
       display: flex;
       justify-content: flex-start;
@@ -131,21 +132,17 @@ export const Homepage = styled.div `
       }
     }
     
-    .history-text {
-      justify-content: space-around;
-      font-size: 24px;
-      
-      gap: 10rem;
-    }
-
     .history-text-paragraph {
-      align-content: space-evenly;
+      align-content: flex-start;
       font-size: 22px;
     }
 
-    .history-text-numbers {
+    .history-numbers {
       text-transform: uppercase;
-      align-items: flex-start;
+      justify-content: flex-end;
+      align-items: center;
+
+      text-align: center;
 
       span {
         font-size: 100px;
@@ -214,7 +211,7 @@ export const Homepage = styled.div `
         gap: .5rem;      
 
         font-size: 24px;
-        line-height: 1.5;
+        line-height: 2rem;
 
         text-decoration: none;
         color: #000;        
@@ -232,16 +229,17 @@ export const Homepage = styled.div `
         }
       }
 
-      h4, + {
-        font-weight: 500;                
-      }
+      h4 {
+      font-size: 24px;
+      font-weight: 500;
+    }
       
     }
     
     .map-address {
       width: 400px;
       height: 350px;
-      transition: ease-in-out all .2s;      
+      transition: linear all .3s;      
     }
 
     .map-address:hover {
