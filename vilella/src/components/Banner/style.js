@@ -1,8 +1,80 @@
 import styled from 'styled-components'
 
 export const BannerContainer = styled.section`
-  padding: 0 0 18px 0;
-  img {
+  margin-bottom: 5rem;
+  max-width: 1000vw;
+
+  h3 {
+      font-size: 60px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .st-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 2rem;
+
+    border-radius: 3px;
+    background-color: rgba(147, 198, 255, 0.5);
+    box-shadow: 0 0 8px rgb(0,0,0,0.2);
+
+    h3 {
+      color: #00116f;
+    }
+  }
+
+  .cover-img, img {
     width: 100%;
   }
+
+  .rd-caption {
+    padding: 2rem;
+    .rd-caption-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      
+      h3 {
+        color: #ffffff;
+      }
+    }
+  }
+
+  button {
+    width: 130px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0px 10px 10px rgb(0,0,0,0.5);
+    border: none;
+
+    background-color: #00116f;
+    color: white;
+        
+    cursor: pointer;
+    transition: ease-out all .3s;
+
+    font-size: 18px;
+    font-weight: 700;
+
+  }
+  button:hover {
+    background-color: #93c5ff;
+    color: #00116f;
+  }
+    
 `

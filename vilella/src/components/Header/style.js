@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.header `
+export const HeaderContainer = styled.header`
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-
-    padding: 1.5rem 3rem;
+    padding: 1.2rem 3rem;
 
     background-color: #ffffff;
     color: #2b2b2b;
@@ -14,40 +13,34 @@ export const HeaderContainer = styled.header `
     position: sticky;     
     top: 0;   
     z-index: 100;    
-
-    div {
-        display: flex;
+  }
+  .header-logo {
+    .img {
+      width: 200px;
+      height: auto;
     }
+  }
+  .align-menu {
+    padding-top: .5rem;
+    a {
+      display: inline;
+      padding: .4rem;
+      cursor: pointer;
 
-    .header-logo {
-        img {
-            width: 200px;
-            height: auto;
-        }
+      text-decoration: none;
+      text-transform: uppercase;
+
+      color: inherit;
+      font-family: arial;
+      font-size: 16px;
+      font-weight: 500;
+
+      transition: linear all .2s;
     }
-
-    .menu {
-        li {
-            display: inline;
-            margin: 10px;
-            justify-content: flex-start;
-            cursor: pointer;
-        }
-        li a {
-            text-decoration: none;
-            text-transform: uppercase;
-
-            color: inherit;
-            font-family: arial;
-            font-size: 16px;
-            font-weight: 500;
-
-            transition: linear all .2s;
-        }
-        li a:hover {
-            font-weight: 700;
-            color: #00116f;
-        }
+    a:hover {
+      font-weight: 700;
+      color: #00116f; 
+    }
         
-    }
+  }
 `

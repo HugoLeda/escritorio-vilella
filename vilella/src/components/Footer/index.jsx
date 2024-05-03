@@ -1,6 +1,6 @@
 import  { FooterContainer } from "./style"
 import { MdOutlineWhatsapp, MdLocalPhone, MdMail } from "react-icons/md";
-import { FaInstagram, FaLinkedin, FaLinkedinIn } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (

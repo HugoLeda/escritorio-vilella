@@ -64,11 +64,9 @@ export const Homepage = styled.div `
       box-shadow: 0 0 8px rgb(0,0,0,0.2);
 
       text-align: center;
-      line-height: 2.2em;
 
       justify-content: center;
       align-items: center;
-      gap: 0.3rem;
 
       .img {
         height: auto;
@@ -85,7 +83,6 @@ export const Homepage = styled.div `
       p {
         font-size: 20px;
         font-weight: 400;
-        line-height: 2.2em;
       }
 
       button {
