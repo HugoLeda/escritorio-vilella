@@ -16,9 +16,9 @@ export default createGlobalStyle`
 `
 const theme = {
   colors: {
-    darkblue: '#0d2d7d',
-    brightred: '#ff0000',
-    white: '#ffffff',
+    bgblue: '#0d2d7d',
+    defred: '#ff0000',
+    defwhite: '#ffffff',
     babyblue: '#93c5ff',
     
     gray1: '#2b2b2b',

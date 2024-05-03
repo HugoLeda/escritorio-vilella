@@ -5,48 +5,64 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   align-items: stretch;
 
-  padding: 16px 0;
+  padding: 1rem 0;
   margin-top: 5rem;
 
   background-color: #00116f;
   color: #fafafa;
 
-  div {
+  h3 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .contact,
+  .services,
+  .client {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 30%;
-  }
-
-  h3 {
-      font-weight: 600;
-      font-size: 22px;
-    }
+    width: 50%;
+  }  
 
   .contact {
     display: flex;
     justify-content: space-between;
     
     line-height: 1.5em;
-    
-    h3.network{
-      margin-top: 20px;
-    }
-    span {
-        margin: 0 2px;
-      }
 
-    div.social-items {     
-      width: 100%;
-      
+    .socials {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;            
+
+      .holder {
+        display: flex;
+        flex-direction: column;
+      }
+    
       .social-item {
         display: flex;
         flex-direction: row;
-        
+        align-items: center;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+
         width: 100%;
+        span {
+          font-size: 18px;
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+        }
       }
-    }  
+    } 
   }
 
   .services {
@@ -56,26 +72,35 @@ export const FooterContainer = styled.footer`
     ul {
       font-size: 20px;
     }
-    li {
+    a {
       display: block;
       list-style: none;
-      line-height: 1.15em;
+      line-height: 1.3em;
     }
   }
 
-  .client-center {
-    font-size: 1.2em;
+  .client {
     text-align: center;
     a {
       text-decoration: none;
+      transition: linear all .2s;
       color: inherit;
     }
-    span {
+    h3 {
+      font-size: 1.2rem;
+      cursor: pointer;
       text-transform: uppercase;
     }
-    img {
-      width: 100px;
+    span {
+      font-size: 1.5rem;
+    }
+    .img {
+      width: auto;
       height: auto;
+    }
+
+    .client-access:hover {
+      transform: scale(1.1);
     }
   }  
 

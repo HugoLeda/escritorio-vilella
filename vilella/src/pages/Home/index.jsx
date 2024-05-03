@@ -1,5 +1,3 @@
-
-
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -10,7 +8,8 @@ import { Homepage } from "./style";
 export default function Home() {
   return(
     <>
-      <Header/>      
+      <Header/>
+      <Banner/>
       <Homepage className="flex">
         <div className="presentation-text">
           <h1>Escritório <span>Vilella</span></h1>
@@ -36,12 +35,12 @@ export default function Home() {
             <button>Saiba Mais</button>
           </div>
         </div>
-        <div className="history">
-          <h2>
-            <span className="history-title-bigger">30</span>
-            <span className="history-title-shorter">anos de <br/> excelência</span>
-          </h2>
-          <div className="history-text flex">  
+        <div className="history flex">
+          <div class="history-content flex-column">
+            <h2>
+              <span className="history-title-bigger">30</span>
+              <span className="history-title-shorter">anos de <br/> excelência</span>
+            </h2>
             <div className="history-text-paragraph">
               <p>Com anos de mercado, nossa experiência nos capacita a fornecer soluções 
               personalizadas para empresas de todos os portes e setores.</p>
@@ -49,17 +48,15 @@ export default function Home() {
               <p>Trabalhamos para garantir que nossos clientes estejam sempre em conformidade
               com todas as leis e regulamentos aplicáveis.</p>
             </div>
-            <div className="history-text-numbers flex-column">
+          </div>
+          <div className="history-numbers flex-column">
               <div>
                 <span>+400</span>
                 <p>Empresas Atendidas</p>
-              </div>
-              <div>
                 <span>+1000</span>
                 <p>Clientes Atendidos</p>
               </div>
             </div>
-          </div>
         </div>
         <div className="solution-icons flex">
           <div className="solution-icon transition flex-column">
@@ -87,23 +84,31 @@ export default function Home() {
         <div className="general-contact flex">
           <div className="find-us">
             <h2>Entre em <span>contato</span></h2>
+            <h4>Onde nos encontrar:</h4>
             <div className="social-item">
-              <MdLocationOn />
-              <span>R. Mario Monteiro de França, 256 - Centro,
-                Fartura/SP - CEP: 18870-030</span> 
+              <span className="item">
+                <MdLocationOn style={{fontSize: 32, color: "#00116f"}} />
+              </span>
+              <span> R. Mario Monteiro de França, 256 - Centro, Fartura/SP - CEP: 18870-030</span> 
             </div>
-            <div className="social-item">
-              <MdLocalPhone /> 
+            <a className="social-item" href="tel:551433822052">
+              <span className="item">
+                <MdLocalPhone style={{fontSize: 32, color: "#00116f"}} />
+              </span>
               <span>(14) 3382-2052</span>
-            </div>
-            <div className="social-item">
-              <MdOutlineWhatsapp />
+            </a>
+            <a className="social-item" href="https://wa.me/5514997795080?text=Ol%C3%A1%2C+gostaria+de+falar+com+o+Escrit%C3%B3rio+Vilella" target="blank">
+              <span className="item">
+                <MdOutlineWhatsapp style={{fontSize: 32, color: "#00116f"}} />
+              </span>
               <span>(14) 99779-5080</span>
-            </div>
-            <div className="social-item">
-              <MdMail /> 
+            </a>
+            <a className="social-item" href="mailto:adm@evilella.com">
+              <span className="item">
+                <MdMail style={{fontSize: 32, color: "#00116f"}} />
+              </span>
               <span>adm@evilella.com</span>
-            </div>
+            </a>
             <div className="office-hours">
               <h4>Horário de Atendimento:</h4>
               <p>De segunda à sexta-feira, das 9h às 17h.</p>
