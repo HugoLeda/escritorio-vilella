@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Homepage = styled.div `      
-  max-width: 1000vw;
+  max-width: 100vw;
   padding: 0 10%;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
   gap: 5rem; 
 
   .flex {
