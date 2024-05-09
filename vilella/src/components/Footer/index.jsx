@@ -7,7 +7,7 @@ export default function Footer() {
     <FooterContainer>
       <div className="contact">
         <div className="socials">
-          <div className="holder">
+          <div className="holder-talk">
             <h3 className="address">Fale Conosco</h3>
             <a className="social-item" href="tel:551433822052">
               <span className="item"><MdLocalPhone style={{fontSize: 22, color: "#ffffff"}}/></span>
@@ -22,7 +22,7 @@ export default function Footer() {
               <span>adm@evilella.com</span>
             </a>
           </div>
-          <div className="holder">
+          <div className="holder-social">
             <h3 className="network">Redes Sociais</h3>
              <a className="social-item" href="https://www.instagram.com/escritoriovilella/" target="blank">
               <span className="item"><FaInstagram style={{fontSize: 22, color: "#ffffff"}}/></span>

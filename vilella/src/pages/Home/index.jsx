@@ -13,9 +13,9 @@ export default function Home() {
       <Homepage className="flex">
         <div className="presentation-text">
           <h1>Escritório <span>Vilella</span></h1>
-          <p>Atuamos no mercado como parceiros essenciais para empresas em todas as etapas de sua 
-            jornada. Nossa equipe de profissionais altamente qualificados nas áreas contábil, fiscal, trabalhista 
-            e de consultoria está pronta para oferecer suporte dedicado e soluções sob medida para a sua empresa.</p>
+          <p>Atuamos no mercado como parceiros essenciais para empresas em todas as etapas de sua jornada.
+            Nossa equipe de profissionais altamente qualificados nas áreas contábil, fiscal e trabalhista 
+            esta pronta para oferecer acessória de excelência e suporte dedicado e soluções sob medida para a sua empresa em todos ramos de atividades</p>
         </div>
         <div className="bsc-boxes flex">
           <div className="bsc-boxes-vision flex-column transition">
