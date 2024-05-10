@@ -14,6 +14,7 @@ export default function Header() {
             <a href="#">Home</a>
             <a href="#">Sobre</a>
             <a href="#">Serviços</a>
+            <a href="#">Equipe</a>
             <a href="#">LGPD</a>
             <a href="#">Contato</a>
             <a href="#">Portal do Cliente</a>
