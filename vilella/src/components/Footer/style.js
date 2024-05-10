@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import Theme from '../../styles/theme'
 
 export const FooterContainer = styled.footer`    
   
@@ -7,11 +8,11 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   align-items: stretch;
 
-  padding: 1rem 0;
+  padding: 2rem 0;
   margin-top: 5rem;
 
-  background-color: #00116f;    
-  color: #fafafa;
+  background-color: ${Theme.colors.blue1};    
+  color: ${Theme.colors.defwhite};  
   
   h3 {
     font-weight: 600;
@@ -38,11 +39,6 @@ export const FooterContainer = styled.footer`
       display: flex;
       flex-direction: column;
       gap: 1rem;            
-
-      /*.holder {
-        display: flex;
-        flex-direction: column;
-      }*/
     
       .social-item {
         display: flex;
@@ -50,7 +46,7 @@ export const FooterContainer = styled.footer`
         align-items: center;
         cursor: pointer;
         text-decoration: none;
-        color: #fff;
+        color: ${Theme.colors.defwhite};
 
         width: 100%;
         span {
@@ -109,10 +105,9 @@ export const FooterContainer = styled.footer`
   }
   
   ${media.lessThan("medium")`
-    background: #2b2b2b;
+    background: ${Theme.colors.bgblue};
     flex-direction: column;
     align-items: center;
-    //padding-left: 2rem;
     gap: 1rem;
 
     .contact {

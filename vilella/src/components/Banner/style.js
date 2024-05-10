@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from "styled-media-query"
+import Theme from '../../styles/theme'
 
 export const BannerContainer = styled.section`
   margin-bottom: 5rem;
@@ -34,7 +35,7 @@ export const BannerContainer = styled.section`
     box-shadow: 0 0 8px rgb(0,0,0,0.2);
 
     h3 {
-      color: #00116f;
+      color: ${Theme.colors.blue1};
     }
   }
 
@@ -51,7 +52,7 @@ export const BannerContainer = styled.section`
       align-items: center;
       
       h3 {
-        color: #ffffff;
+        color: ${Theme.colors.defwhite};
       }
     }
   }
@@ -63,7 +64,7 @@ export const BannerContainer = styled.section`
     box-shadow: 0px 10px 10px rgb(0,0,0,0.5);
     border: none;
 
-    background-color: #00116f;
+    background-color: ${Theme.colors.blue1};
     color: white;
         
     cursor: pointer;
@@ -75,10 +76,10 @@ export const BannerContainer = styled.section`
   }
   button:hover {
     background-color: #93c5ff;
-    color: #00116f;
+    color: ${Theme.colors.blue1};
   }
 
- ${media.lessThan("medium")`
+ ${media.lessThan("large")`
   .carousel-caption {
     display: none;
   }

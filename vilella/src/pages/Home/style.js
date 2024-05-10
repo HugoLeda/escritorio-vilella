@@ -1,5 +1,6 @@
 import styled, { ThemeProvider } from "styled-components";
 import media from "styled-media-query"
+import Theme from "../../styles/theme";
 
 export const Homepage = styled.div `      
   max-width: 100vw;
@@ -26,11 +27,11 @@ export const Homepage = styled.div `
   h1, h2 {
     font-size: 70px;
     font-weight: 600;
-    color: #00116f;
+    color: ${Theme.colors.blue1};
 
     span {
       font-weight: 700;
-      color: #ff0000;
+      color: ${Theme.colors.defred};
     }
 
   }
@@ -47,9 +48,7 @@ export const Homepage = styled.div `
   .presentation-text {
 
     p {
-      margin-top: 1rem;
-      font-size: 22px;
-      line-height: 1.5;      
+      margin-top: 1rem;    
     }
   }
 
@@ -74,9 +73,9 @@ export const Homepage = styled.div `
       }
 
       h3 {
-        color: #000000;
+        color: ${Theme.colors.gray1};
         span {
-          color: #00116f;
+          color: ${Theme.colors.blue1};
           font-weight: 600;
         }
       }
@@ -93,8 +92,8 @@ export const Homepage = styled.div `
         box-shadow: 0 0 8px rgb(0,0,0,0.2);
         border: none;
 
-        background-color: #00116f;
-        color: white;
+        background-color: ${Theme.colors.blue1};
+        color: ${Theme.colors.defwhite};
         
         cursor: pointer;
         transition: ease-out all .3s;
@@ -110,7 +109,7 @@ export const Homepage = styled.div `
     }
 
     button:hover {
-      background-color: #93c5ff;
+      background-color: ${Theme.colors.babyblue};
       color: #00116f;
     }
   }
@@ -126,7 +125,7 @@ export const Homepage = styled.div `
       .title-bigger {
       font-size: 200px;
       font-weight: 500;
-      color: #00116f;
+      color: ${Theme.colors.blue1};
       }
     }
     
@@ -136,6 +135,8 @@ export const Homepage = styled.div `
     }
 
     .history-numbers {
+      display: flex;
+      flex-direction: column;
       text-transform: uppercase;
       justify-content: flex-end;
       align-items: center;
@@ -145,7 +146,7 @@ export const Homepage = styled.div `
       span {
         font-size: 100px;
         font-weight: 700;
-        color: #759dcc;
+        color: ${Theme.colors.blue3};
       }
 
       p {
@@ -212,7 +213,7 @@ export const Homepage = styled.div `
         line-height: 2rem;
 
         text-decoration: none;
-        color: #000;        
+        color: ${Theme.colors.gray1};
 
         .item {
           display: flex;
@@ -245,9 +246,9 @@ export const Homepage = styled.div `
       transform: scale(1.1);
     }
   }
+  
+  ${media.lessThan("large")` //has to be defined first 
 
-  ${media.lessThan("medium")`
-    
   .media-flex {
     flex-direction: column;
   }
@@ -255,7 +256,9 @@ export const Homepage = styled.div `
   h1,h2 {
     font-size: 66px;
   }
+
   .history {
+    flex-direction: column;
     gap: 2rem;
     h2 {
       .title-bigger {
@@ -265,11 +268,26 @@ export const Homepage = styled.div `
         font-size: 66px;
       }
     }
+  .history-numbers {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
   }
+  
+  }
+    .solution-icons {
+      flex-direction: column;
+    }
 
-  .place {
+  .place-contact {
     align-items: center;
     gap: 1rem;
   }
+
+  `}
+
+  ${media.lessThan("medium")`
+  
   `}
 `

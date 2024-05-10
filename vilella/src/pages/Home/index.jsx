@@ -44,19 +44,21 @@ export default function Home() {
             <div className="history-text-paragraph">
               <p>Com anos de mercado, nossa experiência nos capacita a fornecer soluções 
               personalizadas para empresas de todos os portes e setores.</p>
-              <br/>
+              
               <p>Trabalhamos para garantir que nossos clientes estejam sempre em conformidade
               com todas as leis e regulamentos aplicáveis.</p>
             </div>
           </div>
-          <div className="history-numbers flex-column">
-              <div>
+          <div className="history-numbers">
+              <div className="company">
                 <span>+400</span>
                 <p>Empresas Atendidas</p>
+              </div>
+              <div className="clients">
                 <span>+1000</span>
                 <p>Clientes Atendidos</p>
               </div>
-            </div>
+          </div>
         </div>
         <div className="solution-icons flex media-flex">
           <div className="solution-icon transition flex-column">
@@ -82,7 +84,7 @@ export default function Home() {
           </div>
         </div>  
         <div className="general-contact">
-          <div className="place flex media-flex">
+          <div className="place-contact flex media-flex">
             <div className="find-us">
               <h2>Entre em <span>contato</span></h2>
               <h4>Onde nos encontrar:</h4>
