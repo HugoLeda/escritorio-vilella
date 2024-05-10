@@ -39,12 +39,12 @@ export default function Footer() {
         <h3>Nossos Serviços</h3>
         <ul>
           <a>Certificadora</a>
-          <a>Soluções Contábeis</a>
-          <a>Soluções Fiscais</a>
-          <a>Pessoa Física</a>
           <a>Empresarial</a>
           <a>MEI</a>
+          <a>Pessoa Física</a>
           <a>Rural</a>
+          <a>Soluções Contábeis</a>
+          <a>Soluções Fiscais</a>
         </ul>
       </div>
       <div className="client flex">

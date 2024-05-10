@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import media from "styled-media-query"
 
 export const Homepage = styled.div `      
   max-width: 100vw;
@@ -122,7 +123,7 @@ export const Homepage = styled.div `
       align-items: center;
       gap: 1rem;
       
-      .history-title-bigger {
+      .title-bigger {
       font-size: 200px;
       font-weight: 500;
       color: #00116f;
@@ -244,4 +245,31 @@ export const Homepage = styled.div `
       transform: scale(1.1);
     }
   }
+
+  ${media.lessThan("medium")`
+    
+  .media-flex {
+    flex-direction: column;
+  }
+
+  h1,h2 {
+    font-size: 66px;
+  }
+  .history {
+    gap: 2rem;
+    h2 {
+      .title-bigger {
+        font-size: 180px;
+      }
+      .title-shorter {
+        font-size: 66px;
+      }
+    }
+  }
+
+  .place {
+    align-items: center;
+    gap: 1rem;
+  }
+  `}
 `

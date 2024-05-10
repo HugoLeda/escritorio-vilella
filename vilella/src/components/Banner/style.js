@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from "styled-media-query"
 
 export const BannerContainer = styled.section`
   margin-bottom: 5rem;
@@ -76,5 +77,10 @@ export const BannerContainer = styled.section`
     background-color: #93c5ff;
     color: #00116f;
   }
-    
+
+ ${media.lessThan("medium")`
+  .carousel-caption {
+    display: none;
+  }
+ `}   
 `
