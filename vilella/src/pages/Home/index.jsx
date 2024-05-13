@@ -17,7 +17,7 @@ export default function Home() {
             Nossa equipe de profissionais altamente qualificados nas áreas contábil, fiscal e trabalhista 
             esta pronta para oferecer acessória de excelência e suporte dedicado e soluções sob medida para a sua empresa em todos ramos de atividades.</p>
         </div>
-        <div className="bsc-boxes flex media-flex">
+        <div className="bsc-boxes flex mobile">
           <div className="bsc-boxes-vision flex-column transition">
             <div className="img">
               <img src="src\assets\letterE.png" alt="Empresarial"/>
@@ -35,11 +35,11 @@ export default function Home() {
             <button>Saiba Mais</button>
           </div>
         </div>
-        <div className="history flex media-flex">
+        <div className="history flex mobile">
           <div class="history-content flex-column">
             <h2>
               <span className="title-bigger">30</span>
-              <span className="title-shorter">anos de excelência</span>
+              <span className="title-shorter">anos de <br/>excelência</span>
             </h2>
             <div className="history-text-paragraph">
               <p>Com anos de mercado, nossa experiência nos capacita a fornecer soluções 
@@ -60,7 +60,7 @@ export default function Home() {
               </div>
           </div>
         </div>
-        <div className="solution-icons flex media-flex">
+        <div className="solution-icons flex mobile">
           <div className="solution-icon transition flex-column">
             <div>
               <img src="src\assets\metersSpeed.png" alt="Speed"/>
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
         </div>  
         <div className="general-contact">
-          <div className="place-contact flex media-flex">
+          <div className="place-contact flex mobile">
             <div className="find-us">
               <h2>Entre em <span>contato</span></h2>
               <h4>Onde nos encontrar:</h4>

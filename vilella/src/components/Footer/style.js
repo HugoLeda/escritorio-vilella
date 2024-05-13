@@ -105,7 +105,7 @@ export const FooterContainer = styled.footer`
   }
   
   ${media.lessThan("medium")`
-    background: ${Theme.colors.bgblue};
+    background: ${Theme.colors.blue1};
     flex-direction: column;
     align-items: center;
     gap: 1rem;

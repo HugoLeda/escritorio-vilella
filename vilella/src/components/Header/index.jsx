@@ -1,26 +1,35 @@
+import { useState } from 'react';
 import { HeaderContainer } from './style';
 
 export default function Header() {
+  const [classOn, setClassOn] = useState(false);
   return (
-    <HeaderContainer>
-      <div className="header">
+    <HeaderContainer>              
         <div className="header-logo">
           <a href="#">
             <img className="img" src="src\assets\logoVilella.png" alt="Vilella"/>
           </a>
         </div>
-        <div className="menu">
-          <div className="align-menu">
-            <a href="#">Home</a>
-            <a href="#">Sobre</a>
-            <a href="#">Serviços</a>
-            <a href="#">Equipe</a>
-            <a href="#">LGPD</a>
-            <a href="#">Contato</a>
-            <a href="#">Portal do Cliente</a>
-            </div>
+
+        <div className = { classOn ? 'menu-section on' : 'menu-section'} onClick={() => setClassOn(!classOn)}>
+          <div className="menu-toggle">
+            <div className="one"></div>
+            <div className="two"></div>
+            <div className="three"></div>
+          </div>
         </div>
-      </div>
+
+        <nav>
+          <ul className="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Equipe</a></li>
+            <li><a href="#">LGPD</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Portal do Cliente</a></li>
+          </ul>  
+        </nav>                                
     </HeaderContainer>
   )
 }

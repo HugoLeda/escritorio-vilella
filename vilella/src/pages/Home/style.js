@@ -1,5 +1,5 @@
 import styled, { ThemeProvider } from "styled-components";
-import media from "styled-media-query"
+import media from "styled-media-query";
 import Theme from "../../styles/theme";
 
 export const Homepage = styled.div `      
@@ -199,57 +199,59 @@ export const Homepage = styled.div `
   }
 
   .general-contact {
-    justify-content: space-between;
-    gap: 5rem;
+    .place-contact {
+      justify-content: space-around;
+      gap: 2rem;
 
-    .find-us {           
+      .find-us {           
 
-      .social-item {
-        display: flex;   
-        align-items: center;        
-        gap: .5rem;      
+        .social-item {
+          display: flex;   
+          align-items: center;        
+          gap: .5rem;      
 
+          font-size: 24px;
+          line-height: 2rem;
+
+          text-decoration: none;
+          color: ${Theme.colors.gray1};
+
+          .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+          }
+
+          span:nth-child(2) {
+            width: 70%;
+          }
+        }
+
+        h4 {
         font-size: 24px;
-        line-height: 2rem;
-
-        text-decoration: none;
-        color: ${Theme.colors.gray1};
-
-        .item {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 40px;
-          height: 40px;
-        }
-
-        span:nth-child(2) {
-          width: 70%;
-        }
+        font-weight: 500;
+      }
+        
+      }
+      
+      .map-address {
+        width: 400px;
+        height: 350px;
+        transition: linear all .3s;  
       }
 
-      h4 {
-      font-size: 24px;
-      font-weight: 500;
-    }
-      
-    }
-    
-    .map-address {
-      width: 400px;
-      height: 350px;
-      transition: linear all .3s;      
-    }
-
-    .map-address:hover {
-      box-shadow: 0 0 8px rgb(0,0,0,0.4);
-      transform: scale(1.1);
+      .map-address:hover {
+        box-shadow: 0 0 8px rgb(0,0,0,0.4);
+        transform: scale(1.1);
+      }
     }
   }
   
   ${media.lessThan("large")` //has to be defined first 
 
-  .media-flex {
+  .mobile {
     flex-direction: column;
   }
 
@@ -268,26 +270,64 @@ export const Homepage = styled.div `
         font-size: 66px;
       }
     }
-  .history-numbers {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 2rem;
-  }
+    .history-numbers {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      gap: 2rem;
+    }
   
   }
-    .solution-icons {
-      flex-direction: column;
-    }
+  
+  .solution-icons {
+    flex-direction: column;
+  }
 
   .place-contact {
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   `}
 
   ${media.lessThan("medium")`
+  
+  
+  .history {
+    .history-numbers {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  .social-item {
+    span {
+      font-size: 20px;
+    }
+  }
+
+
+  h1,h2 {
+    font-size: 44px;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  h2 {
+    
+    span {
+      .title-bigger {font-size: 100px;}
+      .title-shorter {font-size: 44px;}
+    }
+  }
+
+  `}
+
+  ${media.lessThan("small")`
+  
   
   `}
 `
