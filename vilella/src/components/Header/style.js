@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import media from "styled-media-query";
+import Theme from '../../styles/theme';
 
 export const HeaderContainer = styled.header`
   
@@ -62,11 +63,10 @@ export const HeaderContainer = styled.header`
 
   ${media.lessThan("large")`
 
-  padding: 1.2rem 2.5rem;
+    padding: 0.25rem 1rem;    
 
     nav {
-      display: none;
-      background-color: aqua;
+      display: none;      
     }
 
     .menu-section {
@@ -75,18 +75,18 @@ export const HeaderContainer = styled.header`
 
     .menu-toggle{
       width: 40px;
-      height: 30px;
-      margin-right: 20px;
+      height: 30px;      
     }
     
     .one,
     .two,
     .three {
-      background-color:#000;
-      height: 5px;
+      background-color: ${Theme.colors.gray1};
+      height: .25rem;
       width: 100%;
-      margin: 6px auto;
+      margin: 6px 0;
       transition-duration: 0.3s;
+      border-radius: 3px;
     }
   `}
 `

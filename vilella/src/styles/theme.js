@@ -18,6 +18,10 @@ const Theme = {
     red1: '#cc0000',
     red2: '#ff3333',
   },
+  textSize: {
+
+  }
+
 };
 
 export default Theme;

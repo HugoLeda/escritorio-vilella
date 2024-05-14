@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 import Theme from '../../styles/theme'
 
 export const FooterContainer = styled.footer`    
-  
+
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -105,45 +105,42 @@ export const FooterContainer = styled.footer`
   }
   
   ${media.lessThan("medium")`
-  flex-direction: column;
-  align-items: center;
-  //align-items: flex-start;
-  gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    //align-items: flex-start;
+    gap: 1rem;
 
-  .contact {
-    align-items: flex-start;
-  
-    .socials {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
+    .contact {
+      align-items: flex-start;
+    
+      .socials {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+      }
+    
     }
-  
-  }
-  .services {
-    align-items: flex-start;
-  
-    ul {
-      columns: 2;
-      gap: 2rem;
+    .services {
+      align-items: flex-start;
+    
+      ul {
+        columns: 2;
+        gap: 2rem;
+      }
     }
-  }
-  
   `}
 
   ${media.lessThan("small")`
-  align-items: flex-start;
-  padding: 2rem;
+    align-items: flex-start;
+    padding: 2rem;
 
-  .contact {
-    padding-bottom: 1rem;
-    .socials {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-  }
-
-  
-  `}
+    .contact {
+      padding-bottom: 1rem;
+      .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }  
+  `}  
 `
