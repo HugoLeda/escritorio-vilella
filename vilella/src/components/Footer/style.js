@@ -105,29 +105,44 @@ export const FooterContainer = styled.footer`
   }
   
   ${media.lessThan("medium")`
-    background: ${Theme.colors.blue1};
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
-    .contact {
-      align-items: flex-start;
-    
-      .socials {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-      }
-    
+  .contact {
+    align-items: flex-start;
+  
+    .socials {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
     }
-    .services {
-      align-items: flex-start;
-    
-      ul {
-        columns: 2;
-        gap: 2rem;
-      }
+  
+  }
+  .services {
+    align-items: flex-start;
+  
+    ul {
+      columns: 2;
+      gap: 2rem;
     }
+  }
+  
+  `}
+
+  ${media.lessThan("small")`
+  align-items: flex-start;
+  padding: 2rem;
+
+  .contact {
+    padding-bottom: 1rem;
+    .socials {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
   
   `}
 `

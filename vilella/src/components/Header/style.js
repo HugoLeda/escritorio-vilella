@@ -60,7 +60,9 @@ export const HeaderContainer = styled.header`
     }    
   }
 
-  ${media.lessThan("medium")`
+  ${media.lessThan("large")`
+
+  padding: 1.2rem 2.5rem;
 
     nav {
       display: none;

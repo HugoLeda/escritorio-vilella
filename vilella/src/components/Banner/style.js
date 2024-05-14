@@ -80,7 +80,8 @@ export const BannerContainer = styled.section`
   }
 
  ${media.lessThan("large")`
-  .carousel-caption {
+ margin-bottom: 2rem;
+ .carousel-caption {
     display: none;
   }
  `}   

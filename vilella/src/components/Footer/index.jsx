@@ -48,11 +48,12 @@ export default function Footer() {
         </ul>
       </div>
       <div className="client flex">
-        <a className="client-access">
+        <a className="client-access" href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">
           <a><img src="src\assets\whiteLogo.png" alt="Vilella"/></a>
           <h3>
             <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Acesso<br/>
-          <span>Portal do Cliente</span></a>
+              <span>Portal do Cliente</span>
+            </a>
           </h3>
         </a>
       </div>
