@@ -107,6 +107,7 @@ export const FooterContainer = styled.footer`
   ${media.lessThan("medium")`
   flex-direction: column;
   align-items: center;
+  //align-items: flex-start;
   gap: 1rem;
 
   .contact {
