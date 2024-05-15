@@ -17,7 +17,7 @@ export default function Home() {
             Nossa equipe de profissionais altamente qualificados nas áreas contábil, fiscal e trabalhista 
             esta pronta para oferecer acessória de excelência e suporte dedicado e soluções sob medida para a sua empresa em todos ramos de atividades.</p>
         </div>
-        <div className="bsc-boxes flex mobile">
+        <div className="bsc-boxes flex">
           <div className="bsc-boxes-vision flex-column transition">
             <div className="img">
               <img src="src\assets\letterE.png" alt="Empresarial"/>

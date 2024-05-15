@@ -12,7 +12,7 @@ export const FooterContainer = styled.footer`
   margin-top: 5rem;
 
   background-color: ${Theme.colors.blue1};    
-  color: ${Theme.colors.defwhite};  
+  color: ${Theme.colors.white};  
   
   h3 {
     font-weight: 600;
@@ -46,7 +46,7 @@ export const FooterContainer = styled.footer`
         align-items: center;
         cursor: pointer;
         text-decoration: none;
-        color: ${Theme.colors.defwhite};
+        color: ${Theme.colors.white};
 
         width: 100%;
         span {
@@ -107,7 +107,6 @@ export const FooterContainer = styled.footer`
   ${media.lessThan("medium")`
     flex-direction: column;
     align-items: center;
-    //align-items: flex-start;
     gap: 1rem;
 
     .contact {
@@ -130,8 +129,23 @@ export const FooterContainer = styled.footer`
     }
   `}
 
+    @media (max-width: 726px) {
+      align-items: center;
+      padding: 2rem;
+
+    .contact {
+      padding-bottom: 1rem;
+      .socials {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }  
+
+    }
+
   ${media.lessThan("small")`
-    align-items: flex-start;
+    align-items: center;
     padding: 2rem;
 
     .contact {
@@ -142,5 +156,14 @@ export const FooterContainer = styled.footer`
         gap: 1rem;
       }
     }  
+
+    .services {
+      align-items: flex-start;
+    
+      ul {
+        columns: 1;
+        gap: 2rem;
+      }
+    }
   `}  
 `

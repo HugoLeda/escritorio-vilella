@@ -25,23 +25,23 @@ export const Homepage = styled.div `
   }
 
   h1, h2 {
-    font-size: 70px;
+    font-size: ${Theme.textSize.titleLg};
     font-weight: 600;
     color: ${Theme.colors.blue1};
 
     span {
       font-weight: 700;
-      color: ${Theme.colors.defred};
+      color: ${Theme.colors.red};
     }
 
   }
   
   h3 {
-    font-size: 40px;
+    font-size: ${Theme.textSize.titleMd};
   }
   
   p {
-      font-size: 22px;
+      font-size: ${Theme.textSize.textLg};
       line-height: 1.5;
     }
 
@@ -81,7 +81,7 @@ export const Homepage = styled.div `
       }
 
       p {
-        font-size: 20px;
+        font-size: ${Theme.textSize.textMd};
         font-weight: 400;
       }
 
@@ -93,7 +93,7 @@ export const Homepage = styled.div `
         border: none;
 
         background-color: ${Theme.colors.blue1};
-        color: ${Theme.colors.defwhite};
+        color: ${Theme.colors.white};
         
         cursor: pointer;
         transition: ease-out all .3s;
@@ -109,14 +109,13 @@ export const Homepage = styled.div `
     }
 
     button:hover {
-      background-color: ${Theme.colors.babyblue};
-      color: #00116f;
+      background-color: ${Theme.colors.babyBlue};
+      color: ${Theme.colors.blue1};
     }
   }
 
   .history {
     gap: 5rem;
-
 
     h2 {
       display: flex;
@@ -125,7 +124,7 @@ export const Homepage = styled.div `
       gap: 1rem;
 
       .title-bigger {
-      font-size: 200px;
+      font-size: ${Theme.textSize.titleXlg};
       font-weight: 500;
       color: ${Theme.colors.blue1};
       
@@ -134,7 +133,7 @@ export const Homepage = styled.div `
     
     .history-text-paragraph {
       align-content: flex-start;
-      font-size: 22px;
+      font-size: ${Theme.textSize.textLg};
     }
 
     .history-numbers {
@@ -147,7 +146,7 @@ export const Homepage = styled.div `
       text-align: center;
 
       span {
-        font-size: 100px;
+        font-size: ${Theme.textSize.textNum};
         font-weight: 700;
         color: ${Theme.colors.blue3};
       }
@@ -191,12 +190,12 @@ export const Homepage = styled.div `
     }
 
     h3 {
-      font-size: 24px;
+      font-size: ${Theme.textSize.titleSm};
       font-weight: 500;
     }
 
     p {
-      font-size: 18px;  
+      font-size: ${Theme.textSize.textSm};  
     }
   }
 
@@ -212,7 +211,7 @@ export const Homepage = styled.div `
           align-items: center;        
           gap: .5rem;      
 
-          font-size: 24px;
+          font-size: ${Theme.textSize.textMd};
           line-height: 2rem;
 
           text-decoration: none;
@@ -232,7 +231,7 @@ export const Homepage = styled.div `
         }
 
         h4 {
-        font-size: 24px;
+        font-size: ${Theme.textSize.textLg};
         font-weight: 500;
       }
         
@@ -251,52 +250,80 @@ export const Homepage = styled.div `
     }
   }
   
-  ${media.lessThan("large")` //has to be defined first 
+  ${media.lessThan("large")`
 
-  .mobile {
-    flex-direction: column;
-  }
+    .mobile {
+      flex-direction: column;
+    }
 
-  h1,h2 {
-    font-size: 66px;
-  }
+    h1,h2 {
+      //font-size: 66px;
+    }
 
-  .history {
-    flex-direction: column;
-    gap: 2rem;
-    h2 {
-      .title-bigger {
-        font-size: 180px;
-      }
-      .title-shorter {
-        font-size: 66px;
+    .bsc-boxes {
+      flex-direction: row;
+      .bsc-boxes-vision,
+      .bsc-boxes-values {
+        width: 400px;
+        height: 400px;
+        border-radius: 3px;
+        box-shadow: 0 0 8px rgb(0,0,0,0.2);
+
+        text-align: center;
+
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 220px;
+          height: auto;
+        }
       }
     }
-    .history-numbers {
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
+
+    .history {
+      flex-direction: column;
+      gap: 2rem;
+      h2 {
+        .title-bigger {
+          //font-size: 180px;
+        }
+        .title-shorter {
+          //font-size: 66px;
+        }
+      }
+      .history-numbers {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 2rem;
+      }
+    }
+    
+    .solution-icons {
+      flex-direction: column;
+    }
+
+    .place-contact {
+      align-items: center;
       gap: 2rem;
     }
-  
-  }
-  
-  .solution-icons {
-    flex-direction: column;
-  }
-
-  .place-contact {
-    align-items: center;
-    gap: 2rem;
-  }
 
   `}
 
+  @media (max-width: 980px) {
+    .bsc-boxes {
+      flex-direction: column;
+    }
+    
+  
+  }
+
   ${media.lessThan("medium")`
   
-  h1,h2 { font-size: 44px; }
-  h3 { font-size: 38px; }
-  p { font-size: 20px; }
+  //h1,h2 { font-size: 44px; }
+  //h3 { font-size: 38px; }
+  //p { font-size: 20px; }
 
   .bsc-boxes {
     justify-content: center;

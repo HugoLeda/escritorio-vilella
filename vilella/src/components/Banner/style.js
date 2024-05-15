@@ -75,7 +75,7 @@ export const BannerContainer = styled.section`
 
   }
   button:hover {
-    background-color: #93c5ff;
+    background-color: ${Theme.colors.babyblue};
     color: ${Theme.colors.blue1};
   }
 

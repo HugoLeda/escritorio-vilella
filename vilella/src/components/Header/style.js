@@ -9,8 +9,8 @@ export const HeaderContainer = styled.header`
   align-items: center;
   padding: 1.2rem 3rem;
 
-  background-color: #ffffff;
-  color: #2b2b2b;
+  background-color: ${Theme.colors.white};
+  color: ${Theme.colors.gray1};
 
   position: sticky;     
   top: 0;   
@@ -53,7 +53,7 @@ export const HeaderContainer = styled.header`
 
     a:hover {
       font-weight: 700;
-      color: #00116f; 
+      color: ${Theme.colors.blue1}; 
     }
 
     .menu-section {
