@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { HeaderContainer } from './style';
 
-export default function Header() {
-  const [classOn, setClassOn] = useState(false);
+export default function Header() {  
+  const [classOn, setClassOn] = useState(false);  
   return (
     <HeaderContainer>              
         <div className="header-logo">

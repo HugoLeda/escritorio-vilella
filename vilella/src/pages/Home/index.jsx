@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import { MdLocationOn, MdOutlineWhatsapp, MdLocalPhone, MdMail, MdImportExport } from "react-icons/md";
 import { Homepage } from "./style";
 
-export default function Home() {
+export default function Home() {  
   return(
     <>
       <Header/>

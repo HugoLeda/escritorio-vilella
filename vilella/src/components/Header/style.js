@@ -47,12 +47,17 @@ export const HeaderContainer = styled.header`
 
       color: inherit;
       font-family: arial;
-      font-size: ${Theme.textSize.textSm};
+      font-size: ${Theme.textSize.textXSm};
       font-weight: 500;
 
       transition: linear all .2s;      
 
-      padding-top: 10px;
+      padding-top: 16px;
+    }
+
+    .active {
+      font-weight: 700;
+      color: ${Theme.colors.blue1};
     }
 
     a:hover {
