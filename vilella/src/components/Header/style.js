@@ -23,7 +23,7 @@ export const HeaderContainer = styled.header`
   .header-logo {
     .img {
       width: 200px;
-      height: auto;
+      height: auto;      
     }
   }
 
@@ -167,6 +167,7 @@ export const HeaderContainer = styled.header`
       margin: 6px 0;
       transition-duration: 0.3s;
       border-radius: 3px;
+      transition: linear all .2s;
     }
   `}
 `
