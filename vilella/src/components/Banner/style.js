@@ -7,11 +7,11 @@ export const BannerContainer = styled.section`
   max-width: 1000vw;
 
   h3 {
-      font-size: 60px;
+      font-size: ${Theme.textSize.titleLg};
       font-weight: 600;
     }
     p {
-      font-size: 24px;
+      font-size: ${Theme.textSize.textLg};
       font-weight: 500;
     }
 
@@ -70,7 +70,7 @@ export const BannerContainer = styled.section`
     cursor: pointer;
     transition: ease-out all .3s;
 
-    font-size: 18px;
+    font-size: ${Theme.textSize.textSm};
     font-weight: 700;
 
   }

@@ -17,9 +17,21 @@ export default function Header() {
             <div className="two"></div>
             <div className="three"></div>
           </div>
+
+          <nav className= { classOn ? 'menu-mobile on' : 'menu-mobile'} onClick={() => setClassOn(!classOn)}>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Serviços</a></li>
+              <li><a href="#">Equipe</a></li>
+              <li><a href="#">LGPD</a></li>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Portal do Cliente</a></li>
+            </ul>  
+          </nav>
         </div>
 
-        <nav>
+        <nav className="menu-desk">
           <ul className="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">Sobre</a></li>

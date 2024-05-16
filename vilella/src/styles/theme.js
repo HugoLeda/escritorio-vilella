@@ -22,6 +22,7 @@ const Theme = {
   textSize: {
 
     ///font-size guide for desktop
+    titleXSm: '1.375rem',    //      22px  //  h3 footer
     titleSm: '1.5rem',    //      24px    //   .solution-icons
     titleMd: '2rem',       //     32px    //   .bsc-boxes
     titleLg: '4rem',       //     64px    //   .presentation & .general-contact
@@ -39,7 +40,7 @@ const Theme = {
     titleMobileNum: '6.25rem',   // 100px '30 anos'
 
 
-    textMobileSm: '5rem', // ~17px
+    textMobileSm: '1.1rem', // ~17px
     textMobileMd: '1.25rem', // 20px 
     textMobileLg: '1.375rem', // 22px
     textMobileNum: '5rem', // 80px

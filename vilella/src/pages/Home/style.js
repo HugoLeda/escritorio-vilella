@@ -29,8 +29,8 @@ export const Homepage = styled.div `
   }
   
   p {
-      font-size: ${Theme.textSize.textLg};
-      line-height: 1.5;
+    font-size: ${Theme.textSize.textLg};
+    line-height: 1.5;
   }
 
   //flexbox helper
@@ -155,6 +155,7 @@ export const Homepage = styled.div `
       }
 
       p {
+        font-size: ${Theme.textSize.textLg};
         font-weight: 600;
       }
     }
@@ -203,8 +204,9 @@ export const Homepage = styled.div `
   }
 
   .general-contact {
+    width: 100%;
     .place-contact {
-      justify-content: space-around;
+      justify-content: space-between;
       gap: 2rem;
 
       .find-us {        
@@ -225,6 +227,10 @@ export const Homepage = styled.div `
             align-items: center;
             width: 40px;
             height: 40px;
+          }
+
+          span {
+            font-size: ${Theme.textSize.textLg};
           }
 
           span:nth-child(2) {
@@ -331,18 +337,16 @@ export const Homepage = styled.div `
     }
     
     .history {
+
       .history-numbers {
         display: flex;
         justify-content: center;
         flex-direction: column;
         
         gap: 1rem;
+        span { font-size: ${Theme.textSize.textMobileNum}; }
+        p { font-size: ${Theme.textSize.textMobileSm}; }
       }
-    }
-
-    .social-item {
-      span { font-size: ${Theme.textSize}; }
-      p { font-size: ${Theme.textSize}; }
     }
 
   `}
@@ -412,31 +416,18 @@ export const Homepage = styled.div `
     .general-contact {
       
       .place-contact {
-        .find-us {           
+        .find-us { 
+          h2 { font-size: ${Theme.textSize.titleMobileLg}; }
+          h4 { font-size: ${Theme.textSize.textLMobileg}; }
+          p { font-size: ${Theme.textSize.textMobileMd}; }
           .social-item {
             display: flex;   
-            align-items: center;        
-            gap: .5rem;      
-
-            font-size: 24px;
+            align-items: center;   
             line-height: 2rem;
 
-            .item {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 40px;
-              height: 40px;
-            }
-
-            span:nth-child(2) {
-              width: 70%;
-            }
+            span { font-size: ${Theme.textSize.textMobileLg}; }
           }
         }
-
-        h4 { font-size: ${Theme.textSize.titleSm}; }
-        p { font-size: ${Theme.textSize.textMobileMd}; }
 
         .map-address {
           width: 320px;

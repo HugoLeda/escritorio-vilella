@@ -16,7 +16,7 @@ export const FooterContainer = styled.footer`
   
   h3 {
     font-weight: 600;
-    font-size: 22px;
+    font-size: ${Theme.textSize.titleXSm};
   }
 
   .contact,
@@ -50,7 +50,7 @@ export const FooterContainer = styled.footer`
 
         width: 100%;
         span {
-          font-size: 18px;
+          font-size: ${Theme.textSize.textSm};
         }
 
         .item {
@@ -68,7 +68,7 @@ export const FooterContainer = styled.footer`
     justify-content: flex-start;
 
     ul {
-      font-size: 20px;
+      font-size: ${Theme.textSize.textMd};
       list-style-type: none;
       padding: 0;
     }
@@ -87,12 +87,12 @@ export const FooterContainer = styled.footer`
       color: inherit;
     }
     h3 {
-      font-size: 1.2rem;
+      font-size: ${Theme.titleXSm};
       cursor: pointer;
       text-transform: uppercase;
     }
     span {
-      font-size: 1.5rem;
+      font-size: ${Theme.textSize.textLg};
     }
     .img {
       width: auto;
