@@ -91,16 +91,24 @@ export const HeaderContainer = styled.header`
 
       padding: 1rem 1rem 0 0;
 
-      .menu-toggle {                        
+      .menu-toggle {    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;        
+
+        height: auto;
+        padding-top: 10px;
+        
         .one {                  
           transform: rotate(45deg);  
         }
         
         .two {
-          opacity: 0;
+          display: none;
         }
 
         .three {
+          margin-top: -10px;
           transform: rotate(-45deg);
         }
       }
