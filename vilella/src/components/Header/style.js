@@ -91,24 +91,16 @@ export const HeaderContainer = styled.header`
 
       padding: 1rem 1rem 0 0;
 
-      .menu-toggle {    
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;        
-
-        height: auto;
-        padding-top: 10px;
-        
+      .menu-toggle {                        
         .one {                  
           transform: rotate(45deg);  
         }
         
         .two {
-          display: none;
+          opacity: 0;
         }
 
         .three {
-          margin-top: -10px;
           transform: rotate(-45deg);
         }
       }
@@ -130,7 +122,7 @@ export const HeaderContainer = styled.header`
       
       a {
         display: block;
-        padding: .8rem 0; /* Ajuste o preenchimento conforme necessário */
+        padding: .8rem 0;
         position: relative;
 
         cursor: pointer;
@@ -158,7 +150,6 @@ export const HeaderContainer = styled.header`
         height: 1px; 
         background-color: rgba(43, 43, 43, 0.2); /* Cor da linha com transparência */
       }
-
     }  
     }
 
