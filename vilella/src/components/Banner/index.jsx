@@ -10,7 +10,7 @@ export default function Banner() {
           <Carousel.Item interval={120000}>
             <img
               className="cover-img" 
-              src="src/assets/homeCover.jpeg" alt="cover-I"
+              src="src/assets/homeCover.webP" alt="cover-I"
             />
           <Carousel.Caption className="st-caption">
             <h3>Contabilidade de Confiança</h3>
@@ -21,7 +21,7 @@ export default function Banner() {
           <Carousel.Item interval={120000}>
             <img
               className="cover-img" 
-              src="src/assets/darkBlueBG.png" alt="cover-II"
+              src="src/assets/darkBlueBG.webP" alt="cover-II"
             />
             <Carousel.Caption className="rd-caption">
               <div className="rd-caption-text">

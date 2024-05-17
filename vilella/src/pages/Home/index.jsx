@@ -70,14 +70,14 @@ export default function Home() {
           </div>
           <div className="solution-icon transition flex-column">
             <div>
-              <img src="src\assets\cluster.png" alt="Speed"/>
+              <img src="src\assets\cluster.png" alt="Cluster"/>
             </div>
             <h3>Tecnologia</h3>
             <p>Proporcionar soluções inovadoras para atender às suas necessidades.</p>
           </div>
           <div className="solution-icon transition flex-column">
             <div>
-              <img src="src\assets\shield.png" alt="Speed"/>
+              <img src="src\assets\shield.png" alt="Shield"/>
             </div>
             <h3>Responsabilidade</h3>
             <p>Abordagem proativa para garantir a conformidade com a LGPD.</p>
