@@ -334,6 +334,11 @@ export const Homepage = styled.div `
           height: auto;
         }
       }
+
+      .bsc-boxes-vision:hover,
+      .bsc-boxes-values:hover {
+        transform: scale(1);
+      }
     }
     
     .history {
@@ -347,6 +352,18 @@ export const Homepage = styled.div `
         span { font-size: ${Theme.textSize.textMobileNum}; }
         p { font-size: ${Theme.textSize.textMobileSm}; }
       }
+    }
+
+    .solution-icons {
+      .solution-icon {
+        border-radius: 3px;
+        box-shadow: 0 0 8px rgb(0,0,0,0.2);
+      }
+      .solution-icon:hover {
+        transform: scale(1);
+        border-radius: 3px;
+        box-shadow: 0 0 8px rgb(0,0,0,0.2);
+    }
     }
 
   `}
