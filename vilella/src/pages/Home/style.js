@@ -363,8 +363,21 @@ export const Homepage = styled.div `
         transform: scale(1);
         border-radius: 3px;
         box-shadow: 0 0 8px rgb(0,0,0,0.2);
+      }
     }
+
+
+    .map-address {
+      width: 400px;
+      height: 350px;
+      transition: linear all .3s;
+      box-shadow: 0 0 8px rgb(0,0,0,0.4);
     }
+
+    .map-address:hover {
+      transform: scale(1);
+    }
+
 
   `}
   
