@@ -2,6 +2,8 @@ import  { FooterContainer } from "./style"
 import { MdOutlineWhatsapp, MdLocalPhone, MdMail } from "react-icons/md";
 import { FaInstagram, FaLinkedin } from "react-icons/fa6";
 
+import whiteLogo from '../../assets/whiteLogo.png'
+
 export default function Footer() {
   return (
     <FooterContainer>
@@ -49,7 +51,7 @@ export default function Footer() {
       </div>
       <div className="client flex">
         <a className="client-access" href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">
-          <a><img src="src\assets\whiteLogo.png" alt="Vilella"/></a>
+          <a><img src={whiteLogo} alt="Vilella"/></a>
           <h3>
             <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Acesso<br/>
               <span>Portal do Cliente</span>

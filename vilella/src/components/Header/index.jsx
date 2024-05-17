@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { HeaderContainer } from './style';
 
+import logoVilella from '../../assets/logoVilella.png';
+
 export default function Header() {  
   const [classOn, setClassOn] = useState(false);  
   return (
     <HeaderContainer>              
         <div className="header-logo">
           <a href="#">
-            <img className="img" src="src\assets\logoVilella.png" alt="Vilella"/>
+            <img className="img" src={logoVilella} alt="Vilella"/>
           </a>
         </div>
 

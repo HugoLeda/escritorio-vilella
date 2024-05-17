@@ -2,6 +2,9 @@ import { BannerContainer } from "./style";
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 
+import homeCover from '../../assets/homeCover.webp'
+import darkBlueBG from '../../assets/darkBlueBG.webp'
+
 export default function Banner() {
   return (
     <BannerContainer>
@@ -10,7 +13,7 @@ export default function Banner() {
           <Carousel.Item interval={120000}>
             <img
               className="cover-img" 
-              src="src/assets/homeCover.webP" alt="cover-I"
+              src={homeCover} alt="Foto da fachada do Escritório Vilella"
             />
           <Carousel.Caption className="st-caption">
             <h3>Contabilidade de Confiança</h3>
@@ -21,7 +24,7 @@ export default function Banner() {
           <Carousel.Item interval={120000}>
             <img
               className="cover-img" 
-              src="src/assets/darkBlueBG.webP" alt="cover-II"
+              src={darkBlueBG} alt="cover-II"
             />
             <Carousel.Caption className="rd-caption">
               <div className="rd-caption-text">

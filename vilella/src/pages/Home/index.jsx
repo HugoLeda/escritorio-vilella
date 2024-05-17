@@ -5,6 +5,12 @@ import Header from "../../components/Header";
 import { MdLocationOn, MdOutlineWhatsapp, MdLocalPhone, MdMail, MdImportExport } from "react-icons/md";
 import { Homepage } from "./style";
 
+import letterE from '../../assets/letterE.png';
+import letterV from '../../assets/letterV.png';
+import speed from '../../assets/metersSpeed.png';
+import cluster from '../../assets/cluster.png';
+import shield from '../../assets/shield.png';
+
 export default function Home() {  
   return(
     <>
@@ -20,7 +26,7 @@ export default function Home() {
         <div className="bsc-boxes flex">
           <div className="bsc-boxes-vision flex-column transition">
             <div className="img">
-              <img src="src\assets\letterE.png" alt="Empresarial"/>
+              <img src={letterE} alt="Empresarial"/>
             </div>
             <h3>Visão <span>Empresarial</span></h3>
             <p>Reconhecimento em soluções contábeis.</p>
@@ -28,7 +34,7 @@ export default function Home() {
           </div>
           <div className="bsc-boxes-values flex-column transition">
             <div className="img">
-              <img src="src\assets\letterV.png" alt="Valores"/>
+              <img src={letterV} alt="Valores"/>
             </div>
             <h3>Nossos <span>Valores</span></h3>
             <p>Transparência, Integridade e Responsabilidade.</p>
@@ -63,21 +69,21 @@ export default function Home() {
         <div className="solution-icons flex mobile">
           <div className="solution-icon transition flex-column">
             <div>
-              <img src="src\assets\metersSpeed.png" alt="Speed"/>
+              <img src={speed} alt="speed"/>
             </div>
             <h3>Otimização</h3>
             <p>Aprimorar cada aspecto do seu negócio para alcançar a máxima eficiência.</p>
           </div>
           <div className="solution-icon transition flex-column">
             <div>
-              <img src="src\assets\cluster.png" alt="Cluster"/>
+              <img src={cluster} alt="Cluster"/>
             </div>
             <h3>Tecnologia</h3>
             <p>Proporcionar soluções inovadoras para atender às suas necessidades.</p>
           </div>
           <div className="solution-icon transition flex-column">
             <div>
-              <img src="src\assets\shield.png" alt="Shield"/>
+              <img src={shield} alt="Shield"/>
             </div>
             <h3>Responsabilidade</h3>
             <p>Abordagem proativa para garantir a conformidade com a LGPD.</p>
