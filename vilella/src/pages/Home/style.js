@@ -13,6 +13,7 @@ export const Homepage = styled.div `
   gap: 5rem; 
 
   h1, h2 {
+    user-select: none;
     font-size: ${Theme.textSize.titleLg};
     font-weight: 600;
     color: ${Theme.colors.blue1};
@@ -21,7 +22,6 @@ export const Homepage = styled.div `
       font-weight: 700;
       color: ${Theme.colors.red};
     }
-
   }
   
   h3 {
@@ -49,12 +49,15 @@ export const Homepage = styled.div `
   }
 
   //main divs content
-  .presentation-text {
-    p { margin-top: 1rem; }
+  .presentation {
+    p {
+      margin-top: 1rem;
+    }
   }
 
   .bsc-boxes {
     justify-content: center;
+    user-select: none;
     gap: 3rem;
     
     .bsc-boxes-vision,
@@ -147,6 +150,7 @@ export const Homepage = styled.div `
       align-items: center;
 
       text-align: center;
+      user-select: none;
 
       span {
         font-size: ${Theme.textSize.textNum};
@@ -161,12 +165,13 @@ export const Homepage = styled.div `
     }
   }
 
-  .solution-icons {
+  .solutions {
     justify-content: center;
     align-items: flex-end;
     gap: 3rem;
 
     text-align: center;
+    user-select: none;
 
     .solution-icon {
       width: 350px;
@@ -185,12 +190,13 @@ export const Homepage = styled.div `
         width: 175px;
         height: 100px;        
       }      
-    }
-
-    .solution-icon:hover {
-      transform: scale(1.2);
-      border-radius: 3px;
-      box-shadow: 0 0 8px rgb(0,0,0,0.2);
+    
+      &:hover {
+        transform: scale(1.2);
+        border-radius: 3px;
+        box-shadow: 0 0 8px rgb(0,0,0,0.2);
+    
+      }
     }
 
     h3 {
@@ -203,53 +209,53 @@ export const Homepage = styled.div `
     }
   }
 
-  .general-contact {
+  .contact {
     width: 100%;
-    .place-contact {
-      justify-content: space-between;
-      gap: 2rem;
+    justify-content: space-between;
+    gap: 2rem;
 
-      .find-us {        
-        .social-item {
-          display: flex;   
-          align-items: center;        
-          gap: .5rem;      
+    .find-us {        
+      .social-item {
+        display: flex;   
+        align-items: center;        
+        gap: .5rem;      
 
-          font-size: ${Theme.textSize.textLg};
-          line-height: 2rem;
+        font-size: ${Theme.textSize.textLg};
+        line-height: 2rem;
 
-          text-decoration: none;
-          color: ${Theme.colors.gray1};
+        text-decoration: none;
+        color: ${Theme.colors.gray1};
 
-          .item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-          }
-
-          span {
-            font-size: ${Theme.textSize.textLg};
-          }
-
-          span:nth-child(2) {
-            width: 70%;
-          }
+        .item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
         }
-        
-      }
-      
-      .map-address {
-        width: 400px;
-        height: 350px;
-        transition: linear all .3s;  
-      }
 
-      .map-address:hover {
-        box-shadow: 0 0 8px rgb(0,0,0,0.4);
-        transform: scale(1.1);
+        span {
+          font-size: ${Theme.textSize.textLg};
+        }
+
+        span:nth-child(2) {
+          width: 70%;
+        }
       }
+      .office-hours {
+        margin-top: 1rem;
+      }
+    }
+    
+    .map-address {
+      width: 400px;
+      height: 350px;
+      transition: linear all .3s;  
+    }
+
+    .map-address:hover {
+      box-shadow: 0 0 8px rgb(0,0,0,0.4);
+      transform: scale(1.1);
     }
   }
   
@@ -284,14 +290,7 @@ export const Homepage = styled.div `
     .history {
       flex-direction: column;
       gap: 2rem;
-      h2 {
-        .title-bigger {
-          //font-size: 180px;
-        }
-        .title-shorter {
-          //font-size: 66px;
-        }
-      }
+      
       .history-numbers {
         display: flex;
         justify-content: center;
@@ -300,14 +299,30 @@ export const Homepage = styled.div `
       }
     }
     
-    .solution-icons {
-      flex-direction: column;
+    .solutions {
+      gap: 1rem;
+      .solution-icon:hover {
+        transform: scale(1);
+        box-shadow: none;
+      }
     }
 
-    .place-contact {
+    .contact {
       align-items: center;
       gap: 2rem;
     }
+
+
+    .map-address {
+      width: 400px;
+      height: 350px;
+      box-shadow: 0 0 8px rgb(0,0,0,0.4);
+    }
+
+    .map-address:hover {
+      transform: scale(1);
+    }
+
 
   `}
 
@@ -354,30 +369,38 @@ export const Homepage = styled.div `
       }
     }
 
-    .solution-icons {
+    .solutions {
+      gap: .5rem;
+
       .solution-icon {
-        border-radius: 3px;
-        box-shadow: 0 0 8px rgb(0,0,0,0.2);
+        box-shadow: 0;
+        
+        &:hover {
+          transform: scale(1);
+          border-radius: 0;
+          box-shadow: 0;
+        }
       }
-      .solution-icon:hover {
-        transform: scale(1);
-        border-radius: 3px;
-        box-shadow: 0 0 8px rgb(0,0,0,0.2);
+    }
+
+    .contact {
+      .find-us {
+        .find-title {
+          font-size: ${Theme.textSize.textLg};
+          padding-top: .5rem; 
+        }
+        .social-item {
+          display: flex;   
+          align-items: center;   
+          line-height: 2rem;
+
+          span:nth-child(2) {
+            font-size: ${Theme.textSize.textMobileMd};
+            line-height: 1.5rem;
+          }
+        }
       }
     }
-
-
-    .map-address {
-      width: 400px;
-      height: 350px;
-      transition: linear all .3s;
-      box-shadow: 0 0 8px rgb(0,0,0,0.4);
-    }
-
-    .map-address:hover {
-      transform: scale(1);
-    }
-
 
   `}
   
@@ -424,7 +447,7 @@ export const Homepage = styled.div `
       }
     }
 
-    .solution-icons {
+    .solutions {
       .solution-icon {
         width: 280px;
         height: 280px;
@@ -443,27 +466,32 @@ export const Homepage = styled.div `
       }
     }    
 
-    .general-contact {
-      
-      .place-contact {
-        .find-us { 
-          h2 { font-size: ${Theme.textSize.titleMobileLg}; }
-          h4 { font-size: ${Theme.textSize.textLMobileg}; }
-          p { font-size: ${Theme.textSize.textMobileMd}; }
-          .social-item {
-            display: flex;   
-            align-items: center;   
-            line-height: 2rem;
+    .contact {
+      .find-us { 
+        h2 {
+          font-size: ${Theme.textSize.titleMobileLg}; 
+        }
+        .find-title {
+          font-size: ${Theme.textSize.textLMobileg};
+          padding-top: .5rem; 
+        }
+        p {
+          font-size: ${Theme.textSize.textMobileSm}; 
+        }
+        .social-item {
+          display: flex;   
+          align-items: center;   
+          line-height: 2rem;
 
-            span { font-size: ${Theme.textSize.textMobileLg}; }
+          span:nth-child(2) {
+            font-size: ${Theme.textSize.textMobileSm};
+            line-height: 1.25rem;
           }
         }
+      }
 
-        .map-address {
-          width: 320px;
-          height: 300px;
-          transition: linear all .3s;  
-        }
+      .map-address {
+        width: 320px;
       }
     }
 
@@ -490,5 +518,7 @@ export const Homepage = styled.div `
       }
     }
   }
+
+  //@media (max-width: 600px) {}
 
 `

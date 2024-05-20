@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { HeaderContainer } from './style';
 
 import logoVilella from '../../assets/logoVilella.png';
+import { Link } from 'react-router-dom';
 
-export default function Header() {  
+export default function Header({page}) {  
   const [classOn, setClassOn] = useState(false);  
   return (
     <HeaderContainer>              
@@ -22,26 +23,24 @@ export default function Header() {
 
           <nav className= { classOn ? 'menu-mobile on' : 'menu-mobile'} onClick={() => setClassOn(!classOn)}>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Sobre</a></li>
-              <li><a href="#">Serviços</a></li>
-              <li><a href="#">Equipe</a></li>
-              <li><a href="#">LGPD</a></li>
-              <li><a href="#">Contato</a></li>
-              <li><a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Portal do Cliente</a></li>
+            <li><Link to={"/"}              className={ page == "home"          ? "active" : "" }>Home</Link></li>
+            <li><Link to={"/about"}         className={ page == "about"         ? "active" : "" }>Sobre</Link></li>
+            <li><Link to={"/services"}      className={ page == "services"      ? "active" : "" }>Serviços</Link></li>
+            <li><Link to={"/team"}          className={ page == "team"          ? "active" : "" }>Equipe</Link></li>
+            <li><Link to={"/lgpd"}          className={ page == "lgpd"          ? "active" : "" }>LGPD</Link></li>
+            <li><Link to={"/client-center"} className={ page == "client-center" ? "active" : "" }>Portal do cliente</Link></li>            
             </ul>  
           </nav>
         </div>
 
         <nav className="menu-desk">
           <ul className="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Equipe</a></li>
-            <li><a href="#">LGPD</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Portal do Cliente</a></li>
+            <li><Link to={"/"}              className={ page == "home"          ? "active" : "" }>Home</Link></li>
+            <li><Link to={"/about"}         className={ page == "about"         ? "active" : "" }>Sobre</Link></li>
+            <li><Link to={"/services"}      className={ page == "services"      ? "active" : "" }>Serviços</Link></li>
+            <li><Link to={"/team"}          className={ page == "team"          ? "active" : "" }>Equipe</Link></li>
+            <li><Link to={"/lgpd"}          className={ page == "lgpd"          ? "active" : "" }>LGPD</Link></li>
+            <li><Link to={"/client-center"} className={ page == "client-center" ? "active" : "" }>Portal do cliente</Link></li>            
           </ul>  
         </nav>                                
     </HeaderContainer>
