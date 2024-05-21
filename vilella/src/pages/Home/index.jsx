@@ -11,6 +11,8 @@ import speed from '../../assets/metersSpeed.png';
 import cluster from '../../assets/cluster.png';
 import shield from '../../assets/shield.png';
 
+import { Link } from 'react-router-dom';
+
 export default function Home() {  
   return(
     <>
@@ -30,7 +32,7 @@ export default function Home() {
             </div>
             <h3>Visão <span>Empresarial</span></h3>
             <p>Reconhecimento em soluções contábeis.</p>
-            <button>Saiba Mais</button>
+            <button><Link to={"/about"}>Saiba Mais </Link></button>
           </div>
           <div className="bsc-boxes-values flex-column transition">
             <div className="img">
@@ -38,7 +40,8 @@ export default function Home() {
             </div>
             <h3>Nossos <span>Valores</span></h3>
             <p>Transparência, Integridade e Responsabilidade.</p>
-            <button>Saiba Mais</button>
+            <button><Link to={"/about"}>Saiba Mais </Link></button>
+
           </div>
         </div>
         <div className="history flex mobile">
@@ -118,11 +121,11 @@ export default function Home() {
               <span>adm@evilella.com</span>
             </a>
             <h4 className="find-title">Horário de Atendimento:</h4>
-            <a className="social-item" href="mailto:adm@evilella.com">
+            <a className="social-item">
               <span className="item">
                 <MdOutlineWatchLater style={{fontSize: 32, color: "#00116f"}} />
               </span>
-              <span>Segunda à Sexta-Feira, das 9h às 17h.</span>
+              <span>De segunda à sexta-feira, das 9h às 17h.</span>
             </a>
           </div>
           <div className="map-address flex">

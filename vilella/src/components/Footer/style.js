@@ -3,17 +3,19 @@ import media from 'styled-media-query'
 import Theme from '../../styles/theme'
 
 export const FooterContainer = styled.footer`    
-
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-
-  padding: 2rem 0;
-  margin-top: 5rem;
-
-  background-color: ${Theme.colors.blue1};    
-  color: ${Theme.colors.white};  
   
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    padding: 2rem 0;
+    margin-top: 5rem;
+
+    background-color: ${Theme.colors.blue1};    
+    color: ${Theme.colors.white};  
+  }
+
   h3 {
     font-weight: 600;
     font-size: ${Theme.textSize.titleXSm};
@@ -22,7 +24,6 @@ export const FooterContainer = styled.footer`
   .contact,
   .services,
   .client {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -81,9 +82,10 @@ export const FooterContainer = styled.footer`
 
   .client {
     text-align: center;
+    transition: linear all .1s;
+
     a {
       text-decoration: none;
-      transition: linear all .2s;
       color: inherit;
     }
     h3 {
@@ -98,72 +100,105 @@ export const FooterContainer = styled.footer`
       width: auto;
       height: auto;
     }
+    &:hover {      
+      opacity: .75;      
+    }
+  }
 
-    .client-access:hover {
-      transform: scale(1.1);
+  .copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+
+    background-color: ${Theme.colors.gray1};
+    color: ${Theme.colors.white};
+    font-size: ${Theme.textSize.textMobileXSm};
+    text-align: center;
+  
+    .devs {
+      font-size: ${Theme.textSize.textMobileXSm};
+      span {
+        gap: .2rem;
+      }
+      a {
+        color: ${Theme.colors.white};
+        text-decoration: none;
+      }
     }
   }
   
   ${media.lessThan("medium")`
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
 
-    .contact {
-      align-items: flex-start;
-    
-      .socials {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
+      .contact {
+        align-items: flex-start;
+      
+        .socials {
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+        }
+      
       }
-    
-    }
-    .services {
-      align-items: flex-start;
-    
-      ul {
-        columns: 2;
-        gap: 2rem;
+      .services {
+        align-items: flex-start;
+      
+        ul {
+          columns: 2;
+          gap: 2rem;
+        }
       }
     }
+
   `}
 
-    @media (max-width: 726px) {
+  ${media.lessThan("small")`
+    .footer {
       align-items: center;
       padding: 2rem;
 
-    .contact {
-      padding-bottom: 1rem;
-      .socials {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }  
+      .contact {
+        padding-bottom: 1rem;
+        .socials {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }  
 
+      .services {
+        align-items: flex-start;
+      
+        ul {
+          columns: 1;
+          gap: 2rem;
+        }
+      }
     }
-
-  ${media.lessThan("small")`
-    align-items: center;
-    padding: 2rem;
-
-    .contact {
-      padding-bottom: 1rem;
-      .socials {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }  
-
-    .services {
-      align-items: flex-start;
-    
-      ul {
-        columns: 1;
-        gap: 2rem;
-      }
+    .copy{
+      font-size: ${Theme.textSize.textMobileXSm};
     }
   `}  
+  
+  @media (max-width: 726px) {
+    .footer {
+    align-items: center;
+    padding: 2rem;
+      .contact {
+        padding-bottom: 1rem;
+        .socials {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }  
+
+      }
+  }
+
+
 `

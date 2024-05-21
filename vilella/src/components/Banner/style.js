@@ -63,7 +63,7 @@ export const BannerContainer = styled.section`
     width: 130px;
     height: 40px;
     border-radius: 6px;
-    box-shadow: 0px 10px 10px rgb(0,0,0,0.5);
+    box-shadow: 0 2px 8px rgb(0,0,0,0.5);
     border: none;
 
     background-color: ${Theme.colors.blue1};
@@ -72,12 +72,20 @@ export const BannerContainer = styled.section`
     cursor: pointer;
     transition: ease-out all .3s;
 
-    font-size: ${Theme.textSize.textSm};
-    font-weight: 700;
+    a {
+      font-size: ${Theme.textSize.textSm};
+      font-weight: 700;
+
+      color: ${Theme.colors.white};
+      text-decoration: none;
+    }
 
     &:hover {
       background-color: ${Theme.colors.babyBlue};
       color: ${Theme.colors.blue1};
+      a {
+        color: ${Theme.colors.blue1};
+      }
     }
   }
 

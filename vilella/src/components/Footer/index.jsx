@@ -1,12 +1,13 @@
 import  { FooterContainer } from "./style"
 import { MdOutlineWhatsapp, MdLocalPhone, MdMail } from "react-icons/md";
-import { FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
 
 import whiteLogo from '../../assets/whiteLogo.png'
 
 export default function Footer() {
   return (
     <FooterContainer>
+      <div className="footer flex">
       <div className="contact">
         <div className="socials">
           <div className="holder-talk">
@@ -58,6 +59,19 @@ export default function Footer() {
             </a>
           </h3>
         </a>
+      </div>
+      </div>
+      <div className="copy">
+        <span>&copy; 2024 Escritório Vilella. Todos os direitos reservados.</span>
+        <span className="devs"> 
+          <span><FaGithub style={{fontSize: 16, color: "#ffffff"}}/> </span>
+            <span>
+              Desenvolvido por
+              <a href="https://github.com/HugoLeda" target="blank">  João Hugo </a> 
+              e
+              <a href="https://github.com/maloysa" target="blank"> Heloysa </a>
+          </span>
+        </span>
       </div>
     </FooterContainer>
   )

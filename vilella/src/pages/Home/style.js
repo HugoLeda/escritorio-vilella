@@ -89,32 +89,35 @@ export const Homepage = styled.div `
         font-weight: 400;
       }
 
+      &:hover {
+      transform: scale(1.1);
+      }
       button {
         width: 130px;
         height: 40px;
         border-radius: 6px;
-        box-shadow: 0 0 8px rgb(0,0,0,0.2);
+        box-shadow: 0 2px 8px rgb(0,0,0,0.5);
         border: none;
 
         background-color: ${Theme.colors.blue1};
-        color: ${Theme.colors.white};
-        
+
         cursor: pointer;
         transition: ease-out all .3s;
 
-        font-size: 18px;
-        font-weight: 700;
+        a {
+          font-size: ${Theme.textSize.textSm};
+          font-weight: 700;
+
+          color: ${Theme.colors.white};
+          text-decoration: none;
+        }
+        &:hover {
+          background-color: ${Theme.colors.babyBlue};
+          a {
+            color: ${Theme.colors.blue1};
+          }
+        }
       }
-    }
-
-    .bsc-boxes-vision:hover,
-    .bsc-boxes-values:hover {
-      transform: scale(1.1);
-    }
-
-    button:hover {
-      background-color: ${Theme.colors.babyBlue};
-      color: ${Theme.colors.blue1};
     }
   }
 
@@ -192,7 +195,7 @@ export const Homepage = styled.div `
       }      
     
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
         border-radius: 3px;
         box-shadow: 0 0 8px rgb(0,0,0,0.2);
     
@@ -255,7 +258,7 @@ export const Homepage = styled.div `
 
     .map-address:hover {
       box-shadow: 0 0 8px rgb(0,0,0,0.4);
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
   
@@ -302,8 +305,7 @@ export const Homepage = styled.div `
     .solutions {
       gap: 1rem;
       .solution-icon:hover {
-        transform: scale(1);
-        box-shadow: none;
+        transform: none;
       }
     }
 
@@ -376,9 +378,7 @@ export const Homepage = styled.div `
         box-shadow: 0;
         
         &:hover {
-          transform: scale(1);
-          border-radius: 0;
-          box-shadow: 0;
+          transform: none;
         }
       }
     }
@@ -398,6 +398,12 @@ export const Homepage = styled.div `
             font-size: ${Theme.textSize.textMobileMd};
             line-height: 1.5rem;
           }
+        }
+      }
+      .map-address {
+        width: 320px;
+        &:hover {
+          transform: none;
         }
       }
     }
@@ -489,16 +495,22 @@ export const Homepage = styled.div `
           }
         }
       }
-
-      .map-address {
-        width: 320px;
-      }
     }
 
 
 `}
 
   //media for specific breaks
+  @media (max-width: 1250px) {
+    .solutions {
+      flex-direction: column;
+      gap: 1rem;
+      .solution-icon:hover {
+        transform: none;
+      }
+    }
+  }
+
   @media (max-width: 980px) {
     .bsc-boxes {
       flex-direction: column;
