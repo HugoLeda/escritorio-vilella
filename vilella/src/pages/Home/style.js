@@ -496,9 +496,7 @@ export const Homepage = styled.div `
         }
       }
     }
-
-
-`}
+  `}
 
   //media for specific breaks
   @media (max-width: 1250px) {
