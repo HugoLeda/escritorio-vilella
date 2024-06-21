@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { HeaderContainer } from './style';
 
-import logoVilella from '../../assets/logoVilella.png';
+import logoVilella from '../../assets/blackLogoVilella.webp';
 import { Link } from 'react-router-dom';
 
 export default function Header({page}) {  

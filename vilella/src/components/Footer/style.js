@@ -83,7 +83,7 @@ export const FooterContainer = styled.footer`
   .client {
     text-align: center;
     transition: linear all .1s;
-
+    
     a {
       text-decoration: none;
       color: inherit;

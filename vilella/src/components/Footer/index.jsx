@@ -2,7 +2,7 @@ import  { FooterContainer } from "./style"
 import { MdOutlineWhatsapp, MdLocalPhone, MdMail } from "react-icons/md";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
 
-import whiteLogo from '../../assets/whiteLogo.png'
+import whiteLogo from '../../assets/whiteLogo.webp'
 
 export default function Footer() {
   return (
