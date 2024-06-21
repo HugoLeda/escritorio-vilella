@@ -5,11 +5,11 @@ import Header from "../../components/Header";
 import { MdLocationOn, MdOutlineWhatsapp, MdLocalPhone, MdMail, MdOutlineWatchLater, MdImportExport } from "react-icons/md";
 import { Homepage } from "./style";
 
-import letterE from '../../assets/letterE.png';
-import letterV from '../../assets/letterV.png';
-import speed from '../../assets/metersSpeed.png';
-import cluster from '../../assets/cluster.png';
-import shield from '../../assets/shield.png';
+import letterE from '../../assets/letterE.webp';
+import letterV from '../../assets/letterV.webp';
+import speed from '../../assets/metersSpeed.webp';
+import cluster from '../../assets/cluster.webp';
+import shield from '../../assets/shield.webp';
 
 import { Link } from 'react-router-dom';
 

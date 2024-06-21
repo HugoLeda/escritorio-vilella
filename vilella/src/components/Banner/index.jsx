@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel';
 
 import homeCover from '../../assets/homeCover.webp'
-import darkBlueBG from '../../assets/darkBlueBG.webp'
+import darkBlueBG from '../../assets/blueVilella.webp'
 import { Link } from 'react-router-dom';
 
 export default function Banner() {
