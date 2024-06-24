@@ -3,13 +3,14 @@ import Theme from "../../styles/theme";
 
 export const CardSection = styled.section `
   .flex {
-    display: flex;
+    display: flex;    
   }   
 
   .content {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
+    user-select: none;
   
     .info {
       display: flex;
