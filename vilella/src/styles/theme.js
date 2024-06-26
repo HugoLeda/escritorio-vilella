@@ -39,12 +39,16 @@ const Theme = {
     titleMobileLg: '2.5rem',     // 40px
     titleMobileNum: '6.25rem',   // 100px
 
-
     textMobileSm: '1rem',   // ~17px
     textMobileMd: '1.25rem',  // 20px 
     textMobileLg: '1.375rem', // 22px
     textMobileNum: '5rem',   // 80px
 
+    //font-size guide for cards
+    titleCardXSm: '1.375rem',
+    titleCardSm: '1.5rem',
+    titleCardMd: '2rem',
+    titleCardLg: '2.25rem',
   }
 };
 

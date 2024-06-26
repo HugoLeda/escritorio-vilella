@@ -529,6 +529,4 @@ export const Homepage = styled.div `
     }
   }
 
-  //@media (max-width: 600px) {}
-
 `

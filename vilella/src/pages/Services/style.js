@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import media from "styled-media-query";
 import Theme from "../../styles/theme";
 
 export const Servicespage = styled.section `
@@ -30,4 +31,36 @@ export const Servicespage = styled.section `
   }
 
 
+  ${media.lessThan("large")`
+    margin-top: 2rem;
+    gap: 3rem;
+
+    h1 {
+      font-size: ${Theme.textSize.titleMobileLg};
+    }
+
+    p {
+      font-size: ${Theme.textSize.textMobileLg};
+    }
+  `}
+  ${media.lessThan("medium")`
+
+    p {
+      font-size: ${Theme.textSize.textMobileMd};
+    }
+
+  `}
+
+  ${media.lessThan("small")`
+  
+    h1 {
+      font-size: ${Theme.textSize.titleMobileMd};
+    }
+
+    p {
+      font-size: ${Theme.textSize.textMobileSm};
+    }
+
+
+  `}
 `;

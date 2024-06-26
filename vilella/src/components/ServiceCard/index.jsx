@@ -9,7 +9,6 @@ export default function ServiceCard({direction, title, textContent, img, icon, l
     <CardSection>
       <div className={direction == "normal" ? "content flex-normal" : "content flex-reverse"}>
         <div className="info">
-
           <header className="title flex" alt={""}>
             <div className="img flex">
               <img src={icon} alt={`Icone para representar o serviço empecizado em ${title}`}/>
@@ -25,7 +24,7 @@ export default function ServiceCard({direction, title, textContent, img, icon, l
 
           <footer className="know-more flex">
             <a href={linkWhats} target="blank">
-              <MdOutlineWhatsapp style={{fontSize: 40, color: "#25D366"}} />
+              <MdOutlineWhatsapp className="whatsapp"/>
             </a>
             <button><Link to={"#"}>Ver Mais</Link></button>
           </footer>
