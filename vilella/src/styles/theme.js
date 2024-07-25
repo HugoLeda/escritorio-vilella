@@ -49,6 +49,8 @@ const Theme = {
     titleCardSm: '1.5rem',
     titleCardMd: '2rem',
     titleCardLg: '2.25rem',
+    titleCardXLg: '3rem'
+  
   }
 };
 

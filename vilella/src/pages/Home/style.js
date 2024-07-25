@@ -1,4 +1,4 @@
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import media from "styled-media-query";
 import Theme from "../../styles/theme";
 
