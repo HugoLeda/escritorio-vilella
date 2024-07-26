@@ -11,7 +11,7 @@ export default function ServiceCard({direction, title, textContent, img, icon, l
         <div className="info">
           <header className="title flex" alt={""}>
             <div className="img flex">
-              <img src={icon} alt={`Icone para representar o serviço empecizado em ${title}`}/>
+              <img src={icon} alt={`Icone para representar o serviço empecializado em ${title}`}/>
             </div>            
             <h2>{title}</h2>            
           </header>

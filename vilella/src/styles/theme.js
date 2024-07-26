@@ -49,7 +49,15 @@ const Theme = {
     titleCardSm: '1.5rem',
     titleCardMd: '2rem',
     titleCardLg: '2.25rem',
-    titleCardXLg: '3rem'
+
+    //font-size guide for Client-access
+    titleClientXxSm: '1.75rem',
+    titleClientXSm: '2rem',
+    titleClientSm: '2.25rem',
+    titleClientMd: '2.5rem',
+    titleClientLg: '2.75rem',
+    titleClientXLg: '3rem'
+
   
   }
 };
