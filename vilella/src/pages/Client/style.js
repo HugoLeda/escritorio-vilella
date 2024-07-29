@@ -4,7 +4,7 @@ import Theme from "../../styles/theme";
 export const Clientpage = styled.section `
   display: flex;
   flex-direction: column;
-  max-width: 100vw;
+  max-width: 100vw; //adjust breakpoint;
   padding: 0 10%;
   margin-top: 2rem;
   gap: 5rem;
@@ -12,7 +12,13 @@ export const Clientpage = styled.section `
   .flex {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   h1 {
@@ -36,13 +42,13 @@ export const Clientpage = styled.section `
       color: ${Theme.colors.blue1};
     }
 
-  p, li {
+  p {
     font-size: ${Theme.textSize.textLg};
     line-height: 1.5;
   }
 
   header {
-    display: flex;
+    gap: 1rem;
     h1 {
       font-size: ${Theme.textSize.titleClientXLg};
 
@@ -82,12 +88,17 @@ export const Clientpage = styled.section `
       }
     }
 
+  
+    .outdoor {
+      .link {
+        padding: 1rem 0;
+      }
+    }
   }
 
+
   .img {
-    display: flex;
     justify-content: center;
-    align-items: center;
     width: 460px;
 
     img {
@@ -97,18 +108,21 @@ export const Clientpage = styled.section `
   }
 
   main {
-    display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    .about {
+      p {
+        margin: 0;
+      }
+    }
   }
   .access {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
 
-
     .guide{
-      display: flex;
       flex-direction: column;
       gap: 2rem;
 
@@ -118,13 +132,16 @@ export const Clientpage = styled.section `
     }
   }
 
-  .win {
-    flex-direction: column;
-    gap: 2rem;
+  .gains {
+    gap: 1rem;
+  
     .features {
+      width: 100%;
       display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;
+
     }
+    
   }
 
   @media (max-width: 1185px) {
@@ -137,11 +154,7 @@ export const Clientpage = styled.section `
       }
     }
     .img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 380px;
-
       img {
         width: 380px;
         height: auto;
@@ -165,11 +178,7 @@ export const Clientpage = styled.section `
     }
 
     .img {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 360px;
-
       img {
         width: 360px;
         height: auto;
@@ -177,32 +186,33 @@ export const Clientpage = styled.section `
     }
   }
 
-  @media (max-width: 915px) {
+  @media (max-width: 926px) {
+    gap: 2rem;
     
     header {
-      display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: center;
-      align-items: center;
 
       gap: 2rem;
     }
 
-    .win {
-      flex-direction: column;
-      .features {
-        flex-direction: column;
-        gap: 0;
+    .access{
+      .guide {
+        h2 {
+          font-size: ${Theme.textSize.titleSm};
+        }
         p {
-          font-size: ${Theme.textSize.textMobileMd};
+          font-size: ${Theme.textSize.textMd};
+          line-height: 1.5;
         }
       }
     }
   }
 
+
   @media (max-width: 480px) {
     header {
-      flex-direction: column-reverse;
+      
       h1 {
       font-size: ${Theme.textSize.titleClientXSm};
        span {
@@ -227,5 +237,5 @@ export const Clientpage = styled.section `
       }
     }
   }
-
+  
 `

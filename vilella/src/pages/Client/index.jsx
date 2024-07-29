@@ -4,28 +4,58 @@ import Header from "../../components/Header";
 import { Clientpage } from "./style";
 
 import ClientCenterStep from "../../components/ClientCenterStep";
+import ClientCenterGain from "../../components/ClientCenterGain";
 
 import cloud from "../../assets/client/cloudStorage.webp"
 import login from "../../assets/client/login.webp"
 import select from "../../assets/client/select.webp"
 import grid from "../../assets/client/grid.webp"
+import available from "../../assets/client/cloudAvailable.webp"
+import key from "../../assets/client/key.webp"
+import folders from "../../assets/client/folders.webp"
+import playstore from "../../assets/client/playstore.webp"
+
 
 const tutorialSteps = [
   {
     img: login,
     title: "Acessar o Portal do Cliente",
-    text: "Acessar o portal do cliente através do link, entrar e inserir credenciais cadastradas pelo escritório ou solicitar cadastro.",
+    text: "Acessar o portal do cliente com o link, entrar e inserir as suas credenciais cadastradas pelo escritório, ou solicitar cadastro do seu e-mail conosco.",
   },
   {
     img: select,
     title: "Buscar sua empresa",
-    text: "Pesquisar pelo nome da sua empresa por meio do filtro de seleção e confirmar ao visualizar as informações correspondentes.",
+    text: "Pesquisar pelo nome da sua empresa por meio do filtro de seleção de empresas e confirmar ao visualizar as informações correspondentes.",
   },
   {
     img: grid,
     title: "Sobre o Portal do Cliente",
-    text: "Dentro do Portal é possível visualizar vencimentos de guias, acompanhar notícias do escritório, observar processos, solicitar documentos e muito mais!",
+    text: "Dentro do Portal do Cliente é possível visualizar vencimentos de guias, acompanhar notícias do escritório, observar processos, solicitar documentos e muito mais!",
   }
+]
+
+const appFeatures = [
+  {
+    id: 1,
+    img: available,
+    text: "Acesso instantâneo aos seus dados a qualquer momento e em qualquer dispositivo."
+  },
+  {
+    id: 2,
+    img: key,
+    text: "Tecnologia avançada para proteger seus dados e garantir a segurança de sua empresa."
+  },
+  {
+    id: 3,
+    img: folders,
+    text: "Plataforma digital intuitiva e automatizada para gerenciamento eficiente de solicitações e guias."
+  },
+  {
+    id: 4,
+    img: playstore,
+    text: "Aplicativo disponível para iOS e Android, com todas as funcionalidades que você precisa."
+  },
+  
 ]
 
 export default function Client() {
@@ -41,19 +71,18 @@ export default function Client() {
               <button> <a href="https://onvio.com.br/login/#/?d=https:%2F%2Fonvio.com.br%2Fbr-portal-do-cliente%2F" target="blank"> Portal do Cliente </a></button>
             </div>
           </div>
-          <div className="img">
+          <div className="img flex">
             <img src={cloud} alt="Armazenamento em nuvem"/>
           </div>
         </header>
-        <main>
+        <main className="flex">
           <div className="about">
-           {/*<h1>Portal do <span>Cliente</span></h1>*/}
             <p>Conheça o Onvio Portal do Cliente, nossa ferramenta em nuvem de última geração, projetada para revolucionar a comunicação com nosso escritório, eliminando os riscos da comunicação tradicional.</p>
           </div>
         
           <div className="access flex">
             <h2>Vamos Começar?</h2>
-            <div className="guide"> 
+            <div className="guide flex"> 
               {tutorialSteps.map(service => (
                 <ClientCenterStep
                   key={service.title}
@@ -65,33 +94,16 @@ export default function Client() {
             </div>
           </div>
         </main>
-        <div className="win flex">
+        <div className="gains flex-column">
           <h2>Benefícios</h2>
-          <div className="features">            
-             <div className="icon">
-                <img src={""} alt={""} />
-             </div>
-             <div>
-              <p>Disponibilidade e facilidade de acesso por meio de qualquer dispositivo.</p>
-             </div>
-             <div className="icon">
-                <img src={""} alt={""} />
-             </div>
-             <div>
-              <p>Tecnologias para garantir a segurança das informações da sua empresa.</p>
-             </div>
-             <div className="icon">
-                <img src={""} alt={""} />
-             </div>
-             <div>
-              <p>Agilidade e organização no envio e recebimento de solicitações e guias.</p>
-             </div>
-             <div className="icon">
-                <img src={""} alt={""} />
-             </div>
-             <div>
-              <p>Disponível para download diretamente na sua loja de apilicativos.</p>
-             </div>
+          <div className="features"> 
+            {appFeatures.map(service => (
+              <ClientCenterGain
+                key={service.id}
+                img={service.img}
+                text={service.text}
+              />
+            ))}    
           </div>
         </div>
       </Clientpage>
