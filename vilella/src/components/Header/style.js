@@ -3,6 +3,8 @@ import media from "styled-media-query";
 import Theme from '../../styles/theme';
 
 export const HeaderContainer = styled.header`
+  max-width: 1920px;
+  margin: auto;
   
   display: flex;
   justify-content: space-between;

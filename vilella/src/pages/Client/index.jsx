@@ -54,8 +54,7 @@ const appFeatures = [
     id: 4,
     img: playstore,
     text: "Aplicativo disponível para iOS e Android, com todas as funcionalidades que você precisa."
-  },
-  
+  }
 ]
 
 export default function Client() {
@@ -72,7 +71,7 @@ export default function Client() {
             </div>
           </div>
           <div className="img flex">
-            <img src={cloud} alt="Armazenamento em nuvem"/>
+            <img src={cloud} alt="Imagem de idealização do armazenamento em nuvem do Onvio Portal do Cliente"/>
           </div>
         </header>
         <main className="flex">

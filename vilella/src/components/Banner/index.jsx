@@ -25,9 +25,9 @@ export default function Banner() {
           </Carousel.Item>
           <Carousel.Item interval={5000}>
             <img className="cover-img" 
-                 src={darkBlueBG} alt="cover-II"
+                 src={darkBlueBG} alt="Imagem com a logo do Escritório Vilella"
             />
-            <Carousel.Caption className="rd-caption display">
+            <Carousel.Caption className="nd-caption display">
               <h3>Expertise e Experiência</h3>
               <p>Temos o conhecimento necessário para oferecer o melhor suporte possível.</p>
               <button className="more-services">

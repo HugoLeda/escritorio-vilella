@@ -4,7 +4,8 @@ import Theme from "../../styles/theme";
 
 export const Homepage = styled.div `      
   //all of the page
-  max-width: 100vw;
+  max-width: 1920px; //100vw;
+  margin: 5rem auto 0 auto;
   padding: 0 10%;
 
   display: flex;
@@ -264,6 +265,7 @@ export const Homepage = styled.div `
   
   //media components
   ${media.lessThan("large")`
+    margin-top: 2rem;
 
     .mobile {
       flex-direction: column;
@@ -425,7 +427,7 @@ export const Homepage = styled.div `
 
         text-align: center;
         h3 { font-size: ${Theme.textSize.titleMobileMd}; }
-        p { font-size: ${Theme.textSize.textMobileMd}; }
+        p { font-size: ${Theme.textSize.textMobileSm}; }
 
         justify-content: center;
         align-items: center;

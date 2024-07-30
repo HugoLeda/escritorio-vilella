@@ -2,11 +2,12 @@ import styled from "styled-components";
 import Theme from "../../styles/theme";
 
 export const Clientpage = styled.section `
+  max-width: 1920px;//100vw; //adjust breakpoint;
+  margin: 2rem auto 0 auto;
+  padding: 0 10%;
+  
   display: flex;
   flex-direction: column;
-  max-width: 100vw; //adjust breakpoint;
-  padding: 0 10%;
-  margin-top: 2rem;
   gap: 5rem;
 
   .flex {

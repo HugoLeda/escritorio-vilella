@@ -4,13 +4,13 @@ import Theme from "../../styles/theme";
 
 export const Servicespage = styled.section `
   //all of the page
-  max-width: 100vw;
+  max-width: 1920px; //100vw;
+  margin: 2rem auto 0 auto;
   padding: 0 10%;
   
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
   gap: 5rem;
 
   h1 {
@@ -30,7 +30,6 @@ export const Servicespage = styled.section `
     line-height: 1.5;
   }
 
-
   ${media.lessThan("large")`
     margin-top: 2rem;
     gap: 3rem;
@@ -43,16 +42,14 @@ export const Servicespage = styled.section `
       font-size: ${Theme.textSize.textMobileLg};
     }
   `}
-  ${media.lessThan("medium")`
 
+  ${media.lessThan("medium")`
     p {
       font-size: ${Theme.textSize.textMobileMd};
     }
-
   `}
 
   ${media.lessThan("small")`
-  
     h1 {
       font-size: ${Theme.textSize.titleMobileMd};
     }
@@ -60,7 +57,5 @@ export const Servicespage = styled.section `
     p {
       font-size: ${Theme.textSize.textMobileSm};
     }
-
-
   `}
 `;

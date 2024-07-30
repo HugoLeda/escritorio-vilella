@@ -3,7 +3,7 @@ import media from "styled-media-query"
 import Theme from '../../styles/theme'
 
 export const BannerContainer = styled.section`
-  margin-bottom: 5rem;
+
   max-width: 1000vw;
   user-select: none;
 
@@ -21,15 +21,18 @@ export const BannerContainer = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-content: center;    
   }
 
   .cover-img, img {
-    width: 100%;
+    width: 100%;    
+    height: calc(100vh - 2.4rem - 67px);
+    object-fit: cover;
   }
 
+
   .st-caption {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -44,10 +47,9 @@ export const BannerContainer = styled.section`
       color: ${Theme.colors.blue1}; 
     }
   }
-
   
-  .rd-caption {
-    display: flex;
+  .nd-caption {
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -89,12 +91,22 @@ export const BannerContainer = styled.section`
     }
   }
 
-  ${media.lessThan("large")`
+  ${media.lessThan("large")`  
     margin-bottom: 2rem;
+    .cover-img, img {
+      height: calc(100vh - .5rem - 67px);
+    }
     
     .display {
       background-color: transparent;
       display: none;    
     }
  `}   
+
+  ${media.lessThan("medium")`
+    .cover-img, img {              
+      height: auto;
+      object-fit: fill;
+    }
+  `}    
 `

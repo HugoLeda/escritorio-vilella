@@ -3,16 +3,18 @@ import media from 'styled-media-query'
 import Theme from '../../styles/theme'
 
 export const FooterContainer = styled.footer`    
-  
+  background-color: ${Theme.colors.blue1};  
+
   .footer {
+    max-width: 1920px;
+    margin: auto;
+
     display: flex;
     justify-content: center;
     align-items: stretch;
 
     padding: 2rem 0;
     margin-top: 5rem;
-
-    background-color: ${Theme.colors.blue1};    
     color: ${Theme.colors.white};  
   }
 
@@ -99,9 +101,6 @@ export const FooterContainer = styled.footer`
     .img {
       width: auto;
       height: auto;
-    }
-    &:hover {      
-      opacity: .75;      
     }
   }
 

@@ -28,7 +28,7 @@ export default function Home() {
         <div className="bsc-boxes flex">
           <div className="bsc-boxes-vision flex-column transition">
             <div className="img">
-              <img src={letterE} alt="Empresarial"/>
+              <img src={letterE} alt="Imagem cover para representar a Visão Empresarial"/>
             </div>
             <h3>Visão <span>Empresarial</span></h3>
             <p>Reconhecimento em soluções contábeis.</p>
@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className="bsc-boxes-values flex-column transition">
             <div className="img">
-              <img src={letterV} alt="Valores"/>
+              <img src={letterV} alt="Imagem cover para representar os Nossos Valores"/>
             </div>
             <h3>Nossos <span>Valores</span></h3>
             <p>Transparência, Integridade e Responsabilidade.</p>
@@ -72,21 +72,21 @@ export default function Home() {
         <div className="solutions flex mobile">
           <div className="solution-icon transition flex-column">
             <div>
-              <img src={speed} alt="speed"/>
+              <img src={speed} alt="Ícone de velocímetro"/>
             </div>
             <h3>Otimização</h3>
             <p>Aprimorar cada aspecto do seu negócio para alcançar a máxima eficiência.</p>
           </div>
           <div className="solution-icon transition flex-column">
             <div>
-              <img src={cluster} alt="Cluster"/>
+              <img src={cluster} alt="Ícone de cluster"/>
             </div>
             <h3>Tecnologia</h3>
             <p>Proporcionar soluções inovadoras para atender às suas necessidades.</p>
           </div>
           <div className="solution-icon transition flex-column">
             <div>
-              <img src={shield} alt="Shield"/>
+              <img src={shield} alt="Ícone de escudo"/>
             </div>
             <h3>Responsabilidade</h3>
             <p>Abordagem proativa para garantir a conformidade com a LGPD.</p>

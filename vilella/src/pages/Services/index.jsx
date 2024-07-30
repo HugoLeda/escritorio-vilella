@@ -108,7 +108,6 @@ const servicesContent = [
     icon:calendar, 
     linkWhats:"https://wa.me/5514997795061?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Parcelamento%20de%20D%C3%ADvidas"
   }
-
 ]
 
 export default function Services() {
