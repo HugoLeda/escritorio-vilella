@@ -4,12 +4,12 @@ import { CardSection } from "./style";
 
 import { Link } from "react-router-dom";
 
-export default function ServiceCard({direction, title, textContent, img, icon, linkWhats}) {
+export default function ServiceCard({direction, title, textContent, img, alt, icon, linkWhats}) {
   return (
     <CardSection>
       <div className={direction == "normal" ? "content flex-normal" : "content flex-reverse"}>
         <div className="info">
-          <header className="title flex" alt={""}>
+          <header className="title flex">
             <div className="img flex">
               <img src={icon} alt={`Icone para representar o serviço empecializado em ${title}`}/>
             </div>            
@@ -31,7 +31,7 @@ export default function ServiceCard({direction, title, textContent, img, icon, l
 
         </div>
         <aside className="image">
-          <img src={img}/>
+          <img src={img} alt={alt}/>
         </aside>
       </div>
     </CardSection>

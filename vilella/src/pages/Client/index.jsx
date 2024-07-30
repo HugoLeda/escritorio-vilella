@@ -38,21 +38,25 @@ const appFeatures = [
   {
     id: 1,
     img: available,
+    alt: "Ícone de armazenamento em nuvem",
     text: "Acesso instantâneo aos seus dados a qualquer momento e em qualquer dispositivo."
   },
   {
     id: 2,
     img: key,
+    alt: "Ícone de chave de acesso",
     text: "Tecnologia avançada para proteger seus dados e garantir a segurança de sua empresa."
   },
   {
     id: 3,
     img: folders,
+    alt: "Ícone de pastas",
     text: "Plataforma digital intuitiva e automatizada para gerenciamento eficiente de solicitações e guias."
   },
   {
     id: 4,
     img: playstore,
+    alt: "Ícone da loja de aplicativos PlayStore",
     text: "Aplicativo disponível para iOS e Android, com todas as funcionalidades que você precisa."
   }
 ]
@@ -71,7 +75,7 @@ export default function Client() {
             </div>
           </div>
           <div className="img flex">
-            <img src={cloud} alt="Imagem de idealização do armazenamento em nuvem do Onvio Portal do Cliente"/>
+            <img src={cloud} alt="Imagem de armazenamento em nuvem do Onvio Portal do Cliente"/>
           </div>
         </header>
         <main className="flex">
@@ -84,7 +88,7 @@ export default function Client() {
             <div className="guide flex"> 
               {tutorialSteps.map(service => (
                 <ClientCenterStep
-                  key={service.title}
+                  key={service.id}
                   img={service.img}
                   title={service.title}
                   text={service.text}
@@ -100,6 +104,7 @@ export default function Client() {
               <ClientCenterGain
                 key={service.id}
                 img={service.img}
+                alt={service.alt}
                 text={service.text}
               />
             ))}    

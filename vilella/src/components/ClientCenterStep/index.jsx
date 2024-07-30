@@ -5,7 +5,7 @@ export default function ClientCenterStep({img, title, text}) {
     <Steps>
       <div className="tutorial">
         <aside className="img">
-          <img src={img} alt={`Imagem do Onvio Portal do Cliente para demonstração em ${title}`} />
+          <img src={img} alt={"Imagem do Onvio Portal do Cliente"} />
         </aside>
         <main className="steps">
           <h2>{title}</h2>
