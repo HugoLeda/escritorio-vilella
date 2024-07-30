@@ -20,7 +20,7 @@ const tutorialSteps = [
   {
     img: login,
     title: "Acessar o Portal do Cliente",
-    text: "Acessar o portal do cliente com o link, entrar e inserir as suas credenciais cadastradas pelo escritório, ou solicitar cadastro do seu e-mail conosco.",
+    text: "Acessar o portal do cliente através do link, entrar e inserir as suas credenciais cadastradas pelo escritório, ou solicitar cadastro do seu e-mail conosco.",
   },
   {
     img: select,
@@ -64,11 +64,11 @@ export default function Client() {
       <Header page="client-center"/>
       <Clientpage>
         <header className="flex">
-          <div className="outdoor">
+          <div className="outdoor flex-column">
             <h1>Acesse nosso <br/><span>Portal do cliente</span></h1>
             <p>Uma solução em nuvem para aprimorar seu atendimento.</p>
             <div className="link flex">
-              <button> <a href="https://onvio.com.br/login/#/?d=https:%2F%2Fonvio.com.br%2Fbr-portal-do-cliente%2F" target="blank"> Portal do Cliente </a></button>
+              <button> <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank"> Portal do Cliente </a></button>
             </div>
           </div>
           <div className="img flex">
@@ -80,7 +80,7 @@ export default function Client() {
             <p>Conheça o Onvio Portal do Cliente, nossa ferramenta em nuvem de última geração, projetada para revolucionar a comunicação com nosso escritório, eliminando os riscos da comunicação tradicional.</p>
           </div>
         
-          <div className="access flex">
+          <div className="access flex-column">
             <h2>Vamos Começar?</h2>
             <div className="guide flex"> 
               {tutorialSteps.map(service => (

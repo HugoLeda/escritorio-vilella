@@ -53,8 +53,18 @@ export const Steps = styled.section `
     }
   }
 
-  @media (max-width: 480px){
-
+  @media (max-width: 420px){
+    .tutorial {
+      padding: 1.25rem;
+      
+      .img {
+        width: 300px;
+        img {
+          width: 300px;
+          height: auto;
+        }
+      }
+    }
   }
     
 `

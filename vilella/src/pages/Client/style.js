@@ -11,14 +11,11 @@ export const Clientpage = styled.section `
 
   .flex {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
   }
 
   .flex-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   h1 {
@@ -28,18 +25,18 @@ export const Clientpage = styled.section `
     color: ${Theme.colors.blue1};
 
     span {
-        user-select: none;
-        font-size: ${Theme.textSize.titleLg};
-        font-weight: 600;
-        color: ${Theme.colors.red};
+      user-select: none;
+      font-size: ${Theme.textSize.titleLg};
+      font-weight: 600;
+      color: ${Theme.colors.red};
       }
   }
 
   h2 {
-      user-select: none;
-      font-size: ${Theme.textSize.titleMobileLg};
-      font-weight: 600;
-      color: ${Theme.colors.blue1};
+    user-select: none;
+    font-size: ${Theme.textSize.titleMobileLg};
+    font-weight: 600;
+    color: ${Theme.colors.blue1};
     }
 
   p {
@@ -48,7 +45,8 @@ export const Clientpage = styled.section `
   }
 
   header {
-    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
     h1 {
       font-size: ${Theme.textSize.titleClientXLg};
 
@@ -66,6 +64,7 @@ export const Clientpage = styled.section `
       box-shadow: 0 2px 8px rgb(0,0,0,0.5);
       border: none;
 
+      user-select: none;
       background-color: ${Theme.colors.blue1};
 
       cursor: pointer;
@@ -83,14 +82,11 @@ export const Clientpage = styled.section `
           color: ${Theme.colors.blue1};
         }
       }
-      .link {
-        padding: 1.5rem;
-      }
     }
 
-  
     .outdoor {
       .link {
+        justify-content: center;
         padding: 1rem 0;
       }
     }
@@ -100,6 +96,8 @@ export const Clientpage = styled.section `
   .img {
     justify-content: center;
     width: 460px;
+
+    user-select: none;
 
     img {
       width: 460px;
@@ -118,7 +116,7 @@ export const Clientpage = styled.section `
     }
   }
   .access {
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 2rem;
 
@@ -133,13 +131,14 @@ export const Clientpage = styled.section `
   }
 
   .gains {
+    align-items: center;
+    justify-content: center;
     gap: 1rem;
   
     .features {
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-
     }
     
   }
@@ -147,8 +146,8 @@ export const Clientpage = styled.section `
   @media (max-width: 1185px) {
     header {
       h1 {
-      font-size: ${Theme.textSize.titleClientMd};
-       span {
+        font-size: ${Theme.textSize.titleClientMd};
+        span {
           font-size: ${Theme.textSize.titleClientMd};
         } 
       }
@@ -166,7 +165,7 @@ export const Clientpage = styled.section `
 
     p {
       font-size: ${Theme.textSize.textMobileLg};
-      }
+    }
 
     header {
       h1 {
@@ -192,7 +191,6 @@ export const Clientpage = styled.section `
     header {
       flex-direction: column-reverse;
       justify-content: center;
-
       gap: 2rem;
     }
 
@@ -212,18 +210,17 @@ export const Clientpage = styled.section `
 
   @media (max-width: 480px) {
     header {
-      
       h1 {
-      font-size: ${Theme.textSize.titleClientXSm};
-       span {
-          font-size: ${Theme.textSize.titleClientXSm};
-        } 
+        font-size: ${Theme.textSize.titleClientXSm};
+        span {
+            font-size: ${Theme.textSize.titleClientXSm};
+          } 
       }
     }
-    .access{
-      .guide{
-        //flex-direction: row;
-      }
+    .access, .gains{
+      h2 {
+          font-size: ${Theme.textSize.titleMobileMd};
+        }
     }
   }
 
