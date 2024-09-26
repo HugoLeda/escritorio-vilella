@@ -71,11 +71,13 @@ export default function Home() {
         </div>
         <div className="solutions flex mobile">
           <div className="solution-icon transition flex-column">
-            <div>
+            <div className="solution-icon-img">
               <img src={speed} alt="Ícone de velocímetro"/>
             </div>
+            <div className="solution-icon-text flex-column">
             <h3>Otimização</h3>
             <p>Aprimorar cada aspecto do seu negócio para alcançar a máxima eficiência.</p>
+            </div>
           </div>
           <div className="solution-icon transition flex-column">
             <div>

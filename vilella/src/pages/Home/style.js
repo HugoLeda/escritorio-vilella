@@ -26,7 +26,8 @@ export const Homepage = styled.div `
   }
   
   h3 {
-    font-size: ${Theme.textSize.titleSm};
+    color: ${Theme.colors.gray1};
+    font-size: ${Theme.textSize.titleMd};
   }
   
   p {
@@ -182,18 +183,22 @@ export const Homepage = styled.div `
       height: 300px;
       padding: 20px;
 
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       gap: .25rem;
 
-      div {
+      .solution-icon.img {
         display: flex;
         justify-content: center;
-        align-items: flex-end;
+        //align-items: flex-end;
 
         width: 175px;
         height: 100px;        
-      }      
+      }
+      
+      .solution-icon-text {
+        justify-content: space-around;
+      }
     
       &:hover {
         transform: scale(1.15);
@@ -204,7 +209,7 @@ export const Homepage = styled.div `
     }
 
     h3 {
-      font-size: ${Theme.textSize.titleSm};
+      font-size: ${Theme.textSize.titleMd};
       font-weight: 500;
     }
 
@@ -266,6 +271,7 @@ export const Homepage = styled.div `
   //media components
   ${media.lessThan("large")`
     margin-top: 2rem;
+    gap: 2rem;
 
     .mobile {
       flex-direction: column;
@@ -298,7 +304,7 @@ export const Homepage = styled.div `
       
       .history-numbers {
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-direction: row;
         gap: 2rem;
       }

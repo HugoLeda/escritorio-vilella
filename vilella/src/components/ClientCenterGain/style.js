@@ -41,4 +41,11 @@ export const Gains = styled.section`
     }
 
   }
+
+  @media (max-width: 480px) {
+    p {
+      font-size: ${Theme.textSize.textMobileSm};
+      line-height: 1.25;
+    }
+  }
 `
