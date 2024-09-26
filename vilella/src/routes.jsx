@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Page404 from "./pages/Page404";
 import Building from "./pages/Bulding";
 import Services from "./pages/Services";
+import LGPD from "./pages/LGPD"
 import Client from "./pages/Client"
 
 const Router = createBrowserRouter([
@@ -25,7 +26,7 @@ const Router = createBrowserRouter([
   },
   {
     path: "/lgpd",
-    element: <Building />,
+    element: <LGPD />,
   },
   {
     path: "/client-center",

@@ -27,9 +27,9 @@ export default function Footer() {
             </div>
             <div className="holder-social">
               <h3 className="network">Redes Sociais</h3>
-              <a className="social-item" href="https://www.instagram.com/escritoriovilella/" target="blank">
+              <a className="social-item" href="https://www.instagram.com/escritorio.vilella/" target="blank">
                 <span className="item"><FaInstagram style={{fontSize: 22, color: "#ffffff"}}/></span>
-                <span>escritoriovilella</span>
+                <span>escritorio.vilella</span>
               </a>
               <a className="social-item" href="https://www.linkedin.com/in/vilellaescritorio/" target="blank">
                 <span className="item"><FaLinkedin style={{fontSize: 22, color: "#ffffff"}}/></span>

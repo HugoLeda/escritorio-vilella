@@ -109,8 +109,8 @@ export default function Client() {
               />
             ))}    
           </div>
-        </div>
-      </Clientpage>
+        </div> 
+      </Clientpage>      
       <Footer/>    
     </>
   )

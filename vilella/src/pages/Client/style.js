@@ -86,9 +86,11 @@ export const Clientpage = styled.section `
     }
 
     .outdoor {
+      //width:500px;
+      //word-wrap: break-word;
       .link {
         justify-content: center;
-        padding: 1rem 0;
+        padding: 1rem 1rem 0 0;
       }
     }
   }
@@ -140,8 +142,7 @@ export const Clientpage = styled.section `
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-    }
-    
+    }        
   }
 
   @media (max-width: 1185px) {
@@ -159,6 +160,20 @@ export const Clientpage = styled.section `
         width: 380px;
         height: auto;
       }
+    }
+  }
+
+  @media (max-width: 1285px) {
+    
+    header {
+
+      /*.outdoor {
+        h1 {
+        width: 50%;
+        word-wrap: break-word;
+
+        }
+      }*/
     }
   }
 
@@ -193,6 +208,13 @@ export const Clientpage = styled.section `
       flex-direction: column-reverse;
       justify-content: center;
       gap: 2rem;
+
+      /*.outdoor {
+        h1 {
+          width: 75%;
+        }
+      }*/
+
     }
 
     .access{
