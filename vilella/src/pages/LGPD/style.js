@@ -136,14 +136,13 @@ export const Lgpdpage = styled.div `
 
   .law {
     .owner-rights {
+      flex-direction: column;
       align-items: center;
       gap: 2rem;
       h2 {
         text-align: center;
       }
       .law-features {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         gap: 3.5rem;
         p {
           font-size: ${Theme.textSize.textMd};
@@ -157,7 +156,7 @@ export const Lgpdpage = styled.div `
     .compliance-view {
       width: 100%;
       h1 {
-        width: 400px;
+        width: 350px;
         word-wrap: break-word;
         line-height: .8;
         padding-bottom: 1.2rem;
@@ -170,10 +169,10 @@ export const Lgpdpage = styled.div `
     .guidelines {
       text-align: center;
       gap: 2rem;
-      .guide-order {
+      
+      .guide-features {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 4rem;
         
         p {
@@ -186,8 +185,8 @@ export const Lgpdpage = styled.div `
     
   .dpo {
     align-items: center;
-    gap: 2rem;
     justify-content: space-between;
+    gap: 2rem;
     .dpo-info {
       width: 50%;
     }
@@ -202,22 +201,8 @@ export const Lgpdpage = styled.div `
         span{
           font-size: ${Theme.textSize.titleMobileLg};
         }
-        //line-height: .8;
       }
     }
-
-    /*.dpo-title {
-      width: 100%;
-      h1 {
-        width: 300px;
-        word-wrap: break-word;
-        line-height: .8;
-        padding-bottom: 1.2rem;
-        span{
-          font-size: ${Theme.textSize.titleMobileLg};
-        }
-      }
-    }*/
 
     .dpo-contact {
       gap: .25rem;
@@ -231,42 +216,32 @@ export const Lgpdpage = styled.div `
     }
 
     .img {
-    justify-content: center;
-    width: 450px;
-    height: auto;
-
-    user-select: none;
-    transition: linear all .2s;
-    &:hover {
-      box-shadow: 0 0 8px rgb(0,0,0,0.4);
-      transform: scale(1.05);
-    }
-
-    img {
+      justify-content: center;
       width: 450px;
       height: auto;
-    }
 
-
-  }
-  }
-
-  @media (max-width: 1345px) {
-    h1 {
-      //font-size: ${Theme.textSize.titleMd};
-      span {
-        //font-size: ${Theme.textSize.titleMd};
+      user-select: none;
+      transition: linear all .2s;
+      &:hover {
+        box-shadow: 0 0 8px rgb(0,0,0,0.4);
+        transform: scale(1.05);
       }
-    }
+
+      img {
+        width: 450px;
+        height: auto;
+      }
+  }
   }
 
-  @media (max-width: 1185px) {
+
+  @media (max-width: 1190px) {
     header {
       .outdoor {
         h1 {
-          font-size: ${Theme.textSize.titleClientSm};
+          font-size: ${Theme.textSize.titleMobileMd};
           span {
-            font-size: ${Theme.textSize.titleClientMd};
+            font-size: ${Theme.textSize.titleMobileMd};
           } 
         }
       }
@@ -280,10 +255,52 @@ export const Lgpdpage = styled.div `
       }
     }
 
+    .compliance {
+      width: 100%;
+      h1 {
+        width: 250px;
+        word-wrap: break-word;
+        span {
+          line-height: 3rem;
+        }
+      }
+    }
+
+    .dpo {
+      h1 {
+        font-size: ${Theme.textSize.titleLg};
+      }
+      .dpo-info {
+        width: 100%;
+      }
+      flex-direction: column;
+    }
+  }
+ 
+
+
+  @media (max-width: 1080px) {
+    .law {
+      .owner-rights {
+        .law-features {
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+      }
+    }
+    .compliance {
+      .guidelines {
+        .guide-features {
+          gap: 2rem;
+        }
+      }
+    }
   }
 
   @media (max-width: 926px) {
     gap: 2rem;
+    text-align: justify;
     
     header {
       flex-direction: column-reverse;
@@ -294,4 +311,46 @@ export const Lgpdpage = styled.div `
       }
     }
   }
+
+  @media (max-width: 600px) {
+    .law,
+    .compliance,
+    .dpo {
+      h1 {
+      font-size: ${Theme.textSize.titleMobileLg};
+      span {
+        font-size: ${Theme.textSize.titleMobileLg};
+      }
+      }
+      h2 {
+        font-size: ${Theme.textSize.titleMobileMd};
+        span {
+          font-size: ${Theme.textSize.titleMobileMd};
+        }
+      }
+      h3 {
+        font-size: ${Theme.textSize.titleMobileMd};
+      }
+    }
+
+    .compliance {
+      .guidelines {
+        .guide-features {
+          gap: 1.5rem;
+        }
+      }
+    }
+
+    .dpo {
+      .img {
+        width: 300px;
+        height: auto;
+
+        img {
+          width: 300px;
+          height: auto;
+        }
+    } 
+  }
+}
 `

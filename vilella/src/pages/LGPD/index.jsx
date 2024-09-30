@@ -70,7 +70,7 @@ export default function LGPD() {
         <h1>Lei Geral de Proteção de Dados Pessoais (LGPD).</h1>
         <p>Esclareça dúvidas a respeito da proteção de seus dados. </p>
         <div className="link flex">
-          <button> <a href=""> Fale Conosco</a></button>
+          <button> <a href="https://wa.me/5514997795003?text=Estou%20buscando%20informa%C3%A7%C3%B5es%20sobre%20o%20tratamento%20dos%20meus%20dados.%20Pode%20me%20direcionar%20ao%20DPO%3F" target="blank"> Fale Conosco</a></button>
         </div>
       </div>
       <div className="img flex">
@@ -84,9 +84,9 @@ export default function LGPD() {
         <p>A legislação brasileira, por meio da  Lei nº 13.709/2018,  Lei Geral de Proteção de Dados Pessoais,  regula o uso, coleta e armazenamento de dados pessoais, garantindo a privacidade e os direitos dos titulares através da LGPD.</p>  
       </div>
       
-      <div className="owner-rights flex-column">
+      <div className="owner-rights flex">
         <h2>Direitos do <span>Titular</span></h2>
-        <div className="law-features flex-row">
+        <div className="law-features flex">
           <div>
             <h3>Acesso aos dados</h3>
             <p>Você pode solicitar informações sobre seus dados pessoais.</p>  
@@ -111,7 +111,7 @@ export default function LGPD() {
     
       <div className="guidelines flex-column">
         <h2>Nossas <span>Diretrizes</span></h2>
-        <div className="guide-order">
+        <div className="guide-features">
           {lgpdGuideline.map(service => (
             <LgpdGuide 
               key={service.title}
@@ -120,12 +120,11 @@ export default function LGPD() {
               text={service.textContent}
             />
           ))}
-
         </div>
       </div>
     </div>
 
-    <div className="dpo flex-row">
+    <div className="dpo flex">
       <div className="dpo-info">
         <div className="dpo-title">
           <h1>DPO <span>Responsável</span></h1>
@@ -143,13 +142,13 @@ export default function LGPD() {
             <span>
               <MdOutlineWhatsapp style={{fontSize: 32, color: "#00116f"}}></MdOutlineWhatsapp>
             </span>
-            <a href=""><span>(14) 99779-5003</span></a>
+            <a href="https://wa.me/5514997795003?text=Estou%20buscando%20informa%C3%A7%C3%B5es%20sobre%20o%20tratamento%20dos%20meus%20dados.%20Pode%20me%20direcionar%20ao%20DPO%3F" target="blank"><span>(14) 99779-5003</span></a>
           </div>
           <div className="dpo-icons flex-row">
             <span>
               <MdMail style={{fontSize: 32, color: "#00116f"}}></MdMail>
             </span>
-            <a href=""><span>suportevilella@gmail.com</span></a>
+            <a href="mailto:suportevilella@gmail.com"><span>suportevilella@gmail.com</span></a>
           </div>
         </div>
       </div>

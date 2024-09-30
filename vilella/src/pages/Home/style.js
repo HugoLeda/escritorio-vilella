@@ -151,7 +151,7 @@ export const Homepage = styled.div `
       display: flex;
       flex-direction: column;
       text-transform: uppercase;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
 
       text-align: center;

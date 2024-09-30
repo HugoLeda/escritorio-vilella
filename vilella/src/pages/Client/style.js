@@ -86,8 +86,6 @@ export const Clientpage = styled.section `
     }
 
     .outdoor {
-      //width:500px;
-      //word-wrap: break-word;
       .link {
         justify-content: center;
         padding: 1rem 1rem 0 0;

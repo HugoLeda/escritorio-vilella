@@ -1,9 +1,18 @@
+import { LgpdContainer } from "./style"
+
 export default function LgpdGuide({icon,title,text}) {
   return (
-    <div className="">
-      <span>{icon}</span>
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </div>
+    <LgpdContainer>
+      <div className="feature">
+        <div className="icon">
+          <span>{icon}</span>
+        </div>
+        <div className="description">
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </div>
+      </div>
+    </LgpdContainer>
   )
+
 }

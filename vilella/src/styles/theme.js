@@ -31,7 +31,7 @@ const Theme = {
     textSm: '1.125rem',      //  ~17px  //    
     textMd: '1.2rem',     //   20px  //    
     textLg: '1.35rem',      //   24px  //    
-    textNum: '6.25rem',    //  100px  //    
+    textNum: '6rem',    //  100px  //    
 
     //font-size guide for mobile
     titleMobileSm: '1.2rem',      // 24px
