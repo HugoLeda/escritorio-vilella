@@ -40,6 +40,13 @@ export const Clientpage = styled.section `
     color: ${Theme.colors.blue1};
     }
 
+  h3 {
+    user-select: none;
+    font-size: ${Theme.textSize.titleSm};
+    color: ${Theme.colors.blue1};
+    font-weight: 600;
+  }
+
   p {
     font-size: ${Theme.textSize.textLg};
     line-height: 1.5;
@@ -125,8 +132,8 @@ export const Clientpage = styled.section `
       flex-direction: column;
       gap: 2rem;
 
-      h2 {
-        font-size: ${Theme.textSize.titleMd};
+      h3 {
+        font-size: ${Theme.textSize.titleCardMd};
       }
     }
   }
@@ -159,21 +166,7 @@ export const Clientpage = styled.section `
         height: auto;
       }
     }
-  }
-
-  @media (max-width: 1285px) {
-    
-    header {
-
-      /*.outdoor {
-        h1 {
-        width: 50%;
-        word-wrap: break-word;
-
-        }
-      }*/
-    }
-  }
+  } 
 
   @media (max-width: 975px) {
 
@@ -207,18 +200,15 @@ export const Clientpage = styled.section `
       justify-content: center;
       gap: 2rem;
 
-      /*.outdoor {
-        h1 {
-          width: 75%;
-        }
-      }*/
-
     }
 
     .access{
       .guide {
         h2 {
           font-size: ${Theme.textSize.titleSm};
+        }
+        h3 {
+          font-size: ${Theme.textSize.titleCardSm};
         }
         p {
           font-size: ${Theme.textSize.textMd};

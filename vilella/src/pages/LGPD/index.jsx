@@ -81,7 +81,7 @@ export default function LGPD() {
     <main className="law flex-column">
       <div className="law-view">
         <h1>Aplicação da <span>LGPD</span></h1>
-        <p>A legislação brasileira, por meio da  Lei nº 13.709/2018,  Lei Geral de Proteção de Dados Pessoais,  regula o uso, coleta e armazenamento de dados pessoais, garantindo a privacidade e os direitos dos titulares através da LGPD.</p>  
+        <p>Por meio da Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018), a legislação brasileira regula o uso, a coleta e armazenamento de dados pessoais, garantindo a privacidade e os direitos dos titulares.</p>  
       </div>
       
       <div className="owner-rights flex">
@@ -136,7 +136,7 @@ export default function LGPD() {
             <span>
               <FaUser style={{fontSize: 32, color: "#00116f"}}></FaUser>
             </span>
-            <span>João Hugo Leda de Carvalho</span>
+            <a href="https://www.linkedin.com/in/joaohugoleda/" target="blank"><span>João Hugo Leda de Carvalho</span></a>
           </div>
           <div className="dpo-icons flex-row">
             <span>

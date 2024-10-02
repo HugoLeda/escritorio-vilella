@@ -11,7 +11,6 @@ export const Gains = styled.section`
   width: 50%;
 
   user-select: none;
-
   
   transition: linear all .2s;  
 
@@ -22,7 +21,7 @@ export const Gains = styled.section`
   .img {
     width: 75px;
     img {
-      width: 65px;
+      width: 75px;
       height: auto;
     }
   }    

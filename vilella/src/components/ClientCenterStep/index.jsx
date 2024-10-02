@@ -8,7 +8,7 @@ export default function ClientCenterStep({img, title, text}) {
           <img src={img} alt={"Imagem do Onvio Portal do Cliente"} />
         </aside>
         <main className="steps">
-          <h2>{title}</h2>
+          <h3>{title}</h3>
           <p>{text}</p>
         </main>
       </div>

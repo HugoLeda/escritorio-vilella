@@ -22,26 +22,26 @@ const Theme = {
   textSize: {
 
     //font-size guide for desktop
-    titleXSm: '1.375rem',  //   22px    // old values for reference
-    titleSm: '1.375rem',     //   24px    //
-    titleMd: '1.8rem',       //   32px    //
-    titleLg: '3.5rem',       //   64px    //
+    titleXSm: '1.2rem',  //   19,2px    // old values for reference
+    titleSm: '1.6rem',  //   25,6    // old values for reference
+    titleMd: '2.5rem',     //   40px    //
+    titleLg: '3.5rem',       //   56px    //
     titleNum: '10rem',   //  200px    //
 
     textSm: '1.125rem',      //  ~17px  //    
     textMd: '1.2rem',     //   20px  //    
-    textLg: '1.35rem',      //   24px  //    
+    textLg: '1.3rem',      //   24px  //    
     textNum: '6rem',    //  100px  //    
 
     //font-size guide for mobile
-    titleMobileSm: '1.2rem',      // 24px
-    titleMobileMd: '1.8rem',        // 32px
-    titleMobileLg: '2.2rem',     // 40px
+    titleMobileSm: '1.5rem',      // 24px
+    titleMobileMd: '2rem',        // 32px
+    titleMobileLg: '2.5rem',     // 40px
     titleMobileNum: '6.25rem',   // 100px
 
     textMobileSm: '1rem',   // ~17px
-    textMobileMd: '1.25rem',  // 20px 
-    textMobileLg: '1.375rem', // 22px
+    textMobileMd: '1.15rem',  // 20px 
+    textMobileLg: '1.2rem', // 22px
     textMobileNum: '5rem',   // 80px
 
     //font-size guide for cards

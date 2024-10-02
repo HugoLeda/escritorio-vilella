@@ -27,7 +27,7 @@ export const Homepage = styled.div `
   
   h3 {
     color: ${Theme.colors.gray1};
-    font-size: ${Theme.textSize.titleMd};
+    font-size: ${Theme.textSize.titleSm};
   }
   
   p {
@@ -190,7 +190,6 @@ export const Homepage = styled.div `
       .solution-icon.img {
         display: flex;
         justify-content: center;
-        //align-items: flex-end;
 
         width: 175px;
         height: 100px;        
@@ -206,11 +205,6 @@ export const Homepage = styled.div `
         box-shadow: 0 0 8px rgb(0,0,0,0.2);
     
       }
-    }
-
-    h3 {
-      font-size: ${Theme.textSize.titleMd};
-      font-weight: 500;
     }
 
     p {
@@ -432,7 +426,7 @@ export const Homepage = styled.div `
         box-shadow: 0 0 8px rgb(0,0,0,0.2);
 
         text-align: center;
-        h3 { font-size: ${Theme.textSize.titleMobileMd}; }
+        h3 { font-size: ${Theme.textSize.titleCardSm}; }
         p { font-size: ${Theme.textSize.textMobileSm}; }
 
         justify-content: center;

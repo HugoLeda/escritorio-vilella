@@ -3,7 +3,7 @@ import Theme from "../../styles/theme"
 import media from "styled-media-query"
 
 export const Lgpdpage = styled.div `
-  max-width: 1920px;//100vw; //adjust 
+  max-width: 1920px;
   margin: 2rem auto 0 auto;
   padding: 0 10%;
   
@@ -11,55 +11,52 @@ export const Lgpdpage = styled.div `
   flex-direction: column;
   gap: 5rem;
 
-  .flex {
+  .flex,
+  .flex-column,
+  .flex-row {
     display: flex;
   }
 
   .flex-row {
-    display: flex;
     flex-direction: row;
   }
 
   .flex-column {
-    display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  h1 {
+  h1,h2 {
     user-select: none;
-    font-size: ${Theme.textSize.titleLg};
     font-weight: 600;
     color: ${Theme.colors.blue1};
 
     span {
       user-select: none;
-      font-size: ${Theme.textSize.titleLg};
       font-weight: 600;
       color: ${Theme.colors.red};
       }
   }
 
-  h2 {
-    user-select: none;
-    font-size: ${Theme.textSize.titleMobileLg};
-    font-weight: 600;
-    color: ${Theme.colors.blue1};
-
+  h1 {
+    font-size: ${Theme.textSize.titleLg};
     span {
-      user-select: none;
-      font-size: ${Theme.textSize.titleMobileLg};
-      font-weight: 600;
-      color: ${Theme.colors.red};
+      font-size: ${Theme.textSize.titleLg};
+      }
+    }
+
+  h2 {
+    font-size: ${Theme.textSize.titleMd};
+    span {
+      font-size: ${Theme.textSize.titleMd};
       }
     }
 
   h3,h4 {
     user-select: none;
-    font-size: ${Theme.textSize.titleMd};
+    font-size: ${Theme.textSize.titleSm};
     color: ${Theme.colors.blue1};
     font-weight: 600;
-
   }
 
   p {
@@ -104,34 +101,34 @@ export const Lgpdpage = styled.div `
   }
 
   .link {
-      justify-content: center;
-      padding: 1rem 1rem 0 0;
-      button {
-        width: 150px;
-        height: 40px;
-        border-radius: 6px;
-        box-shadow: 0 2px 8px rgb(0,0,0,0.5);
-        border: none;
+    justify-content: center;
+    padding: 1rem 1rem 0 0;
+    button {
+      width: 150px;
+      height: 40px;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgb(0,0,0,0.5);
+      border: none;
 
-        user-select: none;
-        background-color: ${Theme.colors.blue1};
+      user-select: none;
+      background-color: ${Theme.colors.blue1};
 
-        cursor: pointer;
-        transition: ease-out all .2s;
+      cursor: pointer;
+      transition: ease-out all .2s;
+      a {
+        font-size: ${Theme.textSize.textSm};
+        font-weight: 700;
+
+        color: ${Theme.colors.white};
+        text-decoration: none;
+      }
+      &:hover {
+        background-color: ${Theme.colors.babyBlue};
         a {
-          font-size: ${Theme.textSize.textSm};
-          font-weight: 700;
-
-          color: ${Theme.colors.white};
-          text-decoration: none;
-        }
-        &:hover {
-          background-color: ${Theme.colors.babyBlue};
-          a {
-            color: ${Theme.colors.blue1};
-          }
+          color: ${Theme.colors.blue1};
         }
       }
+    }
   }
 
   .law {
@@ -154,14 +151,13 @@ export const Lgpdpage = styled.div `
 
   .compliance {
     .compliance-view {
-      width: 100%;
       h1 {
-        width: 350px;
+        width: 480px;
         word-wrap: break-word;
         line-height: .8;
         padding-bottom: 1.2rem;
       span{
-        font-size: ${Theme.textSize.titleMobileLg};
+        font-size: ${Theme.textSize.titleMd};
       }
       }
     }
@@ -187,6 +183,7 @@ export const Lgpdpage = styled.div `
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+
     .dpo-info {
       width: 50%;
     }
@@ -267,9 +264,6 @@ export const Lgpdpage = styled.div `
     }
 
     .dpo {
-      h1 {
-        font-size: ${Theme.textSize.titleLg};
-      }
       .dpo-info {
         width: 100%;
       }
@@ -300,7 +294,9 @@ export const Lgpdpage = styled.div `
 
   @media (max-width: 926px) {
     gap: 2rem;
-    text-align: justify;
+    p {
+      font-size: ${Theme.textSize.textMobileLg};
+    }
     
     header {
       flex-direction: column-reverse;
@@ -313,27 +309,74 @@ export const Lgpdpage = styled.div `
   }
 
   @media (max-width: 600px) {
-    .law,
-    .compliance,
-    .dpo {
-      h1 {
-      font-size: ${Theme.textSize.titleMobileLg};
+    h1,h2 {
+      font-size: ${Theme.textSize.titleMobileMd};
       span {
-        font-size: ${Theme.textSize.titleMobileLg};
-      }
-      }
-      h2 {
         font-size: ${Theme.textSize.titleMobileMd};
-        span {
-          font-size: ${Theme.textSize.titleMobileMd};
+      }
+    }
+    h3 {
+      font-size: ${Theme.textSize.titleCardSm};
+    }
+    p {
+      font-size: ${Theme.textSize.textMobileMd};
+    }
+
+
+    header {
+      .img {
+        width: 330px;
+        img {
+          width: 330px;
+          height: auto;
         }
       }
-      h3 {
-        font-size: ${Theme.textSize.titleMobileMd};
+    }
+
+    .law {
+      .owner-rights {
+        .law-features {
+          gap: 1rem;
+        }
       }
     }
 
     .compliance {
+      .compliance-view {
+        h1 {        
+          width: 300px;
+          span {
+            font-size: ${Theme.textSize.titleMobileMd};
+          }
+        }
+      .guidelines {
+        .guide-features {
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+
+    .dpo {
+      .img {
+        width: 350px;
+        height: auto;
+
+        img {
+          width: 350px;
+          height: auto;
+        }
+      } 
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .compliance {
+      .compliance-view {
+        h1 {        
+          width: 250px;
+        }
+      }
       .guidelines {
         .guide-features {
           gap: 1.5rem;
@@ -350,7 +393,8 @@ export const Lgpdpage = styled.div `
           width: 300px;
           height: auto;
         }
-    } 
+      } 
+    }
   }
-}
+
 `
