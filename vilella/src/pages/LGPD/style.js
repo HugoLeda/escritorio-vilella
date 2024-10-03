@@ -68,7 +68,8 @@ export const Lgpdpage = styled.div `
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
-    width: 100%;
+    width: 100%;    
+    //z-index: 10;
 
     .outdoor {
       gap: 0;
@@ -155,7 +156,7 @@ export const Lgpdpage = styled.div `
         width: 480px;
         word-wrap: break-word;
         line-height: .8;
-        padding-bottom: 1.2rem;
+        padding-bottom: .8rem;
       span{
         font-size: ${Theme.textSize.titleMd};
       }
