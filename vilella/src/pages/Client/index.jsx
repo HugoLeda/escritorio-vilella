@@ -20,7 +20,7 @@ const tutorialSteps = [
   {
     img: login,
     title: "Acessar o Portal do Cliente",
-    text: "Acessar o portal do cliente através do link, entrar e inserir as suas credenciais cadastradas pelo escritório, ou solicitar cadastro do seu e-mail conosco.",
+    text: "Acessar o Portal do Cliente através do link, entrar e inserir as suas credenciais cadastradas pelo escritório, ou solicitar cadastro do seu e-mail conosco.",
   },
   {
     img: select,
@@ -30,7 +30,7 @@ const tutorialSteps = [
   {
     img: grid,
     title: "Sobre o Portal do Cliente",
-    text: "Dentro do Portal do Cliente é possível visualizar vencimentos de guias, acompanhar notícias do escritório, observar processos, solicitar documentos e muito mais!",
+    text: "Dentro do Portal do Cliente é possível visualizar vencimentos de guias, acompanhar notícias do escritório, solicitar documentos e muito mais!",
   }
 ]
 
@@ -85,6 +85,13 @@ export default function Client() {
         
           <div className="access flex-column">
             <h2>Vamos Começar?</h2>
+            <div className="tutorial-video-wrapper flex">
+              <iframe src="https://www.youtube.com/embed/lmcjOtB-oJQ?si=kmQa47huf1cPVCTX" title="Tutorial Portal do Cliente" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen>
+              </iframe>
+            </div>
+            <div>
+              <p>Assista ao vídeo e acompanhe o passo a passo abaixo!</p>
+            </div>
             <div className="guide flex"> 
               {tutorialSteps.map(service => (
                 <ClientCenterStep

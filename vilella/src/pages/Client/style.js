@@ -100,7 +100,6 @@ export const Clientpage = styled.section `
     }
   }
 
-
   .img {
     justify-content: center;
     width: 460px;
@@ -134,6 +133,18 @@ export const Clientpage = styled.section `
 
       h3 {
         font-size: ${Theme.textSize.titleCardMd};
+      }
+    }
+    .tutorial-video-wrapper {
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgb(0,0,0,0.5);
+      border: none;
+      
+      iframe {
+        display: flex;
+        align-items: center;
+        width: 700px;
+        height: 393.75px;
       }
     }
   }
@@ -215,8 +226,14 @@ export const Clientpage = styled.section `
           line-height: 1.5;
         }
       }
+      .tutorial-video-wrapper {
+        iframe {
+          width: 560px;
+          height: 315px;
+        }
     }
   }
+}
 
 
   @media (max-width: 480px) {
@@ -232,6 +249,14 @@ export const Clientpage = styled.section `
       h2 {
           font-size: ${Theme.textSize.titleMobileMd};
         }
+    }
+    .access{
+      .tutorial-video-wrapper {
+        iframe {
+          width: 336px;
+          height: 189px;
+        }
+    }
     }
   }
 

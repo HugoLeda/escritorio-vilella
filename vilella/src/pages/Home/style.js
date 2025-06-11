@@ -217,7 +217,7 @@ export const Homepage = styled.div `
     justify-content: space-between;
     gap: 2rem;
 
-    .find-us {        
+    .find-us {
       .social-item {
         display: flex;   
         align-items: center;        
@@ -245,8 +245,8 @@ export const Homepage = styled.div `
           width: 70%;
         }
       }
-      .office-hours {
-        margin-top: 1rem;
+      .business-hours {
+        margin-top: .5rem;
       }
     }
     
@@ -400,6 +400,9 @@ export const Homepage = styled.div `
             font-size: ${Theme.textSize.textMobileMd};
             line-height: 1.5rem;
           }
+        }
+        .business-hours {
+          margin-top: .2rem;
         }
       }
       .map-address {
