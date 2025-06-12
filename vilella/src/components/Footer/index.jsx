@@ -1,65 +1,89 @@
 import  { FooterContainer } from "./style"
 import { MdOutlineWhatsapp, MdLocalPhone, MdMail } from "react-icons/md";
-import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
+import { FaInstagram, FaFacebook, FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa6";
 
-import whiteLogo from '../../assets/whiteLogo.webp'
+import logoFooter from '../../assets/logoFooter.webp'
 
 export default function Footer() {
   return (
     <FooterContainer>
       <div className="footer flex">
-        <div className="contact">
-          <div className="socials">
-            <div className="holder-talk">
+
+        <div className="info flex-column">
+
+          <div className="rights-reserved flex-column">
+            <img src={logoFooter} alt="Logo do Escritório Vilella"/>
+            <div className="flex-column">
+              <span>&copy; 2025 Escritório Vilella.</span>
+              <span>Todos os direitos reservados.</span>
+            </div>
+          </div>
+
+          <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSealBasic?sealID=HtWsR1bqBvFzui6dSDNPOvHjCX3mOawenxn3BSYkRUQhPoVXEUqxNyRAG0SR"></script></span>
+          
+          <div className="socials flex">
+            <a className="social-item" href="https://www.instagram.com/escritorio.vilella/" target="blank">
+              <span className="item"><FaInstagram style={{fontSize: 30, color: "#ffffff"}}/></span>
+            </a>
+            <a className="social-item" href="https://www.facebook.com/people/Escrit%C3%B3rio-Vilella/61567020291268/" target="blank">
+              <span className="item"><FaFacebook style={{fontSize: 30, color: "#ffffff"}}/></span>
+            </a>
+            <a className="social-item" href="https://www.linkedin.com/company/escritoriovilella/" target="blank">
+              <span className="item"><FaLinkedin style={{fontSize: 30, color: "#ffffff"}}/></span>
+            </a>
+            <a className="social-item" href="https://www.youtube.com/@escritorio.vilella" target="blank">
+              <span className="item"><FaYoutube style={{fontSize: 30, color: "#ffffff"}}/></span>
+            </a>
+          </div>
+          
+        </div>
+
+        <div className="services flex-column">
+          <h3>Nossos Serviços</h3>
+          <div className="list">
+            <ul>
+              <li>Certificadora</li>
+              <li>Empresarial</li>
+              <li>MEI</li>
+              <li>Pessoa Física</li>
+              <li>Rural</li>
+              <li>Soluções Contábeis</li>
+              <li>Soluções Fiscais</li>
+              <li>Trabalhista</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="contact flex-column">
+          
+            <div className="call flex-column">
               <h3 className="address">Fale Conosco</h3>
-              <a className="social-item" href="tel:551433822052">
-                <span className="item"><MdLocalPhone style={{fontSize: 22, color: "#ffffff"}}/></span>
+              <a className="social-item flex" href="tel:551433822052">
+                <span className="item flex"><MdLocalPhone style={{fontSize: 22, color: "#ffffff"}}/></span>
                 <span>(14) 3382-2052</span>
               </a>
-              <a className="social-item" href="https://wa.me/5514997795080?text=Ol%C3%A1"  target="blank">
-                <span className="item"><MdOutlineWhatsapp style={{fontSize: 22, color: "#ffffff"}}/></span>
+              <a className="social-item flex" href="https://wa.me/5514997795080?text=Ol%C3%A1"  target="blank">
+                <span className="item flex"><MdOutlineWhatsapp style={{fontSize: 22, color: "#ffffff"}}/></span>
                 <span>(14) 99779-5080</span>
               </a>
-              <a className="social-item" href="mailto:adm@evilella.com">
-                <span className="item"><MdMail style={{fontSize: 22, color: "#ffffff"}}/></span>
+              <a className="social-item flex" href="mailto:adm@evilella.com">
+                <span className="item flex"><MdMail style={{fontSize: 22, color: "#ffffff"}}/></span>
                 <span>adm@evilella.com</span>
               </a>
             </div>
-            <div className="holder-social">
-              <h3 className="network">Redes Sociais</h3>
-              <a className="social-item" href="https://www.instagram.com/escritorio.vilella/" target="blank">
-                <span className="item"><FaInstagram style={{fontSize: 22, color: "#ffffff"}}/></span>
-                <span>escritorio.vilella</span>
-              </a>
-              <a className="social-item" href="https://www.linkedin.com/in/vilellaescritorio/" target="blank">
-                <span className="item"><FaLinkedin style={{fontSize: 22, color: "#ffffff"}}/></span>
-                <span>Escritório Vilella</span>
-              </a>
-            </div>           
-          </div>
+
+            <div className="legal-terms flex-column">
+              <a href=""><span>Política de Privacidade</span></a>
+              <a href=""><span>Termos Legais</span></a>
+            </div>
+               
         </div>
-        <div className="services">
-          <h3>Nossos Serviços</h3>
-          <ul>
-            <a>Certificadora</a>
-            <a>Empresarial</a>
-            <a>MEI</a>
-            <a>Pessoa Física</a>
-            <a>Rural</a>
-            <a>Soluções Contábeis</a>
-            <a>Soluções Fiscais</a>
-          </ul>
-        </div>
-        <div className="client flex">
-          <a className="client-access" href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">
-            <img src={whiteLogo} alt="Vilella"/>
-            <h3><a>Acesso <br/> <span>Portal do Cliente</span></a></h3>
-          </a>
-        </div>
+
       </div>
-      <div className="copy">
-        <span>&copy; 2024 Escritório Vilella. Todos os direitos reservados.</span>
-        <span className="devs"> 
+
+
+      <div className="dev flex">
+        <span className="credits"> 
           <span><FaGithub style={{fontSize: 16, color: "#ffffff"}}/> </span>
             <span>
               Desenvolvido por
