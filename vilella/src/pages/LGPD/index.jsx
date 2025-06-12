@@ -111,7 +111,7 @@ export default function LGPD() {
         
           <div className="guidelines flex-column">
             <h2>Nossas <span>Diretrizes</span></h2>
-            <div className="guide-features">
+            <div className="guide-features flex">
               {lgpdGuideline.map(service => (
                 <LgpdGuide 
                   key={service.title}

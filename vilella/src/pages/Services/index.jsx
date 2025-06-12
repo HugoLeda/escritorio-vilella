@@ -111,7 +111,7 @@ const servicesContent = [
   },
   {
     direction: "reverse", 
-    title:"Parcelamento de Dívidas", 
+    title:"Parcelamento de Débitos", 
     textContent:"Auxiliamos na gestão de dívidas com negociação, parcelamento, consolidação, levantamento de dívida ativa, simulação de parcelamento e acompanhamento de pagamentos.", 
     img:dividas, 
     alt: "Mão segurando caneta ao lado de calculadoras e gráficos sob mesa",

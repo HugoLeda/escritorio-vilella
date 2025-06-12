@@ -26,14 +26,12 @@ export const Lgpdpage = styled.div `
     gap: 2rem;
   }
 
-  h1,h2 {
+  h1,h2,span {
     user-select: none;
     font-weight: 600;
     color: ${Theme.colors.blue1};
 
     span {
-      user-select: none;
-      font-weight: 600;
       color: ${Theme.colors.red};
       }
   }
@@ -69,7 +67,6 @@ export const Lgpdpage = styled.div `
     justify-content: space-between;
     gap: 5rem;
     width: 100%;    
-    //z-index: 10;
 
     .outdoor {
       gap: 0;
@@ -88,16 +85,15 @@ export const Lgpdpage = styled.div `
     }
 
     .img {
-    justify-content: center;
-    width: 460px;
-
-    user-select: none;
-
-    img {
+      justify-content: center;
       width: 460px;
-      height: auto;
+      user-select: none;
+
+      img {
+        width: 460px;
+        height: auto;
+      }
     }
-  }
 
   }
 
@@ -110,16 +106,13 @@ export const Lgpdpage = styled.div `
       border-radius: 6px;
       box-shadow: 0 2px 8px rgb(0,0,0,0.5);
       border: none;
-
       user-select: none;
       background-color: ${Theme.colors.blue1};
-
       cursor: pointer;
       transition: ease-out all .2s;
       a {
         font-size: ${Theme.textSize.textSm};
         font-weight: 700;
-
         color: ${Theme.colors.white};
         text-decoration: none;
       }
@@ -140,6 +133,7 @@ export const Lgpdpage = styled.div `
       h2 {
         text-align: center;
       }
+
       .law-features {
         gap: 3.5rem;
         p {
@@ -165,19 +159,18 @@ export const Lgpdpage = styled.div `
     
     .guidelines {
       text-align: center;
-      gap: 2rem;
-      
+
       .guide-features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 4rem;
-        
+        flex-wrap: wrap;
+        justify-content: space-around;  
+        align-items: center;
+        row-gap: 2rem;
+
         p {
           font-size: ${Theme.textSize.textMd};
         }
       }
     }
-    
   }
     
   .dpo {
@@ -188,17 +181,14 @@ export const Lgpdpage = styled.div `
     .dpo-info {
       width: 50%;
     }
+
     a {
       text-decoration: none;
       color: ${Theme.colors.gray1};
       span {
-            font-size: ${Theme.textSize.textMd};
-          }
-
-      h1 {
-        span{
-          font-size: ${Theme.textSize.titleMobileLg};
-        }
+        color: ${Theme.colors.gray1};
+        font-weight: 300;
+        font-size: ${Theme.textSize.textMd};
       }
     }
 
@@ -222,14 +212,14 @@ export const Lgpdpage = styled.div `
       transition: linear all .2s;
       &:hover {
         box-shadow: 0 0 8px rgb(0,0,0,0.4);
-        transform: scale(1.05);
+        transform: scale(1.1);
       }
 
       img {
         width: 450px;
         height: auto;
       }
-  }
+    }
   }
 
 
@@ -271,8 +261,6 @@ export const Lgpdpage = styled.div `
       flex-direction: column;
     }
   }
- 
-
 
   @media (max-width: 1080px) {
     .law {
@@ -283,14 +271,7 @@ export const Lgpdpage = styled.div `
           gap: 2rem;
         }
       }
-    }
-    .compliance {
-      .guidelines {
-        .guide-features {
-          gap: 2rem;
-        }
-      }
-    }
+    }    
   }
 
   @media (max-width: 926px) {
@@ -352,7 +333,7 @@ export const Lgpdpage = styled.div `
         }
       .guidelines {
         .guide-features {
-          gap: 1.5rem;
+          justify-content: center;
         }
       }
     }
@@ -377,12 +358,7 @@ export const Lgpdpage = styled.div `
         h1 {        
           width: 250px;
         }
-      }
-      .guidelines {
-        .guide-features {
-          gap: 1.5rem;
-        }
-      }
+      }      
     }
 
     .dpo {

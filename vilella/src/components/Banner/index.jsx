@@ -11,7 +11,7 @@ export default function Banner() {
     <BannerContainer>
       <div className="cover">
         <Carousel >
-          <Carousel.Item interval={5000}>
+          <Carousel.Item interval={30000}>
             <img className="cover-img" 
                  src={homeCover} alt="Foto da fachada do Escritório Vilella"
             />
@@ -23,7 +23,7 @@ export default function Banner() {
               </button>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item interval={5000}>
+          <Carousel.Item interval={30000}>
             <img className="cover-img" 
                  src={darkBlueBG} alt="Imagem com a logo do Escritório Vilella"
             />
