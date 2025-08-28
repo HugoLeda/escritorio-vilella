@@ -2,70 +2,100 @@ import styled from "styled-components";
 import Theme from "../../styles/theme";
 
 export const Steps = styled.section `
-  display: flex;
-  gap: 5rem;
 
-  .tutorial {
+  .flex {
     display: flex;
-    justify-content: space-around;
-    border-radius: 6px;
-    box-shadow: 0 0px 4px rgb(0,0,0,0.2);
+  }
+
+  .flow-steps {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     gap: 2rem;
-    padding: 1.5rem;
+    text-align: center;
+
+  }
+
+
+  .number {
+    background-color: ${Theme.colors.babyBlue};
+    width:50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+  }
+
+  .icon {
+    align-items: center;
+    span {
+      text-align: center;
+    }
+  }
+
+  .description {
+    h3 {
+      color: ${Theme.colors.gray1};
+    }
+    h3,p {
+      font-size: ${Theme.textSize.textLg};
+      margin: 0;
+    }
+  }
+
+
+
+  @media (max-width: 1170px) {
     
-    .img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 300px;
-      img {
-        width: 300px;
-        height: auto;
-      }
+    h3 {
+      font-size: ${Theme.textSize.textMobileMd};
+    }     
+    p {
+      font-size: ${Theme.textSize.textMobileSm};
     }
 
-    main {
-      display: flex;
-      justify-content:center;
-    }
 
   }
 
-  @media (max-width: 950px) {
-    .tutorial {
-      flex-direction: column;
-      align-items: center;
-      padding: 1.5rem;
+  @media (max-width: 975px){
+    
+    .flow-steps {
+      padding: .5rem 0;      
+    }
 
-      .img {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        width: 320px;
-        img {
-          width: 320px;
-          height: auto;
-        }
-      }
-      
-      .steps {
-       gap: 0; 
-      }
+    .flow-steps {
+      gap: 1rem;
+
     }
   }
 
-  @media (max-width: 420px){
-    .tutorial {
-      padding: 1.25rem;
-      
-      .img {
-        width: 300px;
-        img {
-          width: 300px;
-          height: auto;
-        }
+  @media (max-width: 800px) {
+
+
+    .flow-steps {
+      h3, p {
+        font-size: ${Theme.textSize.textSm};
       }
     }
+        
+
+  }
+
+
+  @media (max-width: 480px){
+
+
+    .number {
+      width: 37.5px;
+      height: 37.5px;
+      span :nth-child(1) {
+        width: 75%;    
+        height: 75%;
+        
+      }
+    }
+
   }
     
 `

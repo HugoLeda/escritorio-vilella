@@ -1,12 +1,17 @@
 import { Gains } from "./style"
 
-export default function ClientCenterGain({img, alt, text}) {
+export default function ClientCenterGain({icon,title, text}) {
   return(
-    <Gains>      
-      <aside className="img">
-        <img src={img} alt={alt} />
-      </aside>
-      <p>{text}</p>
+    <Gains> 
+      <div className="feature">
+        <div className="icon">
+          <span>{icon}</span>
+        </div>
+        <div className="description">
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </div>
+      </div>     
     </Gains>
   )
 }

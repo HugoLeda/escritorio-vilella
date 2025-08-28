@@ -2,49 +2,78 @@ import styled from "styled-components"
 import Theme from "../../styles/theme"
 
 export const Gains = styled.section`
-  display: flex;  
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;    
-  padding: 1rem 1rem;
-
-  width: 50%;
-
-  user-select: none;
+  .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;    
+    width: 300px;
+    transition: .1s linear;
   
-  transition: linear all .2s;  
-
   &:hover {
       transform: scale(1.08);
     }
-
-  .img {
-    width: 75px;
-    img {
-      width: 75px;
-      height: auto;
-    }
-  }    
-
-  p {
-    font-size: ${Theme.textSize.textSm};
-    line-height: 1.5rem;
-    margin: 0;
   }
 
-  @media (max-width: 926px) {
-    width: 100%;  
+  .description {
+      
+    h3 {
+      font-size: ${Theme.textSize.titleCardXSm};
+      color: ${Theme.colors.gray1};
+    }
 
-    &:hover {
-      transform: none;
+    p {
+      font-size: ${Theme.textSize.textMd};
+      line-height: 1.5rem;
+      margin: 0;
+    }
+
+  }
+
+
+
+  @media (max-width: 926px) {
+
+    .feature {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      gap: 1rem;
+      height: 80px;
+      
+
+      .icon {
+        span :nth-child(1){
+          width: 80%;
+        }
+      }
+      .description {
+        width: 220px;
+      }
     }
 
   }
 
   @media (max-width: 480px) {
-    p {
-      font-size: ${Theme.textSize.textMobileSm};
-      line-height: 1.25;
+
+
+    .feature {
+      height: 70px;
     }
+
+    .description {
+      h3 {
+        font-size: ${Theme.textSize.textMobileLg};
+        line-height: 1.5;
+        margin:0;
+      }        
+      p {
+        font-size: ${Theme.textSize.textMobileSm};
+        line-height: 1.25;
+      }
+
+    }
+
   }
 `

@@ -1,16 +1,19 @@
 import { Steps } from "./style"
 
-export default function ClientCenterStep({img, title, text}) {
+export default function ClientCenterStep({number, icon, title, text, arrow}) {
   return(
     <Steps>
-      <div className="tutorial">
-        <aside className="img">
-          <img src={img} alt={"Imagem do Onvio Portal do Cliente"} />
-        </aside>
-        <main className="steps">
+      <div className="flow-steps flex">
+        <div className="number flex">
+          <span>{number}</span>
+        </div>
+        <div className="icon flex">
+          <span>{icon}</span>
+        </div>
+        <div className="description">
           <h3>{title}</h3>
           <p>{text}</p>
-        </main>
+        </div>   
       </div>
     </Steps>
   )
