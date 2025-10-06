@@ -166,7 +166,7 @@ export const Lgpdpage = styled.div `
       }
 
       .compromise-title {
-        gap: 1rem;
+        gap: 2rem;
       }
 
       .office-actions {
@@ -227,8 +227,10 @@ export const Lgpdpage = styled.div `
       }
   }
 
-  .dpo-forms {
-    gap: 1rem;
+  .contact-dpo-form {
+    gap: 3rem;
+    max-width: 1200px;
+    justify-content: space-around;
   }
 
   .contact-dpo {
@@ -238,7 +240,7 @@ export const Lgpdpage = styled.div `
     gap: 2rem;
 
 
-    .contact-box {
+    .your-voice-matters {
       width: 100%;      
       gap: 2rem;
     }
@@ -306,7 +308,7 @@ export const Lgpdpage = styled.div `
     .dpo {      
       justify-content: space-between;      
       text-align: center;
-      gap: 2rem;    
+      gap: 2rem;
     }
 
     .form {
@@ -397,10 +399,10 @@ export const Lgpdpage = styled.div `
     }    
 
     .contact-dpo {
-      .contact-box {
+      .contact-dpo-form {
         display: flex;
-        flex-direction: column;
-        width: 75%;
+        flex-direction: column;    
+        max-width: 500px; 
       }      
     }
 
@@ -475,16 +477,8 @@ export const Lgpdpage = styled.div `
       }
     }    
 
-    .contact-dpo {
-      .contact-box {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-      }      
-    }   
 
   }
-
 
   @media (max-width: 600px) {
     h1,h2 {
@@ -537,17 +531,6 @@ export const Lgpdpage = styled.div `
         }
       }
     }
-
-    .contact-dpo {
-      .contact-box {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        p {
-
-        }
-      }      
-    }   
 
   }
   

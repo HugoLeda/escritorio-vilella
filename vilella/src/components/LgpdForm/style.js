@@ -26,7 +26,7 @@ export const Forms = styled.div `
     display: flex;
     flex-direction: column;
     justify-content: space-between;    
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .form-fill {
@@ -35,10 +35,14 @@ export const Forms = styled.div `
     gap: 1rem;
   }
 
-  
   .form-item {
     display: flex;
     flex-direction: column;
+  }
+
+  .consent-label {
+    display: flex;    
+    gap: .5rem;
   }
 
   label {
@@ -54,9 +58,10 @@ export const Forms = styled.div `
   input::placeholder,
   textarea::placeholder {
     color: #ccc;
+    margin:0;
   }
 
-  input,
+  input:not([type="checkbox"]),
   select,
   textarea {
     width: 100%;
@@ -85,5 +90,11 @@ export const Forms = styled.div `
   }
 
 
+  @media (max-width: 420px) {
+    .consent-label {
+      font-size: .9rem;
+      
+    }
+  }
 
 `

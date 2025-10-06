@@ -141,7 +141,7 @@ export default function LGPD() {
           <div className="compliance flex">
             <div className="compliance-text flex-column">
               <h3>Compliance</h3>
-              <p>Em parceria com a consultoria <a href="https://embrasi.com.br/">EMBRASI</a>, aprimoramos nossas diretrizes internas para garantir a governança de dados e a plena conformidade com a LGPD.</p>
+              <p>Em parceria com a consultoria <a href="https://embrasi.com.br/" target="blank">EMBRASI</a>, aprimoramos nossas diretrizes internas para garantir a governança de dados e a plena conformidade com a LGPD.</p>
             </div>
             <div className="compliance-checks flex-column">
               {lgpdCompliance.map(service => (
@@ -156,12 +156,12 @@ export default function LGPD() {
         </section>      
 
         <section id="contact-us" className="contact-dpo flex-column">
-          <div className="dpo-forms flex-column">
+          <div className="your-voice-matters flex-column">
             <h2>Sua voz importa</h2>
             <p>Fale conosco sobre seus dados</p>
           </div>
           
-          <div className="contact-box flex">
+          <div className="contact-dpo-form flex">
             <div className="dpo flex-column">
               <div className="dpo-info flex-column">
                 <div className="dpo-title flex-column">

@@ -65,6 +65,16 @@ export const Actions = styled.div `
 
   }
 
+  
+  @media (max-width: 690px) {
+
+    .act {
+      align-items: flex-start;
+    }
+    
+  }
+
+
   @media (max-width: 600px) {
 
     .act {
