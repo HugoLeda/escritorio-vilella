@@ -115,7 +115,7 @@ export default function Policy(){
             <h3>2. Dados coletados</h3>
             <p>Coletamos informações de diferentes formas quando você utiliza o nosso site e os serviços oferecidos. Essas informações são tratadas de forma segura e transparente, com o objetivo de melhorar sua experiência de navegação e garantir a execução dos nossos serviços.</p>
 
-            <h4>2.1. Dados Técnicos</h4>
+            <h4>2.1. Dados técnicos</h4>
             <p>Ao acessar o site, determinadas informações técnicas podem ser coletadas automaticamente pelo navegador, tais como:</p>
             <ul>
               <li>Endereço IP (Internet Protocol);</li>
@@ -126,14 +126,14 @@ export default function Policy(){
             </ul>
             <p>Essas informações são processadas de forma temporária para assegurar o funcionamento correto do site, otimizar a entrega de conteúdo e garantir segurança contra acessos automatizados maliciosos (bots). Nenhuma dessas informações é armazenada de forma permanente ou vinculada a qualquer identificador pessoal.</p>
 
-            <h4>2.2. Dados coletados pelo formulário de contato</h4>
+            <h4>2.2. Dados coletados pelo formulário de contato LGPD</h4>
             <p>Ao preencher e enviar o formulário disponível no site, o usuário fornece voluntariamente alguns dados pessoais, como:</p>
             <ul>
               <li>Nome;</li>
               <li>Endereço de e-mail;</li>
               <li>Conteúdo da mensagem.</li>
             </ul>
-            <p>O tratamento dos dados coletados ocorre com base no consentimento do titular, obtido no momento do envio do formulário, quando o usuário seleciona a opção “Li e concordo com a Política de Privacidade” e não serão utilizados para nenhum outro propósito sem o consentimento prévio do usuário. 
+            <p>O tratamento dos dados coletados ocorre com base no consentimento do titular, obtido no momento do envio do formulário, quando o usuário seleciona a opção “Li e aceito a Política de Privacidade” e não serão utilizados para nenhum outro propósito sem o consentimento prévio do usuário. 
             </p>
             <p>As informações coletadas servirão exclusivamente para fins de contato e retorno da solicitação, como envio de respostas, esclarecimentos ou propostas relacionadas aos serviços do Escritório Vilella. </p>
 
@@ -228,7 +228,7 @@ export default function Policy(){
           </div>
           
           <div className="item">
-            <h3>8. Dúvidas e Suporte</h3>
+            <h3>8. Dúvidas e suporte</h3>
             <p>
               Caso tenha dúvidas sobre esta Política de Privacidade ou deseje entrar em contato conosco para mais informações, por favor, consulte os dados de contato na parte final desta página.
             </p>
@@ -242,10 +242,10 @@ export default function Policy(){
           <h2>Termos Legais</h2>
           <p style={{padding: '4px 8px', backgroundColor: '#f9f9f9', borderLeft: '4px solid #909090'}}>
             <strong>Última atualização:</strong> 09 de outubro de 2025</p>
-            <p>Os Termos Legais a seguir descrevem as condições de uso, direitos autorais, responsabilidade sobre o conteúdo e demais aspectos relacionados à navegação no <strong>evilella.com</strong>.
+            <p>Os Termos Legais a seguir descrevem as condições de uso, direitos autorais, responsabilidade sobre o conteúdo e demais aspectos relacionados à navegação neste site.
           </p>
           <p>
-            Recomendamos a leitura atenta deste conteúdo para melhor compreensão das diretrizes aplicáveis à sua experiência em nosso ambiente digital.
+            Recomendamos a leitura atenta do conteúdo para melhor compreensão das diretrizes aplicáveis à sua experiência em nosso ambiente digital.
           </p>
         </div>
 
@@ -262,7 +262,7 @@ export default function Policy(){
           <p>
             Alguns materiais visuais presentes neste site, como imagens, podem ter sido obtidos de fontes públicas ou gratuitas,
             e nem todos possuem licença formal de uso exclusivo. Caso você seja titular de direitos sobre algum material aqui exibido
-            e deseje solicitar sua remoção ou atribuição, entre em contato pelo canal de suporte disponível no rodapé deste site.
+            e deseje solicitar sua remoção ou atribuição, entre em contato pelos canais de suporte disponíveis ao final desta página.
           </p>
         </div>
 
@@ -278,10 +278,7 @@ export default function Policy(){
         <div className="item">
           <h3>4. Limitação de responsabilidade</h3>
           <p>
-            O conteúdo deste site é fornecido conforme descrito acima, e o uso das informações apresentadas é de responsabilidade exclusiva do visitante.
-            Tomamos todas as medidas razoáveis para proteger os dados pessoais fornecidos através dos formulários de contato.
-            
-            No entanto, apesar de nossos esforços para garantir a segurança, não podemos assegurar a proteção absoluta contra falhas técnicas ou acessos não autorizados.
+            O conteúdo deste site é fornecido conforme descrito acima, e o uso das informações apresentadas é de responsabilidade exclusiva do visitante. Tomamos todas as medidas razoáveis para proteger os dados pessoais fornecidos através dos formulários de contato. No entanto, apesar de nossos esforços para garantir a segurança, não podemos assegurar a proteção absoluta contra falhas técnicas ou acessos não autorizados.
           </p>
           <p> 
             Caso haja algum incidente, tomaremos as providências necessárias para mitigar o impacto e notificar os usuários afetados, conforme exigido pela legislação aplicável.
