@@ -107,6 +107,7 @@ export const FooterContainer = styled.footer`
     .footer {
       flex-direction: column-reverse;
       align-items: center;
+      
       gap: 1rem;
 
       .info {
@@ -120,7 +121,9 @@ export const FooterContainer = styled.footer`
       .legal-terms {
         gap: 1rem;
       }
+    }
   `}
+  
 
   ${media.lessThan("small")`
     .footer {
@@ -147,6 +150,5 @@ export const FooterContainer = styled.footer`
       gap: 2rem;
       margin: 0 30px;
     }
-
   `}
 `

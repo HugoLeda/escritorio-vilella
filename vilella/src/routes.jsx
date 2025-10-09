@@ -6,6 +6,7 @@ import Building from "./pages/Bulding";
 import Services from "./pages/Services";
 import LGPD from "./pages/LGPD"
 import Client from "./pages/Client"
+import Policy from "./pages/Policy"
 
 const Router = createBrowserRouter([
   {
@@ -31,7 +32,11 @@ const Router = createBrowserRouter([
   {
     path: "/client-center",
     element: <Client />,
-  },
+  },  
+  {
+    path: "/privacy-policy",
+    element: <Policy />
+  },  
   {
     path: "*",
     element: <Page404 />

@@ -226,6 +226,10 @@ export const Lgpdpage = styled.div `
         }
       }
   }
+  
+  #contact-us {
+    scroll-margin-top: 8.75rem; 
+  }
 
   .contact-dpo-form {
     gap: 3rem;

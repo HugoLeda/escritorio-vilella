@@ -94,7 +94,7 @@ export default function LGPD() {
             <h1>Lei Geral de Proteção de Dados Pessoais (LGPD) </h1>
             <p>Esclareça suas dúvidas a respeito da proteção e segurança dos seus dados. </p>
             <div className="link flex">
-              <button onClick={(e) => {e.preventDefault(); window.location.replace('#contact-us');}}>Fale Conosco</button>
+              <button> <a href="/lgpd#contact-us"> Fale Conosco</a></button>
             </div>
           </div>
           <div className="img flex">

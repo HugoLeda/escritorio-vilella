@@ -2,9 +2,24 @@ import  { FooterContainer } from "./style"
 import { MdOutlineWhatsapp, MdLocalPhone, MdMail } from "react-icons/md";
 import { FaInstagram, FaFacebook, FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa6";
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import logoFooter from '../../assets/logoFooter.webp'
 
 export default function Footer() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <FooterContainer>
       <div className="footer flex">
@@ -18,8 +33,6 @@ export default function Footer() {
               <span>Todos os direitos reservados.</span>
             </div>
           </div>
-
-          <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSealBasic?sealID=HtWsR1bqBvFzui6dSDNPOvHjCX3mOawenxn3BSYkRUQhPoVXEUqxNyRAG0SR"></script></span>
           
           <div className="socials flex">
             <a className="social-item" href="https://www.instagram.com/escritorio.vilella/" target="blank">
@@ -68,17 +81,15 @@ export default function Footer() {
               </a>
               <a className="social-item flex" href="mailto:adm@evilella.com">
                 <span className="item flex"><MdMail style={{fontSize: 22, color: "#ffffff"}}/></span>
-                <span>adm@evilella.com</span>
+                <span>contato@evilella.com</span>
               </a>
             </div>
 
             <div className="legal-terms flex-column">
-              <a href=""><span>Política de Privacidade</span></a>
-              <a href=""><span>Termos Legais</span></a>
-            </div>
-               
+              <a href="/privacy-policy"><span>Política de Privacidade</span></a>
+              <a href="/privacy-policy#legal-terms"><span>Termos Legais</span></a>
+            </div>               
         </div>
-
       </div>
 
 
