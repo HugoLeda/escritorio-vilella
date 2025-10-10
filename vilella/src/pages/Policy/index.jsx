@@ -311,7 +311,7 @@ export default function Policy(){
         <h2>Contatos para suporte</h2>
         <p>Para esclarecer dúvidas sobre esta <strong>Política de Privacidade</strong>, <strong>Termos Legais</strong> ou exercer qualquer um dos seus direitos relacionados aos dados pessoais, você pode nos encontrar nos seguintes canais:</p>
         <ul>
-          <li><strong>Telefone:</strong> (14) 3382-2052 / (14) 99779-5080</li>
+          <li><strong>Telefone:</strong> (14) 3382-2052 / (14) 99779-5003</li>
           <li><strong>Endereço:</strong> R. Mario Monteiro de França, 256 - Centro, Fartura/SP - CEP: 18870-030</li>
           <li><strong>E-mail:</strong> <a href="mailto:suportevilella@gmail.com">suportevilella@gmail.com</a></li>
         </ul>

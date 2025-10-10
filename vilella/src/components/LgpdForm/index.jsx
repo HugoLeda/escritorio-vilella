@@ -167,9 +167,6 @@ export default function LgpdForm({ onSubmit }) {
               maxLength={300}
               {...register('message', {
                 required: true,
-                minLength: {
-                  value: 50,
-                },
                 maxLength: {
                   value: 300,
                 },
