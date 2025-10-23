@@ -1,13 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { HeaderContainer } from './style';
 
 import logoVilella from '../../assets/blackLogoVilella.webp';
+import logoWhiteVilella from '../../assets/logoFooter.webp';
+
 import { Link } from 'react-router-dom';
 
 export default function Header({page}) {  
   const [classOn, setClassOn] = useState(false);  
+
   return (
-    <HeaderContainer>              
+    <HeaderContainer id="header">              
         <div className="header-logo">
           <a href="#">
             <img className="img" src={logoVilella} alt="Logo do Escritório Vilella"/>

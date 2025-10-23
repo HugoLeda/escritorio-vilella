@@ -16,7 +16,6 @@ export const Actions = styled.div `
     .icon {
       justify-content: center;
       align-items: center;
-      //background-color: ${Theme.colors.babyBlue};
       border-radius: 50%;
       width: 70px;
       height: 70px;      

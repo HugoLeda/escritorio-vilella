@@ -79,7 +79,7 @@ export default function Footer() {
                 <span className="item flex"><MdOutlineWhatsapp style={{fontSize: 22, color: "#ffffff"}}/></span>
                 <span>(14) 99779-5080</span>
               </a>
-              <a className="social-item flex" href="mailto:adm@evilella.com">
+              <a className="social-item flex" href="mailto:contato@evilella.com">
                 <span className="item flex"><MdMail style={{fontSize: 22, color: "#ffffff"}}/></span>
                 <span>contato@evilella.com</span>
               </a>

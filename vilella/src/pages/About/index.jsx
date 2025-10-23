@@ -1,11 +1,338 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
+import AboutValues from "../../components/AboutCoreValues";
+import AboutAdvantages from "../../components/AboutAdvantages";
+import AboutJourney from "../../components/AboutJourney";
+
+import homeCover from "../../assets/homeCover.webp"
+
+import { Aboutpage } from "./style"
+
+import { FaHandsHoldingCircle, FaRegEye, FaFlag, FaBriefcase, FaAward, FaUserTie } from "react-icons/fa6";
+import { FaCogs } from "react-icons/fa";
+
+import { useState, useEffect, useRef } from "react";
+import Theme from "../../styles/theme";
+
+
 export default function About() {
+  
+  /*class .scroll-effect start*/
+
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    let scrollDirection = "down";
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY.current) {
+        scrollDirection = "down";
+      } else {
+        scrollDirection = "up";
+      }
+      lastScrollY.current = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target;
+
+          if (entry.isIntersecting) {
+            el.classList.remove("fade-up", "fade-down");
+
+            if (scrollDirection === "down") {
+              el.classList.add("visible", "fade-up");
+            } else {
+              el.classList.add("visible", "fade-down");
+            }
+          } else {
+            el.classList.remove("visible", "fade-up", "fade-down");
+          }
+        });
+      },
+      {
+        threshold: 0.01,
+      }
+    );
+
+    const elements = document.querySelectorAll(".scroll-effect");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
+  /* class .scroll-effect END*/
+
+  const excelenceCards = [
+    {
+      icon:<FaFlag style={{fontSize: 32}}/>,
+      title:"Missão",
+      text:"Proporcionar tranquilidade e sucesso aos clientes com soluções personalizadas e eficazes.",
+      hoverColor:"#f33" 
+    },
+    {
+      icon:<FaRegEye style={{fontSize: 32}}/>,
+      title:"Visão",
+      text:"Ser reconhecidos pela excelência e satisfação daqueles que confiam em nosso trabalho diário.",
+      hoverColor: "#93c5ff"
+    },    
+    {
+      icon:<FaHandsHoldingCircle style={{fontSize: 32}}/>,
+      title:"Valores",
+      text:"Responsabilidade, confiança, transparência e otimização de processos em todas as relações.",
+      hoverColor:"#0d2daa"
+    }    
+  ];
+
+  /* advantagesCard onClick start */
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const advantagesCards = [
+    {
+      icon: <FaAward style={{ fontSize: 48, color: "#93c5ff" }} />,
+      title: "Décadas de experiência"
+    },
+    {
+      icon: <FaBriefcase style={{ fontSize: 48, color: "#fff" }} />,
+      title: "Assessoria empresarial"
+    },
+    {
+      icon: <FaCogs style={{ fontSize: 48, color: "#00116f" }} />,
+      title: "Atendimento multissetorial"
+    },
+    {
+      icon: <FaUserTie style={{ fontSize: 48, color: "#a8d0ff" }} />,
+      title: "Contabilidade consultiva"      
+    }
+  ];
+  
+  const handleDotClick = (index) => {
+    setCurrentIndex(index);
+  };
+
+  
+  /* advantagesCard onClick END */
+
+
+  const journeyYears = [
+    {
+      year:"ANO",
+      description:"Fundação do Escritório Vilella"
+    },
+    {
+      year:"2008",
+      description:"Informatização e migração de sistema"
+    },    
+    {
+      year:"2011",
+      description:"Início da nova gerência"
+    },    
+    {
+      year:"ANO",
+      description:"Nos tornamos ponto de atendimento para emissão de certificados digitais"
+    },    
+    {
+      year:"2020",
+      description:"Junção com a Organização Fartura de Contabilidade"
+    },    
+    {
+      year:"2021",
+      description:"Mudança para a nova sede, estruturada para atender melhor nossos clientes"
+    },    
+    {
+      year:"2024",
+      description:"Atendimento digital expandido para todo o território nacional"
+    }
+  ];
+
+
   return(
     <>
       <Header page="about"/>      
-        <p>About</p>          
+        <Aboutpage>
+          <header className="flex-column">
+            <div className="outdoor wrapper flex-column">              
+              <div className="outdoor-items flex">
+                <div className="outdoor-text items flex-column">
+                  <h1>Há 35 anos construindo confiança e <span>soluções contábeis personalizadas</span></h1>
+                  <p>Trabalhamos juntos para fazer sua empresa crescer.</p>
+                </div>
+                <div className="outdoor-cards decor-frames">
+                 {/* <img className="img" src={homeCover} alt="office  vilella"/>*/}
+                </div>
+              </div>             
+              <div className="outdoor-scroll flex">
+                <button className="our-history"><a href="/about#timeline">Conheça nossa história</a></button>
+              </div>  
+            </div>       
+          </header>
+          <main>
+            
+            <section id="history" className="flex-column">
+              <div className="history items wrapper flex">
+
+                <div className="history-text items flex-column">
+                  <div className="history-text-title">
+                    <h2>Quem somos</h2>
+                    <span>Escritório Vilella</span>
+                  </div>
+                  <p>Com mais de 35 anos de atuação, somos reconhecidos como um parceiro essencial para empresas que buscam segurança, clareza e suporte em todas as etapas do seu desenvolvimento.</p>
+                  <p>Desde o início, nossa prioridade sempre foi oferecer um atendimento próximo, confiável e eficiente.</p>
+                  <p>Trabalhamos para garantir que nossos clientes estejam sempre em conformidade com as exigências legais, mas, acima de tudo, focados no crescimento saudável e sustentável de seus negócios.</p>
+
+                </div>
+                <figure className="decor-frames">
+                  <img className="img" src={homeCover} alt="office  vilella"/>
+                </figure>
+
+              </div>
+            </section>
+
+            <section id="bsc" className="flex-column">
+              <div className="bsc-items wrapper flex-column">
+
+                <div className="excelence items flex-column">
+                  <div className="excelence-text flex-column items scroll-effect">
+                    <span>missão visão e valores</span>
+                    <h2>Compromisso com a <span>excelência</span></h2>
+                  </div>
+                  <div className="excelence-cards items flex scroll-effect">
+                    {excelenceCards.map(service => (
+                      <AboutValues
+                        key={service.title}
+                        icon={service.icon}
+                        title={service.title}
+                        text={service.text}
+                        hoverColor={service.hoverColor}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                <div className="advantages flex scroll-effect">
+                  <div className="advantages-text flex-column items">
+                    <h2>Nosso <span>diferencial</span></h2>
+                    <p>É o compromisso que assumimos com você.</p>
+                  </div>
+                  <div className="diamond-container">
+                    <div className="diamond">
+                      <div
+                        className={`circle ${currentIndex === 2 ? 'active' : ''}`}
+                        data-pos="top"
+                        onClick={() => handleDotClick(2)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === 'Enter' && handleDotClick(0)}
+                      >
+                        <div className="inner">
+                          <AboutAdvantages icon={advantagesCards[2].icon} title={advantagesCards[2].title} />
+                        </div>
+                      </div>
+
+                      <div
+                        className={`circle ${currentIndex === 3 ? 'active' : ''}`}
+                        data-pos="left"
+                        onClick={() => handleDotClick(3)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === 'Enter' && handleDotClick(1)}
+                      >
+                        <div className="inner">
+                          <AboutAdvantages icon={advantagesCards[0].icon} title={advantagesCards[0].title} />
+                        </div>
+                      </div>
+
+                      <div
+                        className={`circle center ${currentIndex === 0 ? 'active' : ''}`}
+                        onClick={() => handleDotClick(0)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === 'Enter' && handleDotClick(2)}
+                      >
+                        <div className="inner">
+                          <AboutAdvantages icon={advantagesCards[1].icon} title={advantagesCards[1].title} />
+                        </div>
+                      </div>
+
+                      <div
+                        className={`circle ${currentIndex === 1 ? 'active' : ''}`}
+                        data-pos="right"
+                        onClick={() => handleDotClick(1)}
+                        role="button"
+                        tabIndex={0}
+                        onKeyDown={(e) => e.key === 'Enter' && handleDotClick(3)}
+                      >
+                        <div className="inner">
+                          <AboutAdvantages icon={advantagesCards[3].icon} title={advantagesCards[3].title} />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="dots">
+                      {advantagesCards.map((_, index) => (
+                        <span
+                          key={index}
+                          className={`dot ${index === currentIndex ? 'active' : ''}`}
+                          onClick={() => handleDotClick(index)}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+          
+            <section id="timeline" className="flex-column">
+              <div className="timeline items flex-column">
+                <div className="timeline-text items flex-column">
+                  <span className="scroll-effect">Marcos importantes</span>
+                  <h2 className="scroll-effect">Nossa jornada</h2>            
+                </div>
+                <div className="flex-column items scroll-effect">
+                  <div className="timeline-start-end flex-column">
+                    <h4 className="scroll-effect">Início</h4>
+                  </div>
+                  <div className="timeline-between">
+                    {journeyYears.map((service, index) => (
+                      <AboutJourney
+                        key={service.year}
+                        year={service.year}
+                        description={service.description}
+                        side={index % 2 === 0 ? 'left' : 'right'}                        
+                      />
+                    ))}
+                  </div>
+                  <div className="timeline-start-end flex-column scroll-effect">
+                    <h4 className="scroll-effect">Presente</h4>
+                    <p className="scroll-effect">Três décadas de evolução nos trouxeram ao nível de excelência com que atuamos hoje, e seguimos comprometidos com a entrega de valor no nosso trabalho, para oferecer uma contabilidade moderna e transparente.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </main>
+          <section id="call-to-action" className="flex-column">
+            <div className="call-to-action items wrapper flex-column scroll-effect">
+              <div className="invite-text flex-column">
+                <h2 className="">Faça parte da nossa história</h2>
+                <p>Temos orgulho de tudo o que construímos até aqui e o melhor ainda está por vir. <span>Será um prazer ter você conosco nessa jornada!</span></p>
+              </div>
+              <div className="flex-column">
+                <button><a href="https://wa.me/5514997396924?text=Quero%20ser%20cliente!" target="blank">Quero ser cliente</a></button>
+              </div>              
+            </div>
+          </section>
+          
+        </Aboutpage>
       <Footer/>
     </>
   )
