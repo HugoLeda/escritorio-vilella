@@ -1,145 +1,295 @@
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import ServiceSpecialty from "../../components/ServiceSpecialty";
+import LgpdActions from "../../components/LgpdActions";
+import Theme from "../../styles/theme";
 
-import { MdLocationOn, MdOutlineWhatsapp, MdLocalPhone, MdMail, MdOutlineWatchLater, MdImportExport } from "react-icons/md";
+import app from "../../assets/apponvio.png"
+
+import { useState, useEffect, useRef } from "react";
+
 import { Homepage } from "./style";
-
-import letterE from '../../assets/letterE.webp';
-import letterV from '../../assets/letterV.webp';
-import speed from '../../assets/metersSpeed.webp';
-import cluster from '../../assets/cluster.webp';
-import shield from '../../assets/shield.webp';
-
-import { Link } from 'react-router-dom';
+import { FaMobileScreen, FaRegClock, FaRegLightbulb, FaDatabase, FaBook, FaPiggyBank, FaBuilding } from "react-icons/fa6";
+import { FaShieldAlt } from "react-icons/fa";
+import { MdAccountBalance, MdAnalytics, MdBadge, MdMailOutline, MdOutlineLocationOn, MdOutlinePhone, MdOutlineWatchLater, MdSpeed, MdTrendingUp } from "react-icons/md";
 
 export default function Home() {  
+
+    /*class .scroll-effect start*/
+  
+    const lastScrollY = useRef(0);
+  
+    useEffect(() => {
+      let scrollDirection = "down";
+  
+      const handleScroll = () => {
+        if (window.scrollY > lastScrollY.current) {
+          scrollDirection = "down";
+        } else {
+          scrollDirection = "up";
+        }
+        lastScrollY.current = window.scrollY;
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+  
+            if (entry.isIntersecting) {
+              el.classList.remove("fade-up", "fade-down");
+  
+              if (scrollDirection === "down") {
+                el.classList.add("visible", "fade-up");
+              } else {
+                el.classList.add("visible", "fade-down");
+              }
+            } else {
+              el.classList.remove("visible", "fade-up", "fade-down");
+            }
+          });
+        },
+        {
+          threshold: 0.01,
+        }
+      );
+  
+      const elements = document.querySelectorAll(".scroll-effect");
+      elements.forEach((el) => observer.observe(el));
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        elements.forEach((el) => observer.unobserve(el));
+      };
+    }, []);
+  
+    /* class .scroll-effect END*/
+
+
+  const serviceSpecialty = [
+    {
+      icon: <MdAccountBalance style={{fontSize: 80, color: "#0d2daa"}} />,
+      title:"Abertura de empresas",
+      text:"Legalização e suporte completo para novos negócios.",
+      bgColor: Theme.colors.blue2
+    },
+    {
+      icon: <MdTrendingUp style={{fontSize: 80, color: "#a8d0ff"}} />,
+      title:"Gestão tributária",
+      text:"Planejamento e otimização para redução de custos fiscais.",
+      bgColor: Theme.colors.white
+    },
+    {
+      icon: <MdBadge style={{fontSize: 80, color: "#759dcc"}} />,
+      title:"Departamento pessoal",
+      text:"Folha de pagamento, admissões, rescisões, regularização trabalhista.",
+      bgColor: Theme.colors.babyBlue
+    }
+  ]
+
+  
+  const lgpdActions = [
+    {
+      icon: <MdSpeed style={{fontSize: 48, color: "#fff"}}/>,
+      title: "Otimização de processos",
+      bgColor: Theme.colors.babyBlue
+    },
+    {
+      icon: <FaRegLightbulb style={{fontSize: 32, color: "#fff"}}/>,
+      title: "Soluções inteligentes",
+      bgColor: Theme.colors.blue2
+    },
+    {
+      icon: <FaDatabase style={{fontSize: 32, color: "#fff"}}/>,
+      title: "Proteção de dados",
+      bgColor: Theme.colors.blue3
+    },
+    {
+      icon: <FaBook style={{fontSize: 32, color: "#fff"}}/>,
+      title: "Conformidade com a LGPD",
+      bgColor: Theme.colors.red2
+    }
+  ]
+
   return(
     <>
       <Header page="home" />
       <Banner/>
-      <Homepage className="flex">
-        <div className="presentation">
-          <h1>Escritório <span>Vilella</span></h1>
-          <p>Atuamos no mercado como parceiros essenciais para empresas em todas as etapas de sua jornada.
-            Nossa equipe de profissionais altamente qualificados nas áreas contábil, fiscal e trabalhista 
-            esta pronta para oferecer assessoria de excelência e suporte dedicado e soluções sob medida para a sua empresa em todos ramos de atividades.</p>
-        </div>
-        <div className="bsc-boxes flex">
-          <div className="bsc-boxes-vision flex-column transition">
-            <div className="img">
-              <img src={letterE} alt="Imagem cover para representar a Visão Empresarial"/>
-            </div>
-            <h3>Visão <span>Empresarial</span></h3>
-            <p>Reconhecimento em soluções contábeis.</p>
-            <button><Link to={"/about"}>Saiba Mais </Link></button>
-          </div>
-          <div className="bsc-boxes-values flex-column transition">
-            <div className="img">
-              <img src={letterV} alt="Imagem cover para representar os Nossos Valores"/>
-            </div>
-            <h3>Nossos <span>Valores</span></h3>
-            <p>Transparência, Integridade e Responsabilidade.</p>
-            <button><Link to={"/about"}>Saiba Mais </Link></button>
-
-          </div>
-        </div>
-        <div className="history flex mobile">
-          <div class="history-content flex-column">
-            <h2>
-              <span className="title-bigger">35</span>
-              <span className="title-shorter">anos de <br/>excelência</span>
-            </h2>
-            <div className="history-text-paragraph">
-              <p>Com anos de mercado, nossa experiência nos capacita a fornecer soluções 
-              personalizadas para empresas de todos os portes e setores.</p>
-              
-              <p>Trabalhamos para garantir que nossos clientes estejam sempre em conformidade
-              com todas as leis e regulamentos aplicáveis.</p>
-            </div>
-          </div>
-          <div className="history-numbers">
-              <div className="company">
-                <span>+400</span>
-                <p>Empresas Atendidas</p>
+      <Homepage>
+        <main>
+          <section id="solutions" className="flex-column">
+            <div className="solutions flex items wrapper scroll-effect">
+              <div className="solution-text text">                
+                <div><span>Soluções</span></div>
+                <h1>Consultoria contábil</h1>
+                <p>Mais de 35 anos ajudando empresas a simplificar a gestão contábil e reduzir custos com soluções personalizadas.</p>
+                <div className="partner flex-column"><span>Seu parceiro estratégico em gestão empresarial</span> </div>
               </div>
-              <div className="clients">
-                <span>+1000</span>
-                <p>Clientes Atendidos</p>
+              <div className="for-you flex-column">
+                <div className="for-you-item flex">
+                  <div>
+                    <span><FaPiggyBank style={{fontSize: 32, color: "#f33", border: "1px solid #f33", borderRadius: "8px", padding: ".5rem" }}/></span>
+                  </div>
+                  <div><p>Redução de custos tributários para empresas de todos os portes.</p></div>
+                </div>
+                <div className="for-you-item flex">
+                  <div>
+                    <span><FaBuilding style={{fontSize: 32, color: "#a8d0ff", border: "1px solid #93c5ff", borderRadius: "8px", padding: ".5rem" }}/></span>
+                  </div>
+                  <div><p>Consultoria contábil e empresarial para cada tipo de negócio.</p></div>
+                </div>
+                <div className="for-you-item flex">
+                  <div>
+                    <span><MdAnalytics style={{fontSize: 32, color: "#1a3a8a", border: "1px solid #1a3a8a", borderRadius: "8px", padding: ".5rem" }}/></span>
+                  </div>
+                  <div><p>Suporte completo desde a abertura até o planejamento tributário.</p></div>
+                </div>
               </div>
-          </div>
-        </div>
-        <div className="solutions flex mobile">
-          <div className="solution-icon transition flex-column">
-            <div className="solution-icon-img">
-              <img src={speed} alt="Ícone de velocímetro"/>
             </div>
-            <div className="solution-icon-text flex-column">
-            <h3>Otimização</h3>
-            <p>Aprimorar cada aspecto do seu negócio para alcançar a máxima eficiência.</p>
-            </div>
-          </div>
-          <div className="solution-icon transition flex-column">
-            <div>
-              <img src={cluster} alt="Ícone de cluster"/>
-            </div>
-            <h3>Tecnologia</h3>
-            <p>Proporcionar soluções inovadoras para atender às suas necessidades.</p>
-          </div>
-          <div className="solution-icon transition flex-column">
-            <div>
-              <img src={shield} alt="Ícone de escudo"/>
-            </div>
-            <h3>Responsabilidade</h3>
-            <p>Abordagem proativa para garantir a conformidade com a LGPD.</p>
-          </div>
-        </div>
-
-        <div className="contact flex mobile">
-          <div className="find-us flex-column">    
-            <h2>Entre em <span>contato</span></h2>
-            <div className="address">
-              <h4 className="find-title">Onde nos encontrar:</h4>
-              <div className="social-item">
-                <span className="item">
-                  <MdLocationOn style={{fontSize: 32, color: "#00116f"}} />
-                </span>
-                <span> R. Mario Monteiro de França, 256 - Centro, Fartura/SP - CEP: 18870-030</span> 
+          </section>
+          <section id="specialties" className="flex-column">
+            <div className="specialties items flex-column wrapper scroll-effect">
+              <div className="text items">
+                <div><span>Áreas de atuação</span></div>
+                <h2>Nossas especialidades</h2>
+              </div>              
+              <div className="specialty-items flex scroll-effect">
+                {serviceSpecialty.map(service =>(
+                  <ServiceSpecialty              
+                    key={service.title}
+                    icon={service.icon}
+                    title={service.title}
+                    text={service.text}
+                  />
+                ))}
               </div>
-              <a className="social-item" href="tel:551433822052">
-                <span className="item">
-                  <MdLocalPhone style={{fontSize: 32, color: "#00116f"}} />
-                </span>
-                <span>(14) 3382-2052</span>
-              </a>
-              <a className="social-item" href="https://wa.me/5514997795080?text=Ol%C3%A1%2C+gostaria+de+falar+com+o+Escrit%C3%B3rio+Vilella" target="blank">
-                <span className="item">
-                  <MdOutlineWhatsapp style={{fontSize: 32, color: "#00116f"}} />
-                </span>
-                <span>(14) 99779-5080</span>
-              </a>
-              <a className="social-item" href="mailto:adm@evilella.com">
-                <span className="item">
-                  <MdMail style={{fontSize: 32, color: "#00116f"}} />
-                </span>
-                <span>adm@evilella.com</span>
-              </a>
+              <div className="flex">
+                <button><a href="/services">Ver todos os serviços</a></button>
+              </div>
             </div>
-            <div className="business-hours">
-              <h4 className="find-title">Horário de Atendimento:</h4>
-              <a className="social-item">
-                <span className="item">
-                  <MdOutlineWatchLater style={{fontSize: 32, color: "#00116f"}} />
-                </span>
-                <span>Segunda a sexta-feira: 9h às 11h | 13h às 16h.</span>
-              </a>
-            </div>
-          </div>
-          <div className="map-address flex">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.9730041908283!2d-49.51449542549472!3d-23.38919385528803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c1a540abcf309b%3A0x292c0f46692abb18!2sEscrit%C3%B3rio%20Cont%C3%A1bil%20Vilella!5e0!3m2!1spt-BR!2sbr!4v1714398045177!5m2!1spt-BR!2sbr" width="400" height="350" loading="lazy" frameborder="0"></iframe>
-          </div>
-        </div>
 
+          </section>
+          <section id="tech-inovation" className="flex-column">
+            <div className="tech-inovation items flex-column wrapper">
+              <div className="text scroll-effect">
+                <h2>Tecnologia e Inovação</h2>
+                <p>Investimos continuamente em tecnologia e inovação para garantir a máxima confidencialidade das informações de nossos clientes.</p>
+              </div>
+              <div className="flex-column">
+                <div className="tech-cards flex scroll-effect">                        
+                  {lgpdActions.map(service => (
+                    <LgpdActions
+                      key={service.title}
+                      icon={service.icon}
+                      title={service.title}
+                      bgColor={service.bgColor}
+                    />                
+                  ))}
+                </div>
+              </div>              
+              <button><a href="/lgpd">Saiba mais sobre sua privacidade</a></button>
+            </div>
+          </section>
+        </main>
+        <section id="client-center" className="flex-column">
+          <div className="client-center flex-column wrapper">
+            
+            <div className="client-center-content flex">              
+              <div className="client-center-text text flex-column">                
+                <div className="text scroll-effect"><span>Portal do Cliente</span></div>
+                <h2 className="scroll-effect">Sua contabilidade <br />na <span>palma da mão</span></h2>
+                <p className="scroll-effect">Acesse documentos, informações fiscais e muito mais a qualquer hora em qualquer lugar.</p>
+                
+                <div className="client-center-benefits flex">
+                  <div className="icon flex-column scroll-effect">
+                    <span><FaRegClock style={{fontSize: 48, color: "#a8d0ff"}}></FaRegClock></span>
+                    <h3>Acesso 24/7</h3>
+                  </div>
+                  <div className="icon flex-column scroll-effect">
+                    <span><FaShieldAlt style={{fontSize: 64, color: "#a8d0ff"}}></FaShieldAlt></span>
+                    <h3>Segurança</h3>
+                  </div>
+                  <div className="icon flex-column scroll-effect">
+                    <span><FaMobileScreen style={{fontSize: 48, color: "#a8d0ff"}}></FaMobileScreen></span>
+                    <h3>Mobilidade</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="img scroll-effect">
+                <img src={app} alt="Aplicativo Onvio Portal do Cliente"/>
+              </div>
+            </div>
+
+            <div className="text flex-column">
+              <button> <a href="/client-center">Conhecer Portal do Cliente</a></button>
+            </div>
+          </div>          
+        </section>
+        <section id="find-us" className="flex-column">
+          <div className="find-us flex-column items wrapper">             
+            <div className="find-us-title text scroll-effect">
+              <h2>Estamos prontos para te apoiar</h2>
+              <div><span>Onde nos encontrar</span></div>
+            </div>
+            <div className="find-us-content flex scroll-effect">
+              <div className="flex-column">
+                <div className="map flex-column">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.9730041908283!2d-49.51449542549472!3d-23.38919385528803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c1a540abcf309b%3A0x292c0f46692abb18!2sEscrit%C3%B3rio%20Cont%C3%A1bil%20Vilella!5e0!3m2!1spt-BR!2sbr!4v1714398045177!5m2!1spt-BR!2sbr" width="400" height="350" loading="lazy" frameborder="0"></iframe>
+                  <div className="spot flex">
+                    <span className="item">
+                      <MdOutlineWatchLater style={{fontSize: 32, color: "#00116f"}} />
+                    </span>
+                    <div className="">
+                      <h3>Atendimento</h3>
+                      <div className="hours flex">
+                        <div className="business-hours">
+                          <span>Segunda a Sexta: </span>
+                          <span>09:00 - 11:00 | 13:00 - 16:00</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div className="where-to-find-us flex-column">
+                <div className="spot address flex">
+                  <span><MdOutlineLocationOn style={{fontSize: 32, color: "#00116f"}} /></span>
+                  <div>
+                    <h3>Endereço</h3>
+                    <p>R. Mario Monteiro de França, 256 - Centro, Fartura/SP - CEP: 18870-030</p>
+                  </div>
+                </div>
+                <div className="spot mail flex">
+                  <span className="item">
+                    <MdMailOutline style={{fontSize: 32, color: "#00116f"}} />
+                  </span>
+                  <div>                    
+                    <h3>E-mail</h3>
+                    <a className="social-item" href="mailto:contato@evilella.com">
+                    <p>contato@evilella.com</p>
+                    </a>
+                  </div>
+                </div>
+                <div className="spot flex-column">
+                  <div className="phone flex">
+                    <span><MdOutlinePhone style={{fontSize: 32, color: "#00116f"}} /></span>
+                    <div className="">
+                      <h3>Telefone</h3>
+                      <p>(14) 3382-2052 / (14) 99779-5080</p>
+                    </div>                    
+                  </div>
+                  <div className="flex">
+                    <button className="whatsapp"><a href="https://wa.me/5514997795080" target="blank">Falar no WhatsApp</a></button>
+                  </div>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </section>        
       </Homepage>
       <Footer/>
     </>
