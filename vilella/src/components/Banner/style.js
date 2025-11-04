@@ -262,7 +262,6 @@ export const BannerContainer = styled.section`
     h1 {
       font-size: ${Theme.textSize.titleClientXLg};
       display: flex;
-      width: 75%;
       align-items: center;
       gap: 1rem;
       .years {
@@ -538,16 +537,6 @@ export const BannerContainer = styled.section`
         justify-content: center;
       }
 
-      h1 {
-        font-size: ${Theme.textSize.titleClientSm};
-        width: 100%;
-        justify-content: center;
-        
-        .years {
-          font-size: 6rem;
-        }
-      }
-
       p {
         text-align: center;
         font-size: ${Theme.textSize.textLg};
@@ -560,7 +549,24 @@ export const BannerContainer = styled.section`
     .wrapper {
       height: calc(80vh - 2.4rem - 67px);
     }
+  }
 
+  @media (max-width: 600px) {
+
+
+    .banner-team {
+
+    .banner-team-title {
+      justify-content: center;
+    }
+
+      h1 {
+        font-size: ${Theme.textSize.titleCardLg};
+        .years {
+          font-size: 6rem;
+        }
+      }
+    }
   }
 
   @media (max-width: 390px) {

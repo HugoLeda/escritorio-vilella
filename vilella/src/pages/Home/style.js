@@ -101,15 +101,17 @@ export const Homepage = styled.div `
     .solution-text,
     .for-you {
       flex: 1;
-      max-width: 600px;
+      max-width: 600px;      
     }
 
     .solution-text {
+      justify-content: space-between;
     }
 
     .for-you {
       justify-content: flex-end;
-      max-width: 450px;
+      max-width: 500px;
+      height: 350px;
       gap: 2rem;
 
       p {
@@ -327,39 +329,37 @@ export const Homepage = styled.div `
   .find-us-content {
     justify-content: center;
     width: 100%;
-    gap: 3rem;
+    gap: 5rem;
 
       .map {
         box-shadow: 0 1px 10px rgb(0,0,0,0.1);
         border-radius: 8px;
         border: 1px solid rgba(168, 208, 255, 0.5);
         gap: 0;
+        width: 100%;
 
         .spot {          
           padding: 1rem;     
           align-items: center;
-          gap: 1rem; 
+          gap: 1rem;   
+          width: 100%;        
 
           h3 {
-            font-size: ${Theme.textSize.textSm};
+            font-size: ${Theme.textSize.textLg};
           }
-
         }        
       }
 
       iframe {
-        max-width: 600px;
-        width: 100%;
-        height: 300px;
         border-radius: 8px 8px 0 0;
         user-select: none;
       }
-
 
   }
 
   .where-to-find-us {
     gap: 1.5rem;
+    flex-direction: column;
     justify-content: space-between;
     
     .spot {
@@ -367,15 +367,14 @@ export const Homepage = styled.div `
       box-shadow: 0 1px 10px rgb(0,0,0,0.1);
       border-radius: 8px;
       width: 100%;
-      max-width: 400px;
+      max-width: 450px;
       
-      padding: 1rem;     
+      padding: 1rem;
       align-items: center;
       gap: 1rem;    
       
       h3 {
-        font-size: ${Theme.textSize.textSm};
-        //margin: 0;
+        font-size: ${Theme.textSize.textLg};
       }
       p {margin: 0;}
       a {
@@ -383,6 +382,12 @@ export const Homepage = styled.div `
         color: ${Theme.colors.gray1};
       }
 
+
+      .mail {
+        width: 100%;
+        align-items: center;
+        gap: 1rem;
+      }
 
       
       .phone {     
@@ -405,7 +410,8 @@ export const Homepage = styled.div `
         text-transform: uppercase;
         cursor: pointer;
         transition: ease-out all .2s;
-
+        align-items: center;
+        
 
         a {
           font-size: ${Theme.textSize.textMobileSm};
@@ -529,7 +535,6 @@ export const Homepage = styled.div `
     }
 
     .solutions {
-      margin-top: 2rem;
       flex-direction: column;
       gap: 3rem;
 
@@ -573,14 +578,12 @@ export const Homepage = styled.div `
         padding: 0;
       }
 
-      
       .tech-cards{
-        flex-wrap: wrap;
         gap: 5rem;
         justify-content: center;
 
         .act {
-          max-width: 150px;
+          width: 150px;
           flex-direction: column;
           align-items: center;
           gap: 0;
@@ -604,12 +607,13 @@ export const Homepage = styled.div `
     .find-us-content {
       flex-direction: column;
       align-items: center;
+      gap: 1.5rem;
 
       .map {        
-        width: 500px;
+        //width: 500px;
         .spot {
           max-width: 500px;
-          width: 500px;
+          //width: 500px;
         }
       }
 
@@ -620,8 +624,8 @@ export const Homepage = styled.div `
       .where-to-find-us {
         //align-items: center;
         .spot {          
-          width: 500px;
-          max-width: 500px;
+          //width: 500px;
+          max-width: 450px;
         }
       }
     }
@@ -630,6 +634,18 @@ export const Homepage = styled.div `
 
   @media (max-width: 1010px) {
     
+    
+    .tech-inovation {
+      .tech-cards{
+        //gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        max-width: 500px;
+      }
+    }
+
+
     #client-center {
       border-radius: 0 100px 0 100px;
       padding-top: 0;
@@ -659,7 +675,10 @@ export const Homepage = styled.div `
         align-items: center;
         justify-content: space-around;
         width: 100%; 
-        gap: 2rem;
+        gap: 1rem;
+        .icon {
+          gap: 1.5rem;
+        }
       }
     }
 
@@ -680,7 +699,7 @@ export const Homepage = styled.div `
   }
 
   @media (max-width: 900px) {
-    
+
     .client-center {
       gap: 8rem;
       margin-top: 3rem;
@@ -713,11 +732,14 @@ export const Homepage = styled.div `
         }
       }
     }
-
   }
+
 
   @media (max-width: 624px) {
         
+    .solutions {
+      margin-top: 4rem;
+    }
     .tech-inovation {
       
       .tech-cards{
@@ -729,27 +751,34 @@ export const Homepage = styled.div `
       }
     }
 
+        
+    #client-center {      
+      h2 {
+        font-size: ${Theme.textSize.titleMobileMd};
+      }
+    }
       
     .find-us-content {
       flex-direction: column;
       align-items: center;
       gap: 2rem;
       .map {        
-        max-width: 325px;
+        max-width: 350px;
 
         .spot {
-          max-width: 325px;
+          max-width: 350px;
         }
       }
 
       iframe {
+        max-width: 350px;
         max-height: 250px;
       }
 
       .where-to-find-us {
         //align-items: center;
         .spot {          
-          max-width: 325px;
+          max-width: 350px;
         }
       }
     }
@@ -777,29 +806,36 @@ export const Homepage = styled.div `
         }
       }
     }
-  }
 
-  
-  @media (max-width: 400px) {
-         
+    
     .find-us-content {
       .map {        
-        max-width: 300px;
-
         .spot {
-          max-width: 300px;
+          width: 100%;
+          max-width: 280px;
         }
       }
 
       iframe {
+        max-width: 290px;
         max-height: 250px;
       }
 
       .where-to-find-us {
-        //align-items: center;
-        .spot {          
-          max-width: 300px;
+        .spot {        
+          width: 100%;  
+          max-width: 290px;
         }
+      }
+    }
+  }
+
+  
+  @media (max-width: 400px) {
+    
+    #client-center {
+      .client-center-benefits {
+        gap: 0;
       }
     }
   }

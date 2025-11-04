@@ -4,7 +4,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 
 import entrance from "../../assets/entrance.webp";
-import team from "../../assets/team.png";
+import team from "../../assets/team.webp";
 
 export default function Banner() {
   return (

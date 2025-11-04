@@ -125,25 +125,25 @@ export default function Home() {
               <div className="solution-text text">                
                 <div><span>Soluções</span></div>
                 <h1>Consultoria contábil</h1>
-                <p>Mais de 35 anos ajudando empresas a simplificar a gestão contábil e reduzir custos com soluções personalizadas.</p>
+                <p>Há 35 anos ajudando empresas a simplificar a gestão contábil e reduzir custos com soluções personalizadas.</p>
                 <div className="partner flex-column"><span>Seu parceiro estratégico em gestão empresarial</span> </div>
               </div>
               <div className="for-you flex-column">
                 <div className="for-you-item flex">
                   <div>
-                    <span><FaPiggyBank style={{fontSize: 32, color: "#f33", border: "1px solid #f33", borderRadius: "8px", padding: ".5rem" }}/></span>
+                    <span><FaPiggyBank style={{fontSize: 40, color: "#f33", border: "1px solid #f33", borderRadius: "8px", padding: ".5rem" }}/></span>
                   </div>
                   <div><p>Redução de custos tributários para empresas de todos os portes.</p></div>
                 </div>
                 <div className="for-you-item flex">
                   <div>
-                    <span><FaBuilding style={{fontSize: 32, color: "#a8d0ff", border: "1px solid #93c5ff", borderRadius: "8px", padding: ".5rem" }}/></span>
+                    <span><FaBuilding style={{fontSize: 40, color: "#a8d0ff", border: "1px solid #93c5ff", borderRadius: "8px", padding: ".5rem" }}/></span>
                   </div>
                   <div><p>Consultoria contábil e empresarial para cada tipo de negócio.</p></div>
                 </div>
                 <div className="for-you-item flex">
                   <div>
-                    <span><MdAnalytics style={{fontSize: 32, color: "#1a3a8a", border: "1px solid #1a3a8a", borderRadius: "8px", padding: ".5rem" }}/></span>
+                    <span><MdAnalytics style={{fontSize: 40, color: "#1a3a8a", border: "1px solid #1a3a8a", borderRadius: "8px", padding: ".5rem" }}/></span>
                   </div>
                   <div><p>Suporte completo desde a abertura até o planejamento tributário.</p></div>
                 </div>
@@ -205,15 +205,15 @@ export default function Home() {
                 
                 <div className="client-center-benefits flex">
                   <div className="icon flex-column scroll-effect">
-                    <span><FaRegClock style={{fontSize: 48, color: "#a8d0ff"}}></FaRegClock></span>
+                    <span><FaRegClock style={{fontSize: 40, color: "#a8d0ff"}}></FaRegClock></span>
                     <h3>Acesso 24/7</h3>
                   </div>
                   <div className="icon flex-column scroll-effect">
-                    <span><FaShieldAlt style={{fontSize: 64, color: "#a8d0ff"}}></FaShieldAlt></span>
+                    <span><FaShieldAlt style={{fontSize: 68, color: "#a8d0ff"}}></FaShieldAlt></span>
                     <h3>Segurança</h3>
                   </div>
                   <div className="icon flex-column scroll-effect">
-                    <span><FaMobileScreen style={{fontSize: 48, color: "#a8d0ff"}}></FaMobileScreen></span>
+                    <span><FaMobileScreen style={{fontSize: 40, color: "#a8d0ff"}}></FaMobileScreen></span>
                     <h3>Mobilidade</h3>
                   </div>
                 </div>
@@ -237,7 +237,7 @@ export default function Home() {
             <div className="find-us-content flex scroll-effect">
               <div className="flex-column">
                 <div className="map flex-column">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.9730041908283!2d-49.51449542549472!3d-23.38919385528803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c1a540abcf309b%3A0x292c0f46692abb18!2sEscrit%C3%B3rio%20Cont%C3%A1bil%20Vilella!5e0!3m2!1spt-BR!2sbr!4v1714398045177!5m2!1spt-BR!2sbr" width="400" height="350" loading="lazy" frameborder="0"></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3661.9730041908283!2d-49.51449542549472!3d-23.38919385528803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c1a540abcf309b%3A0x292c0f46692abb18!2sEscrit%C3%B3rio%20Cont%C3%A1bil%20Vilella!5e0!3m2!1spt-BR!2sbr!4v1714398045177!5m2!1spt-BR!2sbr" width="450" height="350" loading="lazy" frameborder="0"></iframe>
                   <div className="spot flex">
                     <span className="item">
                       <MdOutlineWatchLater style={{fontSize: 32, color: "#00116f"}} />
@@ -246,8 +246,7 @@ export default function Home() {
                       <h3>Atendimento</h3>
                       <div className="hours flex">
                         <div className="business-hours">
-                          <span>Segunda a Sexta: </span>
-                          <span>09:00 - 11:00 | 13:00 - 16:00</span>
+                          <span>Segunda a Sexta: 09:00 - 11:00 | 13:00 - 16:00</span>
                         </div>
                       </div>
                     </div>
@@ -263,27 +262,27 @@ export default function Home() {
                     <p>R. Mario Monteiro de França, 256 - Centro, Fartura/SP - CEP: 18870-030</p>
                   </div>
                 </div>
-                <div className="spot mail flex">
-                  <span className="item">
-                    <MdMailOutline style={{fontSize: 32, color: "#00116f"}} />
-                  </span>
-                  <div>                    
-                    <h3>E-mail</h3>
-                    <a className="social-item" href="mailto:contato@evilella.com">
-                    <p>contato@evilella.com</p>
-                    </a>
-                  </div>
+                <div className="spot flex">
+                  <a className="mail flex" href="mailto:contato@evilella.com">
+                    <span className="item">
+                      <MdMailOutline style={{fontSize: 32, color: "#00116f"}} />
+                    </span>
+                    <div>                
+                      <h3>E-mail</h3>
+                      <p>contato@evilella.com</p>
+                    </div>
+                  </a>                  
                 </div>
-                <div className="spot flex-column">
+                <div className="spot phone flex-column">
                   <div className="phone flex">
                     <span><MdOutlinePhone style={{fontSize: 32, color: "#00116f"}} /></span>
                     <div className="">
                       <h3>Telefone</h3>
-                      <p>(14) 3382-2052 / (14) 99779-5080</p>
+                      <p>(14) 3382-2052 | (14) 99779-5080</p>
                     </div>                    
                   </div>
                   <div className="flex">
-                    <button className="whatsapp"><a href="https://wa.me/5514997795080" target="blank">Falar no WhatsApp</a></button>
+                    <button className="whatsapp flex"><a href="https://wa.me/5514997795080" target="blank">Falar no WhatsApp</a></button>
                   </div>
                 </div>                
               </div>
