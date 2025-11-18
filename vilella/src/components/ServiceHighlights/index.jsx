@@ -1,0 +1,116 @@
+import { FaCheckCircle } from "react-icons/fa"
+import styled from "styled-components";
+import Theme from "../../styles/theme";
+
+export default function Highlights () {
+
+  const HighlightsSection = styled.div`
+  .container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    //padding: 2rem 0;
+  }
+
+
+  p {    
+    color: ${Theme.colors.gray1};
+  }
+
+  h3 {
+    font-size: ${Theme.textSize.titleClientXxSm};
+    color: ${Theme.colors.blue};
+    margin: 0;
+  }
+
+  .card {    
+    align-items: center;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    gap: 2rem;
+    max-width: 300px;
+    box-shadow: 0 2px 10px rgba(104, 102, 233, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 400px;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0, 38, 255, 0.2);
+    }
+  }
+
+
+  .topics {
+   gap: 1.5rem; 
+   align-items: flex-start;
+  }
+
+  .topic {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+    text-align: left;
+    align-items: center;    
+    p {
+      font-size: ${Theme.textSize.textSm};
+      margin:0;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+
+`;
+
+  const eachHighlight = [
+    {
+      title: "Planejamento",
+      topics: [
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Análise da situação atual da empresa" },
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Aplicação de novos métodos contábeis"},
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Monitoramento contínuo dos resultados" },
+      ]
+    },
+    {
+      title: "Benefícios",
+      topics: [
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Redução de riscos fiscais e operacionais" },
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Suporte para decisões mais seguras" },
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Otimização de tempo, custos e recursos" },
+      ]
+
+    },
+    {
+      title: "Diferencial",
+      topics: [
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Atendimento voltado às suas necessidades" },
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Equipe especializada e comprometida" },
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Soluções sob medida para seus objetivos" },
+      ]
+    }
+  ];
+
+  return (
+    <HighlightsSection>
+      <div className="container">
+        {eachHighlight.map((card, index) => (
+          <div key={index} className="card">
+            <h3 className="title">{card.title}</h3>
+            <div className="topics flex-column">
+              {card.topics.map((item, i) => (
+                <div key={i} className="topic">
+                  <span className="icon">{item.icon}</span>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </HighlightsSection>
+  )
+}

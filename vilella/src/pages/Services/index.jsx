@@ -1,152 +1,228 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
+import Banner from "../../components/ServiceBanner";
+import Actions from "../../components/LgpdActions"
+import Highlights from "../../components/ServiceHighlights";
+
+import strategy from "../../assets/services/financial.png";
+
 import { Servicespage } from "./style";
+import { MdFactory, MdHealthAndSafety, MdMailOutline, MdOutlinePhone, MdOutlineShoppingCart, MdOutlineWhatsapp, MdRequestQuote } from "react-icons/md";
+import { FaUserTie } from "react-icons/fa";
+import { FaArrowDown, FaBriefcase, FaBuildingCircleArrowRight, FaBuildingCircleCheck, FaMedal } from "react-icons/fa6";
 
-import ServiceCard from "../../components/ServiceCard";
-
-import card from '../../assets/services/card.webp'
-import simples from '../../assets/services/simples.webp';
-import tractor from '../../assets/services/tractor.webp';
-import nfe from '../../assets/services/nfe.webp';
-import people from '../../assets/services/people.webp';
-import person from '../../assets/services/person.webp';
-import calc from '../../assets/services/calc.webp';
-import scale from '../../assets/services/scale.webp';
-import greet from '../../assets/services/greet.webp';
-import calendar from '../../assets/services/calendar.webp';
-
-import certificado from '../../assets/services/certificado.webp';
-import mei from '../../assets/services/mei.webp';
-import rural from '../../assets/services/rural.webp';
-import cpf from '../../assets/services/cpf.webp';
-import fiscal from '../../assets/services/fiscal.webp';
-import ctps from '../../assets/services/ctps.webp';
-import contabil from '../../assets/services/contabil.webp';
-import legal from '../../assets/services/legal.webp';
-import assessoria from '../../assets/services/assessoria.webp';
-import dividas from '../../assets/services/dividas.webp';
-
-const servicesContent = [
-  {
-    direction: "normal", 
-    title:"Assessoria Empresarial", 
-    textContent:"Orientação e suporte especializados para expandir o alcance no mercado, entender concorrentes, setor e base de clientes, em busca da maximização de oportunidades e crescimento do seu negócio.", 
-    img:assessoria, 
-    alt: "Caneta sob gráfico impresso",
-    icon:greet, 
-    linkWhats:"https://wa.me/5514997795351?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Assessoria%20Empresarial."
-  },
-  {
-    direction: "reverse", 
-    title:"Contábil", 
-    textContent:"Gestão completa da contabilidade do seu negócio, desde a escrituração e apuração de impostos até a geração de relatórios financeiros, garantindo precisão e conformidade com a legislação.", 
-    img:contabil, 
-    alt: "Calculadora, lupa e moedas sob documento",
-    icon:calc, 
-    linkWhats:"https://wa.me/5514997795063?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Contabilidade"
-  },
-  {
-    direction: "normal", 
-    title:"Fiscal e Tributário", 
-    textContent:"Oferecemos orientação especializada para garantir a conformidade fiscal, apurar impostos com precisão e minimizar encargos financeiros por meio de estratégias de segregação tributária.", 
-    img:fiscal, 
-    alt: "Lupa e calculadora sob gráfico",
-    icon:nfe, 
-    linkWhats:"https://wa.me/5514997795063?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20Fiscal%20e%20Tribut%C3%A1rio."
-  },
-  {
-    direction: "reverse", 
-    title:"Departamento Pessoal", 
-    textContent:"Nosso serviço de departamento pessoal oferece suporte para empresas com a transmissão de obrigações e todas as questões trabalhistas relacionadas aos seus colaboradores.", 
-    img:ctps, 
-    alt: "Aparelho celular com aplicativo CTPS ao lado de uma Carteira de Trabalho física",
-    icon:people, 
-    linkWhats:"https://wa.me/5514997795085?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Departamento%20Pessoal"
-  },  
-  {
-    direction: "normal", 
-    title:"Departamento Legal", 
-    textContent:"Assistência direcionada para assegurar que seu negócio opere dentro da estrutura legal, desde a abertura, regularização até a alteração do contrato social e encerramento de empresas.", 
-    img:legal, 
-    alt: "Duas pessoas em reunião com documentos, balança e malhete sob mesa",
-    icon:scale, 
-    linkWhats:"https://wa.me/5514997795053?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Legaliza%C3%A7%C3%A3o!"
-  },
-  {
-    direction: "reverse", 
-    title:"Pessoa Física", 
-    textContent:"Fornecemos orientação especializada em declaração de IRPF, planejamento sucessório patrimonial e outras soluções financeiras e fiscais para auxiliar na organização de suas finanças pessoais.", 
-    img:cpf, 
-    alt: "Pessoa segurando um cartão CPF em destaque",
-    icon:person, 
-    linkWhats:"https://wa.me/5514997795080?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20para%20Pessoa%20F%C3%ADsica."
-  },
-  {
-    direction: "normal", 
-    title:"Produtor Rural", 
-    textContent:"Oferecemos serviços de escrituração fiscal, gestão de impostos, folha de pagamento e elaboração de relatórios financeiros, assegurando o suporte necessário para suas atividades rurais.", 
-    img:rural, 
-    alt: "Irrigação de plantas",
-    icon:tractor, 
-    linkWhats:"https://wa.me/5514997795025?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20para%20Produtor%20Rural."
-  },
-  {
-    direction: "reverse", 
-    title:"MEI", 
-    textContent:"Oferecemos um serviço completo para regularizar seu negócio como Microempreendedor Individual (MEI), assegurando o cumprimento de todas as obrigações fiscais.", 
-    img:mei, 
-    alt: "Papéis com logo do MEI e da Receita Federal",
-    icon:simples, 
-    linkWhats:"https://wa.me/5514997795080?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20MEI."
-  },
-  {
-    direction: "normal", 
-    title:"Certificadora", 
-    textContent:"Emitimos certificados digitais para Pessoa Física e Jurídica, garantindo a autenticidade da identidade digital por meio de um processo prático e eficiente.", 
-    img:certificado, 
-    alt: "Certificado digital A3",
-    icon:card, 
-    linkWhats:"https://wa.me/5514997794243?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Certificadora%20Digital."
-  },
-  {
-    direction: "reverse", 
-    title:"Parcelamento de Débitos", 
-    textContent:"Auxiliamos na gestão de dívidas com negociação, parcelamento, consolidação, levantamento de dívida ativa, simulação de parcelamento e acompanhamento de pagamentos.", 
-    img:dividas, 
-    alt: "Mão segurando caneta ao lado de calculadoras e gráficos sob mesa",
-    icon:calendar, 
-    linkWhats:"https://wa.me/5514997795061?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20o%20servi%C3%A7o%20de%20Parcelamento%20de%20D%C3%ADvidas"
-  }
-]
+import Theme from "../../styles/theme";
+import { useState } from "react";
 
 export default function Services() {
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+  const options = [
+    {
+      title: "Assessoria completa para você abrir seu CNPJ",
+      icon: <FaBuildingCircleCheck style={{ color: "#0d2daa", fontSize: "84" }} />,
+      benefits: [
+        "Inicie sua empresa com abertura e regularização já adequada às novas regras da Reforma Tributária.",
+        "Unimos experiência contábil e tecnologia para garantir um processo rápido, prático e seguro.",
+        "Cuidamos de toda a burocracia para que você se preocupe apenas em começar a empreender."
+      ],
+      buttonText: "Quero Abrir minha empresa"
+    },
+    {
+      title: "Suporte contábil que garante tranquilidade",
+      icon: <FaBuildingCircleCheck style={{ color: "#759dcc", fontSize: "84" }} />,
+      benefits: [
+        "Tenha uma contabilidade confiável e sempre atualizada com as exigências legais.",
+        "Nossos especialistas cuidam de toda a parte fiscal, contábil e trabalhista para você.",
+        "Descomplique sua rotina financeira com a garantia de segurança e tranquilidade para o seu negócio."
+      ],
+      buttonText: "Quero migrar de contabilidade"
+    }
+  ];
+
+  
+  const solutionActions = [
+    {
+      icon: <MdOutlineShoppingCart style={{fontSize: 32, color: "#fff"}}/>,
+      title: "Comércio",
+      text: "Serviços adaptados para o seu setor comercial",
+      bgColor: Theme.colors.blue2
+    },
+    {
+      icon: <MdRequestQuote style={{fontSize: 32, color: "#fff"}}/>,
+      title: "Serviço",
+      text: "Soluções fiscais para profissionais autônomos",
+      bgColor: Theme.colors.babyBlue
+  
+    },
+    {
+      icon: <MdHealthAndSafety style={{fontSize: 32, color: "#fff"}}/>,
+      title: "Saúde",
+      text: "Gestão fiscal para clínicas e CNPJ médico",
+      bgColor: Theme.colors.red1
+    },
+    {
+      icon: <MdFactory style={{fontSize: 32, color: "#fff"}}/>,
+      title: "Indústria",
+      text: "Planejamento e redução de custo de produção",
+      bgColor: Theme.colors.blue3
+    }
+  ]
+
   return(
     <>
       <Header page="services"/>  
-      <Servicespage className="flex">
+      <Servicespage>
+        <header className="flex-column">  
+          <div className="outdoor flex">            
+            <div className="service-outdoor flex">
+              <h1>Soluções completas para sua empresa</h1>
+              <p>Atendimento de qualidade para profissionais autônomos, microempreendedores individuais (MEI) e empresas de todos os setores econômicos.</p>            
+              <div className="link flex">
+                <button className="button"><a href="">Fale com nossos especialistas</a></button>
+              </div>
+            </div>                    
+            <div className="img flex-column">
+              <img src={strategy} alt="Computador com análise de gráficos" />
+            </div>
+          </div>            
+          <div className="next-section">
+            <span><a href="/services#business-consulting"><FaArrowDown style={{color: "#0d2daa", fontSize: "16"}}/></a></span>
+          </div>
+        </header>
+        <main id="business-consulting" className="flex-column">
+          <div className="business-consulting-wrapper flex-column wrapper">            
+            <h2>{options[currentIndex].title}</h2>
+            
+            <div className="consulting-button flex items">
+              {options.map((opt, i) => (
+                <button
+                  key={i}
+                  className={i === currentIndex ? "active" : ""}
+                  onClick={() => setCurrentIndex(i)}
+                >
+                  {opt.title.includes("Assessoria") ? "Abertura de empresa" : "Assessoria contábil"}
+                </button>
+              ))}
+            </div>
 
-        <div className="services">
-          <h1>Nossos <span>Serviços</span></h1>
-          <p>No Escritório Vilella, oferecemos serviços de excelência nas áreas contábil, tributária, trabalhista e empresarial. Nossa equipe de profissionais altamente qualificados está sempre pronta para atender e apresentar soluções personalizadas e eficientes, se adaptando às necessidades específicas de cada cliente.</p>
-          <p>Valorizamos a parceria e a confiança que estabelecemos com nossos clientes, atendendo com qualidade desde profissionais autônomos e produtores rurais até microempreendedores individuais (MEI) e grandes empresas de todos os setores econômicos, oferecendo um serviço marcado pelo profissionalismo e pela ética.</p>
+            <div className="accounting-advisory flex-column items">              
+              <div className="advisory-content flex items">
+                <div className="icon flex">
+                  <span className="flex"style={{ borderColor: options[currentIndex].icon.props.style.color }}>{options[currentIndex].icon}</span>
+                </div>
+                <div className="advisory-benefits-wrapper flex-column">
+                  {options[currentIndex].benefits.map((benefit, i) => (
+                    <div key={i} className="advisory-benefits flex">
+                      <span style={{ backgroundColor: options[currentIndex].icon.props.style.color }}>
+                        <FaBuildingCircleArrowRight style={{ color: "#fff", fontSize: "24" }} />
+                      </span>
+                      <p>{benefit}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            
+              <div className="option-cta flex">
+                <button><a href="">{options[currentIndex].buttonText}</a></button>
+              </div>
+            </div>
+          </div>
+        </main>        
+        <section className="service-banners">
+          <div>
+            <Banner/>
+          </div>
+        </section>
+        <section className="why-choose-us flex-column">
+          <div className="why-choose-us-wrapper flex-column wrapper items">
+            <div className="why-choose-us-title flex-column">              
+                <div><span>Sua empresa em boas mãos</span></div>
+              <h2>Assessoria contábil de confiança</h2>
+            </div>
+            <div className="planning-benefits-advantages">
+              <Highlights/>
+            </div>            
+          </div>
+        </section>
+        <div className="excelence-wrapper flex-column">          
+          <div className="excelence flex">
+            <div className="excelence-title flex">
+              <div>
+                <h2>35 anos de excelência</h2>            
+                <p>Transformando desafios contábeis em soluções estratégicas</p>
+              </div>              
+            </div>
+            <div className="excelence-icons flex">
+              <span><FaUserTie style={{color: "#fff", fontSize: "48"}}/></span>
+              <span><FaMedal style={{color: "#fff", fontSize: "48"}}/></span>
+              <span><FaBriefcase style={{color: "#fff", fontSize: "48"}}/></span>
+            </div>
+          </div>
         </div>
-
-        <main className="services">
-          {servicesContent.map(service => (
-            <ServiceCard 
-              key={service.title}              
-              direction={service.direction}
-              title={service.title}
-              textContent={service.textContent}
-              img={service.img}
-              alt={service.alt}
-              icon={service.icon}
-              linkWhats={service.linkWhats}
-            />
-          ))}      
-        </main>
-
+        <section className="flex-column">
+          <div className="each-client wrapper flex-column items"> 
+            <div className="each-client-title flex-column items">
+              <h2>Soluções para cada cliente</h2>
+              <p>Tenha uma contabilidade consultiva estruturada para atender seu segmento.</p>
+            </div>            
+            <div>              
+              <div className="office-actions flex">                        
+                {solutionActions.map(service => (
+                  <Actions
+                    key={service.title}
+                    icon={service.icon}
+                    title={service.title}
+                    text={service.text}
+                    bgColor={service.bgColor}
+                  />                
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="flex-column">
+          <div className="cta flex-column wrapper items">
+            <div className="cta-title flex-column"> 
+              <h2>Pronto para transformar sua empresa?</h2>
+              <p>Aumente sua produtividade e leve seu negócio ao próximo nível.</p>              
+            </div>            
+            <div className="where-to-find-us flex items">
+              <div className="spot phone flex">
+                <span><MdOutlinePhone style={{fontSize: 32, color: "#00116f"}} /></span>
+                <div className="">
+                  <h3>Telefone</h3>
+                  <p>(14) 3382-2052</p>
+                </div>                    
+              </div>    
+              <div className="spot flex">
+                <a className="mail flex" href="mailto:contato@evilella.com">
+                  <span className="item">
+                    <MdMailOutline style={{fontSize: 32, color: "#00116f"}} />
+                  </span>
+                  <div>                
+                    <h3>E-mail</h3>
+                    <p>contato@evilella.com</p>
+                  </div>
+                </a>                  
+              </div>
+              <div className="spot phone flex">
+                <a className="flex phone" href="">
+                  <span><MdOutlineWhatsapp style={{fontSize: 32, color: "#00116f"}} /></span>
+                  <div className="">
+                    <h3>Whatsapp</h3>
+                    <p>(14) 99779-5080</p>
+                  </div>
+                </a>                
+              </div>
+            </div>
+            <div className="button flex-column items">
+              <button><a href="">Solicitar Serviço</a></button>
+            </div>
+          </div>
+        </section>
       </Servicespage>    
       <Footer/>
     </>
