@@ -23,10 +23,6 @@ const Router = createBrowserRouter([
     element: <Services />,
   },
   {
-    path: "/team",
-    element: <Building />,
-  },
-  {
     path: "/lgpd",
     element: <LGPD />,
   },

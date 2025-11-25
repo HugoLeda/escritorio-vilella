@@ -57,7 +57,14 @@ export default function Banner() {
                 </div>
                 <div className="button flex">
                   <button className="our-team">
-                    <a href="/team">Veja quem faz acontecer</a>
+                    <a href="https://instagram.com/escritorio.vilella/" onclick="
+                      if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
+                        window.location = 'instagram://user?username=escritorio.vilella';
+                        setTimeout(function(){ window.location = 'https://www.instagram.com/escritorio.vilella/'; }, 400);
+                      } else {
+                        window.location = 'https://www.instagram.com/escritorio.vilella/';
+                      }
+                    ">Veja quem faz acontecer</a>
                   </button>
                   <button className="work-with-us">
                     <a href="mailto:contato@evilella.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco&body=Olá,%20gostaria%20de%20enviar%20meu%20currículo%20para%20futuras%20oportunidades.">Trabalhe Conosco</a>

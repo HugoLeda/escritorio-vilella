@@ -29,7 +29,6 @@ export default function Header({page}) {
             <li><Link to={"/"}              className={ page == "home"          ? "active" : "" }>Home</Link></li>
             <li><Link to={"/about"}         className={ page == "about"         ? "active" : "" }>Sobre</Link></li>
             <li><Link to={"/services"}      className={ page == "services"      ? "active" : "" }>Serviços</Link></li>
-            <li><Link to={"/team"}          className={ page == "team"          ? "active" : "" }>Equipe</Link></li>
             <li><Link to={"/lgpd"}          className={ page == "lgpd"          ? "active" : "" }>LGPD</Link></li>
             <li><Link to={"/client-center"} className={ page == "client-center" ? "active" : "" }>Portal do cliente</Link></li>            
             </ul>  
@@ -41,7 +40,6 @@ export default function Header({page}) {
             <li><Link to={"/"}              className={ page == "home"          ? "active" : "" }>Home</Link></li>
             <li><Link to={"/about"}         className={ page == "about"         ? "active" : "" }>Sobre</Link></li>
             <li><Link to={"/services"}      className={ page == "services"      ? "active" : "" }>Serviços</Link></li>
-            <li><Link to={"/team"}          className={ page == "team"          ? "active" : "" }>Equipe</Link></li>
             <li><Link to={"/lgpd"}          className={ page == "lgpd"          ? "active" : "" }>LGPD</Link></li>
             <li><Link to={"/client-center"} className={ page == "client-center" ? "active" : "" }>Portal do cliente</Link></li>            
           </ul>  

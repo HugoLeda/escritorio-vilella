@@ -11,6 +11,7 @@ export default function Building() {
   const Content = styled.main`
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
 
@@ -22,23 +23,42 @@ export default function Building() {
     }
 
     .back {
+      position: relative;
+      background: transparent;
+      transition: color 0.3s ease;
+      color: ${Theme.colors.blue};
+    
       cursor: pointer;
       transition: ease-out all .3s;
+      font-weight: 500;
 
-      font-size: ${Theme.textSize.textSm};
-      font-weight: 700;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -.25rem;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s ease;    
+        background-color: ${Theme.colors.blue};
 
-      &:hover {
-        text-align: center;
-        text-shadow: 1px 2px 2px #93c5ff;
       }
+
+      &:hover::after {
+        width: 100%;
+        height: 1px;
+        border-radius: 40px;
+      }
+
+
     }
 
     a {
         text-decoration: none;
-        font-size: ${Theme.textSize.textMd};
-        color: ${Theme.colors.blue1};
-        font-weight: 500;
+        font-size: 1rem;
+        color: #0d2daa; //color: ${Theme.colors.blue};
 
         word-wrap: default;
       }
@@ -46,7 +66,6 @@ export default function Building() {
     .homepage {
       display: flex;
       align-items: center;
-      gap: .2rem;
     }
     
     ${media.lessThan("medium")`
@@ -63,7 +82,7 @@ export default function Building() {
           <h1>Página em construção</h1>
           <div className="back">
             <Link to={"/"}
-              className="homepage"> <MdHome style={{fontSize: 24, color: "#00116f"}} />
+              className="homepage">
               Retornar à Página Inicial
             </Link>
           </div>

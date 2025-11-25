@@ -6,11 +6,13 @@ import { MdHome } from "react-icons/md";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { FaArrowRotateLeft, FaHouse } from "react-icons/fa6";
 
 export default function Page404() {
   const Content = styled.main`
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
 
@@ -20,31 +22,89 @@ export default function Page404() {
     h1 {
       font-size: ${Theme.textSize.titleLg};
     }
+
+    h2 {      
+      font-size: ${Theme.textSize.titleMobileSm};
+    }
     span {
       font-weight: 800;
     }
     p {
       font-size: ${Theme.textSize.textLg};
     }
+/*
+    .flex, .flex-column {
+      display: flex;
+    }
+
+    .flex-column {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .buttons {
+      gap: 2rem;
+    }
+    
+    .cta {
+      background-color: #0d2daa;
+      border-radius: 8px;
+
+      button {      
+        padding: .2rem .5rem;
+        height: 45px;
+        background-color: #0d2daa;
+        border: none;    
+        transition: ease-out all .2s;
+        background-color: transparent;
+        font-weight: 400;
+
+        a {
+          text-decoration: none;
+          color: ${Theme.colors.white};
+          text-transform: uppercase;
+        }
+      }    
+    }
+     */
 
     .back {
+      position: relative;
+      background: transparent;
+      transition: color 0.3s ease;
+      color: ${Theme.colors.blue};
+    
       cursor: pointer;
       transition: ease-out all .3s;
-
-      font-size: ${Theme.textSize.textSm};
       font-weight: 500;
 
-      &:hover {
-        text-align: center;
-        text-shadow: 1px 2px 2px #93c5ff;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -.25rem;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s ease;    
+        background-color: ${Theme.colors.blue};
+
       }
+
+      &:hover::after {
+        width: 100%;
+        height: 1px;
+        border-radius: 40px;
+      }
+
+
     }
 
     a {
         text-decoration: none;
-        font-size: ${Theme.textSize.textMd};
-        color: ${Theme.colors.blue1};
-        font-weight: 500;
+        font-size: 1rem;
+        color: #0d2daa; //color: ${Theme.colors.blue};
 
         word-wrap: default;
       }
@@ -52,7 +112,6 @@ export default function Page404() {
     .homepage {
       display: flex;
       align-items: center;
-      gap: .2rem;
     }
 
     ${media.lessThan("medium")`
@@ -67,13 +126,17 @@ export default function Page404() {
     <>
       <Header/>   
         <Content>
-          <h1>Erro: <span>404</span></h1> 
-          <p>Página não encontrada :(</p>      
+          <div className="flex-column">
+            <h1>Erro: <span>404</span></h1> 
+            <p>Página não encontrada :(</p>
+          </div>
+          
           <div className="back">
-            <Link to={"/"} className="homepage"> <MdHome style={{fontSize: 24, color: "#00116f"}} />
+            <Link to={"/"} className="homepage">
             Retornar à Página Inicial
             </Link>
           </div>
+        
         </Content>   
       <Footer/>
     </>

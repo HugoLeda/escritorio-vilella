@@ -27,7 +27,9 @@ export default function Footer() {
         <div className="info flex-column">
 
           <div className="rights-reserved flex-column">
-            <img src={logoFooter} alt="Logo do Escritório Vilella"/>
+            <a href="/">
+              <img src={logoFooter} alt="Logo do Escritório Vilella"/>
+            </a>            
             <div className="flex-column">
               <span>&copy; 2025 Escritório Vilella.</span>
               <span>Todos os direitos reservados.</span>
@@ -52,11 +54,12 @@ export default function Footer() {
         </div>
 
         <div className="services flex-column">
-          <h3>Nossos Serviços</h3>
+          <a href="/services">
+            <h3>Nossos Serviços</h3>
+          </a>
           <div className="list">
             <ul>
               <li>Certificadora</li>
-              <li>Empresarial</li>
               <li>MEI</li>
               <li>Pessoa Física</li>
               <li>Rural</li>
