@@ -9,9 +9,7 @@ export default function Highlights () {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
-    //padding: 2rem 0;
   }
-
 
   p {    
     color: ${Theme.colors.gray1};
@@ -23,7 +21,7 @@ export default function Highlights () {
     margin: 0;
   }
 
-  .card {    
+  .card {
     align-items: center;
     border-radius: 8px;
     padding: 1.5rem 2rem;
@@ -32,6 +30,7 @@ export default function Highlights () {
     box-shadow: 0 2px 10px rgba(104, 102, 233, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-height: 400px;
+    user-select: none;
 
     &:hover {
       transform: translateY(-5px);
@@ -58,11 +57,29 @@ export default function Highlights () {
     }
   }
 
-  @media (max-width: 1080px) {
+  @media (max-width: 1200px) {
     .container {
-      flex-direction: column;
+    p {
+      font-size: ${Theme.textSize.textMobileSm};
+    }
     }
   }
+
+  
+  @media (max-width: 1140px) {
+    .container {
+      flex-wrap: wrap;
+
+      .card {
+        box-shadow: 0 4px 16px rgba(0, 38, 255, 0.2);
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+
+  }
+
 
 `;
 
@@ -79,7 +96,7 @@ export default function Highlights () {
       title: "Benefícios",
       topics: [
         { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Redução de riscos fiscais e operacionais" },
-        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Suporte para decisões mais seguras" },
+        { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Suporte para decisões estratégicas" },
         { icon: <FaCheckCircle style={{color: "#759dcc", fontSize: "24"}}/>, text: "Otimização de tempo, custos e recursos" },
       ]
 

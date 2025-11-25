@@ -5,23 +5,23 @@ export const Banner = styled.div`
 
   .services-banner {
     position: relative;
-    
-    h2,p {
+    overflow: hidden;
+
+    h2, p {
       color: ${Theme.colors.white};
       user-select: none;
     }
   }
 
-  .banner-item {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    
-    padding: 5rem 10% 8rem 10%;
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease; 
   }
 
-  .banner-item.active {
-    display: block;
+  .banner-item {
+    flex-shrink: 0;
+    width: 100%; 
+    padding: 5rem 10% 8rem 10%;
     opacity: 1;
   }
 
@@ -32,7 +32,8 @@ export const Banner = styled.div`
   .title-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     text-align: left;
     max-width: 530px;
     gap: 2rem;    
@@ -41,11 +42,39 @@ export const Banner = styled.div`
     .button {
       width: 100%;
       align-items: flex-start;
+      a {
+        text-decoration: none;
+      }
+      
       button {
-      background-color: ${Theme.colors.white};
-      user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        background-color: ${Theme.colors.white};
+        user-select: none;    
+        text-transform: uppercase;
+
+        &:hover {
+          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+          .headset {
+            animation: swingSmooth 0.5s ease forwards;
+          }
+        }
+      }    
     }
+    .headset {
+      transition: transform 0.5s ease;
     }
+
+    @keyframes swingSmooth {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(15deg); }
+      50% { transform: rotate(-15deg); }
+      75% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+
   }
 
   .topics {
@@ -86,6 +115,11 @@ export const Banner = styled.div`
   .nav-button.prev { left: 2rem; }
   .nav-button.next { right: 2rem; }
 
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+
   /* Dots */
   .dots {
     margin-top: 15px;
@@ -113,14 +147,24 @@ export const Banner = styled.div`
   }
 
 
-  @media (max-width: 1080px) {
+  @media (max-width: 1155px) {
+
+    .content {
+      gap: 6.5rem;
+      h2 {        
+        font-size: ${Theme.textSize.titleClientMd};
+      }
+    }
+  }
+
+  @media (max-width: 1090px) {
 
     .content {
       flex-direction: column;
       align-items: center;
       h2 {        
         text-align: center;
-        font-size: ${Theme.textSize.titleClientMd};
+        font-size: ${Theme.textSize.titleClientLg};
       }
 
       
@@ -155,8 +199,29 @@ export const Banner = styled.div`
 
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 660px) {
+
+    .banner-item {
+      padding-bottom: 6rem;
+    }
+
     .content {
+      h2 {        
+        font-size: ${Theme.textSize.titleClientSm};
+      }
+      
+      p {
+        font-size: ${Theme.textSize.textMobileMd};
+      }
+    }
+  }
+   @media (max-width: 540px) {
+    .content {
+
+      .title-text {
+        justify-content: space-between;
+        padding: 0 2rem;
+      }
       h2 {        
         font-size: ${Theme.textSize.titleClientXxSm};
       }
@@ -166,5 +231,33 @@ export const Banner = styled.div`
       }
     }
   }
+   @media (max-width: 500px) {
+    .content {
+      .title-text {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+   @media (max-width: 475px) {
+
+    .banner-item {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .content {
+      .title-text {
+        h2 {
+          padding: 0 1.25rem;
+        }
+        p {
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+  
+
+
 
 `

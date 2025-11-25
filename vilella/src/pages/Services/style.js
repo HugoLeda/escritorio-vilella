@@ -4,7 +4,6 @@ import Theme from "../../styles/theme";
 
 export const Servicespage = styled.section `
   
-  
   .wrapper {
     max-width: 1920px;
     margin: 5rem 0 5rem 0;
@@ -24,8 +23,6 @@ export const Servicespage = styled.section `
   h1,h2 {
     font-size: ${Theme.textSize.titleClientLg};
     color: #0d2daa;//color: ${Theme.colors.blue};
-    
-    user-select: none;
   }
 
   p {
@@ -66,6 +63,7 @@ export const Servicespage = styled.section `
     transition: ease-out all .2s;
     background-color: transparent;
     font-weight: 400;
+    user-select: none;
 
     a {
       text-decoration: none;
@@ -83,7 +81,7 @@ export const Servicespage = styled.section `
     .outdoor {
       margin: 5rem 0;
       gap: 8rem;      
-      max-width: 1024px;
+      max-width: 1000px;
     }
    
     .service-outdoor {
@@ -120,7 +118,7 @@ export const Servicespage = styled.section `
       width: 300px;
       height: 5rem;
       top: 60%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(10, 101, 185, 0.6);
       filter: blur(50px);
       border-radius: 50%;
     }
@@ -133,6 +131,14 @@ export const Servicespage = styled.section `
         align-items: center;
         color: ${Theme.colors.white};
       }
+    
+      &:hover {
+        background-color: ${Theme.colors.babyBlue};
+        a {
+          color: ${Theme.colors.blue1};
+          font-weight: 500;
+        }
+      } 
     }
     
     .next-section {
@@ -173,6 +179,7 @@ export const Servicespage = styled.section `
         padding: 0 1rem;     
         box-shadow: none;
         text-transform: uppercase;
+        user-select: none;
       }     
     }
 
@@ -198,8 +205,8 @@ export const Servicespage = styled.section `
           width: 150px;
           height: 150px;
           align-items: center;
-          justify-content: flex-end;
-          padding-right: 1.5rem;
+          justify-content: center;
+          //padding-left: 1.5rem;
         }
       }
 
@@ -225,13 +232,21 @@ export const Servicespage = styled.section `
       }
 
       .option-cta {
-        button {
-          background-color: #0d2daa;
-          a {
-            text-decoration: none;
-            color: ${Theme.colors.white};
+        a {
+          text-decoration: none;
+
+          button {
+            background-color: #0d2daa;
+            text-transform: uppercase;            
+            color: ${Theme.colors.white}; 
+            
+            &:hover {
+              background-color: ${Theme.colors.babyBlue};
+              color: ${Theme.colors.blue1};
+              font-weight: 500;
+            } 
           }
-        }
+        }        
       }
     }
 
@@ -285,7 +300,7 @@ export const Servicespage = styled.section `
     justify-content: space-between;    
     gap: 5rem;
     border-radius: 40px;
-
+    user-select: none;
     
     .excelence-title {
       gap: 1rem;
@@ -316,6 +331,7 @@ export const Servicespage = styled.section `
 
     .office-actions {
       text-align: center;
+      user-select: none;
       flex: 1;
       gap: 4rem;
       .act {
@@ -353,7 +369,7 @@ export const Servicespage = styled.section `
       p {      
         color: ${Theme.colors.gray1};
         margin: 0;
-        font-size: ${Theme.textSize.textMobileMd};
+        //font-size: ${Theme.textSize.textMobileMd};
       }
     }
     
@@ -392,8 +408,58 @@ export const Servicespage = styled.section `
         text-decoration: none;
         color: ${Theme.colors.white};
       }
+      
+      &:hover {
+        background-color: ${Theme.colors.babyBlue};
+        a {
+          color: ${Theme.colors.blue1};
+          font-weight: 500;
+        }
+      } 
+      
     }
   }
+
+  /*scroll-effect START*/
+      
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+    .scroll-effect {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: all .5s ease-in-out;
+    }
+
+    .scroll-effect.visible.fade-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .scroll-effect.visible.fade-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+  }
+
+  /*scroll-effect END */
+
 
   @media (max-width: 1200px) {
 
@@ -449,7 +515,13 @@ export const Servicespage = styled.section `
         img {
           width: 300px;
         }
-      }      
+      }
+
+      .img::before {  
+        width: 250px;
+        height: 4rem;
+        top: 60%;
+      }
 
       
       }
@@ -503,34 +575,9 @@ export const Servicespage = styled.section `
       }            
     }
 
-    
-    .excelence {
-      flex-direction: column;      
-      max-width: 320px;
-      padding: 3rem;
-      top: -5rem;
-      gap: 1rem;
-
-      .excelence-icons {
-        align-items: center;
-        justify-content: center;
-        display: none;
-      }
-      
-      h2 {        
-        font-size: ${Theme.textSize.titleMobileLg};
-        margin: 0;
-      }
-
-      p {
-        display: none;
-      }
-
-    }
-
 
     .each-client {
-      margin: 3rem 0 0 0;
+      margin: 0;
       .each-client-title {        
         text-align: center;
         gap: 2rem;
@@ -577,17 +624,44 @@ export const Servicespage = styled.section `
       h2 {
         font-size: ${Theme.textSize.titleClientXxSm};
       }
+      p {
+        font-size: ${Theme.textSize.textMobileMd};
+      }
       .where-to-find-us {
         flex-direction: column;
         gap: 2rem;
       }
 
+      
+    .button {
+      padding-top: 0;
+    }
       button {
         max-width: 284px;
       }
     }
   }
   
+  @media (max-width: 1140px) {
+    
+    .excelence {
+      text-align: center;
+      padding: 3rem;
+      top: -6rem;
+      gap: 3rem;
+
+      .excelence-icons {
+        align-items: center;
+        justify-content: center;
+        display: none;
+      }
+      
+      h2 {        
+        font-size: ${Theme.textSize.titleMobileLg};
+      }
+    }
+
+  }
   
   @media (max-width: 800px) {
 
@@ -599,7 +673,13 @@ export const Servicespage = styled.section `
           width: 200px;
           height: auto;
         }
-      }            
+      }
+      .img::before {  
+        width: 150px;
+        height: 3rem;
+        top: 60%;
+      }
+
     }
 
     .outdoor {
@@ -614,8 +694,10 @@ export const Servicespage = styled.section `
     .excelence {
       max-width: 300px;
       padding: 2rem;
-      bottom: 6rem;
-      text-align: center;
+      bottom: 0rem;
+      p {
+        display: none;
+      }
     }
   }
 
@@ -665,6 +747,10 @@ export const Servicespage = styled.section `
           padding: 0;
         }
       }
+    }
+
+    .each-client {
+      margin-top: 1rem;
     }
   }
 
