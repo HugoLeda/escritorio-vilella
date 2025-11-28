@@ -65,6 +65,11 @@ export default function Policy(){
       gap: .5rem;      
     }
 
+      
+    #cookie-policy {
+      scroll-margin-top: 8.75rem; 
+    }
+
     #legal-terms {
       scroll-margin-top: 8.75rem; 
     }
@@ -156,7 +161,7 @@ export default function Policy(){
 
           </div>
 
-          <div className="item">
+          <div id="cookie-policy" className="item">
             <h3>3. Política de Cookies</h3>
 
             <h4>3.1. Definições de Cookies</h4>

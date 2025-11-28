@@ -57,7 +57,7 @@ export default function Banner() {
                 </div>
                 <div className="button flex">
                   <button className="our-team">
-                    <a href="https://instagram.com/escritorio.vilella/" onclick="
+                    <a href="https://instagram.com/escritorio.vilella/" target="blank" onclick="
                       if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
                         window.location = 'instagram://user?username=escritorio.vilella';
                         setTimeout(function(){ window.location = 'https://www.instagram.com/escritorio.vilella/'; }, 400);

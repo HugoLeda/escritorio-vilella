@@ -12,7 +12,7 @@ export default function Header({page}) {
   return (
     <HeaderContainer id="header">              
         <div className="header-logo">
-          <a href="#">
+          <a href="/">
             <img className="img" src={logoVilella} alt="Logo do Escritório Vilella"/>
           </a>
         </div>
