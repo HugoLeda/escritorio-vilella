@@ -73,13 +73,16 @@ const AboutCards = styled.div`
     
   @media (max-width: 1224px) {
 
+    h3 {
+      margin:  0;
+    }
 
     .bsc-card {
       gap: 2rem;
       width: 300px;
       height: 300px;
       border-radius: 40px;
-      padding: 1rem .5rem;
+      padding: 2rem .5rem 1rem .5rem;
       }
     
 

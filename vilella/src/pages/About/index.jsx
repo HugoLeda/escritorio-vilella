@@ -131,7 +131,7 @@ export default function About() {
       description:"Expansão de atuação e atendimento regional"
     },    
     {
-      year:"2017",
+      year:"2015",
       description:"Nos tornamos ponto de atendimento para emissão de certificados digitais"
     },    
     {

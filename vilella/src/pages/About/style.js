@@ -205,7 +205,6 @@ export const Aboutpage = styled.div`
 
     p {
       max-width: 600px;
-
     }
   }
   
@@ -410,6 +409,21 @@ export const Aboutpage = styled.div`
       }
     } 
     
+    
+    .history {
+      .history-text {
+        p {
+          max-width: 550px;
+        }
+      }
+      .decor-frames::before {
+        width: 200px;
+        height: 200px;
+        right: 0;
+        bottom: 1rem;
+      }
+    }
+
     .excelence-cards {
       h3 {
         font-size: ${Theme.textSize.titleCardXSm};
@@ -437,30 +451,6 @@ export const Aboutpage = styled.div`
     span {
       font-weight: 500;
     }
-
-    header {
-      .outdoor-items {
-        flex-direction: column-reverse;
-      }
-      .decor-frames {
-        display: none;
-      }
-    }
-
-
-    .history {
-      flex-direction: column;      
-      .decor-frames {
-        display:none;
-      }
-    }
-    
-    #call-to-action { 
-      h2,p {
-        width: 100%;
-        text-align: center;
-      }
-    }
   }
   
 
@@ -486,6 +476,50 @@ export const Aboutpage = styled.div`
     }
   }  
 
+  @media (max-width: 1140px) {
+
+    header {
+      .outdoor {
+        gap: 3rem;
+      }
+    }
+
+    .history {
+      gap: 0;
+    }
+    
+    #call-to-action { 
+      h2,p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 1100px) {
+
+    header {
+      .outdoor {
+        .decor-frames {
+          display: none;
+        }
+      }
+    }
+
+    .history {
+      margin: 5rem 0;
+      padding: 0 18vw 0 20vw;
+      .history-text {
+        p {
+          max-width: 100vw;
+        }
+      }
+      .decor-frames {
+        display: none;
+      }
+    }
+  }
+
 
   @media (max-width: 960px) {
 
@@ -497,6 +531,11 @@ export const Aboutpage = styled.div`
         } 
       }
     }    
+
+    
+    .history {
+      padding: 0 10vw;
+    }
 
     .advantages {
       flex-direction: column;
@@ -512,7 +551,7 @@ export const Aboutpage = styled.div`
     .timeline-between {  
       &::before {
         left: 5%;
-        top: 7rem;
+        top: 6rem;
         bottom: 8rem;
       }  
     }
@@ -532,6 +571,19 @@ export const Aboutpage = styled.div`
           max-width: 400px;
           font-size: ${Theme.textSize.titleMobileMd};
         }
+      }
+    }
+
+    .history {
+      margin: 5rem 0;
+      p {
+        font-size: ${Theme.textSize.textMobileMd};
+      }
+    }
+
+    .excelence {
+      h2 {
+        padding: 0 2rem;
       }
     }
 

@@ -125,7 +125,7 @@ export const Servicespage = styled.section `
     
 
     button {
-      background-color: #0d2daa;//background-color: ${Theme.colors.blue};
+      background-color: #0d2daa;
       a {
         text-decoration: none;
         align-items: center;
@@ -751,6 +751,24 @@ export const Servicespage = styled.section `
 
     .each-client {
       margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 405px) {
+
+    button {
+      padding: .5rem;
+    }
+    .business-consulting-wrapper {
+      .consulting-button {
+        gap: 1rem;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+      }
     }
   }
 
