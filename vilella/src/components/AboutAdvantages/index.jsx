@@ -1,22 +1,27 @@
 import styled from "styled-components"
 import Theme from "../../styles/theme"
 
-export default function AboutAdvantages({icon,title,place}) {
+export default function AboutAdvantages({icon,title,place,text}) {
 
   const Advantages = styled.div `
 
     .advantage-card {
-      gap: 1rem;
-      user-select: none;
-      width: 150px;
-
+      flex-direction: column;
+      max-width: 320px;
+      padding: 2.5rem;
+      border: 1px solid ${Theme.colors.white};
+      border-radius: 40px;      
       
+    h3 {
+      font-size: ${Theme.textSize.textMobileMd};
+    }
       p {
-        font-size: ${Theme.textSize.textSm};
+        font-size: ${Theme.textSize.textMobileSm};
         color: ${Theme.colors.white};
-        width: 75%;
         margin: 0;
       }
+      
+
     }
 
     @media (max-width: 960px) {
@@ -35,9 +40,10 @@ export default function AboutAdvantages({icon,title,place}) {
     <>
     <Advantages>
       <div className={`place${place}`}>
-        <div className="advantage-card flex-column">
+        <div className="advantage-card flex">
           <div className="icon">{icon}</div>
-          <p>{title}</p>
+          <h3>{title}</h3>
+          <p>{text}</p>
         </div>
       </div>
     </Advantages>

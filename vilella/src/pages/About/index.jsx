@@ -5,15 +5,11 @@ import AboutValues from "../../components/AboutCoreValues";
 import AboutAdvantages from "../../components/AboutAdvantages";
 import AboutJourney from "../../components/AboutJourney";
 
-import homeCover from "../../assets/homeCover.webp"
-
 import { Aboutpage } from "./style"
 
-import { FaHandsHoldingCircle, FaRegEye, FaFlag, FaBriefcase, FaAward, FaUserTie } from "react-icons/fa6";
-import { FaCogs } from "react-icons/fa";
+import { FaHandsHoldingCircle, FaRegEye, FaFlag, FaBriefcase, FaAward, FaUserTie, FaArrowDown } from "react-icons/fa6";
 
-import { useState, useEffect, useRef } from "react";
-import Theme from "../../styles/theme";
+import { useEffect, useRef } from "react";
 
 
 export default function About() {
@@ -34,38 +30,38 @@ export default function About() {
       lastScrollY.current = window.scrollY;
     };
 
-    window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const el = entry.target;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
 
-          if (entry.isIntersecting) {
-            el.classList.remove("fade-up", "fade-down");
+        if (entry.isIntersecting) {
+          el.classList.remove("fade-up", "fade-down");
 
-            if (scrollDirection === "down") {
-              el.classList.add("visible", "fade-up");
-            } else {
-              el.classList.add("visible", "fade-down");
-            }
+          if (scrollDirection === "down") {
+            el.classList.add("visible", "fade-up");
           } else {
-            el.classList.remove("visible", "fade-up", "fade-down");
+            el.classList.add("visible", "fade-down");
           }
-        });
-      },
-      {
-        threshold: 0.01,
-      }
-    );
+        } else {
+          el.classList.remove("visible", "fade-up", "fade-down");
+        }
+      });
+    },
+    {
+      threshold: 0.01,
+    }
+  );
 
-    const elements = document.querySelectorAll(".scroll-effect");
-    elements.forEach((el) => observer.observe(el));
+  const elements = document.querySelectorAll(".scroll-effect");
+  elements.forEach((el) => observer.observe(el));
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      elements.forEach((el) => observer.unobserve(el));
-    };
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    elements.forEach((el) => observer.unobserve(el));
+  };
   }, []);
 
   /* class .scroll-effect END*/
@@ -80,43 +76,42 @@ export default function About() {
     {
       icon:<FaRegEye style={{fontSize: 32}}/>,
       title:"Visão",
-      text:"Ser reconhecidos pela excelência e satisfação daqueles que confiam em nosso trabalho diário.",
+      text:"Ser reconhecido pela excelência e satisfação daqueles que confiam em nosso trabalho diário.",
       hoverColor: "#93c5ff"
     },    
     {
       icon:<FaHandsHoldingCircle style={{fontSize: 32}}/>,
       title:"Valores",
-      text:"Responsabilidade, confiança, transparência e otimização de processos em todas as relações.",
-      hoverColor:"#0d2daa"
+      text:"Otimização de processos, responsabilidade, confiança e transparência em todas as relações.",
+      hoverColor:"#759dcc"
     }    
   ];
 
   /* advantagesCard onClick start */
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  //const [currentIndex, setCurrentIndex] = useState(0);
 
   const advantagesCards = [
     {
-      icon: <FaAward style={{ fontSize: 48, color: "#93c5ff" }} />,
-      title: "Décadas de experiência"
+      icon: <FaAward style={{ fontSize: 32, color: "#fff" }} />,
+      title: "Décadas de experiência",
+      text: "Há 35 anos oferecendo serviços com conhecimento sólido, segurança e total conformidade fiscal, tributária e trabalhista."
     },
     {
-      icon: <FaBriefcase style={{ fontSize: 48, color: "#fff" }} />,
-      title: "Assessoria empresarial"
+      icon: <FaBriefcase style={{ fontSize: 32, color: "#fff" }} />,
+      title: "Soluções digitais",
+      text: "Investimos em tecnologia para garantir segurança e acesso rápido às suas informações, apoiando sua gestão diária. "
     },
     {
-      icon: <FaCogs style={{ fontSize: 48, color: "#00116f" }} />,
-      title: "Atendimento multissetorial"
-    },
-    {
-      icon: <FaUserTie style={{ fontSize: 48, color: "#a8d0ff" }} />,
-      title: "Contabilidade consultiva"      
+      icon: <FaUserTie style={{ fontSize: 32, color: "#fff" }} />,
+      title: "Contabilidade consultiva",
+      text: "Equipe especializada com atendimento próximo e preparada para indicar oportunidades de melhoria e crescimento."
     }
   ];
   
-  const handleDotClick = (index) => {
-    setCurrentIndex(index);
-  };
+  //const handleDotClick = (index) => {
+    //setCurrentIndex(index);
+  //};
 
   
   /* advantagesCard onClick END */
@@ -124,8 +119,8 @@ export default function About() {
 
   const journeyYears = [
     {
-      year:"ANO",
-      description:"Fundação do Escritório Vilella"
+      year:"1993",
+      description:"Início da gestão Vilella"
     },
     {
       year:"2008",
@@ -133,10 +128,10 @@ export default function About() {
     },    
     {
       year:"2011",
-      description:"Início da nova gerência"
+      description:"Expansão de atuação e atendimento regional"
     },    
     {
-      year:"ANO",
+      year:"2017",
       description:"Nos tornamos ponto de atendimento para emissão de certificados digitais"
     },    
     {
@@ -158,39 +153,52 @@ export default function About() {
     <>
       <Header page="about"/>      
         <Aboutpage>
-          <header className="flex-column">
-            <div className="outdoor wrapper flex-column">              
-              <div className="outdoor-items flex">
-                <div className="outdoor-text items flex-column">
-                  <h1>Há 35 anos construindo confiança e <span>soluções contábeis personalizadas</span></h1>
-                  <p>Trabalhamos juntos para fazer sua empresa crescer.</p>
+          <header className="flex-column">  
+            <div className="outdoor flex">            
+
+              {/* Texto principal */}
+              <div className="service-outdoor flex">
+                <h1>
+                  Há 35 anos construindo confiança e 
+                  <span> soluções contábeis personalizadas</span>
+                </h1>
+                <p>Trabalhamos juntos para fazer sua empresa crescer.</p>
+
+                <div className="link flex">
+                  <button className="button">
+                    <a href="/about#timeline">Acompanhe nossa jornada</a>
+                  </button>
                 </div>
-                <div className="outdoor-cards decor-frames">
-                 {/* <img className="img" src={homeCover} alt="office  vilella"/>*/}
-                </div>
-              </div>             
-              <div className="outdoor-scroll flex">
-                <button className="our-history"><a href="/about#timeline">Conheça nossa história</a></button>
-              </div>  
-            </div>       
+              </div>
+
+              <div className="img flex-column outdoor-cards decor-frames">
+                {/* <img className="img" src={homeCover} alt="office vilella" /> */}
+              </div>
+
+            </div>
+
+            <div className="next-section">
+              <span><a href="/about#history"><FaArrowDown style={{ color: "#fff", fontSize: "16" }} /></a></span>
+            </div>
           </header>
+
           <main>
             
             <section id="history" className="flex-column">
               <div className="history items wrapper flex">
-
                 <div className="history-text items flex-column">
                   <div className="history-text-title">
                     <h2>Quem somos</h2>
                     <span>Escritório Vilella</span>
                   </div>
-                  <p>Com mais de 35 anos de atuação, somos reconhecidos como um parceiro essencial para empresas que buscam segurança, clareza e suporte em todas as etapas do seu desenvolvimento.</p>
-                  <p>Desde o início, nossa prioridade sempre foi oferecer um atendimento próximo, confiável e eficiente.</p>
-                  <p>Trabalhamos para garantir que nossos clientes estejam sempre em conformidade com as exigências legais, mas, acima de tudo, focados no crescimento saudável e sustentável de seus negócios.</p>
-
+                  <div className="">
+                    <p>Com mais de três décadas de atuação, somos reconhecidos como um parceiro essencial para empresas que buscam segurança, clareza e suporte em todas as etapas do seu desenvolvimento.</p>
+                    <p>Desde o início, nossa prioridade sempre foi oferecer um atendimento próximo, confiável e eficiente.</p>
+                    <p>Trabalhamos para garantir que nossos clientes estejam sempre em conformidade com as exigências legais, mas, acima de tudo, focados no crescimento saudável e sustentável de seus negócios.</p>
+                  </div>                  
                 </div>
-                <figure className="decor-frames">
-                  <img className="img" src={homeCover} alt="office  vilella"/>
+                <figure className="decor-frames flex">
+                  {/*<img className="img" src={homeCover} alt="office  vilella"/>*/}
                 </figure>
 
               </div>
@@ -201,7 +209,7 @@ export default function About() {
 
                 <div className="excelence items flex-column">
                   <div className="excelence-text flex-column items scroll-effect">
-                    <span>missão visão e valores</span>
+                    <span>Missão, visão e valores</span>
                     <h2>Compromisso com a <span>excelência</span></h2>
                   </div>
                   <div className="excelence-cards items flex scroll-effect">
@@ -216,75 +224,18 @@ export default function About() {
                     ))}
                   </div>
                 </div>
-
-                <div className="advantages flex scroll-effect">
+                <div className="advantages flex-column scroll-effect">
                   <div className="advantages-text flex-column items">
                     <h2>Nosso <span>diferencial</span></h2>
-                    <p>É o compromisso que assumimos com você.</p>
                   </div>
-                  <div className="diamond-container">
-                    <div className="diamond">
-                      <div
-                        className={`circle ${currentIndex === 2 ? 'active' : ''}`}
-                        data-pos="top"
-                        onClick={() => handleDotClick(2)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === 'Enter' && handleDotClick(0)}
-                      >
-                        <div className="inner">
-                          <AboutAdvantages icon={advantagesCards[2].icon} title={advantagesCards[2].title} />
-                        </div>
-                      </div>
-
-                      <div
-                        className={`circle ${currentIndex === 3 ? 'active' : ''}`}
-                        data-pos="left"
-                        onClick={() => handleDotClick(3)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === 'Enter' && handleDotClick(1)}
-                      >
-                        <div className="inner">
-                          <AboutAdvantages icon={advantagesCards[0].icon} title={advantagesCards[0].title} />
-                        </div>
-                      </div>
-
-                      <div
-                        className={`circle center ${currentIndex === 0 ? 'active' : ''}`}
-                        onClick={() => handleDotClick(0)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === 'Enter' && handleDotClick(2)}
-                      >
-                        <div className="inner">
-                          <AboutAdvantages icon={advantagesCards[1].icon} title={advantagesCards[1].title} />
-                        </div>
-                      </div>
-
-                      <div
-                        className={`circle ${currentIndex === 1 ? 'active' : ''}`}
-                        data-pos="right"
-                        onClick={() => handleDotClick(1)}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => e.key === 'Enter' && handleDotClick(3)}
-                      >
-                        <div className="inner">
-                          <AboutAdvantages icon={advantagesCards[3].icon} title={advantagesCards[3].title} />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="dots">
-                      {advantagesCards.map((_, index) => (
-                        <span
-                          key={index}
-                          className={`dot ${index === currentIndex ? 'active' : ''}`}
-                          onClick={() => handleDotClick(index)}
-                        />
-                      ))}
-                    </div>
+                  <div className="advantages-cards flex">
+                    {advantagesCards.map(service => (
+                      <AboutAdvantages
+                        key={service.title}
+                        title={service.title}
+                        text={service.text}
+                      />
+                    ))}
                   </div>
                 </div>
 

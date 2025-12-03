@@ -8,24 +8,27 @@ const AboutCards = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
-    width: 317px;
+    width: 320px;
     height: 317px;
     border-radius: 40px;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 2rem;
+    gap: 2rem;
+    box-shadow: 0 2px 10px rgba(104, 102, 233, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
+    
     overflow: hidden;
     transition: 0.2s linear all;
     background-color: ${props => props.hoverColor || "red"};    
     border: none;
     user-select: none;
-  }
-  
-  .bsc-card:hover {
-    background-color: transparent;
-    border: 1px solid ${Theme.colors.white};
-    h3 {
-      color: ${Theme.colors.gray1};
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 16px rgba(0, 38, 255, 0.2);
     }
+
   }
+    
 
   .bg-circle {
     position: absolute;
@@ -62,7 +65,7 @@ const AboutCards = styled.div`
   }
 
   p {
-    font-size: ${Theme.textSize.textMobileLg};
+    font-size: ${Theme.textSize.textMobileMd};
     padding: 1rem;
     margin: 0;
   }

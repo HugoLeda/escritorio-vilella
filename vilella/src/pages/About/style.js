@@ -15,21 +15,19 @@ export const Aboutpage = styled.div`
 
   .wrapper {
     max-width: 1920px;
-    margin: 5rem 0 5rem 0;
+    margin: 8rem 0;
     padding: 0 10%;
   }
 
-  
   .items {
     gap: 2rem;
   }
 
   h1,h2 {
-    font-size: ${Theme.textSize.titleCardLg};
+    font-size: ${Theme.textSize.titleMd};
     span {
       color: ${Theme.colors.babyBlue};
     }
-    
   }
   p {
     font-size: ${Theme.textSize.textMd};
@@ -54,63 +52,89 @@ export const Aboutpage = styled.div`
       text-decoration: none;
       font-weight: 500;
     }
-
   }
 
-
   header {
-    background: linear-gradient(to right, #00116f, #1a3a8a, #0d2daa);
-    //background-color: ${Theme.colors.blue2};
-    color: ${Theme.colors.white};    
+    position: relative;
+    background-color: ${Theme.colors.blue};
+    color: ${Theme.colors.white};
+    padding: 0 10%;
+    align-items: center;
 
     .outdoor {
+      margin: 5rem 0;
       gap: 5rem;
+      max-width: 1000px;
       justify-content: space-evenly;
-      user-select: none;
     }
 
-    .outdoor-items {
-      gap: 5rem;
-    }
-
-    .outdoor-text,
-    .outdoor-cards {
-      flex: 1;
-    }
-
-    .outdoor-text {
-      text-align: center;
+    .service-outdoor {
+      flex-direction: column;
       justify-content: center;
+      gap: 3rem;
+
       h1 {
-        width: 500px;
+        font-size: ${Theme.textSize.titleClientMd};
+        max-width: 500px;
+      }
+
+      h1,p {
+        text-align: center;
+        margin:0;
+      }
+
+      .link {
+        flex-direction: row;
+        justify-content: center;
       }
     }
 
-    .outdoor-cards {
+    .img {
+      position: relative;
+      justify-content: center;
       width: 400px;
       height: 400px;
+      user-select: none;
+
+      img {
+        width: 400px;
+        height: auto;
+        z-index: 2;
+      }
     }
-        
 
-  .decor-frames {
-    position: relative;
+    .decor-frames {
+      position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      background-color: ${Theme.colors.babyBlue};
-      border-radius: 1rem;
-      right: 5rem;
-      bottom: 3rem;
-      box-shadow: -8rem -6rem 0 0 ${Theme.colors.blue1};      
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: ${Theme.colors.blue1};
+        border-radius: 1rem;
+        right: 0rem;
+        top: 5rem;      
+        box-shadow: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: ${Theme.colors.babyBlue};
+        border-radius: 1rem;
+        right: 3rem;
+        bottom: 3rem;
+        box-shadow: -6rem -8rem 0 0 ${Theme.colors.white};
+      }
     }
-  } 
-
 
     button {
       border: 1px solid ${Theme.colors.white};
+      background: transparent;
+
       a {
         color: ${Theme.colors.white};
       }
@@ -119,15 +143,37 @@ export const Aboutpage = styled.div`
         background-color: ${Theme.colors.white};
         border: none;
 
-      a {
-        color: ${Theme.colors.blue2};
+        a {
+          color: ${Theme.colors.blue2};
+        }
       }
-      }      
+    }
+
+    .next-section {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -1rem;
     }
   }
 
+  header::before {
+    content: "";
+    position: absolute;
+    background: #0d2d7d;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
   #history,
   #timeline {
+    scroll-margin-top: 2rem; 
+
     h1,h2 {
       color: ${Theme.colors.gray1};
     }
@@ -137,73 +183,63 @@ export const Aboutpage = styled.div`
 
   }
 
+  .history {
+    width: 100%;
+  }
+
 
   .history-text {
+    width: 100%;
     align-items: flex-start;
     gap: 1rem;
-    
+
+    .history-text-title {
+    }
+
     h2 {
       margin: 0;
     }
     span {
       font-size: ${Theme.textSize.titleSm};
     }
-  }
 
-  
-  .img {
-    border-radius: 1rem;
-    width: 500px;
-    height: 400px;
-    object-fit: cover;
-    position: relative;
+    p {
+      max-width: 600px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 75px;
-      height: 75px;
-      background-color: ${Theme.colors.babyBlue};
-      border-radius: 1rem;
-      right: -1rem;
-      bottom: -2rem;
-      box-shadow: -3rem -2rem 0 0 ${Theme.colors.blue1};
-      
     }
   }
-
+  
   figure {
     position: relative;
 
-    &::after {
+    &::before {
       content: "";
       position: absolute;
-      width: 75px;
-      height: 75px;
-      background-color: ${Theme.colors.babyBlue};
+      width: 220px;
+      height: 220px;
+      background-color: ${Theme.colors.lightGray};
       border-radius: 1rem;
-      right: -1rem;
-      top: 24rem;
-      box-shadow: -3rem -2rem 0 0 ${Theme.colors.blue1};
-      
+      right: 2rem;
+      bottom: 2rem;
+      box-shadow: -6rem -6rem 0 0 #0d2daa;
     }
   } 
 
 
   #bsc {
-    background-color: ${Theme.colors.gray1};
+    background-color: ${Theme.colors.blue};
     color: ${Theme.colors.white};
   }
 
-
   .bsc-items {
-    gap: 10rem;
+    gap: 8rem;
     padding: 0;
   }
 
   .excelence {
-    gap: 5rem;
+    gap: 3rem;
     text-align: center;
+    margin-top: -2rem;
 
     .excelence-text {
       span {
@@ -218,132 +254,31 @@ export const Aboutpage = styled.div`
 
     .excelence-cards {
       gap: 3rem;
+      p {
+        font-size: ${Theme.textSize.textMobileMd};
+      }
     }
     
   }
 
 
   .advantages {
-    gap: 5rem;
-    justify-content: space-between;
+    gap: 3rem;
+    justify-content: space-around;
     width: 100%;
+    margin-bottom: 3rem;
     
-    padding-right: 5rem;
-
-    .advantages-text {
-      align-items: flex-start;
-
-      h2 {
-        position: relative;
-        &::after {
-          position: absolute;
-          content: " ";
-          width: 90%;
-          height: 2px;  
-          background: linear-gradient(to right, #2b2b2b, #606060, #f2f2f2);
-          border-radius: 0 40px 40px 0;
-          right: 0;
-          bottom: -1rem;
-        }
-      }
-
+    .advantages-cards {
+      justify-content: space-around;
+      gap: 3rem;
     }
+
   }
-
-
-  /*AboutAdvantages START*/
-
-  .diamond {
-    position: relative;
-    width: 300px;
-    height: 220px;
-  }
-
-  /* cada circle posiciona com translate (somente posicionamento) */
-  .circle {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: ${Theme.colors.white};
-  }
-
-  /* centro deve ficar exatamente no meio */
-  .circle.center {
-    width: 120px;
-    height: 120px;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .circle[data-pos="top"] {
-    top: -1rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .circle[data-pos="left"] {
-    top: 50%;
-    left: 0;
-    transform: translate(-50%, -50%);
-  }
-
-  .circle[data-pos="right"] {
-    top: 50%;
-    right: 0;
-    transform: translate(50%, -50%);
-  }
-
-  .circle .inner {
-    transition: transform .2s ease;
-    opacity: 0.6;
-  }
-
-  /* estado ativo — escala */
-  .circle.active .inner {
-    transform: scale(1.15);
-    z-index: 3;
-    opacity: 100%;
-  }
-
-  
-  .dots {
-    text-align: center;
-    padding-top: 2rem;
-  }
-
-  .dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background: ${Theme.colors.lightGray};
-    border-radius: 50%;
-    margin: 0 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .dot.active {    
-    background: transparent;
-    border: 1px solid ${Theme.colors.lightGray};
-  }
-
-
-
-  /*AboutAdvantages END */
-
 
 
   /*AboutJourney START */
-
   
-
   #timeline {
-    scroll-margin-top: 8.75rem; 
     background-color: ${Theme.colors.white};
     color: black;
 
@@ -357,7 +292,7 @@ export const Aboutpage = styled.div`
   }
 
   .timeline-start-end {
-    user-select: none;
+    //user-select: none;
     p {
       padding: 1rem 5rem 0;
       text-align: center;
@@ -386,7 +321,11 @@ export const Aboutpage = styled.div`
 
   #call-to-action {
     background-color: ${Theme.colors.lightGray};
-    margin-bottom: -5rem;
+    margin-bottom: -8rem;
+    
+    .wrapper {
+      margin-top: 5rem;
+    }
 
     p {
       text-align: center;
@@ -421,7 +360,6 @@ export const Aboutpage = styled.div`
       display: block;
       color: ${Theme.colors.gray1};
       font-weight: 300;
-
     }
   }
 
@@ -459,13 +397,32 @@ export const Aboutpage = styled.div`
   }
 
   .scroll-effect.visible.fade-down {
-  animation: fadeInDown 0.8s ease-out forwards;
-}
+    animation: fadeInDown 0.8s ease-out forwards;
+  }
 
+
+
+  @media (max-width: 1224px) {
+
+    header {
+      .outdoor-text {
+        padding-top: 2rem;
+      }
+    } 
+    
+    .excelence-cards {
+      h3 {
+        font-size: ${Theme.textSize.titleCardXSm};
+        font-weight: 600;
+      }
+      p {
+        font-size: ${Theme.textSize.textMobileSm};
+      }
+    }
+  }
 
   @media (max-width: 1170px) {
 
-    
     h1,h2 {
       font-size: ${Theme.textSize.titleCardMd};
       span {
@@ -482,160 +439,74 @@ export const Aboutpage = styled.div`
     }
 
     header {
+      .outdoor-items {
+        flex-direction: column-reverse;
+      }
       .decor-frames {
         display: none;
       }
-
-      
-    .outdoor-text {
-      h1 {
-        width: 400px;
-      } 
     }
 
-    }
-
-    .outdoor-items {
-      flex-direction: column-reverse;
-      .outdoor-cards {
-      }
-    }
 
     .history {
-      flex-direction: column-reverse;
-
-      .img {
-        width: 100%;
+      flex-direction: column;      
+      .decor-frames {
+        display:none;
       }
     }
-
     
-  figure {
-    &::after {
-      bottom: -3rem;
-      box-shadow: -3rem -2rem 0 0 ${Theme.colors.blue1};      
-    }
-  } 
-
-
-    #call-to-action {
-      
+    #call-to-action { 
       h2,p {
         width: 100%;
         text-align: center;
-      }      
-
-
+      }
     }
-
   }
-
   
-  @media (max-width: 1224px) {
-
-    header {
-      .decor-frames {
-        display: none;
-      }
-
-      
-    .outdoor-text {
-      padding-top: 2rem;
-    }
-
-    }
-    
-    .excelence-cards {
-     
-      
-      h3 {
-        font-size: ${Theme.textSize.titleCardXSm};
-        font-weight: 600;
-      }
-
-        
-      p {
-        font-size: ${Theme.textSize.textMobileSm};
-      }
-
-    }
-
-
-  }
 
   @media (max-width: 1160px) {
  
+    .bsc-items {
+      gap: 5rem;
+    }
+    .excelence {
+      gap: 3rem;
+    }
+
     .excelence-cards {
       flex-direction: column;
+    }
+    
+    .advantages {
+      margin-bottom: 0;
+    }
 
+    .advantages-cards {
+      flex-direction: column;
     }
   }  
 
 
   @media (max-width: 960px) {
 
-
     header {
-
-      .decor-frames {
-        display: none;
-      }
-
-      
       .outdoor-text {
         padding-top: 5rem;
         h1 {
           width: 330px;
         } 
-
       }
-
     }    
 
     .advantages {
       flex-direction: column;
       align-items: center;
-      gap: 6rem;
       padding-right: 0;
-
-      .advantages-text {
-        align-items: center;
-        text-align: center;
-        padding: 0 2rem;
-      }
-
-      .advantages-cards {
-        flex-wrap: wrap;
-      }
-
-        .circle.center {
-          top: 100%;
-        }
-
-        .circle[data-pos="top"] {
-          top: -1.5rem;
-        }
-
-        .circle[data-pos="left"] {
-          top: 45%;
-          left: 15%;
-        }
-
-        .circle[data-pos="right"] {
-          top: 45%;
-          right: 15%;
-        }
-
-        
-        .dots {
-          padding-top: 5rem;
-        }
-
     }
 
     
     .timeline-start-end:nth-child(1) {
-      display: none;      
+      display: none;
     }
 
     .timeline-between {  
@@ -650,11 +521,26 @@ export const Aboutpage = styled.div`
       width: 100%;
       padding: 1rem 2rem;
     }
-
+    
   }
 
-  @media (max-width: 370px) {
+  @media (max-width: 624px) {
 
+    header {      
+      .service-outdoor {    
+        h1 {
+          max-width: 400px;
+          font-size: ${Theme.textSize.titleMobileMd};
+        }
+      }
+    }
+
+    .invite-text {
+      padding: .25rem;
+      span {
+        padding-top: 1rem;
+      }
+    }
   }
-
+  
 `
