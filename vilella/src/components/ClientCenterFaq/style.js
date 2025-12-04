@@ -23,9 +23,9 @@ export const Faq = styled.section `
       justify-content: space-between;
       align-items: center;
       gap: 2rem;
-      border-radius: 6px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 10px rgb(0,0,0,0.2);
+      border-radius: 40px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 12px rgb(0,0,0,0.1);
     }
 
     h3 {
@@ -50,6 +50,9 @@ export const Faq = styled.section `
         max-height 0.5s ease,
         opacity 0.2s linear 0.1s,
         transform 0.4s ease;
+      a {
+        color: ${Theme.colors.gray1};
+      }
     }
 
     .faq-answer.open {

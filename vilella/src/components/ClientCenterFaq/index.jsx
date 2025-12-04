@@ -12,7 +12,7 @@ const [open, setOpen] = useState(false);
             <div className={`arrow ${open ? 'open' : ''}`}></div>
           </div>
             <div className={`faq-answer ${open ? 'open' : ''}`}>
-              <p>{answer}</p>
+              <p dangerouslySetInnerHTML={{ __html: answer }} />
             </div>
         </div>
       </div>

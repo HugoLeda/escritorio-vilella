@@ -35,16 +35,19 @@ export const Steps = styled.section `
   }
 
   .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
     h3 {
       color: ${Theme.colors.gray1};
     }
     h3,p {
-      font-size: ${Theme.textSize.textLg};
+      //font-size: ${Theme.textSize.textLg};
       margin: 0;
     }
   }
-
-
 
   @media (max-width: 1170px) {
     

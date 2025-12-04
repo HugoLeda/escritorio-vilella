@@ -265,7 +265,7 @@ export const Aboutpage = styled.div`
     gap: 3rem;
     justify-content: space-around;
     width: 100%;
-    margin-bottom: 3rem;
+    //margin-bottom: 3rem;
     
     .advantages-cards {
       justify-content: space-around;
