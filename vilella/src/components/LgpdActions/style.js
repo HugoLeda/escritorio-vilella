@@ -12,6 +12,7 @@ export const Actions = styled.div `
   }
   .act {
     justify-content: center;
+    max-width: 240px;
 
     .icon {
       justify-content: center;
@@ -37,6 +38,7 @@ export const Actions = styled.div `
       flex-direction: row;
       justify-content: flex-start;
       gap: 1.5rem;
+      max-width: 500px;
 
       .icon-number {
         flex-direction: row;
