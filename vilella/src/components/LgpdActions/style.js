@@ -31,7 +31,7 @@ export const Actions = styled.div `
     }
 
   }
-
+  
   @media (max-width: 1080px) {
 
     .act {

@@ -33,4 +33,48 @@ export const Gains = styled.section`
       margin: 0;
     }
   }
+
+  
+  /*scroll-effect START*/
+      
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+    .scroll-effect {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: all .5s ease-in-out;
+    }
+
+    .scroll-effect.visible.fade-up {
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .scroll-effect.visible.fade-down {
+    animation: fadeInDown 0.8s ease-out forwards;
+  }
+
+  /*scroll-effect END */
+
+
+
 `

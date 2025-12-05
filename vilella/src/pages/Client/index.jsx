@@ -15,9 +15,10 @@ import playstore from "../../assets/client/playstore.webp"
 import appstore from "../../assets/client/appstore.webp"
 
 
-import { Fa1, Fa2, Fa3, Fa4, FaAppStore, FaAppStoreIos, FaArrowRight, FaFolderOpen, FaGooglePlay, FaMobileScreen, FaRegBell, FaRegBuilding, FaRegClock, FaRegMessage, FaRegUser} from "react-icons/fa6";
+import { Fa1, Fa2, Fa3, Fa4, FaArrowRight, FaFolderOpen, FaMobileScreen, FaRegBell, FaRegBuilding, FaRegClock, FaRegMessage, FaRegUser} from "react-icons/fa6";
 import { MdMailOutline } from "react-icons/md";
 
+import { useEffect, useRef } from "react";
 
 const tutorialSteps = [
   {
@@ -111,6 +112,62 @@ const clientFaq = [
 
 
 export default function Client() {
+
+  
+  /*class .scroll-effect start*/
+
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    let scrollDirection = "down";
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY.current) {
+        scrollDirection = "down";
+      } else {
+        scrollDirection = "up";
+      }
+      lastScrollY.current = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target;
+
+          if (entry.isIntersecting) {
+            el.classList.remove("fade-up", "fade-down");
+
+            if (scrollDirection === "down") {
+              el.classList.add("visible", "fade-up");
+            } else {
+              el.classList.add("visible", "fade-down");
+            }
+          } else {
+            el.classList.remove("visible", "fade-up", "fade-down");
+          }
+        });
+      },
+      {
+        threshold: 0.01,
+      }
+    );
+
+    const elements = document.querySelectorAll(".scroll-effect");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
+  /* class .scroll-effect END*/
+
+
+
   return (
     <>
       <Header page="client-center"/>
@@ -136,17 +193,17 @@ export default function Client() {
         
           <div className="access flex-column">
             <div className="tutorial-wrapper flex-column wrapper">
-              <h2>Vamos Começar?</h2>
-              <p>Aprenda em minutos com nossos tutoriais completos!</p>
+              <h2 className="scroll-effect">Vamos Começar?</h2>
+              <p className="scroll-effect">Aprenda em minutos com nossos tutoriais completos!</p>
               <div className="tutorial flex">
-                <div className="desktop-tutorial flex-column">
+                <div className="desktop-tutorial flex-column scroll-effect">
                   <iframe src="https://www.youtube.com/embed/lmcjOtB-oJQ?si=kmQa47huf1cPVCTX" title="Tutorial Portal do Cliente Desktop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                   <div className="tutorial-description flex-column">
                     <span>Tutorial 01: Desktop</span>
                     <p>Veja como acessar e utilizar o Onvio Portal do Cliente no seu computador.</p>
                   </div>
                 </div>
-                <div className="mobile-tutorial flex-column">
+                <div className="mobile-tutorial flex-column scroll-effect">
                   <iframe src="https://www.youtube.com/embed/F1TkfFRHKXg?si=c2R8vtZKRtpc3G58" title="Tutorial Portal do Cliente Aplicativo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                   <div className="tutorial-description flex-column">
                     <span>Tutorial 02: Smartphone</span>
@@ -159,8 +216,8 @@ export default function Client() {
 
           <div className="steps-section flex-column">
             <div className="steps flex-column wrapper">                
-              <h2>Como funciona?</h2>
-              <div className="flow flex"> 
+              <h2 className="scroll-effect">Como funciona?</h2>
+              <div className="flow flex scroll-effect"> 
                 {tutorialSteps.map(service => (
                   <>
                     <ClientCenterStep
@@ -184,7 +241,7 @@ export default function Client() {
         
         <section className="gains-section flex-column">
           <div className="gains flex-column wrapper">
-            <h2>Benefícios</h2>
+            <h2 className="scroll-effect">Benefícios</h2>
             <div className="features flex"> 
               {appFeatures.map(service => (
                 <ClientCenterGain
@@ -200,7 +257,7 @@ export default function Client() {
 
         <section className="faq-section flex-column">
           <div className="faq-section flex-column wrapper">            
-            <h2>Perguntas Frequentes</h2>
+            <h2 className="scroll-effect">Perguntas Frequentes</h2>
             <div className="faq-items">
               {clientFaq.map(service => (
                 <ClientCenterFaq
@@ -217,17 +274,17 @@ export default function Client() {
           <div className="sign-up flex wrapper"> 
             <div className="sign-up-cta flex-column">
               <div className="sign-up-text flex-column">
-                <h2>Pronto para começar?</h2>
-                <p>Faça agora o download do Portal do Cliente e aproveite seus benefícios!</p>
+                <h2 className="scroll-effect">Pronto para começar?</h2>
+                <p className="scroll-effect">Faça agora o download do Portal do Cliente e aproveite seus benefícios!</p>
               </div>            
               <div className="link flex">
-                <button className="client-center"> <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Acessar Portal</a></button>
-                <button className="client-center help"> <a href="https://wa.me/14997795003" target="_blank">Solicitar acesso</a></button>
+                <button className="client-center scroll-effect"> <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Acessar Portal</a></button>
+                <button className="client-center help scroll-effect"> <a href="https://wa.me/14997795003" target="_blank">Solicitar acesso</a></button>
               </div>
             </div> 
             <div className="client-center-download flex-column">
-              <img src={apponvio} alt="Imagem de armazenamento em nuvem do Onvio Portal do Cliente"/>  
-              <div className="download-options flex">
+              <img src={apponvio} alt="Imagem de armazenamento em nuvem do Onvio Portal do Cliente" className="scroll-effect"/>  
+              <div className="download-options flex scroll-effect">
                 <a href="https://apps.apple.com/us/app/onvio-client-center/id1050812390" target="blank">
                   <img src={appstore} alt="" className="appstore"/>
                 </a>              

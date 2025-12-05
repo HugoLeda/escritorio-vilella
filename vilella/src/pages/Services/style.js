@@ -451,11 +451,11 @@ export const Servicespage = styled.section `
     }
 
     .scroll-effect.visible.fade-up {
-      animation: fadeInUp 1s ease-out forwards;
+      animation: fadeInUp .6s ease-out forwards;
     }
 
     .scroll-effect.visible.fade-down {
-    animation: fadeInDown 0.8s ease-out forwards;
+    animation: fadeInDown 0.6s ease-out forwards;
   }
 
   /*scroll-effect END */

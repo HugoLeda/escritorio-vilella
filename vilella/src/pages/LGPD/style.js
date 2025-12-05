@@ -93,7 +93,7 @@ export const Lgpdpage = styled.div `
           color: #fff;
           transition: transform 0.5s ease;
           
-          @keyframes swingSmooth {
+          @keyframes pointDown {
             0% { transform: translateY(0px); }
             25% { transform: translateY(1px); }
             50% { transform: translateY(-1px); }
@@ -108,7 +108,7 @@ export const Lgpdpage = styled.div `
           color: #0d2daa;
           .icon {
             color: #0d2daa;
-            animation: swingSmooth 0.5s ease forwards;
+            animation: pointDown 0.5s ease forwards;
           }
         }
       }
@@ -366,6 +366,46 @@ export const Lgpdpage = styled.div `
     }
   }
 
+  
+  /*scroll-effect START*/
+      
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+    .scroll-effect {
+      opacity: 0;
+      transform: translateY(1rem);
+      transition: all .5s ease-in-out;
+    }
+
+    .scroll-effect.visible.fade-up {
+      animation: fadeInUp .6s ease-out forwards;
+    }
+
+    .scroll-effect.visible.fade-down {
+    animation: fadeInDown 0.6s ease-out forwards;
+  }
+
+  /*scroll-effect END */
 
 
   @media (max-width: 1190px) {

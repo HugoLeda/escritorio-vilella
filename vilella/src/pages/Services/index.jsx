@@ -1,6 +1,5 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-
 import Banner from "../../components/ServiceBanner";
 import Actions from "../../components/LgpdActions"
 import Highlights from "../../components/ServiceHighlights";
@@ -8,15 +7,76 @@ import Highlights from "../../components/ServiceHighlights";
 import financial from "../../assets/services/financial.webp";
 
 import { Servicespage } from "./style";
-import { MdFactory, MdGrain, MdHealthAndSafety, MdMailOutline, MdOutlinePhone, MdOutlineShoppingCart, MdOutlineWhatsapp, MdRequestQuote, MdTrendingUp } from "react-icons/md";
+import { MdFactory, MdHealthAndSafety, MdMailOutline, MdOutlinePhone, MdOutlineShoppingCart, MdOutlineWhatsapp, MdRequestQuote, MdTrendingUp } from "react-icons/md";
 import { FaUserTie } from "react-icons/fa";
 import { FaArrowDown, FaBriefcase, FaBuildingCircleArrowRight, FaBuildingCircleCheck, FaMedal } from "react-icons/fa6";
 
 import Theme from "../../styles/theme";
 import { useState, useEffect, useRef } from "react";
 
-export default function Services() {
 
+const solutionActions = [
+  {
+    icon: <MdOutlineShoppingCart style={{fontSize: 32, color: "#fff"}}/>,
+    title: "Comércio",
+    text: "Serviços adaptados ao seu setor comercial",
+    bgColor: Theme.colors.blue2
+  },
+  {
+    icon: <MdRequestQuote style={{fontSize: 32, color: "#fff"}}/>,
+    title: "Serviço",
+    text: "Melhores soluções para prestadores de serviço",
+    bgColor: Theme.colors.babyBlue
+
+  },
+  {
+    icon: <MdFactory style={{fontSize: 32, color: "#fff"}}/>,
+    title: "Indústria",
+    text: "Conte com planejamento tributário especializado",
+    bgColor: Theme.colors.red1
+  },
+  
+  {
+    icon: <MdHealthAndSafety style={{fontSize: 32, color: "#fff"}}/>,
+    title: "Saúde",
+    text: "Contabilidade para profissionais da saúde",      
+    bgColor: Theme.colors.blue3
+  }
+];
+
+
+const options = [
+  {
+    title: "Assessoria completa para abrir seu CNPJ",
+    icon: <FaBuildingCircleCheck style={{ color: "#0d2daa", fontSize: "92", paddingLeft: "1rem"}} />,
+    benefits: [
+      "Inicie sua empresa com abertura e regularização já adequada às novas regras da Reforma Tributária.",
+      "Unimos experiência contábil e tecnologia para garantir um processo eficiente e seguro.",
+      "Cuidamos de toda a burocracia para que você se preocupe apenas em empreender."
+    ],
+    buttonText: "Quero Abrir minha empresa",
+    href:"https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20abrir%20minha%20empresa."
+  },
+  {
+    title: "Suporte contábil que garante tranquilidade",
+    icon: <MdTrendingUp style={{ color: "#759dcc", fontSize: "84" }} />,
+    benefits: [
+      "Tenha uma contabilidade confiável e sempre atualizada com as exigências legais.",
+      "Nossos especialistas cuidam de toda a parte fiscal, contábil e trabalhista para você.",
+      "Descomplique sua rotina financeira com a garantia de segurança e tranquilidade para o seu negócio."
+    ],
+    buttonText: "Quero migrar de contabilidade",
+    href:"https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20migrar%20de%20contabilidade."
+  }
+];
+
+const smallIcons = [
+  <FaBuildingCircleArrowRight style={{ color: "#fff", fontSize: 22 }} />,
+  <MdTrendingUp style={{ color: "#fff", fontSize: 22 }} />
+];
+
+
+export default function Services() {
 
   /*class .scroll-effect start*/
 
@@ -70,69 +130,7 @@ export default function Services() {
 
   /* class .scroll-effect END*/
 
-
-
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const options = [
-    {
-      title: "Assessoria completa para abrir seu CNPJ",
-      icon: <FaBuildingCircleCheck style={{ color: "#0d2daa", fontSize: "92", paddingLeft: "1rem"}} />,
-      benefits: [
-        "Inicie sua empresa com abertura e regularização já adequada às novas regras da Reforma Tributária.",
-        "Unimos experiência contábil e tecnologia para garantir um processo eficiente e seguro.",
-        "Cuidamos de toda a burocracia para que você se preocupe apenas em empreender."
-      ],
-      buttonText: "Quero Abrir minha empresa",
-      href:"https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20abrir%20minha%20empresa."
-    },
-    {
-      title: "Suporte contábil que garante tranquilidade",
-      icon: <MdTrendingUp style={{ color: "#759dcc", fontSize: "84" }} />,
-      benefits: [
-        "Tenha uma contabilidade confiável e sempre atualizada com as exigências legais.",
-        "Nossos especialistas cuidam de toda a parte fiscal, contábil e trabalhista para você.",
-        "Descomplique sua rotina financeira com a garantia de segurança e tranquilidade para o seu negócio."
-      ],
-      buttonText: "Quero migrar de contabilidade",
-      href:"https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20migrar%20de%20contabilidade."
-    }
-  ];
-
-  
-  const smallIcons = [
-    <FaBuildingCircleArrowRight style={{ color: "#fff", fontSize: 22 }} />,
-    <MdTrendingUp style={{ color: "#fff", fontSize: 22 }} />
-  ];
-  
-  const solutionActions = [
-    {
-      icon: <MdOutlineShoppingCart style={{fontSize: 32, color: "#fff"}}/>,
-      title: "Comércio",
-      text: "Serviços adaptados ao seu setor comercial",
-      bgColor: Theme.colors.blue2
-    },
-    {
-      icon: <MdRequestQuote style={{fontSize: 32, color: "#fff"}}/>,
-      title: "Serviço",
-      text: "Melhores soluções para prestadores de serviço",
-      bgColor: Theme.colors.babyBlue
-  
-    },
-    {
-      icon: <MdFactory style={{fontSize: 32, color: "#fff"}}/>,
-      title: "Indústria",
-      text: "Conte com planejamento tributário especializado",
-      bgColor: Theme.colors.red1
-    },
-    
-    {
-      icon: <MdHealthAndSafety style={{fontSize: 32, color: "#fff"}}/>,
-      title: "Saúde",
-      text: "Contabilidade para profissionais da saúde",      
-      bgColor: Theme.colors.blue3
-    }
-  ]
 
   return(
     <>

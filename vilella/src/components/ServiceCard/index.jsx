@@ -1,7 +1,5 @@
 import { MdOutlineWhatsapp } from "react-icons/md";
-
 import { CardSection } from "./style";
-
 import { Link } from "react-router-dom";
 
 export default function ServiceCard({direction, title, textContent, img, alt, icon, linkWhats}) {

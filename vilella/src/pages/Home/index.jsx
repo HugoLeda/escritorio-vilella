@@ -14,6 +14,54 @@ import { FaMobileScreen, FaRegClock, FaRegLightbulb, FaDatabase, FaBook, FaPiggy
 import { FaShieldAlt } from "react-icons/fa";
 import { MdAccountBalance, MdAnalytics, MdBadge, MdMailOutline, MdOutlineLocationOn, MdOutlinePhone, MdOutlineWatchLater, MdSpeed, MdTrendingUp } from "react-icons/md";
 
+
+
+const serviceSpecialty = [
+  {
+    icon: <MdAccountBalance style={{fontSize: 80, color: "#0d2daa"}} />,
+    title:"Abertura de empresas",
+    text:"Legalização e suporte completo para novos negócios.",
+    bgColor: Theme.colors.blue2
+  },
+  {
+    icon: <MdTrendingUp style={{fontSize: 80, color: "#a8d0ff"}} />,
+    title:"Gestão tributária",
+    text:"Planejamento e otimização para redução de custos fiscais.",
+    bgColor: Theme.colors.white
+  },
+  {
+    icon: <MdBadge style={{fontSize: 80, color: "#759dcc"}} />,
+    title:"Departamento pessoal",
+    text:"Folha de pagamento, admissões, rescisões, regularização trabalhista.",
+    bgColor: Theme.colors.babyBlue
+  }
+]
+
+
+const lgpdActions = [
+  {
+    icon: <MdSpeed style={{fontSize: 48, color: "#fff"}}/>,
+    title: "Otimização de processos",
+    bgColor: Theme.colors.babyBlue
+  },
+  {
+    icon: <FaRegLightbulb style={{fontSize: 32, color: "#fff"}}/>,
+    title: "Soluções inteligentes",
+    bgColor: Theme.colors.blue2
+  },
+  {
+    icon: <FaDatabase style={{fontSize: 32, color: "#fff"}}/>,
+    title: "Proteção de dados",
+    bgColor: Theme.colors.blue3
+  },
+  {
+    icon: <FaBook style={{fontSize: 32, color: "#fff"}}/>,
+    title: "Conformidade com a LGPD",
+    bgColor: Theme.colors.red2
+  }
+];
+
+
 export default function Home() {  
 
     /*class .scroll-effect start*/
@@ -67,52 +115,6 @@ export default function Home() {
     }, []);
   
     /* class .scroll-effect END*/
-
-
-  const serviceSpecialty = [
-    {
-      icon: <MdAccountBalance style={{fontSize: 80, color: "#0d2daa"}} />,
-      title:"Abertura de empresas",
-      text:"Legalização e suporte completo para novos negócios.",
-      bgColor: Theme.colors.blue2
-    },
-    {
-      icon: <MdTrendingUp style={{fontSize: 80, color: "#a8d0ff"}} />,
-      title:"Gestão tributária",
-      text:"Planejamento e otimização para redução de custos fiscais.",
-      bgColor: Theme.colors.white
-    },
-    {
-      icon: <MdBadge style={{fontSize: 80, color: "#759dcc"}} />,
-      title:"Departamento pessoal",
-      text:"Folha de pagamento, admissões, rescisões, regularização trabalhista.",
-      bgColor: Theme.colors.babyBlue
-    }
-  ]
-
-  
-  const lgpdActions = [
-    {
-      icon: <MdSpeed style={{fontSize: 48, color: "#fff"}}/>,
-      title: "Otimização de processos",
-      bgColor: Theme.colors.babyBlue
-    },
-    {
-      icon: <FaRegLightbulb style={{fontSize: 32, color: "#fff"}}/>,
-      title: "Soluções inteligentes",
-      bgColor: Theme.colors.blue2
-    },
-    {
-      icon: <FaDatabase style={{fontSize: 32, color: "#fff"}}/>,
-      title: "Proteção de dados",
-      bgColor: Theme.colors.blue3
-    },
-    {
-      icon: <FaBook style={{fontSize: 32, color: "#fff"}}/>,
-      title: "Conformidade com a LGPD",
-      bgColor: Theme.colors.red2
-    }
-  ]
 
   return(
     <>

@@ -1,6 +1,6 @@
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 
 import LgpdGuide from "../../components/LgpdCompliance";
 import Actions from "../../components/LgpdActions"
@@ -12,7 +12,7 @@ import Theme from "../../styles/theme";
 
 import db from "../../assets/lgpd/database.webp"
 
-import { MdOutlineWhatsapp, MdMailOutline, MdSupervisedUserCircle, MdOutlineSupervisedUserCircle } from "react-icons/md";
+import { MdOutlineWhatsapp, MdMailOutline, MdSupervisedUserCircle } from "react-icons/md";
 import { FaBook, FaShieldAlt, FaRegCheckCircle, FaPencilAlt } from "react-icons/fa";
 import { Fa1, Fa2, Fa3, Fa4, FaArrowDown, FaGraduationCap } from "react-icons/fa6"
 
@@ -85,6 +85,59 @@ const lgpdCompliance = [
 
 
 export default function LGPD() {  
+  
+  /*class .scroll-effect start*/
+
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    let scrollDirection = "down";
+
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY.current) {
+        scrollDirection = "down";
+      } else {
+        scrollDirection = "up";
+      }
+      lastScrollY.current = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target;
+
+          if (entry.isIntersecting) {
+            el.classList.remove("fade-up", "fade-down");
+
+            if (scrollDirection === "down") {
+              el.classList.add("visible", "fade-up");
+            } else {
+              el.classList.add("visible", "fade-down");
+            }
+          } else {
+            el.classList.remove("visible", "fade-up", "fade-down");
+          }
+        });
+      },
+      {
+        threshold: 0.01,
+      }
+    );
+
+    const elements = document.querySelectorAll(".scroll-effect");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      elements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
+  /* class .scroll-effect END*/
+
   return(
     <>
       <Header page="lgpd"/>
@@ -113,8 +166,8 @@ export default function LGPD() {
 
         <main className="law flex-column">
           <div className="law-view flex-column wrapper">
-            <h1>Aplicação da LGPD</h1>
-            <p>A Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) regula o uso, a coleta e armazenamento de dados pessoais, garantindo a privacidade e os direitos dos titulares.</p>  
+            <h1 className="scroll-effect">Aplicação da LGPD</h1>
+            <p className="scroll-effect">A Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018) regula o uso, a coleta e armazenamento de dados pessoais, garantindo a privacidade e os direitos dos titulares.</p>  
             <div className="rights flex">
               {lgpdRights.map(service =>(
                 <Rights                  
@@ -127,8 +180,8 @@ export default function LGPD() {
           </div>          
           <div className="compromise flex-column wrapper">
             <div className="compromise-title flex-column">
-              <h2>Ações proativas</h2>
-              <p>Medidas para garantir a conformidade com a LGPD e a proteção dos seus dados pessoais:</p>
+              <h2 className="scroll-effect">Ações proativas</h2>
+              <p className="scroll-effect">Medidas para garantir a conformidade com a LGPD e a proteção dos seus dados pessoais:</p>
             </div>
             <div className="office-actions flex">                        
               {lgpdActions.map(service => (
@@ -147,11 +200,11 @@ export default function LGPD() {
     
         <section className="embrasi flex-column">
           <div className="compliance-wrapper flex-column wrapper">
-            <h2>EMBRASI</h2>
+            <h2 className="scroll-effect">EMBRASI</h2>
             <div className="compliance flex">
               <div className="compliance-text flex-column">
-                <h3>Compliance</h3>
-                <p>Em parceria com a consultoria <a href="https://embrasi.com.br/" target="blank">EMBRASI</a>, aprimoramos nossas diretrizes internas para garantir a governança de dados e a plena conformidade com a LGPD.</p>
+                <h3 className="scroll-effect">Compliance</h3>
+                <p className="scroll-effect">Em parceria com a consultoria <a href="https://embrasi.com.br/" target="blank">EMBRASI</a>, aprimoramos nossas diretrizes internas para garantir a governança de dados e a plena conformidade com a LGPD.</p>
               </div>
               <div className="compliance-checks flex-column">
                 {lgpdCompliance.map(service => (
@@ -169,11 +222,11 @@ export default function LGPD() {
         <section id="contact-us" className="contact-dpo flex-column">
           <div className="contact-wrapper flex-column wrapper">
             <div className="your-voice-matters flex-column">
-              <h2>Sua voz importa</h2>
-              <p>Fale conosco sobre seus dados</p>
+              <h2 className="scroll-effect">Sua voz importa</h2>
+              <p className="scroll-effect">Fale conosco sobre seus dados</p>
             </div>          
             <div className="contact-dpo-form flex">
-              <div className="dpo flex-column">
+              <div className="dpo flex-column scroll-effect">
                 <div className="dpo-info flex-column">
                   <div className="dpo-title flex-column">
                     <MdSupervisedUserCircle style={{fontSize: 80, color: "#93c5ff"}}/>
@@ -210,7 +263,7 @@ export default function LGPD() {
                 </div>
               </div>
 
-              <div className="form flex-column">
+              <div className="form flex-column scroll-effect">
                 <h2>Formulário de contato LGPD</h2>              
                 <div className="send-request flex-column">
                   <LgpdForm/>

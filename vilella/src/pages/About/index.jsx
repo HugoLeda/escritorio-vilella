@@ -1,16 +1,84 @@
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-
 import AboutValues from "../../components/AboutCoreValues";
 import AboutAdvantages from "../../components/AboutAdvantages";
 import AboutJourney from "../../components/AboutJourney";
 
 import { Aboutpage } from "./style"
-
 import { FaHandsHoldingCircle, FaRegEye, FaFlag, FaBriefcase, FaAward, FaUserTie, FaArrowDown } from "react-icons/fa6";
-
 import { useEffect, useRef } from "react";
 
+
+const excelenceCards = [
+  {
+    icon:<FaFlag style={{fontSize: 32}}/>,
+    title:"Missão",
+    text:"Proporcionar tranquilidade e sucesso aos clientes com soluções personalizadas e eficazes.",
+    hoverColor:"#f33" 
+  },
+  {
+    icon:<FaRegEye style={{fontSize: 32}}/>,
+    title:"Visão",
+    text:"Ser reconhecido pela excelência e satisfação daqueles que confiam em nosso trabalho diário.",
+    hoverColor: "#93c5ff"
+  },    
+  {
+    icon:<FaHandsHoldingCircle style={{fontSize: 32}}/>,
+    title:"Valores",
+    text:"Otimização de processos, responsabilidade, confiança e transparência em todas as relações.",
+    hoverColor:"#759dcc"
+  }    
+];
+
+
+const advantagesCards = [
+  {
+    icon: <FaAward style={{ fontSize: 32, color: "#fff" }} />,
+    title: "Décadas de experiência",
+    text: "Há 35 anos oferecendo serviços com conhecimento sólido, segurança e total conformidade fiscal, tributária e trabalhista."
+  },
+  {
+    icon: <FaBriefcase style={{ fontSize: 32, color: "#fff" }} />,
+    title: "Soluções digitais",
+    text: "Investimos em tecnologia para garantir segurança e acesso rápido às suas informações, apoiando sua gestão diária. "
+  },
+  {
+    icon: <FaUserTie style={{ fontSize: 32, color: "#fff" }} />,
+    title: "Contabilidade consultiva",
+    text: "Equipe especializada com atendimento próximo e preparada para indicar oportunidades de melhoria e crescimento."
+  }
+];
+
+const journeyYears = [
+  {
+    year:"1993",
+    description:"Início da gestão Vilella"
+  },
+  {
+    year:"2008",
+    description:"Informatização e migração de sistema"
+  },    
+  {
+    year:"2011",
+    description:"Expansão de atuação e atendimento regional"
+  },    
+  {
+    year:"2015",
+    description:"Nos tornamos ponto de atendimento para emissão de certificados digitais"
+  },    
+  {
+    year:"2020",
+    description:"Junção com a Organização Fartura de Contabilidade"
+  },    
+  {
+    year:"2021",
+    description:"Mudança para a nova sede, estruturada para atender melhor nossos clientes"
+  },    
+  {
+    year:"2024",
+    description:"Atendimento digital expandido para todo o território nacional"
+  }
+];
 
 export default function About() {
   
@@ -30,123 +98,39 @@ export default function About() {
       lastScrollY.current = window.scrollY;
     };
 
-  window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const el = entry.target;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target;
 
-        if (entry.isIntersecting) {
-          el.classList.remove("fade-up", "fade-down");
+          if (entry.isIntersecting) {
+            el.classList.remove("fade-up", "fade-down");
 
-          if (scrollDirection === "down") {
-            el.classList.add("visible", "fade-up");
+            if (scrollDirection === "down") {
+              el.classList.add("visible", "fade-up");
+            } else {
+              el.classList.add("visible", "fade-down");
+            }
           } else {
-            el.classList.add("visible", "fade-down");
+            el.classList.remove("visible", "fade-up", "fade-down");
           }
-        } else {
-          el.classList.remove("visible", "fade-up", "fade-down");
-        }
-      });
-    },
-    {
-      threshold: 0.01,
-    }
-  );
+        });
+      },
+      {
+        threshold: 0.01,
+      }
+    );
 
-  const elements = document.querySelectorAll(".scroll-effect");
-  elements.forEach((el) => observer.observe(el));
+    const elements = document.querySelectorAll(".scroll-effect");
+    elements.forEach((el) => observer.observe(el));
 
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-    elements.forEach((el) => observer.unobserve(el));
-  };
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      elements.forEach((el) => observer.unobserve(el));
+    };
   }, []);
-
-  /* class .scroll-effect END*/
-
-  const excelenceCards = [
-    {
-      icon:<FaFlag style={{fontSize: 32}}/>,
-      title:"Missão",
-      text:"Proporcionar tranquilidade e sucesso aos clientes com soluções personalizadas e eficazes.",
-      hoverColor:"#f33" 
-    },
-    {
-      icon:<FaRegEye style={{fontSize: 32}}/>,
-      title:"Visão",
-      text:"Ser reconhecido pela excelência e satisfação daqueles que confiam em nosso trabalho diário.",
-      hoverColor: "#93c5ff"
-    },    
-    {
-      icon:<FaHandsHoldingCircle style={{fontSize: 32}}/>,
-      title:"Valores",
-      text:"Otimização de processos, responsabilidade, confiança e transparência em todas as relações.",
-      hoverColor:"#759dcc"
-    }    
-  ];
-
-  /* advantagesCard onClick start */
-
-  //const [currentIndex, setCurrentIndex] = useState(0);
-
-  const advantagesCards = [
-    {
-      icon: <FaAward style={{ fontSize: 32, color: "#fff" }} />,
-      title: "Décadas de experiência",
-      text: "Há 35 anos oferecendo serviços com conhecimento sólido, segurança e total conformidade fiscal, tributária e trabalhista."
-    },
-    {
-      icon: <FaBriefcase style={{ fontSize: 32, color: "#fff" }} />,
-      title: "Soluções digitais",
-      text: "Investimos em tecnologia para garantir segurança e acesso rápido às suas informações, apoiando sua gestão diária. "
-    },
-    {
-      icon: <FaUserTie style={{ fontSize: 32, color: "#fff" }} />,
-      title: "Contabilidade consultiva",
-      text: "Equipe especializada com atendimento próximo e preparada para indicar oportunidades de melhoria e crescimento."
-    }
-  ];
-  
-  //const handleDotClick = (index) => {
-    //setCurrentIndex(index);
-  //};
-
-  
-  /* advantagesCard onClick END */
-
-
-  const journeyYears = [
-    {
-      year:"1993",
-      description:"Início da gestão Vilella"
-    },
-    {
-      year:"2008",
-      description:"Informatização e migração de sistema"
-    },    
-    {
-      year:"2011",
-      description:"Expansão de atuação e atendimento regional"
-    },    
-    {
-      year:"2015",
-      description:"Nos tornamos ponto de atendimento para emissão de certificados digitais"
-    },    
-    {
-      year:"2020",
-      description:"Junção com a Organização Fartura de Contabilidade"
-    },    
-    {
-      year:"2021",
-      description:"Mudança para a nova sede, estruturada para atender melhor nossos clientes"
-    },    
-    {
-      year:"2024",
-      description:"Atendimento digital expandido para todo o território nacional"
-    }
-  ];
 
 
   return(
@@ -156,7 +140,6 @@ export default function About() {
           <header className="flex-column">  
             <div className="outdoor flex">            
 
-              {/* Texto principal */}
               <div className="service-outdoor flex">
                 <h1>
                   Há 35 anos construindo confiança e 
@@ -172,7 +155,6 @@ export default function About() {
               </div>
 
               <div className="img flex-column outdoor-cards decor-frames">
-                {/* <img className="img" src={homeCover} alt="office vilella" /> */}
               </div>
 
             </div>
@@ -187,18 +169,17 @@ export default function About() {
             <section id="history" className="flex-column">
               <div className="history items wrapper flex">
                 <div className="history-text items flex-column">
-                  <div className="history-text-title">
-                    <h2>Quem somos</h2>
-                    <span>Escritório Vilella</span>
+                  <div className="history-text-title flex-column">
+                    <h2 className="scroll-effect">Quem somos</h2>
+                    <span className="scroll-effect">Escritório Vilella</span>
                   </div>
                   <div className="">
-                    <p>Com mais de três décadas de atuação, somos reconhecidos como um parceiro essencial para empresas que buscam segurança, clareza e suporte em todas as etapas do seu desenvolvimento.</p>
-                    <p>Desde o início, nossa prioridade sempre foi oferecer um atendimento próximo, confiável e eficiente.</p>
-                    <p>Trabalhamos para garantir que nossos clientes estejam sempre em conformidade com as exigências legais, mas, acima de tudo, focados no crescimento saudável e sustentável de seus negócios.</p>
+                    <p className="scroll-effect">Com mais de três décadas de atuação, somos reconhecidos como um parceiro essencial para empresas que buscam segurança, clareza e suporte em todas as etapas do seu desenvolvimento.</p>
+                    <p className="scroll-effect">Desde o início, nossa prioridade sempre foi oferecer um atendimento próximo, confiável e eficiente.</p>
+                    <p className="scroll-effect">Trabalhamos para garantir que nossos clientes estejam sempre em conformidade com as exigências legais, mas, acima de tudo, focados no crescimento saudável e sustentável de seus negócios.</p>
                   </div>                  
                 </div>
-                <figure className="decor-frames flex">
-                  {/*<img className="img" src={homeCover} alt="office  vilella"/>*/}
+                <figure className="decor-frames flex scroll-effect">
                 </figure>
 
               </div>
@@ -208,9 +189,9 @@ export default function About() {
               <div className="bsc-items wrapper flex-column">
 
                 <div className="excelence items flex-column">
-                  <div className="excelence-text flex-column items scroll-effect">
-                    <span>Missão, visão e valores</span>
-                    <h2>Compromisso com a <span>excelência</span></h2>
+                  <div className="excelence-text flex-column items">
+                    <span className="scroll-effect">Missão, visão e valores</span>
+                    <h2 className="scroll-effect">Compromisso com a <span>excelência</span></h2>
                   </div>
                   <div className="excelence-cards items flex scroll-effect">
                     {excelenceCards.map(service => (
@@ -224,9 +205,9 @@ export default function About() {
                     ))}
                   </div>
                 </div>
-                <div className="advantages flex-column scroll-effect">
+                <div className="advantages flex-column">
                   <div className="advantages-text flex-column items">
-                    <h2>Nosso <span>diferencial</span></h2>
+                    <h2 className="scroll-effect">Nosso <span>diferencial</span></h2>
                   </div>
                   <div className="advantages-cards flex">
                     {advantagesCards.map(service => (
