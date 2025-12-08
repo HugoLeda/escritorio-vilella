@@ -5,7 +5,7 @@ import ServiceSpecialty from "../../components/ServiceSpecialty";
 import LgpdActions from "../../components/LgpdActions";
 import Theme from "../../styles/theme";
 
-import app from "../../assets/apponvio.png"
+import app from "../../assets/apponvio.webp"
 
 import { useState, useEffect, useRef } from "react";
 
@@ -221,7 +221,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="img scroll-effect">
-                <img src={app} alt="Aplicativo Onvio Portal do Cliente"/>
+                <img src={app} alt="Download do aplicativo Onvio Portal do Cliente"/>
               </div>
             </div>
 

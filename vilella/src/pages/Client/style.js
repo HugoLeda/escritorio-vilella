@@ -146,6 +146,7 @@ export const Clientpage = styled.section `
     user-select: none;
 
     img {
+      pointer-events: none;
       width: 450px;
       height: auto;
     }
@@ -308,6 +309,7 @@ export const Clientpage = styled.section `
       width: 190px;
       gap: 1.5rem;
       img {
+        pointer-events: none;
         width: 190px;
         height: auto;
       }

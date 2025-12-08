@@ -78,6 +78,7 @@ export const BannerContainer = styled.section`
     position: relative;
 
     img {
+      pointer-events: none;
       width: 350px;      
       height: 350px;
       object-fit: cover;

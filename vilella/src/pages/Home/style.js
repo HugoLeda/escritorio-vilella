@@ -257,6 +257,7 @@ export const Homepage = styled.div `
       user-select: none;
 
       img {        
+        pointer-events: none;
         animation: floatY 3s ease-in-out infinite;
         width: 350px;
         height: auto;

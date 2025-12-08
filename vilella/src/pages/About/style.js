@@ -66,6 +66,7 @@ export const Aboutpage = styled.div`
       gap: 5rem;
       max-width: 1000px;
       justify-content: space-evenly;
+      user-select: none;
     }
 
     .service-outdoor {
@@ -97,6 +98,7 @@ export const Aboutpage = styled.div`
       user-select: none;
 
       img {
+        pointer-events: none;
         width: 400px;
         height: auto;
         z-index: 2;

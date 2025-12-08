@@ -19,7 +19,6 @@ export const Lgpdpage = styled.div `
   }
 
   h1,h2 {
-    user-select: none;
     color: ${Theme.colors.blue1};
   }
 
@@ -60,6 +59,7 @@ export const Lgpdpage = styled.div `
     user-select: none;
 
     img {
+      pointer-events: none;
       width: 430px;
       height: auto;
     }
@@ -252,6 +252,7 @@ export const Lgpdpage = styled.div `
       border-radius: 6px;
       box-shadow: 0 1px 8px rgb(0,0,0,0.2);
       gap: .5rem;
+      user-select: none;
 
       .whatsapp,
       .mail {
@@ -259,7 +260,6 @@ export const Lgpdpage = styled.div `
         border-radius: 6px;
         box-shadow: 0 2px 5px rgb(0,0,0,0.2);
         border: none;
-        user-select: none;
         text-transform: uppercase;
         cursor: pointer;
         transition: ease-out all .2s;

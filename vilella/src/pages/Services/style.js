@@ -106,6 +106,7 @@ export const Servicespage = styled.section `
       user-select: none;
 
       img {
+        pointer-events: none;
         width: 400px;
         height: auto;
         z-index: 2;

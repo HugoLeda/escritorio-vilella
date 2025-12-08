@@ -10,7 +10,7 @@ import ClientCenterFaq from "../../components/ClientCenterFaq";
 import { FaShieldAlt } from "react-icons/fa";
 
 import cloud from "../../assets/client/cloudStorage.webp"
-import apponvio from "../../assets/apponvio.png"
+import apponvio from "../../assets/apponvio.webp"
 import playstore from "../../assets/client/playstore.webp"
 import appstore from "../../assets/client/appstore.webp"
 
@@ -283,7 +283,7 @@ export default function Client() {
               </div>
             </div> 
             <div className="client-center-download flex-column">
-              <img src={apponvio} alt="Imagem de armazenamento em nuvem do Onvio Portal do Cliente" className="scroll-effect"/>  
+              <img src={apponvio} alt="Download do aplicativo Onvio Portal do Cliente" className="scroll-effect"/>  
               <div className="download-options flex scroll-effect">
                 <a href="https://apps.apple.com/us/app/onvio-client-center/id1050812390" target="blank">
                   <img src={appstore} alt="" className="appstore"/>
