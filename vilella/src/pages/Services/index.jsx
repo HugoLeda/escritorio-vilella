@@ -146,7 +146,7 @@ export default function Services() {
               </div>
             </div>                    
             <div className="img flex-column">
-              <img src={financial} alt="Computador com análise de gráficos" />
+              <img src={financial} alt="Calculadora com análise de gráficos" />
             </div>
           </div>            
           <div className="next-section">

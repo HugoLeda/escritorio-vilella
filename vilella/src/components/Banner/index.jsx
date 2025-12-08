@@ -73,7 +73,7 @@ export default function Banner() {
                 </div>
               </div>   
               <div className="image">
-                <img src={team} alt="Fachada do Escritório Vilella" />
+                <img src={team} alt="Equipe do Escritório Vilella" />
               </div>
             </div>
             </div>
