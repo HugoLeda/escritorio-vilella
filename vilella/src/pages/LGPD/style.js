@@ -263,44 +263,39 @@ export const Lgpdpage = styled.div `
         text-transform: uppercase;
         cursor: pointer;
         transition: ease-out all .2s;
+      }
 
+      .whatsapp {
+        background-color: #25D366;
+        width: 100%;
+        color: ${Theme.colors.white};        
+        font-weight: 500;
+
+        &:hover {          
+          background-color: ${Theme.colors.babyBlue};
+          color: ${Theme.colors.blue2};
+        }
+      }
+
+      .mail {
+        width: 100%;
+        border: 1px solid ${Theme.colors.blue2};
+        background-color: ${Theme.colors.white};
+        
         a {
-          font-size: ${Theme.textSize.textMobileSm};
-          font-weight: 700;
+          color: ${Theme.colors.blue2};
           text-decoration: none;
+          font-weight: 500;
         }
 
         &:hover {
+          border: 1px solid ${Theme.colors.babyBlue};
           background-color: ${Theme.colors.babyBlue};
           a {
             color: ${Theme.colors.blue1};
           }
         }
-
-        
-      }
-      .whatsapp {
-        background-color: #25D366;
-        a {
-          color: ${Theme.colors.white};
-        }
-      }
-
-      .mail {
-          border: 1px solid ${Theme.colors.blue2};
-          background-color: ${Theme.colors.white};
-          
-          a {
-            color: ${Theme.colors.blue2};
-          }
-          &:hover {
-            border: 1px solid ${Theme.colors.babyBlue};
-            background-color: ${Theme.colors.babyBlue};
-            a {
-              color: ${Theme.colors.blue1};
-            }
-          }
-        }   
+      }   
             
     }
     
@@ -326,7 +321,7 @@ export const Lgpdpage = styled.div `
 
 
     .dpo-icons{
-      justify-content: space-around;
+      text-align: left;
       width : 100%;
       gap: 1rem;
       span {
@@ -336,7 +331,8 @@ export const Lgpdpage = styled.div `
       a {
         text-decoration: none;
       }
-      .dpo-icon {        
+      .dpo-icon {  
+        display: flex;
         gap: .5rem;
       }  
     }

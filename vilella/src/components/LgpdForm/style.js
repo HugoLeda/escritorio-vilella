@@ -80,7 +80,7 @@ export const Forms = styled.div `
   .mail {
     width: 100%;
     font-size: ${Theme.textSize.textMobileSm};
-    font-weight: 700;
+    font-weight: 500;
     color: ${Theme.colors.blue2};
     text-decoration: none;
     &:hover {

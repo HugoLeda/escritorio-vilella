@@ -142,7 +142,9 @@ export default function Services() {
               <h1>Soluções completas para sua empresa</h1>
               <p>Atendimento de qualidade para profissionais autônomos, microempreendedores individuais (MEI) e empresas de todos os setores econômicos.</p>            
               <div className="link flex">
-                <button className="button"><a href="https://wa.me/5514997396924" target="blamk">Fale com nossos especialistas</a></button>
+                <a href="https://wa.me/5514997396924" target="blamk">
+                  <button className="button"><a href="https://wa.me/5514997396924" target="blamk">Fale com nossos especialistas</a></button>
+                </a>                
               </div>
             </div>                    
             <div className="img flex-column">
@@ -286,7 +288,9 @@ export default function Services() {
               </a>   
             </div>
             <div className="button flex-column items scroll-effect">
-              <button><a href="https://wa.me/5514997396924" target="blank">Solicitar Serviço</a></button>
+              <a href="https://wa.me/5514997396924" target="blank">
+                <button><a href="https://wa.me/5514997396924" target="blank">Solicitar Serviço</a></button>
+              </a>
             </div>
           </div>
         </section>

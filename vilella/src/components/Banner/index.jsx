@@ -26,12 +26,16 @@ export default function Banner() {
                   </div>                  
                 </div>
                 <div className="button flex">
+                  <a href="https://wa.me/5514997795080" target="blank">
                   <button className="specialists">
                     <a href="https://wa.me/5514997795080" target="blank">Fale com nossos especialistas</a>
                   </button>
-                  <button className="services">
-                    <a href="/services">Ver serviços</a>
-                  </button>
+                  </a>
+                  <a href="/services">
+                    <button className="services">
+                      <a href="/services">Ver serviços</a>
+                    </button>
+                  </a>
                 </div>
               </div>              
               <div className="image flex">
@@ -56,20 +60,32 @@ export default function Banner() {
                   <p>Há 35 anos, nossa excelência é construída por pessoas que fazem a diferença todos os dias.</p>
                 </div>
                 <div className="button flex">
-                  <button className="our-team">
-                    <a href="https://instagram.com/escritorio.vilella/" target="blank" onclick="
+                  <a href="https://instagram.com/escritorio.vilella/" target="blank" onclick="
                       if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
                         window.location = 'instagram://user?username=escritorio.vilella';
                         setTimeout(function(){ window.location = 'https://www.instagram.com/escritorio.vilella/'; }, 400);
                       } else {
                         window.location = 'https://www.instagram.com/escritorio.vilella/';
                       }
-                    ">Veja quem faz acontecer</a>
-                  </button>
-                  <button className="work-with-us">
-                    <a href="mailto:contato@evilella.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco&body=Olá,%20gostaria%20de%20enviar%20meu%20currículo%20para%20futuras%20oportunidades.">Trabalhe Conosco</a>
-
-                  </button>
+                    ">
+                    <button className="our-team">
+                      <a href="https://instagram.com/escritorio.vilella/" target="blank" onclick="
+                        if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
+                          window.location = 'instagram://user?username=escritorio.vilella';
+                          setTimeout(function(){ window.location = 'https://www.instagram.com/escritorio.vilella/'; }, 400);
+                        } else {
+                          window.location = 'https://www.instagram.com/escritorio.vilella/';
+                        }
+                      ">
+                        Veja quem faz acontecer
+                      </a>
+                    </button>
+                  </a>
+                  <a href="mailto:contato@evilella.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco&body=Olá,%20gostaria%20de%20enviar%20meu%20currículo%20para%20futuras%20oportunidades.">
+                    <button className="work-with-us">
+                      <a href="mailto:contato@evilella.com?subject=Curr%C3%ADculo%20-%20Trabalhe%20Conosco&body=Olá,%20gostaria%20de%20enviar%20meu%20currículo%20para%20futuras%20oportunidades.">Trabalhe Conosco</a>
+                    </button>
+                  </a>
                 </div>
               </div>   
               <div className="image">

@@ -284,7 +284,9 @@ export default function Home() {
                     </div>                    
                   </div>
                   <div className="flex">
-                    <button className="whatsapp flex"><a href="https://wa.me/5514997795080" target="blank">Falar no WhatsApp</a></button>
+                    <a href="https://wa.me/5514997795080" target="blank">
+                      <button className="whatsapp flex"><a href="https://wa.me/5514997795080" target="blank">Falar no WhatsApp</a></button>
+                    </a>                    
                   </div>
                 </div>                
               </div>

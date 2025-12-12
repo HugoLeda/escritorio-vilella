@@ -297,12 +297,8 @@ export const Clientpage = styled.section `
     }
 
     .link {
-      align-items: flex-start;
       width: 100%;
       gap: 2rem;
-    }
-    button {
-      width: 300px;
     }
 
     .client-center-download {

@@ -179,8 +179,12 @@ export default function Client() {
               <h2>Sua contabilidade na palma da mão</h2>
               <p>Acesse documentos, informações fiscais e muito mais a qualquer hora em qualquer lugar.</p>
               <div className="link flex">
-                <button className="client-center"> <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Acessar Portal</a></button>
-                <button className="client-center help"> <a href="https://wa.me/14997795003" target="_blank"> Solicitar Acesso </a></button>
+                <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">
+                  <button className="client-center"><a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Acessar Portal</a></button>
+                </a>                
+                <a href="https://wa.me/14997795003" target="_blank">
+                  <button className="client-center help"> <a href="https://wa.me/14997795003" target="_blank"> Solicitar Acesso </a></button>
+                </a>
               </div>
             </div> 
             <div className="img flex">
@@ -278,8 +282,16 @@ export default function Client() {
                 <p className="scroll-effect">Faça agora o download do Portal do Cliente e aproveite seus benefícios!</p>
               </div>            
               <div className="link flex">
-                <button className="client-center scroll-effect"> <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Acessar Portal</a></button>
-                <button className="client-center help scroll-effect"> <a href="https://wa.me/14997795003" target="_blank">Solicitar acesso</a></button>
+                <div className="link-button">
+                  <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">
+                    <button className="client-center scroll-effect"> <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Acessar Portal</a></button>
+                  </a>
+                </div>
+                <div>
+                  <a href="https://wa.me/14997795003" target="_blank">
+                    <button className="client-center help scroll-effect"> <a href="https://wa.me/14997795003" target="_blank">Solicitar acesso</a></button>
+                  </a>
+                </div>
               </div>
             </div> 
             <div className="client-center-download flex-column">

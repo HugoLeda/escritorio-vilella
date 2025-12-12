@@ -148,9 +148,11 @@ export default function About() {
                 <p>Trabalhamos juntos para fazer sua empresa crescer.</p>
 
                 <div className="link flex">
-                  <button className="button">
-                    <a href="/about#timeline">Acompanhe nossa jornada</a>
-                  </button>
+                  <a href="/about#timeline">
+                    <button className="button">
+                      <a href="/about#timeline">Acompanhe nossa jornada</a>
+                    </button>
+                  </a>
                 </div>
               </div>
 
@@ -259,7 +261,9 @@ export default function About() {
                 <p>Temos orgulho de tudo o que construímos até aqui e o melhor ainda está por vir. <span>Será um prazer ter você conosco nessa jornada!</span></p>
               </div>
               <div className="flex-column">
-                <button><a href="https://wa.me/5514997396924?text=Quero%20ser%20cliente!" target="blank">Quero ser cliente</a></button>
+                <a href="https://wa.me/5514997396924?text=Quero%20ser%20cliente!" target="blank">
+                  <button><a href="https://wa.me/5514997396924?text=Quero%20ser%20cliente!" target="blank">Quero ser cliente</a></button>
+                </a>
               </div>              
             </div>
           </section>

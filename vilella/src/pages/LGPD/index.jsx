@@ -149,12 +149,14 @@ export default function LGPD() {
                 <h1>Lei Geral de Proteção de Dados Pessoais (LGPD) </h1>
                 <p>Esclareça suas dúvidas a respeito da proteção e segurança dos seus dados. </p>
                 <div className="link flex">
-                  <button>
+                  <a href="/lgpd#contact-us">
+                    <button>
                       <a href="/lgpd#contact-us" className="flex">
                       <FaArrowDown style={{fontSize: "14"}} className="icon"/>
                         Fale Conosco
                       </a>
-                  </button>
+                    </button>   
+                  </a>                  
                 </div>
               </div>              
             </div>
@@ -258,8 +260,12 @@ export default function LGPD() {
                   </div>            
                 </div>
                 <div className="dpo-redirect flex-column">
-                  <button className="whatsapp"> <a href="https://wa.me/5514997795003?text=Estou%20buscando%20informa%C3%A7%C3%B5es%20sobre%20o%20tratamento%20dos%20meus%20dados.%20Pode%20me%20direcionar%20ao%20DPO%3F">Falar no Whatsapp</a></button>
-                  <button className="mail"> <a href="mailto:suportevilella@gmail.com">Enviar e-mail</a> </button>
+                  <a href="https://wa.me/5514997795003?text=Estou%20buscando%20informa%C3%A7%C3%B5es%20sobre%20o%20tratamento%20dos%20meus%20dados.%20Pode%20me%20direcionar%20ao%20DPO%3F" target="blank">
+                    <button className="whatsapp">Falar no Whatsapp</button>
+                  </a>           
+                  <a href="mailto:suportevilella@gmail.com">
+                    <button className="mail"> <a href="mailto:suportevilella@gmail.com">Enviar e-mail</a> </button>
+                  </a>
                 </div>
               </div>
 
