@@ -572,15 +572,14 @@ export const Homepage = styled.div `
 
   @media (max-width: 1080px) {
 
-
-    .tech-inovation {      
+    .tech-inovation {  
       gap: 3rem;
       p {
         padding: 0;
       }
 
       .tech-cards{
-        gap: 5rem;
+        gap: 3rem;
         justify-content: center;
 
         .act {
@@ -611,10 +610,8 @@ export const Homepage = styled.div `
       gap: 1.5rem;
 
       .map {        
-        //width: 500px;
         .spot {
           max-width: 500px;
-          //width: 500px;
         }
       }
 
@@ -623,9 +620,7 @@ export const Homepage = styled.div `
       }
 
       .where-to-find-us {
-        //align-items: center;
         .spot {          
-          //width: 500px;
           max-width: 450px;
         }
       }

@@ -38,7 +38,7 @@ export const Lgpdpage = styled.div `
   
   .outdoor-wrapper {
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 5rem;
     width: 100%;   
     user-select: none; 
@@ -69,7 +69,7 @@ export const Lgpdpage = styled.div `
     padding-top: 1rem;
 
     button {
-      padding: 0 1rem;
+      padding: 0 1.2rem 0 1rem;
       height: 45px;
       border-radius: 6px;
       box-shadow: 0 2px 8px rgb(0,0,0,0.2);
@@ -84,6 +84,7 @@ export const Lgpdpage = styled.div `
         font-size: ${Theme.textSize.textMobileSm};
         font-weight: 500;
         color: ${Theme.colors.white};
+        padding-top: .1rem;
         text-decoration: none;
         align-items: center;
         justify-content: center;
@@ -449,6 +450,12 @@ export const Lgpdpage = styled.div `
           max-width: 400px;
           text-align: center;
           align-items: center;        
+        }
+        .link {
+          a {
+            width: 100%;
+            padding-top: 0;
+          }
         }
       }
     }}

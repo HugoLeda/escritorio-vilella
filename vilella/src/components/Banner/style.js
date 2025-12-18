@@ -426,21 +426,21 @@ export const BannerContainer = styled.section`
     }
 
     
-  .wrapper {
-    width: 100%;
-    max-width: none;
-    padding: 0;
-    margin: 0;
-  }
+    .wrapper {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+      margin: 0;
+    }
 
-  .banner-text {
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-  }
+    .banner-text {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+    }
 
     .banner-office .image,
     .banner-team .image {
@@ -449,6 +449,10 @@ export const BannerContainer = styled.section`
       
     .banner-text {
       gap: 2rem;
+
+      a {
+        width: 100%;
+      }
     }
 
     .banner-office {

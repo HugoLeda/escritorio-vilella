@@ -448,6 +448,17 @@ export const Clientpage = styled.section `
       }
       .outdoor {
         max-width: 400px;
+
+        .link {
+          gap: 1rem;
+          width: 100%;
+          a {
+            width: 100%;
+          }
+          button {
+            width: 100%;
+          }
+        }
       }
     }
 
