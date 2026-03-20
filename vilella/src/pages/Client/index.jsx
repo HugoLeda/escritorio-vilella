@@ -99,7 +99,7 @@ const clientFaq = [
     ou através do aplicativo oficial, disponível para 
     <a href="https://play.google.com/store/apps/details?id=com.thomsonreuters.cs.onvio.clientcenter&hl=pt_BR" target="_blank">Android</a>
     e
-    <a href="https://apps.apple.com/us/app/onvio-client-center/id1050812390" target="_blank">iOS</a>.
+    <a href="https://apps.apple.com/br/app/onvio-client-center/id1050812390" target="_blank">iOS</a>.
     Recomendamos a instalação do aplicativo para receber notificações de vencimentos e
     para acessar documentos da sua empresa com mais agilidade.
   `
@@ -297,7 +297,7 @@ export default function Client() {
             <div className="client-center-download flex-column">
               <img src={apponvio} alt="Download do aplicativo Onvio Portal do Cliente" className="scroll-effect"/>  
               <div className="download-options flex scroll-effect">
-                <a href="https://apps.apple.com/us/app/onvio-client-center/id1050812390" target="blank">
+                <a href="https://apps.apple.com/br/app/onvio-client-center/id1050812390" target="blank">
                   <img src={appstore} alt="" className="appstore"/>
                 </a>              
                 <a href="https://play.google.com/store/apps/details?id=com.thomsonreuters.cs.onvio.clientcenter&hl=pt_BR" target="blank">

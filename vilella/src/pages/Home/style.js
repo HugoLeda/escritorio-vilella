@@ -45,6 +45,13 @@ export const Homepage = styled.div `
 
   h1,h2 {
     color: ${Theme.colors.blue};
+  }
+
+  h1 {
+    font-size: ${Theme.textSize.titleClientLg};
+  }
+
+  h2 {
     font-size: ${Theme.textSize.titleMd};
   }
   
@@ -65,20 +72,26 @@ export const Homepage = styled.div `
   }
     
 
+  #solutions {
+    margin: 2rem 0;
+    width: 100%;
+  }
+
   .solutions {
     text-align: left;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 5rem;
+    width: 100%;
 
     span {
-      background-color: ${Theme.colors.blue};
+      background-color: ${Theme.colors.blue3};
       color: ${Theme.colors.white};      
       padding: .2rem 1rem;
       user-select: none;
     }
       
     .partner {      
-      max-width: 400px;
+      max-width: 450px;
       align-items: center;
       height: 45px;
       justify-content: center;
@@ -106,13 +119,33 @@ export const Homepage = styled.div `
 
     .solution-text {
       justify-content: space-between;
+      max-width: 450px;
+
+      .text {
+        h1 {
+          width: 100%;
+          align-items: flex-start;
+        }
+        gap: 2.5rem;
+      }
+
+
+      button {
+        a {
+          font-weight: 400;
+        }
+      }
+    }
+
+    .text {
+      gap: 3rem;
     }
 
     .for-you {
       justify-content: flex-end;
-      max-width: 500px;
+      max-width: 425px;
       height: 350px;
-      gap: 2rem;
+      gap: 2.5rem;
 
       p {
         margin: 0;
@@ -120,10 +153,9 @@ export const Homepage = styled.div `
 
       .for-you-item {
         align-items: center;
-        background: linear-gradient(to right, #EFF6FF, #fff);
-        //background-color: rgba(168, 208, 255, 0.2);
+        background: linear-gradient(to right, #EFF6FF, #EFF6FF, #fff);
         border-radius: 40px 0 0 40px;
-        padding: .5rem 1rem;
+        padding: .8rem 1rem;
         span {
           background-color: transparent;
         }
@@ -311,8 +343,13 @@ export const Homepage = styled.div `
     }
   }
 
+
+  #find-us {
+    margin: 2rem 0;
+  }
+
   .find-us {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     gap: 3rem;
     width: 100%;
   }
@@ -320,7 +357,7 @@ export const Homepage = styled.div `
   .find-us-title {
     text-align: center;
     span {
-      background-color: ${Theme.colors.blue};
+      background-color: ${Theme.colors.blue3};
       color: ${Theme.colors.white};      
       padding: .2rem 1rem;
       user-select: none;
@@ -330,30 +367,56 @@ export const Homepage = styled.div `
   .find-us-content {
     justify-content: center;
     width: 100%;
+    display: flex;    
     gap: 5rem;
+
+    .map-time,
+    .where-to-find-us {      
+      flex: 1;
+      max-width: 500px;
+    }
 
       .map {
         box-shadow: 0 1px 10px rgb(0,0,0,0.1);
         border-radius: 8px;
-        border: 1px solid rgba(168, 208, 255, 0.5);
+        border: 1px solid rgba(168, 208, 255, 0.4);
         gap: 0;
         width: 100%;
 
         .spot {          
-          padding: 1rem;     
-          align-items: center;
-          gap: 1rem;   
-          width: 100%;        
+          padding: 1rem;
+          //align-items: center;
+          width: 100%;
+          gap: 1rem;          
 
           h3 {
-            font-size: ${Theme.textSize.textLg};
+            font-size: ${Theme.textSize.textMd};
+            margin: 0;
           }
-        }        
+
+          span {
+            padding-top: .25rem;
+          }
+          
+        }     
+        .hours {
+          width: 100%;          
+        }
+        .business-hours {
+          justify-content: space-between;
+          word-spacing: 3px;
+          gap: 1rem;
+
+          span {
+            padding-top: 0;
+          }
+        }   
       }
 
       iframe {
         border-radius: 8px 8px 0 0;
         user-select: none;
+        width: 100%;
       }
 
   }
@@ -364,18 +427,26 @@ export const Homepage = styled.div `
     justify-content: space-between;
     
     .spot {
-      border: 1px solid rgba(168, 208, 255, 0.5);
+      border: 1px solid rgba(168, 208, 255, 0.4);
       box-shadow: 0 1px 10px rgb(0,0,0,0.1);
       border-radius: 8px;
       width: 100%;
-      max-width: 450px;
+      height: 100%;
       
-      padding: 1rem;
+      padding: 1.5rem 2rem 1rem 1.5rem;
       align-items: center;
-      gap: 1rem;    
+      justify-content: space-between;
+      gap: .5rem;    
       
-      h3 {
+      h2 {
         font-size: ${Theme.textSize.textLg};
+        color: ${Theme.colors.gray1};
+        text-align: left;
+        width: 100%;
+      }
+      h3 {
+        font-size: ${Theme.textSize.textMd};
+        margin: 0;
       }
       p {margin: 0;}
       a {
@@ -384,56 +455,52 @@ export const Homepage = styled.div `
       }
 
 
+      .address,
+      .phone,
       .mail {
         width: 100%;
-        align-items: center;
+        align-items: flex-start;
         gap: 1rem;
-      }
 
-      
-      .phone {     
-        align-items: center;
-        gap: 1rem; 
-        width: 100%;
+        span {
+          padding-top: .1rem;
+        }
       }
 
       button {
         height: 2rem;
       }
 
-      .whatsapp {
-        background-color: #25D366;
-        padding: 0 1rem;
-        border-radius: 6px;
-        box-shadow: 0 2px 5px rgb(0,0,0,0.2);
-        border: none;
-        user-select: none;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: ease-out all .2s;
-        align-items: center;
-        
-
-        a {
-          font-size: ${Theme.textSize.textMobileSm};
-          text-decoration: none;
-          text-transform: uppercase;
-          color: ${Theme.colors.white};
-          font-weight: 500;
+      .follow-us {
+        position: relative;
+        padding-top: 1rem;
+        width: 100%;
+        align-items: flex-start;
+        h3 {
+          color: ${Theme.colors.gray1};
+          margin: 0;
         }
-
-        &:hover {
-          background-color: ${Theme.colors.babyBlue};
-          a {
-            color: ${Theme.colors.blue1};
+        gap: 1rem;
+          .socials {
+            gap: 2rem;
           }
-        }
+      }
+
+      .follow-us::before {
+        position: absolute;
+        content: " ";
+        //max-width: 380px;
+        width: 100%;
+        background-color: ${Theme.colors.babyBlue};
+        height: 1px;
+        top: 0;
       }
     }
   }
 
   /*bullet to line animation button*/
 
+  .solutions button,
   .specialties button,
   .tech-inovation button,
   .client-center button {
@@ -443,7 +510,7 @@ export const Homepage = styled.div `
     cursor: pointer;
     transition: color 0.3s ease;
   }
-
+  .solutions button,
   .specialties button,
   .tech-inovation button {
     color: ${Theme.colors.blue};
@@ -453,7 +520,7 @@ export const Homepage = styled.div `
     color: ${Theme.colors.white};
   }
 
-
+  .solutions button::after,
   .specialties button::after,
   .tech-inovation button::after,
   .client-center button::after {
@@ -468,6 +535,7 @@ export const Homepage = styled.div `
     transition: all 0.3s ease;
   }
 
+  .solutions button::after,
   .specialties button::after,
   .tech-inovation button::after {
     background-color: ${Theme.colors.blue};
@@ -477,6 +545,7 @@ export const Homepage = styled.div `
     background-color: ${Theme.colors.white};
   }
 
+  .solutions button:hover::after,
   .specialties button:hover::after,
   .tech-inovation button:hover::after,
   .client-center button:hover::after {
@@ -535,24 +604,6 @@ export const Homepage = styled.div `
       font-size: ${Theme.textSize.titleMobileMd};
     }
 
-    .solutions {
-      flex-direction: column;
-      gap: 3rem;
-
-      .partner {
-        display: none;
-      }
-
-      .for-you {
-        max-width: 100%;
-        align-items: flex-start;
-        padding: 0 1rem;
-
-        .for-you-item {
-          padding: .5rem;
-        }
-      }
-    }
 
     .specialty-items {
       flex-direction: column;
@@ -568,6 +619,28 @@ export const Homepage = styled.div `
 
     }
   }
+
+  @media (max-width: 1125px) {
+        
+
+    .find-us-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .map-time,
+      .where-to-find-us {
+        width: 100%;
+      }
+
+      iframe {        
+        max-height: 250px;        
+      }
+
+
+    }
+  }
+  
   
 
   @media (max-width: 1080px) {
@@ -602,42 +675,16 @@ export const Homepage = styled.div `
 
   }
 
-  @media (max-width: 1024px) {
-    
-    .find-us-content {
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-
-      .map {        
-        .spot {
-          max-width: 500px;
-        }
-      }
-
-      iframe {
-        max-height: 250px;
-      }
-
-      .where-to-find-us {
-        .spot {          
-          max-width: 450px;
-        }
-      }
-    }
-  }
 
 
-  @media (max-width: 1010px) {
-    
+  @media (max-width: 1010px) {    
     
     .tech-inovation {
       .tech-cards{
-        //gap: 2rem;
         flex-wrap: wrap;
         justify-content: center;
 
-        max-width: 500px;
+        //max-width: 500px;
       }
     }
 
@@ -663,36 +710,82 @@ export const Homepage = styled.div `
       gap: 8rem;
       margin-top: 3rem;
 
-    .client-center-content {
-      align-items: center;
-      gap: 3rem;
-
-      .client-center-benefits {
+      .client-center-content {
         align-items: center;
-        justify-content: space-around;
-        width: 100%; 
-        gap: 1rem;
-        .icon {
-          gap: 1.5rem;
+        gap: 3rem;
+
+        .client-center-benefits {
+          align-items: center;
+          justify-content: space-around;
+          width: 100%; 
+          gap: 1rem;
+          .icon {
+            gap: 1.5rem;
+          }
+        }
+      }
+
+      .img {      
+        top: 0;
+
+        img {
+          max-width: 300px;
+        }
+
+        &::before {
+          bottom: -4rem;
         }
       }
     }
 
-    .img {      
-      top: 0;
-
-      img {
-        max-width: 300px;
+    .find-us-content {
+      .map,
+      .where-to-find-us {
+        .spot {
+          h2,h3 {
+            font-size: ${Theme.textSize.textMobileMd};
+          }
+        }
       }
 
-      &::before {
-        bottom: -4rem;
-      }
-    }
+      .where-to-find-us {
+        .spot {
+          .follow-us {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }      
 
     }
 
   }
+
+
+  @media (max-width: 980px) {
+    .solutions {
+      flex-direction: column;
+      gap: 3rem;
+      align-items: center;
+
+      .partner {
+        display: none;
+      }
+
+      .for-you {
+        max-width: 500px;
+        align-items: flex-start;
+        padding: 0 1rem;
+
+        .for-you-item {
+          padding: .5rem;
+        }
+      }
+    }
+  }
+    
 
   @media (max-width: 900px) {
 
@@ -753,31 +846,29 @@ export const Homepage = styled.div `
         font-size: ${Theme.textSize.titleMobileMd};
       }
     }
-      
+
+    
     .find-us-content {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
       .map {        
-        max-width: 350px;
+        max-width: 100%;
 
         .spot {
-          max-width: 350px;
+          max-width: 100%;
         }
       }
 
       iframe {
-        max-width: 350px;
-        max-height: 250px;
+        max-width: 100%;
       }
 
       .where-to-find-us {
-        //align-items: center;
         .spot {          
-          max-width: 350px;
+          width: 100%;
         }
       }
-    }
+    } 
+      
+
   }
 
   @media (max-width: 500px) {
@@ -804,26 +895,26 @@ export const Homepage = styled.div `
     }
 
     
+    
     .find-us-content {
       .map {        
+        max-width: 100%;
+
         .spot {
-          width: 100%;
-          max-width: 280px;
+          max-width: 100%;
         }
       }
 
       iframe {
-        max-width: 290px;
-        max-height: 250px;
+        max-width: 100%;
       }
 
       .where-to-find-us {
-        .spot {        
-          width: 100%;  
-          max-width: 290px;
+        .spot {          
+          width: 100%;
         }
       }
-    }
+    } 
   }
 
   
