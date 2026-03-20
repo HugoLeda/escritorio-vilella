@@ -18,7 +18,7 @@ export const FooterContainer = styled.footer`
     max-width: 1920px;
     margin: auto;
     justify-content: space-around;
-    padding: 2rem 0;
+    padding: 3rem 0;
     margin-top: 5rem; 
   }
 
@@ -36,20 +36,41 @@ export const FooterContainer = styled.footer`
     font-size: ${Theme.textSize.textSm};
   }
 
+
   .info {
     justify-content: space-between;
+    gap: 3rem;
     
-    .rights-reserved {
+    .company-logo {
       gap: 1rem;
       img {
         width: 200px;
         height: auto;
       }
+
+      .company-id {
+        gap: 3rem;
+        .id-1,
+        .id-2 {
+          p {
+            margin: 0;
+          }
+          span {
+            font-weight: 500;
+          }
+        }
+
+        .id-1 {
+          p {
+            text-transform: uppercase;
+          }
+        }
+      }
     }
 
     .socials {
       justify-content: space-between;
-
+      gap: 1rem;
       a {
         cursor: pointer;
       }
@@ -62,14 +83,16 @@ export const FooterContainer = styled.footer`
       list-style-type: none;
       padding: 0;
       margin: 0;
-      line-height: 2rem;
+      line-height: 2.75rem;
+      align-items: stretch;
+
     }
   }
 
   .contact {
-    justify-content: space-between;
+    justify-content: flex-start;
     line-height: 1.5em;
-    gap: 1rem;    
+    gap: 2rem;    
     
     .social-item {
       flex-direction: row;
@@ -84,9 +107,24 @@ export const FooterContainer = styled.footer`
       height: 30px;
     }
     }
+
+    .client-center {
+      align-items: center;
+    }
+    .client-center-button {
+      background-color: transparent;
+      border-radius: 20px;
+      border: 1px solid ${Theme.colors.white};      
+      padding: .5rem 2rem;  
+      a {
+        text-decoration: none;        
+      }
+      span {
+      }
+    }
   }
 
-  .dev {
+  .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     margin: 0 100px;
     background-color: ${Theme.colors.gray1};
@@ -103,15 +141,77 @@ export const FooterContainer = styled.footer`
     }
   }
   
-  ${media.lessThan("medium")` //medium = 768px
+  @media (max-width: 900px) {
+
+    .footer {
+      justify-content: center;
+      gap: 5rem;
+    }
+
+    .services {
+      display: none;
+    }
+
+    .copyright {
+      margin: 0 2rem;
+      text-align: center;
+      .credits {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 740px) {
+    .footer {
+      flex-direction: column-reverse;
+      align-items: center;      
+      gap: 3rem;
+
+      .info,
+      .contact {
+        max-width: 250px;
+        width: 100%;
+      }
+
+      .info {        
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+        .company-id {
+          gap: 2rem;
+        }
+      }
+      
+      .contact {
+        .item {
+          width: 25px;
+        }
+      }
+
+      .call {
+        align-items: center;
+           
+        h3 {
+          text-align: center;
+          width: 100%;
+        }  
+        a {          
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  /*${media.lessThan("medium")` //medium = 768px
     .footer {
       flex-direction: column-reverse;
       align-items: center;
       
-      gap: 1rem;
+      gap: 2rem;
 
       .info {
-        gap: 1rem;
+        gap: 1rem;        
       }
       .services {
         display: none;
@@ -122,10 +222,10 @@ export const FooterContainer = styled.footer`
         gap: 1rem;
       }
     }
-  `}
+  `}*/
   
 
-  ${media.lessThan("small")`
+  /*${media.lessThan("small")`
     .footer {
       gap: 2rem;
 
@@ -150,5 +250,5 @@ export const FooterContainer = styled.footer`
       gap: 2rem;
       margin: 0 30px;
     }
-  `}
+  `}*/
 `
