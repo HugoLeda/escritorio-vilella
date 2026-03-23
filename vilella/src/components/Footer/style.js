@@ -140,6 +140,10 @@ export const FooterContainer = styled.footer`
       }
     }
   }
+
+  @media (max-width: 1010px) {
+    margin-bottom: 4rem;
+  }
   
   @media (max-width: 900px) {
 
