@@ -3,9 +3,10 @@ import Header from "../../components/Header";
 import AboutValues from "../../components/AboutCoreValues";
 import AboutAdvantages from "../../components/AboutAdvantages";
 import AboutJourney from "../../components/AboutJourney";
+import team from "../../assets/makehistory.webp"
 
 import { Aboutpage } from "./style"
-import { FaHandsHoldingCircle, FaRegEye, FaFlag, FaBriefcase, FaAward, FaUserTie, FaArrowDown } from "react-icons/fa6";
+import { FaHandsHoldingCircle, FaRegEye, FaFlag, FaBriefcase, FaAward, FaUserTie, FaArrowDown, FaBook, FaBuilding, FaHandHoldingHand, FaFileSignature, FaMap, FaServer, FaComputer } from "react-icons/fa6";
 import { useEffect, useRef } from "react";
 
 
@@ -51,30 +52,43 @@ const advantagesCards = [
 
 const journeyYears = [
   {
+    icon: <FaUserTie style={{ fontSize: 32, color: "#759dcc" }} />,
     year:"1993",
     description:"Início da gestão Vilella"
   },
   {
+    icon: <FaComputer style={{ fontSize: 32, color: "#1a3a8a" }} />,
     year:"2008",
     description:"Informatização e migração de sistema"
   },    
   {
+    icon: <FaMap style={{ fontSize: 32, color: "#a8d0ff" }} />,
     year:"2011",
     description:"Expansão de atuação e atendimento regional"
   },    
   {
+    icon: <FaFileSignature style={{ fontSize: 32, color: "#f33" }} />,
     year:"2015",
     description:"Nos tornamos ponto de atendimento para emissão de certificados digitais"
   },    
   {
+    icon: <FaHandHoldingHand style={{ fontSize: 32, color: "#0d2daa" }} />,
+    borderColor: "#0d2daa",
     year:"2020",
     description:"Junção com a Organização Fartura de Contabilidade"
   },    
   {
+    icon: <FaBuilding style={{ fontSize: 32, color: "#759dcc" }} />,
     year:"2021",
     description:"Mudança para a nova sede, estruturada para atender melhor nossos clientes"
-  },    
+  },     
   {
+    icon: <FaBook style={{ fontSize: 32, color: "#f33" }} />,
+    year:"2022",
+    description:"Aprimoramento de políticas internas e conclusão da adequação à LGPD"
+  },   
+  {
+    icon: <FaFlag style={{ fontSize: 32, color: "#1a3a8a" }} />,
     year:"2024",
     description:"Atendimento digital expandido para todo o território nacional"
   }
@@ -181,8 +195,9 @@ export default function About() {
                     <p className="scroll-effect">Trabalhamos para garantir que nossos clientes estejam sempre em conformidade com as exigências legais, mas, acima de tudo, focados no crescimento saudável e sustentável de seus negócios.</p>
                   </div>                  
                 </div>
-                <figure className="decor-frames flex scroll-effect">
-                </figure>
+                  <div className="image flex">                    
+                    <img className="figure" src={team} alt="Fachada do Escritório Vilella" />
+                  </div>
 
               </div>
             </section>
@@ -239,6 +254,8 @@ export default function About() {
                     {journeyYears.map((service, index) => (
                       <AboutJourney
                         key={service.year}
+                        icon={service.icon}
+                        borderColor={service.borderColor}
                         year={service.year}
                         description={service.description}
                         side={index % 2 === 0 ? 'left' : 'right'}                        

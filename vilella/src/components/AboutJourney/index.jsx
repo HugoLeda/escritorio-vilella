@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Journey } from "./style"
 
-export default function AboutJourney({year,description, side}){
+export default function AboutJourney({year,description, side, icon, borderColor}){
   
   const lastScrollY = useRef(0);
 
@@ -54,8 +54,10 @@ export default function AboutJourney({year,description, side}){
   return(
     <>
     <Journey>     
-      <span className="timeline-circle" />
-      <div className={`timeline-item ${side}`}>   
+      <div style={{border: borderColor}}>
+        <span className="timeline-circle">{icon}</span>
+      </div>
+      <div className={`timeline-item ${side}`}>           
         <div className="timeline-content scroll-effect">
           <h4>{year}</h4>
           <p>{description}</p>

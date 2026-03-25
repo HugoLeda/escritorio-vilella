@@ -186,7 +186,7 @@ export const Aboutpage = styled.div`
   }
 
   .history {
-    width: 100%;
+    gap: 5rem;
   }
 
 
@@ -194,9 +194,7 @@ export const Aboutpage = styled.div`
     width: 100%;
     align-items: flex-start;
     gap: 1rem;
-
-    .history-text-title {
-    }
+    max-width: 600px;
 
     h2 {
       margin: 0;
@@ -209,22 +207,36 @@ export const Aboutpage = styled.div`
       max-width: 600px;
     }
   }
+
   
-  figure {
+  .image {
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
     position: relative;
 
     &::before {
       content: "";
       position: absolute;
-      width: 220px;
-      height: 220px;
-      background-color: ${Theme.colors.lightGray};
-      border-radius: 1rem;
-      right: 2rem;
-      bottom: 2rem;
-      box-shadow: -6rem -6rem 0 0 #0d2daa;
+      width: 380px;
+      height: 150px;
+      background-color: #f2f2f2;
+      border-radius: 2rem;
+      right: 0;
+      bottom: 0;
+      box-shadow: 0 -13rem 0 0  ${Theme.colors.lightGray};
+    }   
+
+    img {
+      position: relative;
+      pointer-events: none;
+      width: 350px;      
+      height: 350px;
+      object-fit: cover;
+      border-radius: 2rem;
+      object-position: 35% 50%;    
     }
-  } 
+  }
 
 
   #bsc {
@@ -418,10 +430,9 @@ export const Aboutpage = styled.div`
           max-width: 550px;
         }
       }
-      .decor-frames::before {
-        width: 200px;
-        height: 200px;
-        right: 0;
+      
+      .image::before {
+        right: -.5rem;
         bottom: 1rem;
       }
     }
@@ -485,10 +496,6 @@ export const Aboutpage = styled.div`
         gap: 3rem;
       }
     }
-
-    .history {
-      gap: 0;
-    }
     
     #call-to-action { 
       h2,p {
@@ -514,9 +521,10 @@ export const Aboutpage = styled.div`
       .history-text {
         p {
           max-width: 100vw;
+          text-align: justify;
         }
       }
-      .decor-frames {
+      .image {
         display: none;
       }
     }
@@ -525,11 +533,15 @@ export const Aboutpage = styled.div`
 
   @media (max-width: 960px) {
 
-    header {
+    header {            
+
+      .service-outdoor {
+        gap: 3rem;
+      }
       .outdoor-text {
         padding-top: 5rem;
         h1 {
-          width: 330px;
+          //width: 330px;
         } 
       }
     }    
@@ -568,10 +580,10 @@ export const Aboutpage = styled.div`
   @media (max-width: 624px) {
 
     header {      
+      padding: 10%;
       .service-outdoor {    
         h1 {
-          max-width: 400px;
-          font-size: ${Theme.textSize.titleMobileMd};
+          font-size: ${Theme.textSize.titleClientSm};
         }
       }
     }
@@ -589,6 +601,12 @@ export const Aboutpage = styled.div`
       }
     }
 
+    .timeline {
+      p {    
+        font-size: ${Theme.textSize.textMobileSm};          
+      }
+    }
+
     .invite-text {
       padding: .25rem;
       span {
@@ -596,5 +614,145 @@ export const Aboutpage = styled.div`
       }
     }
   }
+
+  @media (max-width: 452px) {
+    header {
+      padding: 10%;
+      
+      .service-outdoor {            
+        gap: 5rem;
+        h1 {
+          font-size: 1.95rem;
+        }
+        p {
+          font-size: ${Theme.textSize.textMobileLg};
+        }
+      }
+    }
+    .excelence{
+      .excelence-cards {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .invite-text {
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
   
+
+  @media (max-width: 390px) {
+    header {
+      .service-outdoor {         
+        gap: 5rem;
+        h1 {
+          font-size: 1.9rem;
+        }
+        p {                 
+          font-size: ${Theme.textSize.textMobileMd};
+        }
+      }
+
+      button {
+        a {
+          padding: 0;
+          font-size: 90%;
+        }
+      }
+    }
+
+    
+    .history {
+      .history-text {
+        p {
+          font-size: ${Theme.textSize.textMobileSm};
+        }
+      }
+    }
+
+    
+
+
+    .advantages {
+      padding: 0 10vw;
+      
+      .advantages-cards {         
+        gap: 2rem;
+        p {          
+          font-size: 90%;
+        }
+      }
+      .advantage-card {
+        padding: 2rem;
+      }
+
+    }
+
+    .timeline {
+      P {
+        font-size: 90%;
+      }
+      
+    }
+  }
+ 
+  @media (max-width: 372px) {
+    
+
+    header {
+      padding: 0 10vw;     
+
+      .service-outdoor {    
+        
+        gap: 5rem;
+        h1 {
+          font-size: 1.75rem;
+        }
+        p {                 
+          font-size: ${Theme.textSize.textMobileMd};
+        }
+      }
+
+      button {
+        width: 280px;
+      }
+    }
+
+    .history {
+      
+      .history-text {
+        p {
+          font-size: ${Theme.textSize.textMobileSm};
+        }
+      }
+    }
+
+    .advantages {
+      
+      
+      .advantages-cards {         
+        gap: 2rem;
+        p {          
+          font-size: 90%;
+        }
+      }
+      .advantage-card {
+        padding: 2rem;
+      }
+    }
+
+
+    .call-to-action {      
+      
+      button {
+        width: 280px;
+      }
+    }
+  }
+
+
 `

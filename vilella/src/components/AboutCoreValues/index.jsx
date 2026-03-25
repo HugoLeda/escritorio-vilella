@@ -104,6 +104,13 @@ const AboutCards = styled.div`
       position: relative;
     }
   }
+
+  @media (max-width: 400px) {
+    .bsc-card {
+      padding: 2rem 2rem 1rem;
+      width: 290px;
+    }
+  }
 `;
 
 export default function AboutValues({ icon, title, text, borderColor, hoverColor }) {

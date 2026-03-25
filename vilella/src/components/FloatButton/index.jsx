@@ -18,7 +18,7 @@ const FloatWhatsapp = styled.div `
     position: fixed;
     bottom: 1.5rem;
     right: 2rem;
-    z-index: 100;
+    z-index: 10;
     border-radius: 40px;   
 
     opacity: ${props => props.show ? 1 : 0};
@@ -115,7 +115,6 @@ const FloatWhatsapp = styled.div `
 
 export default function FloatButton () {
 
-    // Estado mobile
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1010);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 1010);
@@ -123,9 +122,8 @@ export default function FloatButton () {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Estado visibilidade botão
   const [showWhatsapp, setShowWhatsapp] = useState(false);
-  const [activated, setActivated] = useState(false); // marca se passou 120px
+  const [activated, setActivated] = useState(false);
   const SCROLL_THRESHOLD = 10;
   const SHOW_AFTER = 120;
 
@@ -135,13 +133,11 @@ export default function FloatButton () {
     const handleScroll = () => {
       const currentY = window.scrollY;
 
-      // desktop sempre visível
       if (!isMobile) {
         setShowWhatsapp(true);
         return;
       }
 
-      // ativa o botão quando passar de 120px
       if (!activated && currentY > SHOW_AFTER) {
         setActivated(true);
         setShowWhatsapp(true);
@@ -149,18 +145,15 @@ export default function FloatButton () {
         return;
       }
 
-      // evita micro scroll
       if (Math.abs(currentY - lastY) < SCROLL_THRESHOLD) return;
 
       if (!activated) {
-        // ainda não passou de 120px → mantém escondido
         setShowWhatsapp(false);
       } else {
-        // comportamento descendente/ascendente
         if (currentY > lastY) {
-          setShowWhatsapp(true); // descendo → mostra
+          setShowWhatsapp(true); 
         } else {
-          setShowWhatsapp(false); // subindo → esconde
+          setShowWhatsapp(false); 
         }
       }
 

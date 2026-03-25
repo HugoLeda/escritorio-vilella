@@ -39,7 +39,7 @@ export default function Footer() {
               
               <div className="id-2 flex-column">
                 <p><span>Responsável Técnico</span></p>
-                <p><span>Registro: </span>CRC 3SP012940/O-6</p>
+                <p><span>Registro: </span>CRC 1SP146294/O-6</p>
               </div>
 
             </div>                      
