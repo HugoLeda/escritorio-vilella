@@ -116,6 +116,10 @@ export const Journey=styled.div`
 
   @media (max-width: 960px) {
 
+    .timeline-item:hover {
+      transform: none;
+    }
+
     .timeline-item.left,
     .timeline-item.right {
       left: 10%;

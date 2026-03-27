@@ -73,7 +73,6 @@ const journeyYears = [
   },    
   {
     icon: <FaHandHoldingHand style={{ fontSize: 32, color: "#0d2daa" }} />,
-    borderColor: "#0d2daa",
     year:"2020",
     description:"Junção com a Organização Fartura de Contabilidade"
   },    
@@ -255,7 +254,6 @@ export default function About() {
                       <AboutJourney
                         key={service.year}
                         icon={service.icon}
-                        borderColor={service.borderColor}
                         year={service.year}
                         description={service.description}
                         side={index % 2 === 0 ? 'left' : 'right'}                        

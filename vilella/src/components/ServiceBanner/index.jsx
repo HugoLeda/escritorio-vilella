@@ -6,6 +6,7 @@ import { FaHeadset } from "react-icons/fa6";
 
 const banners = [
   {
+    id: "fiscal",
     title: "Cuidamos da sua conformidade fiscal!",
     description: "Aproveite de uma apuração precisa de impostos e estratégias para redução de encargos.",
     topics: [
@@ -18,6 +19,7 @@ const banners = [
     href: "https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20fiscal."
   },
   {
+    id: "consultiva",
     title: "Precisa de uma Contabilidade Consultiva?",
     description: "Tenha uma visão clara do desempenho da sua empresa e o suporte para crescer com segurança.",
     topics: [
@@ -30,6 +32,7 @@ const banners = [
     href: "https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20contábil."
   },
   {
+    id: "pessoal",
     title: "Soluções de Departamento Pessoal",
     description: "Suporte completo com transmissão de obrigações e todas as questões trabalhistas de colaboradores.",
     topics: [
@@ -42,6 +45,7 @@ const banners = [
     href: "https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20de%20departamento%20pessoal."
   },
   {
+    id: "certificado",
     title: "Emitimos seu certificado digital com agilidade!",
     description: "Garanta a emissão ou renovação do seu certificado digital com segurança e suporte especializado.",
     topics: [
@@ -54,6 +58,7 @@ const banners = [
     href: "https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20emitir%20meu%20certificado%20digital."
   },
   {
+    id: "rural",
     title: "Contabilidade para Produtor Rural",
     description: "Escrituração fiscal, gestão de impostos e folha de pagamento com precisão para sua atividade rural.",
     topics: [
@@ -93,7 +98,7 @@ export default function ServiceBanner() {
               <div className="flex-column">
                 <div className="content flex">
                   <div className="title-text flex-column">
-                    <h2 className="title">{banner.title}</h2>
+                    <h2 className={`title title-${banner.id}`}>{banner.title}</h2>
                     <p className="description">{banner.description}</p>
                     <div className="button flex-column">
                       <a href={banner.href} target="blank">

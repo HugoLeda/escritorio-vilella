@@ -27,16 +27,14 @@ const HighlightsSection = styled.div`
     gap: 2rem;
     max-width: 300px;
     box-shadow: 0 2px 10px rgba(104, 102, 233, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-height: 400px;
     user-select: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 16px rgba(0, 38, 255, 0.2);
-    }
+  .card:hover {
+    box-shadow: 0 8px 64px rgba(0, 38, 255, 0.2);
   }
-
 
   .topics {
     gap: 1.5rem; 
@@ -76,10 +74,14 @@ const HighlightsSection = styled.div`
         }
       }
     }
-
   }
 
-
+  @media (max-width: 375px) {
+    h3 {
+      
+        font-size: ${Theme.textSize.titleMobileSm};
+    }
+  }
 `;
 
   const eachHighlight = [
@@ -167,9 +169,9 @@ export default function Highlights () {
 
   return (
     <HighlightsSection>
-      <div className="container">
+      <div className="container scroll-effect">
         {eachHighlight.map((card, index) => (
-          <div key={index} className="card  scroll-effect">
+          <div key={index} className="card scroll-effect">
             <h3 className="title">{card.title}</h3>
             <div className="topics flex-column">
               {card.topics.map((item, i) => (

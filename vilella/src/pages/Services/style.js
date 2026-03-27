@@ -464,9 +464,7 @@ export const Servicespage = styled.section `
 
   @media (max-width: 1200px) {
 
-    
     header {
-
       .service-outdoor {
         h1 {
           font-size: ${Theme.textSize.titleClientLg};
@@ -749,6 +747,11 @@ export const Servicespage = styled.section `
         }
       }
     }
+    .why-choose-us {
+      h2 {
+        font-size: ${Theme.textSize.titleClientXxSm};        
+      }
+    }
 
     .each-client {
       margin-top: 1rem;
@@ -758,7 +761,7 @@ export const Servicespage = styled.section `
   @media (max-width: 405px) {
 
     button {
-      padding: .5rem;
+      padding: .5rem;      
     }
     .business-consulting-wrapper {
       .consulting-button {
@@ -770,8 +773,94 @@ export const Servicespage = styled.section `
         align-items: center;
         line-height: 1.2;
       }
-    }
+    }    
+
   }
 
+  @media (max-width: 400px) {
+
+    header {
+      .service-outdoor {
+        h1 {
+          font-size: ${Theme.textSize.titleMobileMd};
+        }
+        p {
+          font-size: .9rem;
+        }
+      }
+
+      
+      .img {
+        width: 100%;
+        img {
+          width: 180px;
+        }
+      }
+
+      button {
+        padding: 0 1rem;
+        font-size: .9rem;
+      }
+    }
+
+    .business-consulting-wrapper {
+      
+      button {        
+        font-size: .95rem;
+      }
+
+      p {
+        font-size: .9rem;
+      }
+    }
+
+
+    .each-client {
+      .each-client-title {
+        h2 {
+        font-size: ${Theme.textSize.titleMobileMd};
+        }
+        p {
+          font-size: ${Theme.textSize.textMobileSm};
+        }
+      }
+
+      .office-actions {
+        .act {
+          .description {
+            h2 {
+              font-size: ${Theme.textSize.textMobileMd};
+            }
+            p {
+              font-size: ${Theme.textSize.textMobileSm};
+            }
+          }
+        }
+      }
+    }
+
+    .cta {
+      h2 {
+        font-size: ${Theme.textSize.titleClientXxSm};
+      }
+      p {
+        font-size: ${Theme.textSize.textMobileSm};
+      }
+      
+      button {
+        padding: 0 1rem;
+        font-size: .9rem;
+      }
+
+      .where-to-find-us {
+        h3 {
+          font-size: ${Theme.textSize.textMobileMd};
+        }
+        p {
+          font-size: ${Theme.textSize.textMobileSm};
+        }
+      }
+    }
+  }
 
 `
