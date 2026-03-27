@@ -2,7 +2,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { Banner } from "./style"
 import { useState } from "react";
 import { FaHeadset } from "react-icons/fa6";
-
+import { useEffect } from "react";
 
 const banners = [
   {
@@ -16,7 +16,7 @@ const banners = [
     ],
     background: "linear-gradient(135deg, #1a3a8a 0%, #0d2daa 100%)",
     buttonColor: "#1a3a8a",
-    href: "https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20fiscal."
+    href: "https://wa.me/5514997795080?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20fiscal."
   },
   {
     id: "consultiva",
@@ -29,7 +29,7 @@ const banners = [
     ],
     background: "linear-gradient(135deg, #759dcc 50%, #93c5ff 150%)",
     buttonColor: "#759dcc",
-    href: "https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20contábil."
+    href: "https://wa.me/5514997795080?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20contábil."
   },
   {
     id: "pessoal",
@@ -42,7 +42,7 @@ const banners = [
     ],
     background: "linear-gradient(90deg, #00116f 0%, #0d2daa 100%)",
     buttonColor: "#00116f",
-    href: "https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20de%20departamento%20pessoal."
+    href: "https://wa.me/5514997795080?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20de%20departamento%20pessoal."
   },
   {
     id: "certificado",
@@ -55,7 +55,7 @@ const banners = [
     ],
     background: "linear-gradient(135deg, #2b2b2b 0%, #606060 100%)",
     buttonColor: "#2b2b2b",
-    href: "https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20emitir%20meu%20certificado%20digital."
+    href: "https://wa.me/5514997794243?text=Ol%C3%A1!%20Quero%20emitir%20meu%20certificado%20digital."
   },
   {
     id: "rural",
@@ -68,7 +68,7 @@ const banners = [
     ],
     background: "linear-gradient(135deg, #759dcc 50%, #1a3a8a 150%)",
     buttonColor: "#759dcc",
-    href: "https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20em%20Rural."
+    href: "https://wa.me/5514997795080?text=Ol%C3%A1!%20Quero%20falar%20com%20especialista%20em%20Rural."
   }
 ];
 
@@ -81,6 +81,18 @@ export default function ServiceBanner() {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + banners.length) % banners.length);
   const goTo = (index) => setCurrentIndex(index);
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const bannerId = params.get("banner");
+
+    if (bannerId) {
+      const index = banners.findIndex(b => b.id === bannerId);
+
+      if (index !== -1) {
+        setCurrentIndex(index);
+      }
+    }
+  }, [location]);
 
   return (
     <Banner>    

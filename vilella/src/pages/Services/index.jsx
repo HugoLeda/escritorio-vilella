@@ -55,7 +55,7 @@ const options = [
       "Cuidamos de toda a burocracia para que você se preocupe apenas em empreender."
     ],
     buttonText: "Quero Abrir minha empresa",
-    href:"https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20abrir%20minha%20empresa."
+    href:"https://wa.me/5514997795080?text=Ol%C3%A1!%20Quero%20abrir%20minha%20empresa."
   },
   {
     title: "Suporte contábil que garante tranquilidade",
@@ -66,7 +66,7 @@ const options = [
       "Descomplique sua rotina financeira com a garantia de segurança e tranquilidade para o seu negócio."
     ],
     buttonText: "Quero migrar de contabilidade",
-    href:"https://wa.me/5514997396924?text=Ol%C3%A1!%20Quero%20migrar%20de%20contabilidade."
+    href:"https://wa.me/5514997795080?text=Ol%C3%A1!%20Quero%20migrar%20de%20contabilidade."
   }
 ];
 
@@ -142,8 +142,8 @@ export default function Services() {
               <h1>Soluções completas para sua empresa</h1>
               <p>Atendimento de qualidade para profissionais autônomos, microempreendedores individuais (MEI) e empresas de todos os setores econômicos.</p>            
               <div className="link flex">
-                <a href="https://wa.me/5514997396924" target="blamk">
-                  <button className="button"><a href="https://wa.me/5514997396924" target="blamk">Fale com nossos especialistas</a></button>
+                <a href="https://wa.me/5514997795080" target="blamk">
+                  <button className="button"><a href="https://wa.me/5514997795080" target="blamk">Fale com nossos especialistas</a></button>
                 </a>                
               </div>
             </div>                    
@@ -196,7 +196,7 @@ export default function Services() {
             </div>
           </div>
         </main>        
-        <section className="service-banners">
+        <section id="service-banner" className="service-banners">
           <div>
             <Banner/>
           </div>
@@ -275,7 +275,7 @@ export default function Services() {
                   </div>              
                 </div>
               </a>
-              <a className="phone" href="https://wa.me/5514997396924" target="blank">
+              <a className="phone" href="https://wa.me/5514997795080" target="blank">
                 <div className="spot flex">
                   <span className="item">
                     <MdOutlineWhatsapp style={{fontSize: 32, color: "#00116f"}} />
@@ -288,8 +288,8 @@ export default function Services() {
               </a>   
             </div>
             <div className="button flex-column items scroll-effect">
-              <a href="https://wa.me/5514997396924" target="blank">
-                <button><a href="https://wa.me/5514997396924" target="blank">Solicitar Serviço</a></button>
+              <a href="https://wa.me/5514997795080" target="blank">
+                <button><a href="https://wa.me/5514997795080" target="blank">Solicitar Serviço</a></button>
               </a>
             </div>
           </div>

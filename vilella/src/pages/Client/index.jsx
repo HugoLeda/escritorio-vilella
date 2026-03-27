@@ -182,8 +182,8 @@ export default function Client() {
                 <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">
                   <button className="client-center"><a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">Acessar Portal</a></button>
                 </a>                
-                <a href="https://wa.me/14997795003" target="_blank">
-                  <button className="client-center help"> <a href="https://wa.me/14997795003" target="_blank"> Solicitar Acesso </a></button>
+                <a href="https://wa.me/5514997795003" target="_blank">
+                  <button className="client-center help"> <a href="https://wa.me/5514997795003" target="_blank"> Solicitar Acesso </a></button>
                 </a>
               </div>
             </div> 
@@ -288,8 +288,8 @@ export default function Client() {
                   </a>
                 </div>
                 <div>
-                  <a href="https://wa.me/14997795003" target="_blank">
-                    <button className="client-center help scroll-effect"> <a href="https://wa.me/14997795003" target="_blank">Solicitar acesso</a></button>
+                  <a href="https://wa.me/5514997795003" target="_blank">
+                    <button className="client-center help scroll-effect"> <a href="https://wa.me/5514997795003" target="_blank">Solicitar acesso</a></button>
                   </a>
                 </div>
               </div>

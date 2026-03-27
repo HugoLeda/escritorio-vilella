@@ -266,6 +266,10 @@ export const Servicespage = styled.section `
     }
 
   }
+  
+  #service-banner {
+    scroll-margin-top: 7rem; 
+  }
 
   .why-choose-us {
     background-color: #eff6ff;

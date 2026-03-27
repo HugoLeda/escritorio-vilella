@@ -31,7 +31,7 @@ const serviceSpecialty = [
     text:"Planejamento e otimização para redução de custos fiscais.",
     bgColor: Theme.colors.white,
     arrow: <FaArrowRight style={{fontSize: 30, color: "#d8d8d8"}} />,
-    link:"/services#business-consulting"
+    link:"/services?banner=fiscal#service-banner"
   },
   {
     icon: <MdBadge style={{fontSize: 80, color: "#759dcc"}} />,
@@ -39,7 +39,7 @@ const serviceSpecialty = [
     text:"Folha de pagamento, admissões, rescisões, regularização trabalhista.",
     bgColor: Theme.colors.babyBlue,
     arrow: <FaArrowRight style={{fontSize: 30, color: "#d8d8d8"}} />,
-    link:"/services#business-consulting"
+    link:"/services?banner=pessoal#service-banner"
   }
 ]
 
