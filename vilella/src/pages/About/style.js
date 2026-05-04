@@ -50,7 +50,7 @@ export const Aboutpage = styled.div`
     
     a {
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 400;
     }
   }
 
@@ -352,6 +352,7 @@ export const Aboutpage = styled.div`
       border: 1px solid ${Theme.colors.blue2};
       a {
         color: ${Theme.colors.blue2};
+        font-weight: 400;
       }
 
       &:hover {

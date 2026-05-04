@@ -105,11 +105,9 @@ export default function Footer() {
           </div>
 
           <div className="client-center flex-column">
-            <button className="client-center-button flex">
-            <a href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank" className="flex">
-              <span>Portal do Cliente</span>
-            </a>
-            </button>            
+            <a className="client-center-button flex" href="https://onvio.com.br/clientcenter/pt/auth?r=%2Fhome" target="blank">              
+              <span>Portal do Cliente</span>              
+            </a>            
           </div>               
         </div>
       </div>

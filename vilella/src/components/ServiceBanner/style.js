@@ -43,20 +43,19 @@ export const Banner = styled.div`
       width: 100%;
       align-items: flex-start;
       a {
-        text-decoration: none;
+        text-decoration: none;        
       }
       
       button {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: .5rem;
+        gap: .5rem;        
         background-color: ${Theme.colors.white};
         user-select: none;    
-        text-transform: uppercase;
+        text-transform: uppercase;        
 
         &:hover {
-          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
           .headset {
             animation: swingSmooth 0.5s ease forwards;
           }
@@ -70,8 +69,8 @@ export const Banner = styled.div`
     @keyframes swingSmooth {
       0% { transform: rotate(0deg); }
       25% { transform: rotate(15deg); }
-      50% { transform: rotate(-15deg); }
-      75% { transform: rotate(10deg); }
+      50% { transform: rotate(-20deg); }
+      75% { transform: rotate(15deg); }
       100% { transform: rotate(0deg); }
     }
 

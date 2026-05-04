@@ -109,7 +109,7 @@ export const Clientpage = styled.section `
 
     a {
       font-size: ${Theme.textSize.textMobileSm};
-      font-weight: 700;
+      font-weight: 400;
 
       color: ${Theme.colors.white};
       text-decoration: none;

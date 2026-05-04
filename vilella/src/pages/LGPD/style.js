@@ -82,9 +82,8 @@ export const Lgpdpage = styled.div `
       a {
         text-transform: uppercase;
         font-size: ${Theme.textSize.textMobileSm};
-        font-weight: 500;
+        font-weight: 400;
         color: ${Theme.colors.white};
-        padding-top: .1rem;
         text-decoration: none;
         align-items: center;
         justify-content: center;
@@ -96,9 +95,9 @@ export const Lgpdpage = styled.div `
           
           @keyframes pointDown {
             0% { transform: translateY(0px); }
-            25% { transform: translateY(1px); }
+            25% { transform: translateY(2px); }
             50% { transform: translateY(-1px); }
-            75% { transform: translateY(1px); }
+            75% { transform: translateY(2px); }
             100% { transform: translateY(0px); }
           }
         }
@@ -270,7 +269,7 @@ export const Lgpdpage = styled.div `
         background-color: #25D366;
         width: 100%;
         color: ${Theme.colors.white};        
-        font-weight: 500;
+        font-weight: 400;
 
         &:hover {          
           background-color: ${Theme.colors.babyBlue};
@@ -286,7 +285,7 @@ export const Lgpdpage = styled.div `
         a {
           color: ${Theme.colors.blue2};
           text-decoration: none;
-          font-weight: 500;
+          font-weight: 400;
         }
 
         &:hover {

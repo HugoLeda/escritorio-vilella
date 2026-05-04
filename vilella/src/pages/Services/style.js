@@ -61,13 +61,13 @@ export const Servicespage = styled.section `
     border-radius: 6px;
     box-shadow: 0 2px 8px rgb(0,0,0,0.2);
     transition: ease-out all .2s;
-    background-color: transparent;
-    font-weight: 400;
+    background-color: transparent;    
     user-select: none;
 
     a {
       text-decoration: none;
       text-transform: uppercase;
+      font-weight: 400;
     }
   }
 
@@ -128,6 +128,7 @@ export const Servicespage = styled.section `
     button {
       background-color: #0d2daa;
       a {
+        font-weight: 400;
         text-decoration: none;
         align-items: center;
         color: ${Theme.colors.white};
@@ -180,7 +181,7 @@ export const Servicespage = styled.section `
         padding: 0 1rem;     
         box-shadow: none;
         text-transform: uppercase;
-        user-select: none;
+        user-select: none;        
       }     
     }
 
@@ -234,17 +235,16 @@ export const Servicespage = styled.section `
 
       .option-cta {
         a {
-          text-decoration: none;
+          text-decoration: none;          
 
           button {
             background-color: #0d2daa;
             text-transform: uppercase;            
             color: ${Theme.colors.white}; 
-            
+            font-weight: 400;
             &:hover {
               background-color: ${Theme.colors.babyBlue};
-              color: ${Theme.colors.blue1};
-              font-weight: 500;
+              color: ${Theme.colors.blue1};              
             } 
           }
         }        
@@ -374,7 +374,6 @@ export const Servicespage = styled.section `
       p {      
         color: ${Theme.colors.gray1};
         margin: 0;
-        //font-size: ${Theme.textSize.textMobileMd};
       }
     }
     
@@ -412,13 +411,13 @@ export const Servicespage = styled.section `
       a {
         text-decoration: none;
         color: ${Theme.colors.white};
+        font-weight: 400;
       }
       
       &:hover {
         background-color: ${Theme.colors.babyBlue};
         a {
-          color: ${Theme.colors.blue1};
-          font-weight: 500;
+          color: ${Theme.colors.blue1};          
         }
       } 
       
