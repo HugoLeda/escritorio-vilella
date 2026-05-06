@@ -238,7 +238,7 @@ export default function LGPD() {
                   <div className="dpo-icons flex-column">
                     <div className="dpo-icon flex-row">
                       <span>
-                        <MdSupervisedUserCircle style={{fontSize: 24, color: "#93c5ff"}}/>
+                        <MdSupervisedUserCircle style={{fontSize: 24, color: "#0d2daa"}}/>
                       </span>
                       <a href="https://www.linkedin.com/in/joaohugoleda/" target="blank">
                         <span>João Hugo Leda de Carvalho</span>
@@ -253,7 +253,7 @@ export default function LGPD() {
                     </div>
                     <div className="dpo-icon flex-row">
                       <span>
-                        <MdMailOutline style={{fontSize: 24, color: "#93c5ff"}}></MdMailOutline>
+                        <MdMailOutline style={{fontSize: 24, color: "#0d2daa"}}></MdMailOutline>
                       </span>
                       <span>suportevilella@gmail.com</span>
                     </div>

@@ -333,7 +333,11 @@ export const Lgpdpage = styled.div `
       }
       .dpo-icon {  
         display: flex;
-        gap: .5rem;
+        align-items: center;
+        padding: .5rem 2rem;
+        gap: 1rem;
+        border-radius: 6px;
+        border: 1px solid #A8D0FF;
       }  
     }
 
@@ -481,6 +485,14 @@ export const Lgpdpage = styled.div `
       flex-direction: column;
     }
 
+    .contact-wrapper {
+      .dpo-icons {
+        .dpo-icon {
+          gap: .5rem;
+        }
+      }
+    }
+
   }
 
   @media (max-width: 926px) {
@@ -585,6 +597,14 @@ export const Lgpdpage = styled.div `
           p {
             font-size: ${Theme.textSize.textMobileSm};
           }
+        }
+      }
+    }
+
+    .contact-wrapper {
+      .dpo-icons {
+        .dpo-icon {
+          padding: .5rem;
         }
       }
     }

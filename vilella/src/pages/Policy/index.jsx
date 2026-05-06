@@ -96,7 +96,7 @@ export default function Policy(){
           <h1>Política de Privacidade</h1>          
           <p style={{padding: '4px 8px', backgroundColor: '#f9f9f9', borderLeft: '4px solid #909090'}}>Última atualização: 07 de outubro de 2025</p>
           <p>
-          Agradecemos por acessar o nosso site, <strong>evilella.com</strong>, e por demonstrar interesse em nossos serviços.
+          Agradecemos por visitar o nosso site, <strong>evilella.com</strong>, e por demonstrar interesse em nossos serviços.
           A sua privacidade é extremamente importante para nós, e estamos comprometidos em proteger seus dados pessoais com segurança e transparência.
           </p>
           <p>Caso tenha alguma dúvida, estamos à disposição para esclarecimento.

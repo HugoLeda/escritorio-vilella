@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useState, useEffect } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import emailjs from '@emailjs/browser';
-
+import {FaRegPaperPlane } from 'react-icons/fa6'
 
 export default function LgpdForm({ onSubmit }) {
 
@@ -205,7 +205,12 @@ export default function LgpdForm({ onSubmit }) {
 
 
         <div className="form-send">
-          <button className="mail" type="submit" disabled={submitStatus === 'loading'}>Enviar solicitação</button>
+          <button className="send" type="submit" disabled={submitStatus === 'loading'}>
+            <span className="send-items">  
+              <FaRegPaperPlane style={{fontSize: "14"}} className="icon"/>
+              Enviar solicitação
+            </span>            
+          </button>
           <ToastContainer
             position="top-right"
             autoClose={5000}

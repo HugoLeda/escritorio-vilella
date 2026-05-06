@@ -77,18 +77,40 @@ export const Forms = styled.div `
     max-height: 200px;
   }
 
-  .mail {
+  .send {
     width: 100%;
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #0d2daa;
+    background-color: #0d2daa;
+    box-shadow: 0 2px 5px rgb(0,0,0,0.2);    
+    
+    color: ${Theme.colors.white};
     font-size: ${Theme.textSize.textMobileSm};
-    font-weight: 400;
-    color: ${Theme.colors.blue2};
-    text-decoration: none;
+    font-weight: 400;    
+    text-transform: uppercase;    
+    text-decoration: none;        
+    cursor: pointer;
+    
+    transition: ease-out all .2s;
+
     &:hover {
+      border: 1px solid ${Theme.colors.babyBlue};
+      color: ${Theme.colors.blue2};
       background-color: ${Theme.colors.babyBlue};
-      color: ${Theme.colors.blue1};
+      span {
+        font-weight: 400;
+      }
+      
     }
   }
 
+  .send-items {
+    display: flex; 
+    justify-content: center;    
+    align-items: center;
+    gap: .5rem;
+  }
 
   @media (max-width: 420px) {
     .consent-label {
