@@ -9,12 +9,12 @@ export default function Cookies() {
     left: 50%;
     transform: translateX(-50%);
     bottom: 1.25rem;
-    padding: 1.5rem;
+    padding: .75rem 1.5rem;
     width: 80vw;
     z-index: 100;
     
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 14px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -44,9 +44,10 @@ export default function Cookies() {
       box-shadow: 0 2px 8px rgb(0,0,0,0.2);
       transition: ease-out all .2s;
       background-color: #0d2daa;
-      font-weight: 500;
+      font-weight: 400;
       user-select: none;
       color: ${Theme.colors.white};
+      text-transform: uppercase;
 
       &:hover {
         background-color: ${Theme.colors.babyBlue};
@@ -94,7 +95,7 @@ export default function Cookies() {
       <div className="cookie-wrapper flex">
         <div>
           <p>
-            Este site utiliza cookies para melhorar a experiência de navegação. Saiba mais em nossa <a href="/privacy-policy#cookie-policy">Política de Privacidade.</a>
+            Utilizamos cookies para melhorar sua experiência de navegação. Saiba mais em nossa <a href="/privacy-policy#cookie-policy">Política de Privacidade</a>.
           </p>
         </div>
         <div>

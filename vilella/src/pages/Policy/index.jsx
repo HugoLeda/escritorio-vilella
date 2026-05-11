@@ -99,7 +99,7 @@ export default function Policy(){
           Agradecemos por visitar o nosso site, <strong>evilella.com</strong>, e por demonstrar interesse em nossos serviços.
           A sua privacidade é extremamente importante para nós, e estamos comprometidos em proteger seus dados pessoais com segurança e transparência.
           </p>
-          <p>Caso tenha alguma dúvida, estamos à disposição para esclarecimento.
+          <p>Caso tenha alguma dúvida, estamos à disposição para esclarecimento através dos canais disponibilizados ao final desta página.
           </p>
         </div>
         
@@ -178,7 +178,9 @@ export default function Policy(){
               Contudo, páginas que incorporam conteúdo de terceiros podem permitir que esses serviços externos utilizem cookies para seu funcionamento técnico ou análise de visualizações.
               Esses cookies são controlados exclusivamente por esses terceiros, de acordo com suas respectivas políticas de privacidade.
             </p>
-            <p>Ao continuar navegando neste site, o usuário consente com o uso de cookies de terceiros conforme descrito nesta política. O usuário pode gerenciar ou bloquear cookies nas configurações do navegador, podendo isso afetar algumas funcionalidades do site.</p>
+            <p>
+              Ao continuar navegando neste site, o usuário consente com o uso de cookies de terceiros conforme descrito nesta política. O usuário pode gerenciar ou bloquear cookies nas configurações do navegador, podendo isso afetar algumas funcionalidades do site.
+            </p>
           </div>
           
           <div className="item">

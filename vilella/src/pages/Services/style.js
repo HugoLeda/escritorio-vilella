@@ -42,7 +42,7 @@ export const Servicespage = styled.section `
     }
 
     span {
-      font-weight: 500;
+      font-weight: 400;
       border-radius: 40px;          
       padding: .2rem .5rem;
     }
@@ -138,7 +138,7 @@ export const Servicespage = styled.section `
         background-color: ${Theme.colors.babyBlue};
         a {
           color: ${Theme.colors.blue1};
-          font-weight: 500;
+          font-weight: 400;
         }
       } 
     }
@@ -289,7 +289,7 @@ export const Servicespage = styled.section `
         
         text-transform: uppercase;  
         text-align: center;
-        font-weight: 500;
+        font-weight: 400;
         border-radius: 40px;          
         padding: .2rem .5rem;
       }
