@@ -221,6 +221,18 @@ export const Homepage = styled.div `
     background: linear-gradient(to right, #00116f, #0d2daa, #0d2daa);
     border-radius: 100px 0;
     color: ${Theme.colors.white};
+    position: relative;    
+  }
+
+  #client-center:after {
+    position: absolute;
+    content: " ";
+    height: 100px;
+    width: 100px;
+    background-color: #f2f2f2;
+    bottom:0;
+    right: 0;
+    z-index: -1;
   }
 
   .client-center {
@@ -343,6 +355,18 @@ export const Homepage = styled.div `
     }
   }
 
+  #subscribe {
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+  }
+
+  .form-newsletter {   
+    width: 100%; 
+    display: flex;    
+    justify-content: space-evenly;
+    gap: 5rem;
+  }
 
   #find-us {
     margin: 2rem 0;
@@ -763,6 +787,19 @@ export const Homepage = styled.div `
 
   }
 
+  @media (max-width: 990px) {
+
+    #subscribe {
+      padding: 3rem;
+    }
+
+    .form-newsletter {
+      flex-direction: column;
+      max-width: 500px;
+      padding: 0;      
+    }
+
+  }
 
   @media (max-width: 980px) {
     .solutions {

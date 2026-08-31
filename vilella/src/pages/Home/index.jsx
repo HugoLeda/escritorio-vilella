@@ -3,6 +3,8 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import ServiceSpecialty from "../../components/ServiceSpecialty";
 import LgpdActions from "../../components/LgpdActions";
+import Newsletter from "../../components/Newsletter";
+import NewsletterForm from "../../components/NewsletterForm";
 import Theme from "../../styles/theme";
 
 import app from "../../assets/apponvio.webp"
@@ -242,6 +244,20 @@ export default function Home() {
             </div>
           </div>          
         </section>
+
+        <section id="subscribe">
+          <div className="form-newsletter scroll-effect wrapper">
+            <div className="subscribe-form">
+              <h2>Fique por dentro</h2>
+              <p style={{fontSize:"1.125rem"}}>Inscreva-se para receber nossos informativos mensais:</p>
+              <NewsletterForm/>
+            </div>
+            <div className="newsletter" style={{textAlign:"center"}}>
+              <Newsletter/>
+            </div>
+          </div>
+        </section>
+
         <section id="find-us" className="flex-column">
           <div className="find-us flex-column items wrapper">             
             <div className="find-us-title text scroll-effect">
