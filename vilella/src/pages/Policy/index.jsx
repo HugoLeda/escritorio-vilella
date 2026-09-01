@@ -94,7 +94,7 @@ export default function Policy(){
       <div id="privacy-policy">
         <div className="welcome-note item">        
           <h1>Política de Privacidade</h1>          
-          <p style={{padding: '4px 8px', backgroundColor: '#f9f9f9', borderLeft: '4px solid #909090'}}>Última atualização: 07 de outubro de 2025</p>
+          <p style={{padding: '4px 8px', backgroundColor: '#f9f9f9', borderLeft: '4px solid #909090'}}>Última atualização: 01 de setembro de 2026</p>
           <p>
           Agradecemos por visitar o nosso site, <strong>evilella.com</strong>, e por demonstrar interesse em nossos serviços.
           A sua privacidade é extremamente importante para nós, e estamos comprometidos em proteger seus dados pessoais com segurança e transparência.
@@ -131,16 +131,17 @@ export default function Policy(){
             </ul>
             <p>Essas informações são processadas de forma temporária para assegurar o funcionamento correto do site, otimizar a entrega de conteúdo e garantir segurança contra acessos automatizados maliciosos (bots). Nenhuma dessas informações é armazenada de forma permanente ou vinculada a qualquer identificador pessoal.</p>
 
-            <h4>2.2. Dados coletados pelo formulário de contato LGPD</h4>
-            <p>Ao preencher e enviar o formulário disponível no site, o usuário fornece voluntariamente alguns dados pessoais, como:</p>
+            <h4>2.2. Dados coletados por formulário</h4>
+            <p>Ao preencher e enviar os formulários disponibilizados no site, o usuário fornece voluntariamente dados pessoais, como:</p>
             <ul>
               <li>Nome;</li>
               <li>Endereço de e-mail;</li>
-              <li>Conteúdo da mensagem.</li>
-            </ul>
-            <p>O tratamento dos dados coletados ocorre com base no consentimento do titular, obtido no momento do envio do formulário, quando o usuário seleciona a opção “Li e aceito a Política de Privacidade” e não serão utilizados para nenhum outro propósito sem o consentimento prévio do usuário. 
+              <li>Outras informações necessárias à finalidade do formulário.</li>
+            </ul>            
+            <p>O tratamento dos dados coletados ocorre com base no consentimento do titular, obtido no momento do envio do formulário, quando o usuário seleciona a opção “Li e aceito a Política de Privacidade” e não serão utilizados para nenhum outro propósito sem seu consentimento prévio.</p>
+            <p>As informações coletadas através do formulário de contato LGPD servirão exclusivamente para fins de contato e retorno da solicitação, como envio de respostas, esclarecimentos ou propostas relacionadas aos serviços do Escritório Vilella.
             </p>
-            <p>As informações coletadas servirão exclusivamente para fins de contato e retorno da solicitação, como envio de respostas, esclarecimentos ou propostas relacionadas aos serviços do Escritório Vilella. </p>
+            <p>No caso do formulário de inscrição para receber o boletim informativo mensal, as informações fornecidas pelo usuário serão utilizadas exclusivamente para possibilitar seu envio. A inscrição é voluntária e poderá ser removida a qualquer momento, utilizando o link de descadastramento disponibilizado nos e-mails enviados ou pelos canais de contato indicados ao final desta Política. </p>            
 
             <h4>2.3. Forma de processamento</h4>
             <p>
