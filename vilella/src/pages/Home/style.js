@@ -712,6 +712,18 @@ export const Homepage = styled.div `
       }
     }
 
+    
+  #client-center:after {
+    position: absolute;
+    content: " ";
+    height: 100px;
+    width: 100px;
+    background-color: #f2f2f2;
+    bottom:0;
+    left: 0;
+    z-index: -1;
+  }
+
 
     #client-center {
       border-radius: 0 100px 0 100px;

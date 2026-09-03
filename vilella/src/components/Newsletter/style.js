@@ -11,6 +11,7 @@ export const NewsletterStyle = styled.div `
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
     user-select: none;
+    //overscroll-behavior: none;
   }
 
   .preview-zindex {
@@ -19,6 +20,8 @@ export const NewsletterStyle = styled.div `
     z-index: 10;
     background-color: transparent;
     cursor: default;
+    pointer-events: auto;
+    //touch-action: none;
   }
 
   iframe {

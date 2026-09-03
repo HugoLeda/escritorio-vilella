@@ -41,8 +41,8 @@ function Newsletter() {
           id="estanteiframe"
           title="Informativo"
           src={iframeUrl}
-          scrolling="no"
         />         
+        <div className="preview-zindex" />
       </div>
     
       <div width="fit-content" style={{display:"flex", flexDirection:"column", paddingTop:"1rem", gap:".5rem"}}>

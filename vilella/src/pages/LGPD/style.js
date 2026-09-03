@@ -27,7 +27,7 @@ export const Lgpdpage = styled.div `
   }
 
   p {
-    font-size: ${Theme.textSize.textLg};
+    font-size: ${Theme.textSize.textMd};
     line-height: 1.5;
   }
 
@@ -49,7 +49,7 @@ export const Lgpdpage = styled.div `
     max-width: 550px;
 
     h1 {
-      font-size: ${Theme.textSize.titleClientXLg};
+      font-size: ${Theme.textSize.titleClientMd};
     }
   }
 
@@ -150,7 +150,7 @@ export const Lgpdpage = styled.div `
 
     p {
       color: ${Theme.colors.gray1};
-      font-size: ${Theme.textSize.textLg};
+      font-size: ${Theme.textSize.textMd};
     }
 
     .compromise-title {

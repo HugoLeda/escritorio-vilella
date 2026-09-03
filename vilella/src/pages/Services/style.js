@@ -26,7 +26,7 @@ export const Servicespage = styled.section `
   }
 
   p {
-    font-size: ${Theme.textSize.textLg};
+    font-size: ${Theme.textSize.textMd};
     color: ${Theme.colors.gray1};
     
   }

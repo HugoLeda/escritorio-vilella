@@ -246,13 +246,13 @@ export default function Home() {
         </section>
 
         <section id="subscribe">
-          <div className="form-newsletter scroll-effect wrapper">
-            <div className="subscribe-form">
+          <div className="form-newsletter wrapper">
+            <div className="subscribe-form scroll-effect">
               <h2>Fique por dentro</h2>
               <p style={{fontSize:"1.125rem"}}>Inscreva-se para receber nossos informativos mensais:</p>
               <NewsletterForm/>
             </div>
-            <div className="newsletter" style={{textAlign:"center"}}>
+            <div className="newsletter scroll-effect" style={{textAlign:"center"}}>
               <Newsletter/>
             </div>
           </div>

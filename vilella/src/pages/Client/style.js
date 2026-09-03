@@ -48,7 +48,7 @@ export const Clientpage = styled.section `
   }
 
   p {
-    font-size: ${Theme.textSize.textLg};
+    font-size: ${Theme.textSize.textMd};
     line-height: 1.5;
   }
 
