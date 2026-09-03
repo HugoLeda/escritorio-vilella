@@ -282,7 +282,7 @@ export default function Services() {
                   </span>
                   <div className="">
                     <h3>Whatsapp</h3>
-                    <p>(14) 99739-6924</p>
+                    <p>(14) 99779-5080</p>
                   </div>
                 </div>                  
               </a>   

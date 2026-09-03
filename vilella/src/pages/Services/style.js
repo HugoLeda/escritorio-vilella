@@ -385,6 +385,8 @@ export const Servicespage = styled.section `
       max-width: 300px;
       align-items: center;
       gap: 1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
 
       h3 {margin:0;}
       p {
@@ -398,6 +400,11 @@ export const Servicespage = styled.section `
         align-items: center;
         gap: 1rem;
       }
+    }
+
+    
+    .spot:hover {
+      box-shadow: 0 8px 24px rgba(0, 21, 138, 0.1);
     }
 
 

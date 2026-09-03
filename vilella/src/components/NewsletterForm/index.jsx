@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
 import emailjs from '@emailjs/browser';
 import {FaRegPaperPlane } from 'react-icons/fa6'
+import { MdOutlineMail } from 'react-icons/md';
 
 export default function NewsletterForm({ onSubmit }) {
 
@@ -168,8 +169,8 @@ export default function NewsletterForm({ onSubmit }) {
         <div className="form-send">
           <button className="send" type="submit" disabled={submitStatus === 'loading'}>
             <span className="send-items">  
-              <FaRegPaperPlane style={{fontSize: "14"}} className="icon"/>
-              Enviar
+              <MdOutlineMail style={{fontSize: "20"}} className="icon"/>
+              Inscrever
             </span>            
           </button>
         </div>
