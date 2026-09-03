@@ -3,6 +3,11 @@ import Theme from "../../styles/theme";
 
 export const Forms = styled.div `
 
+  
+  .Toastify__toast-container {
+    margin-top: -6rem;
+  }
+
   .Toastify__toast--success,
   .Toastify__toast--error {
     background-color: ${Theme.colors.lightGray};
@@ -12,10 +17,6 @@ export const Forms = styled.div `
   .Toastify__close-button>svg{
     fill: ${Theme.colors.gray2};
         
-  }
-
-  .Toastify__progress-bar{
-    //background-color: ${Theme.colors.babyBlue};
   }
 
   .Toastify__toast--error {    
@@ -100,8 +101,7 @@ export const Forms = styled.div `
       background-color: ${Theme.colors.babyBlue};
       span {
         font-weight: 400;
-      }
-      
+      }      
     }
   }
 
@@ -112,11 +112,15 @@ export const Forms = styled.div `
     gap: .5rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .consent-label {
-      font-size: .9rem;
-      
+      font-size: .9rem;      
     }
-  }
+    
+    .Toastify__toast-container {
+      width: 100%;    
+      margin-top: -5rem;
+    }
+  }  
 
 `

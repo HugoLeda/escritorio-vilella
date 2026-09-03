@@ -707,8 +707,6 @@ export const Homepage = styled.div `
       .tech-cards{
         flex-wrap: wrap;
         justify-content: center;
-
-        //max-width: 500px;
       }
     }
 
@@ -794,9 +792,7 @@ export const Homepage = styled.div `
           }
         }
       }      
-
     }
-
   }
 
   @media (max-width: 990px) {
@@ -809,6 +805,7 @@ export const Homepage = styled.div `
       flex-direction: column;
       max-width: 500px;
       padding: 0;      
+      margin: 2rem 0;
     }
 
   }
@@ -855,7 +852,6 @@ export const Homepage = styled.div `
       }
 
       .img {      
-        //top: 0;
         max-width: 250px;
 
         img {

@@ -14,10 +14,6 @@ export const Forms = styled.div `
         
   }
 
-  .Toastify__progress-bar{
-    //background-color: ${Theme.colors.babyBlue};
-  }
-
   .Toastify__toast--error {    
     color: ${Theme.colors.red2};
   }
@@ -112,10 +108,13 @@ export const Forms = styled.div `
     gap: .5rem;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .consent-label {
-      font-size: .9rem;
-      
+      font-size: .9rem;      
+    }    
+    .Toastify__toast-container {
+      width: 100%;     
+      margin-top: 1.5rem;     
     }
   }
 

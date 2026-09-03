@@ -203,7 +203,6 @@ export default function LgpdForm({ onSubmit }) {
             </p>
           )}
 
-
         <div className="form-send">
           <button className="send" type="submit" disabled={submitStatus === 'loading'}>
             <span className="send-items">  
@@ -211,13 +210,15 @@ export default function LgpdForm({ onSubmit }) {
               Enviar solicitação
             </span>            
           </button>
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            draggable
-          />
         </div>
-      </form>          
+      </form>       
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        draggable
+        newestOnTop
+        limit={3}
+      />         
     </Forms>
   );
 }

@@ -28,12 +28,10 @@ export default function NewsletterForm({ onSubmit }) {
     const allFieldsFilled =
       watchedFields.name &&
       watchedFields.email &&
-      watchedFields.subject &&
-      watchedFields.message &&
       watchedFields.consent;
 
     if (!hasErrors && allFieldsFilled) {
-      setFormError(false); // limpa a mensagem de erro quando tudo está certo
+      setFormError(false); 
     }
   }, [errors, watchedFields]);
 
@@ -167,7 +165,6 @@ export default function NewsletterForm({ onSubmit }) {
             </p>
           )}
 
-
         <div className="form-send">
           <button className="send" type="submit" disabled={submitStatus === 'loading'}>
             <span className="send-items">  
@@ -175,13 +172,16 @@ export default function NewsletterForm({ onSubmit }) {
               Enviar
             </span>            
           </button>
-          <ToastContainer
-            position="top-right"
-            autoClose={5000}
-            draggable
-          />
         </div>
-      </form>          
+      </form>      
+      
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        draggable
+        newestOnTop
+        limit={3}
+      />    
     </Forms>
   );
 }
