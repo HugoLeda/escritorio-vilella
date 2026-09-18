@@ -291,7 +291,7 @@ export default function Home() {
                     <span><MdOutlineLocationOn style={{fontSize: 32, color: "#93c5ff"}} /></span>
                     <div>
                       <h3>Endereço</h3>
-                      <p>R. Mario Monteiro de França, 256 - Centro, Fartura/SP - CEP: 18870-030</p>
+                      <p>R. Mario Monteiro de França, 256 - Vila Velha, Fartura/SP - CEP: 18870-030</p>
                     </div>
                   </div>
                   <div className="phone flex">
